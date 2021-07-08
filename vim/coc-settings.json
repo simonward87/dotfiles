@@ -1,3 +1,5 @@
 {
-  "tsserver.npm": "/Users/simonward/.nvm/versions/node/v16.4.2/bin/node"
+  "tsserver.npm": "/Users/simonward/.nvm/versions/node/v16.4.2/bin/node",
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "javascriptreact", "typescript", "typescriptreact", "json", "graphql"]
 }
+
