@@ -3,6 +3,7 @@
 I'm learning about dotfiles at [dotfiles.eieio.xyz](http://dotfiles.eieio.xyz)
 
 ## TODO
+
 - Terminal Preferences
 - Changed Shell to ZSH
 - Dock Preferences
@@ -11,3 +12,4 @@ I'm learning about dotfiles at [dotfiles.eieio.xyz](http://dotfiles.eieio.xyz)
 - Trackpad settings
 - .zshrc
 - Git (config and SSH)
+- Homebrew Install
