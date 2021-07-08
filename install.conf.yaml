@@ -5,14 +5,14 @@
 - clean: ['~']
 
 - link:
-    ~/.tmux.conf: tmux.conf
-    ~/.vim: vim
-    ~/.vimrc: vimrc
-    ~/.zshrc: zshrc
+    ~/.gitconfig:
+    ~/.tmux.conf:
+    ~/.vim:
+    ~/.vimrc:
+    ~/.zshrc:
 
 - create:
     - ~/Work
-    - ~/.vim/undo-history
 
 # - shell:
 #   - [git submodule update --init --recursive, Installing submodules]
