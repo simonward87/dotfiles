@@ -5,11 +5,11 @@
 - clean: ['~']
 
 - link:
-    ~/.config/alacritty: alacritty
+    ~/.config/alacritty/alacritty.yml: alacritty.yml
     ~/.config/karabiner: karabiner
     ~/.gitconfig:
     ~/.tmux.conf:
-    ~/.vim:
+    ~/.vim/coc-settings.json: coc-settings.json
     ~/.vimrc:
     ~/.zshrc:
 
