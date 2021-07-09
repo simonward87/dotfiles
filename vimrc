@@ -14,6 +14,7 @@ set mouse=nicr                                  " enable mouse
 set nobackup                                    " coc recommendation
 set noerrorbells                                " mute error sound
 set noswapfile                                  " new buffers created without swapfiles
+set nowrap                                      " disable default line wrapping
 set nowritebackup                               " coc recommendation
 set number                                      " enable line numbers
 set relativenumber                              " enable relative line numbers
