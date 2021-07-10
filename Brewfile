@@ -1,3 +1,4 @@
+tap "eth-p/software"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
@@ -21,6 +22,8 @@ brew "tmux"
 brew "tree"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Bash scripts that integrate bat with various command-line tools
+brew "eth-p/software/bat-extras"
 # GPU-accelerated terminal emulator
 cask "alacritty"
 # Data backup and storage service

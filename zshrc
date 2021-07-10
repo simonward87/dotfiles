@@ -1,8 +1,6 @@
 echo "Hello from .zshrc"
 
 # Variables
-## Syntax highlighting for man pages using bat
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export BAT_THEME="gruvbox-dark"
 
 ## Switch off OSX gatekeeper
@@ -19,6 +17,7 @@ export NVM_DIR="$HOME/.nvm"
 alias exa='exa -laFh --git'
 alias ls='exa -laFh --git'
 alias k=kubectl
+alias man=batman
 
 # Prompt Customization
 PROMPT='
