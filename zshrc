@@ -16,9 +16,9 @@ export NVM_DIR="$HOME/.nvm"
 # ZSH Options
  
 # Aliases
-# alias ls='ls -lAFh'
 alias exa='exa -laFh --git'
 alias ls='exa -laFh --git'
+alias k=kubectl
 
 # Prompt Customization
 PROMPT='
@@ -36,3 +36,5 @@ function mkcd() {
 # ZSH Plugins
 
 # Other
+source <(kubectl completion zsh)
+complete -F __start_kubectl k
