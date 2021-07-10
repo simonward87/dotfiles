@@ -41,24 +41,27 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+" Plugins
 Plug 'alvan/vim-closetag'                       " auto-close html, jsx, tsx tags
-Plug 'andreasvc/vim-256noir'										" monochrome theme
-Plug 'arcticicestudio/nord-vim'                 " theme
 Plug 'ctrlpvim/ctrlp.vim'                       " fuzzy finder
 Plug 'evanleck/vim-svelte', {'branch': 'main'}  " syntax highlighting & indentation, Svelte
-Plug 'jacoborus/tender.vim'                     " theme
 Plug 'jremmen/vim-ripgrep'                      " fast search
 Plug 'leafgarland/typescript-vim'               " ts syntax files
 Plug 'lilydjwg/colorizer'                       " hex code colourizer
 Plug 'mattn/emmet-vim'                          " expanding abbreviations
 Plug 'mbbill/undotree'                          " undo history visualizer
-Plug 'morhetz/gruvbox'                          " theme
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " extensions and language servers
 Plug 'pangloss/vim-javascript'                  " syntax highlighting & indentation, JavaScript
-Plug 'rakr/vim-one'                             " theme
 Plug 'tpope/vim-commentary'                     " comment stuff out
 Plug 'tpope/vim-fugitive'                       " git wrapper
 Plug 'tpope/vim-surround'                       " streamline surroundings workflow
+
+" Themes
+Plug 'andreasvc/vim-256noir'
+Plug 'arcticicestudio/nord-vim'
+Plug 'jacoborus/tender.vim'
+Plug 'morhetz/gruvbox'
+Plug 'rakr/vim-one'
 
 call plug#end()
 
