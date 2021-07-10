@@ -12,14 +12,15 @@ brew install tmux
 brew install tree
 brew install vim
 
-brew install --cask google-chrome
-brew install --cask firefox
-brew install --cask alacritty
-brew install --cask karabiner-elements
-brew install --cask rectangle
-# brew install --cask backblaze
-# brew install --cask pokerstars
-# brew install --cask docker
-# brew install --cask skype
+brew install --cask --no-quarantine google-chrome
+brew install --cask --no-quarantine firefox
+brew install --cask --no-quarantine alacritty
+brew install --cask --no-quarantine karabiner-elements
+brew install --cask --no-quarantine rectangle
+brew install --cask --no-quarantine alfred
+# brew install --cask --no-quarantine backblaze
+# brew install --cask --no-quarantine pokerstars
+# brew install --cask --no-quarantine docker
+# brew install --cask --no-quarantine skype
 
 # Investigate font installs
