@@ -3,8 +3,8 @@ window:
     columns: 0
     lines: 0
   padding:
-    x: 7
-    y: 7
+    x: 8
+    y: 8
   decorations: none
   startup_mode: Windowed
 scrolling:
@@ -23,7 +23,7 @@ font:
   bold_italic:
     family: "Roboto Mono for Powerline"
     style: Bold Italic
-  size: 15
+  size: 14
   offset:
     x: 0
     y: 4

@@ -14,7 +14,7 @@ set mouse=nicr                                  " enable mouse
 set nobackup                                    " coc recommendation
 set noerrorbells                                " mute error sound
 set noswapfile                                  " new buffers created without swapfiles
-set nowrap                                      " disable default line wrapping
+set nowrap                                      " disable line wrapping
 set nowritebackup                               " coc recommendation
 set number                                      " enable line numbers
 set relativenumber                              " enable relative line numbers
@@ -42,6 +42,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'alvan/vim-closetag'                       " auto-close html, jsx, tsx tags
+Plug 'andreasvc/vim-256noir'										" monochrome theme
 Plug 'arcticicestudio/nord-vim'                 " theme
 Plug 'ctrlpvim/ctrlp.vim'                       " fuzzy finder
 Plug 'evanleck/vim-svelte', {'branch': 'main'}  " syntax highlighting & indentation, Svelte
@@ -145,19 +146,17 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+set bg=dark
+colo gruvbox
+
 " if strftime("%H") < 12
 "   set bg=light
 " else
 "   set bg=dark
 " endif
 
-set bg=dark
-colo gruvbox
-
 " set cmdheight=2                                 " increase message space
 " set cursorcolumn                                " current column highlight
 " set nohlsearch                                  " remove search highlighting
 " set noshowmode                                  " remove mode UI
-" set nowrap                                      " disable line wrapping
-" set paste                          						  " don't auto-indent on on paste
 " set scrolloff=999                               " cursor always centered
