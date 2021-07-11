@@ -1,11 +1,13 @@
 - defaults:
     link:
       relink: true
+      create: true
 
 - clean: ['~']
 
 - link:
-    ~/.config/alacritty/alacritty.yml: alacritty.yml
+    ~/.config/alacritty: alacritty
+    ~/.config/bat: bat
     ~/.config/karabiner: karabiner
     ~/.gitconfig:
     ~/.tmux.conf:

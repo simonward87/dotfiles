@@ -1,8 +1,6 @@
 echo "Hello from .zshrc"
 
 # Variables
-export BAT_THEME="gruvbox-dark"
-
 ## Switch off OSX gatekeeper
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 
