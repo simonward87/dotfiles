@@ -44,6 +44,7 @@ call plug#begin('~/.vim/plugged')
 " Plugins
 Plug 'alvan/vim-closetag'                       " auto-close html, jsx, tsx tags
 Plug 'ctrlpvim/ctrlp.vim'                       " fuzzy finder
+Plug 'djoshea/vim-autoread'                     " auto reload files when changed externally
 Plug 'evanleck/vim-svelte', {'branch': 'main'}  " syntax highlighting & indentation, Svelte
 Plug 'jremmen/vim-ripgrep'                      " fast search
 Plug 'leafgarland/typescript-vim'               " ts syntax files
@@ -57,8 +58,9 @@ Plug 'tpope/vim-fugitive'                       " git wrapper
 Plug 'tpope/vim-surround'                       " streamline surroundings workflow
 
 " Themes
-Plug 'andreasvc/vim-256noir'
 Plug 'arcticicestudio/nord-vim'
+Plug 'axvr/photon.vim'
+Plug 'davidosomething/vim-colors-meh'
 Plug 'jacoborus/tender.vim'
 Plug 'morhetz/gruvbox'
 Plug 'rakr/vim-one'
@@ -96,6 +98,7 @@ let g:coc_global_extensions = [
       \ ]
 let g:ctrlp_use_caching=0
 let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git\|__sapper__\|dist'
+let g:gruvbox_bold=0
 let g:netrw_banner=0
 let g:netrw_browse_split=2
 let g:netrw_winsize=25
@@ -150,7 +153,7 @@ function! s:check_back_space() abort
 endfunction
 
 set bg=dark
-colo gruvbox
+colo photon
 
 " if strftime("%H") < 12
 "   set bg=light

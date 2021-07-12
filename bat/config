@@ -1,4 +1,5 @@
---theme="gruvbox-dark"
+#--theme="gruvbox-dark"
+--theme="Nord"
 #--italic-text=always
 
 # Syntax mappings: map a certain filename pattern to a language.

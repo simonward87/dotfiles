@@ -12,8 +12,8 @@ export NVM_DIR="$HOME/.nvm"
 # ZSH Options
  
 # Aliases
-alias exa='exa -laFh --git'
-alias ls='exa -laFh --git'
+alias exa='exa -laFh --git -s type'
+alias ls='exa -laFh --git -s type'
 alias k=kubectl
 alias man=batman
 
