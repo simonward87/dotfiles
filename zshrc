@@ -17,6 +17,7 @@ alias ls='exa -laFh --git -s type'
 alias k=kubectl
 alias man=batman
 alias bbd='brew bundle dump --force --describe'
+alias trail='<<<${(F)path}'
 
 # Prompt Customization
 PROMPT='
