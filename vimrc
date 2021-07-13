@@ -161,6 +161,9 @@ endfunction
 set bg=dark
 colo photon
 
+" set bg=light
+" colo antiphoton
+
 " if strftime("%H") < 12
 "   set bg=light
 " else
