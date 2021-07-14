@@ -3,6 +3,7 @@ echo "Hello from .zshrc"
 # Variables
 ## Switch off OSX gatekeeper
 export HOMEBREW_CASK_OPTS="--no-quarantine"
+export NULLCMD=bat
 
 ## Loads nvm and nvm bash_completion
 export NVM_DIR="$HOME/.nvm"
