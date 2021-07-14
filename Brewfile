@@ -24,6 +24,8 @@ brew "tmux"
 brew "tree"
 # Vi 'workalike' with many additional features
 brew "vim"
+# UNIX shell (command interpreter)
+brew "zsh"
 # Bash scripts that integrate bat with various command-line tools
 brew "eth-p/software/bat-extras"
 # GPU-accelerated terminal emulator
