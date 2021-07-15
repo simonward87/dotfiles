@@ -19,9 +19,10 @@ set nowritebackup                               " coc recommendation
 set number                                      " enable line numbers
 set relativenumber                              " enable relative line numbers
 set ruler                                       " show cursor location
-set scrolloff=5                                 " scroll limit in lines from screen boundaries
+set scrolloff=5                                 " scroll limit from screenY boundaries
 set shiftwidth=2                                " updates shift-width value
 set shortmess+=c                                " avoid file message prompts
+set sidescrolloff=5                             " scroll limit from screenX boundaries
 set smartcase                                   " case-sensitive search on capital letter
 set smarttab                                    " indents according to shiftwidth 
 set softtabstop=2                               " 2 spaces for tabs during editing
@@ -44,8 +45,8 @@ call plug#begin('~/.vim/plugged')
 " Plugins
 Plug 'alvan/vim-closetag'                       " auto-close html, jsx, tsx tags
 Plug 'ctrlpvim/ctrlp.vim'                       " fuzzy finder
+Plug 'djoshea/vim-autoread'                     " auto reload files when changed externally
 Plug 'evanleck/vim-svelte', {'branch': 'main'}  " syntax highlighting & indentation, Svelte
-Plug 'jremmen/vim-ripgrep'                      " fast search
 Plug 'leafgarland/typescript-vim'               " ts syntax files
 Plug 'lilydjwg/colorizer'                       " hex code colourizer
 Plug 'mattn/emmet-vim'                          " expanding abbreviations
@@ -55,10 +56,12 @@ Plug 'pangloss/vim-javascript'                  " syntax highlighting & indentat
 Plug 'tpope/vim-commentary'                     " comment stuff out
 Plug 'tpope/vim-fugitive'                       " git wrapper
 Plug 'tpope/vim-surround'                       " streamline surroundings workflow
+" Plug 'jremmen/vim-ripgrep'                      " fast search
 
 " Themes
-Plug 'andreasvc/vim-256noir'
 Plug 'arcticicestudio/nord-vim'
+Plug 'axvr/photon.vim'
+Plug 'davidosomething/vim-colors-meh'
 Plug 'jacoborus/tender.vim'
 Plug 'morhetz/gruvbox'
 Plug 'rakr/vim-one'
@@ -96,6 +99,7 @@ let g:coc_global_extensions = [
       \ ]
 let g:ctrlp_use_caching=0
 let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git\|__sapper__\|dist'
+" let g:gruvbox_bold=0
 let g:netrw_banner=0
 let g:netrw_browse_split=2
 let g:netrw_winsize=25
@@ -138,6 +142,11 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
+" Allow color schemes to do bright colors without forcing bold.
+if &t_Co == 8 && $TERM !~# '^Eterm'
+  set t_Co=16
+endif
+
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -150,7 +159,10 @@ function! s:check_back_space() abort
 endfunction
 
 set bg=dark
-colo gruvbox
+colo photon
+
+" set bg=light
+" colo antiphoton
 
 " if strftime("%H") < 12
 "   set bg=light

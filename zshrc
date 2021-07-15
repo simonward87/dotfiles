@@ -3,6 +3,7 @@ echo "Hello from .zshrc"
 # Variables
 ## Switch off OSX gatekeeper
 export HOMEBREW_CASK_OPTS="--no-quarantine"
+export NULLCMD=bat
 
 ## Loads nvm and nvm bash_completion
 export NVM_DIR="$HOME/.nvm"
@@ -12,10 +13,12 @@ export NVM_DIR="$HOME/.nvm"
 # ZSH Options
  
 # Aliases
-alias exa='exa -laFh --git'
-alias ls='exa -laFh --git'
+alias bbd='brew bundle dump --force --describe'
+alias exa='exa -laFh --git -s type'
 alias k=kubectl
+alias ls='exa -laFh --git -s type'
 alias man=batman
+alias trail='<<<${(F)path}'
 
 # Prompt Customization
 PROMPT='

@@ -3,8 +3,8 @@ window:
     columns: 0
     lines: 0
   padding:
-    x: 8
-    y: 8
+    x: 7
+    y: 7
   decorations: none
   startup_mode: Windowed
 scrolling:
@@ -23,7 +23,7 @@ font:
   bold_italic:
     family: "Roboto Mono for Powerline"
     style: Bold Italic
-  size: 14
+  size: 15
   offset:
     x: 0
     y: 4
@@ -33,13 +33,65 @@ font:
   use_thin_strokes: false
   draw_bold_text_with_bright_colors: true
 
-# Colors (Tender)
+# Colors (Photon)
+colors:
+  primary:
+    background: '#262626'
+    foreground: '#c6c6c6'
+  cursor:
+    text: '#262626'
+    cursor: '#c6c6c6'
+  normal:
+    black: '#262626'
+    red: '#F88D8B'
+    green: '#5BC186'
+    yellow: '#D6AA5C'
+    blue: '#5EB6F4'
+    magenta: '#D098FA'
+    cyan: '#B6B65A'
+    white: '#626262'
+  bright: 
+    black: '#767676'
+    red: '#FCC6C5'
+    green: '#ADE0C2'
+    yellow: '#EBD4AE'
+    blue: '#AEDAF9'
+    magenta: '#E8CCFC'
+    cyan: '#DADAAD'
+
+# Colors (AntiPhoton)
+# colors:
+#   primary:
+#     background: '#ffffff'
+#     foreground: '#121212'
+#   cursor:
+#     text: '#121212'
+#     cursor: '#ffffff'
+#   normal:
+#     black: '#121212'
+#     red:  '#9B260E'
+#     green: '#0B603C'
+#     yellow: '#6F4F0B'
+#     blue:  '#254FA9'
+#     magenta: '#831DA8'
+#     cyan:  '#405D0B'
+#     white: '#949494'
+#   bright: 
+#     black: '#6c6c6c'
+#     red: '#E0300C'
+#     green: '#078751'
+#     yellow: '#9D6D08'
+#     blue: '#2F6EF4'
+#     magenta: '#BC22F3'
+#     cyan: '#578207'
+#     white: '#ffffff'
+
+## Colors (Tender)
 # colors:
 #   # Default colors
 #   primary:
 #     background: "0x282828"
 #     foreground: "0xeeeeee"
-#
 #   # Normal colors
 #   normal:
 #     black: "0x282828"
@@ -50,7 +102,6 @@ font:
 #     magenta: "0xd3b987"
 #     cyan: "0x73cef4"
 #     white: "0xeeeeee"
-#
 #   # Bright colors
 #   bright:
 #     black: "0x4c4c4c"
@@ -63,64 +114,64 @@ font:
 #     white: "0xfeffff"
 
 ## Colors (Gruvbox dark)
-colors:
-  primary:
-    # hard contrast background - '#1d2021'
-    background: &gruvbox_dark_bg "#282828"
-    # soft contrast background - '#32302f'
-    foreground: "#ebdbb2"
-    bright_foreground: "#fbf1c7"
-    dim_foreground: "#a89984"
-  cursor:
-    text: CellBackground
-    cursor: CellForeground
-  vi_mode_cursor:
-    text: CellBackground
-    cursor: CellForeground
-    search:
-      matches:
-        foreground: "#000000"
-        background: "#ffffff"
-      focused_match:
-        foreground: CellBackground
-        background: CellForeground
-      bar:
-        background: ""
-        foreground: ""
-    line_indicator:
-      foreground: None
-      background: None
-  selection:
-    text: CellBackground
-    background: CellForeground
-  bright:
-    black: "#928374"
-    red: "#fb4934"
-    green: "#b8bb26"
-    yellow: "#fabd2f"
-    blue: "#83a598"
-    magenta: "#d3869b"
-    cyan: "#8ec07c"
-    white: "#ebdbb2"
-  normal:
-    black: *gruvbox_dark_bg
-    red: "#cc241d"
-    green: "#98971a"
-    yellow: "#d79921"
-    blue: "#458588"
-    magenta: "#b16286"
-    cyan: "#689d6a"
-    white: "#a89984"
-  dim:
-    black: "#32302f"
-    red: "#9d0006"
-    green: "#79740e"
-    yellow: "#b57614"
-    blue: "#076678"
-    magenta: "#8f3f71"
-    cyan: "#427b58"
-    white: "#928374"
-  #   indexed_colors: []
+# colors:
+#   primary:
+#     # hard contrast background - '#1d2021'
+#     background: &gruvbox_dark_bg "#282828"
+#     # soft contrast background - '#32302f'
+#     foreground: "#ebdbb2"
+#     bright_foreground: "#fbf1c7"
+#     dim_foreground: "#a89984"
+#   cursor:
+#     text: CellBackground
+#     cursor: CellForeground
+#   vi_mode_cursor:
+#     text: CellBackground
+#     cursor: CellForeground
+#     search:
+#       matches:
+#         foreground: "#000000"
+#         background: "#ffffff"
+#       focused_match:
+#         foreground: CellBackground
+#         background: CellForeground
+#       bar:
+#         background: ""
+#         foreground: ""
+#     line_indicator:
+#       foreground: None
+#       background: None
+#   selection:
+#     text: CellBackground
+#     background: CellForeground
+#   bright:
+#     black: "#928374"
+#     red: "#fb4934"
+#     green: "#b8bb26"
+#     yellow: "#fabd2f"
+#     blue: "#83a598"
+#     magenta: "#d3869b"
+#     cyan: "#8ec07c"
+#     white: "#ebdbb2"
+#   normal:
+#     black: *gruvbox_dark_bg
+#     red: "#cc241d"
+#     green: "#98971a"
+#     yellow: "#d79921"
+#     blue: "#458588"
+#     magenta: "#b16286"
+#     cyan: "#689d6a"
+#     white: "#a89984"
+#   dim:
+#     black: "#32302f"
+#     red: "#9d0006"
+#     green: "#79740e"
+#     yellow: "#b57614"
+#     blue: "#076678"
+#     magenta: "#8f3f71"
+#     cyan: "#427b58"
+#     white: "#928374"
+#   #   indexed_colors: []
 
   ## gruvbox_light: &gruvbox_light
 # primary:
