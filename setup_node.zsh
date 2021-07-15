@@ -9,4 +9,12 @@ source $(brew --prefix nvm)/nvm.sh
 
 # Install and activate latest stable node and npm
 nvm install node --latest-npm
-nvm use node
+
+# Install Global NPM Packages
+npm i -g firebase-tools
+npm i -g typescript
+npm i -g json-server
+npm i -g http-server
+
+echo "Global NPM Packages Installed:"
+npm list --global --depth=0
