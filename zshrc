@@ -2,6 +2,7 @@ echo "Hello from .zshrc"
 
 # Variables
 ## Switch off OSX gatekeeper
+export DOTFILES="$HOME/.dotfiles"
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 export NULLCMD=bat
 
