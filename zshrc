@@ -1,9 +1,12 @@
 echo "Hello from .zshrc"
 
 # Variables
-## Switch off OSX gatekeeper
 export DOTFILES="$HOME/.dotfiles"
+
+## Switch off OSX gatekeeper
 export HOMEBREW_CASK_OPTS="--no-quarantine"
+
+## change default command from cat to bat
 export NULLCMD=bat
 
 ## Loads nvm and nvm bash_completion
