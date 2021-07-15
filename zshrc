@@ -22,6 +22,7 @@ alias exa='exa -laFh --git -s type'
 alias k=kubectl
 alias ls='exa -laFh --git -s type'
 alias man=batman
+alias rm=trash
 alias trail='<<<${(F)path}'
 
 # Prompt Customization
