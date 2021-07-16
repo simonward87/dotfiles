@@ -1,6 +1,7 @@
 tap "eth-p/software"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/core"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
@@ -18,6 +19,8 @@ brew "mas"
 brew "ncdu"
 # Manage multiple Node.js versions
 brew "nvm"
+# Version control system designed to be a better CVS
+brew "subversion"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
@@ -36,6 +39,16 @@ cask "docker"
 cask "dropbox"
 # Web browser
 cask "firefox"
+cask "font-courier-prime"
+cask "font-courier-prime-code"
+cask "font-courier-prime-medium-and-semi-bold"
+cask "font-courier-prime-sans"
+cask "font-inconsolata"
+cask "font-lato"
+cask "font-open-sans"
+cask "font-roboto"
+cask "font-roboto-mono"
+cask "font-roboto-slab"
 # Web browser
 cask "google-chrome"
 # Keyboard customizer

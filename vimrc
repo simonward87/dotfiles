@@ -56,7 +56,6 @@ Plug 'pangloss/vim-javascript'                  " syntax highlighting & indentat
 Plug 'tpope/vim-commentary'                     " comment stuff out
 Plug 'tpope/vim-fugitive'                       " git wrapper
 Plug 'tpope/vim-surround'                       " streamline surroundings workflow
-" Plug 'jremmen/vim-ripgrep'                      " fast search
 
 " Themes
 Plug 'arcticicestudio/nord-vim'
@@ -158,11 +157,11 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-set bg=dark
-colo photon
+" set bg=dark
+" colo photon
 
-" set bg=light
-" colo antiphoton
+set bg=light
+colo antiphoton
 
 " if strftime("%H") < 12
 "   set bg=light
