@@ -2,6 +2,7 @@ echo "Hello from .zshrc"
 
 # Variables
 export DOTFILES="$HOME/.dotfiles"
+export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
 
 ## Switch off OSX gatekeeper
 export HOMEBREW_CASK_OPTS="--no-quarantine"

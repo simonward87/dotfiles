@@ -1,4 +1,5 @@
 #--theme="gruvbox-dark"
+#--theme="GitHub"
 --theme="Nord"
 
 # enable mouse scrolling support in `bat` when running inside tmux

@@ -157,10 +157,7 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" set bg=dark
-" colo photon
-
-set bg=light
+set bg=dark
 colo antiphoton
 
 " if strftime("%H") < 12
@@ -168,9 +165,3 @@ colo antiphoton
 " else
 "   set bg=dark
 " endif
-
-" set cmdheight=2                                 " increase message space
-" set cursorcolumn                                " current column highlight
-" set nohlsearch                                  " remove search highlighting
-" set noshowmode                                  " remove mode UI
-" set scrolloff=999                               " cursor always centered
