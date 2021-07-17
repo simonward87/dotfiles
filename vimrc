@@ -18,7 +18,7 @@ set nowrap                                      " disable line wrapping
 set nowritebackup                               " coc recommendation
 set number                                      " enable line numbers
 set relativenumber                              " enable relative line numbers
-set ruler                                       " show cursor location
+set noruler                                       " show cursor location
 set scrolloff=5                                 " scroll limit from screenY boundaries
 set shiftwidth=2                                " updates shift-width value
 set shortmess+=c                                " avoid file message prompts
