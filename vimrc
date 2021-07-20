@@ -158,7 +158,7 @@ function! s:check_back_space() abort
 endfunction
 
 set bg=dark
-colo antiphoton
+colo photon
 
 " if strftime("%H") < 12
 "   set bg=light

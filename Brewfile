@@ -5,6 +5,8 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Secure runtime for JavaScript and TypeScript
+brew "deno"
 # Modern replacement for 'ls'
 brew "exa"
 # Distributed revision control system
