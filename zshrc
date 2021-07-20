@@ -21,6 +21,7 @@ export NVM_DIR="$HOME/.nvm"
 alias bbd='brew bundle dump --force --describe'
 alias exa='exa -laFh --git -s type'
 alias k=kubectl
+# alias ls='ls -lAFGh'
 alias ls='exa -laFh --git -s type'
 alias man=batman
 alias rm=trash
@@ -32,7 +33,9 @@ PROMPT='
 
 RPROMPT='%*'
 
-# Add Locations to $PATH Variable
+# Add Locations to $path Array
+## Remove duplicates
+typeset -U path
 
 # Functions
 function mkcd() {
