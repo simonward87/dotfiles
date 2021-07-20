@@ -3,8 +3,8 @@ window:
     columns: 0
     lines: 0
   padding:
-    x: 7
-    y: 7
+    x: 8
+    y: 8
   decorations: none
   startup_mode: Windowed
 scrolling:
@@ -12,21 +12,21 @@ scrolling:
   multiplier: 3
 font:
   normal:
-    family: "Roboto Mono for Powerline" 
+    family: "Courier Prime Code" 
     style: Regular
   bold:
-    family: "Roboto Mono for Powerline"
+    family: "Courier Prime Code" 
     style: Bold
   italic:
-    family: "Roboto Mono for Powerline"
+    family: "Courier Prime Code" 
     style: Italic
   bold_italic:
-    family: "Roboto Mono for Powerline"
+    family: "Courier Prime Code" 
     style: Bold Italic
-  size: 15
+  size: 16
   offset:
     x: 0
-    y: 4
+    y: 5
   glyph_offset:
     x: 0
     y: 0
@@ -34,57 +34,57 @@ font:
   draw_bold_text_with_bright_colors: true
 
 # Colors (Photon)
-colors:
-  primary:
-    background: '#262626'
-    foreground: '#c6c6c6'
-  cursor:
-    text: '#262626'
-    cursor: '#c6c6c6'
-  normal:
-    black: '#262626'
-    red: '#F88D8B'
-    green: '#5BC186'
-    yellow: '#D6AA5C'
-    blue: '#5EB6F4'
-    magenta: '#D098FA'
-    cyan: '#B6B65A'
-    white: '#626262'
-  bright: 
-    black: '#767676'
-    red: '#FCC6C5'
-    green: '#ADE0C2'
-    yellow: '#EBD4AE'
-    blue: '#AEDAF9'
-    magenta: '#E8CCFC'
-    cyan: '#DADAAD'
-
-# Colors (AntiPhoton)
 # colors:
 #   primary:
-#     background: '#ffffff'
-#     foreground: '#121212'
+#     background: '#262626'
+#     foreground: '#c6c6c6'
 #   cursor:
-#     text: '#121212'
-#     cursor: '#ffffff'
+#     text: '#262626'
+#     cursor: '#c6c6c6'
 #   normal:
-#     black: '#121212'
-#     red:  '#9B260E'
-#     green: '#0B603C'
-#     yellow: '#6F4F0B'
-#     blue:  '#254FA9'
-#     magenta: '#831DA8'
-#     cyan:  '#405D0B'
-#     white: '#949494'
+#     black: '#262626'
+#     red: '#F88D8B'
+#     green: '#5BC186'
+#     yellow: '#D6AA5C'
+#     blue: '#5EB6F4'
+#     magenta: '#D098FA'
+#     cyan: '#B6B65A'
+#     white: '#626262'
 #   bright: 
-#     black: '#6c6c6c'
-#     red: '#E0300C'
-#     green: '#078751'
-#     yellow: '#9D6D08'
-#     blue: '#2F6EF4'
-#     magenta: '#BC22F3'
-#     cyan: '#578207'
-#     white: '#ffffff'
+#     black: '#767676'
+#     red: '#FCC6C5'
+#     green: '#ADE0C2'
+#     yellow: '#EBD4AE'
+#     blue: '#AEDAF9'
+#     magenta: '#E8CCFC'
+#     cyan: '#DADAAD'
+
+# Colors (AntiPhoton)
+colors:
+  primary:
+    background: '#FFFFFF'
+    foreground: '#121212'
+  cursor:
+    text: '#121212'
+    cursor: '#FFFFFF'
+  normal:
+    black: '#121212'
+    red:  '#E72222'
+    green: '#0F8841'
+    yellow: '#7A790E'
+    blue:  '#0A7BC2'
+    magenta: '#9F4FDA'
+    cyan:  '#A66801'
+    white: '#949494'
+  bright: 
+    black: '#6C6C6C'
+    red: '#FF5E3D'
+    green: '#00AB47'
+    yellow: '#9a9800'
+    blue: '#0099FA'
+    magenta: '#C06CFF'
+    cyan: '#D18200'
+    white: '#FFFFFF'
 
 ## Colors (Tender)
 # colors:

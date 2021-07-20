@@ -18,7 +18,7 @@ set nowrap                                      " disable line wrapping
 set nowritebackup                               " coc recommendation
 set number                                      " enable line numbers
 set relativenumber                              " enable relative line numbers
-set ruler                                       " show cursor location
+set noruler                                       " show cursor location
 set scrolloff=5                                 " scroll limit from screenY boundaries
 set shiftwidth=2                                " updates shift-width value
 set shortmess+=c                                " avoid file message prompts
@@ -56,7 +56,6 @@ Plug 'pangloss/vim-javascript'                  " syntax highlighting & indentat
 Plug 'tpope/vim-commentary'                     " comment stuff out
 Plug 'tpope/vim-fugitive'                       " git wrapper
 Plug 'tpope/vim-surround'                       " streamline surroundings workflow
-" Plug 'jremmen/vim-ripgrep'                      " fast search
 
 " Themes
 Plug 'arcticicestudio/nord-vim'
@@ -159,19 +158,10 @@ function! s:check_back_space() abort
 endfunction
 
 set bg=dark
-colo photon
-
-" set bg=light
-" colo antiphoton
+colo antiphoton
 
 " if strftime("%H") < 12
 "   set bg=light
 " else
 "   set bg=dark
 " endif
-
-" set cmdheight=2                                 " increase message space
-" set cursorcolumn                                " current column highlight
-" set nohlsearch                                  " remove search highlighting
-" set noshowmode                                  " remove mode UI
-" set scrolloff=999                               " cursor always centered
