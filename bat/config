@@ -1,15 +1,15 @@
-#--theme="gruvbox-dark"
---theme="GitHub"
-#--theme="Nord"
+# --theme="gruvbox-dark"
+# --theme="GitHub"
+--theme="Nord"
 
 # enable mouse scrolling support in `bat` when running inside tmux
-#--pager="--RAW-CONTROL-CHARS --quit-if-one-screen --mouse"
+# --pager="--RAW-CONTROL-CHARS --quit-if-one-screen --mouse"
 
 # Syntax mappings: map a certain filename pattern to a language.
 #   Example 1: use the C++ syntax for .ino files
 #   Example 2: Use ".gitignore"-style highlighting for ".ignore" files
-#--map-syntax "*.ino:C++"
-#--map-syntax ".ignore:Git Ignore"
+# --map-syntax "*.ino:C++"
+# --map-syntax ".ignore:Git Ignore"
 --map-syntax "zshrc:Bourne Again Shell (bash)"
 --map-syntax "zshenv:Bourne Again Shell (bash)"
 --map-syntax "Brewfile:Bourne Again Shell (bash)"
