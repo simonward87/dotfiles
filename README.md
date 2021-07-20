@@ -1,6 +1,6 @@
 # Dotfiles
 
-I'm learning about dotfiles at [dotfiles.eieio.xyz](http://dotfiles.eieio.xyz)
+I'm learning a ton about [dotfiles, command line use, Homebrew, zsh, git, macOS and more with the course ***Dotfiles from Start to Finish-ish***](http://dotfiles.eieio.xyz/) by [@EIEIOxyz](https://twitter.com/EIEIOxyz/), and you can too!
 
 ## TODO
 
@@ -19,3 +19,4 @@ I'm learning about dotfiles at [dotfiles.eieio.xyz](http://dotfiles.eieio.xyz)
 - Git (config and SSH)
 - Enable Kubernetes in Docker preferences
 - _Changed Shell to ZSH_ **now default**
+- Share this repo with a million people
