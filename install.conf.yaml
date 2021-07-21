@@ -6,9 +6,9 @@
 - clean: ['~']
 
 - link:
-    ~/.config/alacritty: alacritty
-    ~/.config/bat: bat
-    ~/.config/karabiner: karabiner
+    ~/.config/alacritty: config/alacritty
+    ~/.config/bat: config/bat
+    ~/.config/karabiner: config/karabiner
     ~/.gitconfig:
     ~/.tmux.conf:
     ~/.vim/coc-settings.json: coc-settings.json

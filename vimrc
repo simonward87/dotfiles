@@ -18,7 +18,7 @@ set nowrap                                      " disable line wrapping
 set nowritebackup                               " coc recommendation
 set number                                      " enable line numbers
 set relativenumber                              " enable relative line numbers
-set noruler                                       " show cursor location
+set ruler                                       " show cursor location
 set scrolloff=5                                 " scroll limit from screenY boundaries
 set shiftwidth=2                                " updates shift-width value
 set shortmess+=c                                " avoid file message prompts
@@ -80,21 +80,22 @@ let g:closetag_regions = {
     \ }
 let g:closetag_shortcut = '>'
 let g:coc_global_extensions = [
-      \ 'coc-snippets',
-      \ 'coc-pairs',
-      \ 'coc-tsserver',
-      \ 'coc-html',
-      \ 'coc-htmlhint',
       \ 'coc-css',
       \ 'coc-deno',
-      \ 'coc-go',
-      \ 'coc-prettier',
-      \ 'coc-json',
+      \ 'coc-emmet',
       \ 'coc-eslint',
-      \ 'coc-toml',
-      \ 'coc-svelte',
-      \ 'coc-styled-components',
+      \ 'coc-go',
+      \ 'coc-html',
+      \ 'coc-htmlhint',
+      \ 'coc-json',
+      \ 'coc-pairs',
+      \ 'coc-prettier',
       \ 'coc-sh',
+      \ 'coc-snippets',
+      \ 'coc-styled-components',
+      \ 'coc-svelte',
+      \ 'coc-tsserver',
+      \ 'coc-yaml',
       \ ]
 let g:ctrlp_use_caching=0
 let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git\|__sapper__\|dist'
@@ -146,19 +147,32 @@ if &t_Co == 8 && $TERM !~# '^Eterm'
   set t_Co=16
 endif
 
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<Tab>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" 
+" function! s:check_back_space() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
+
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-set bg=dark
-colo photon
+let g:coc_snippet_next = '<tab>'
+
+set bg=light
+colo antiphoton
 
 " if strftime("%H") < 12
 "   set bg=light
