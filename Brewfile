@@ -19,6 +19,8 @@ brew "less"
 brew "mas"
 # NCurses Disk Usage
 brew "ncdu"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # Manage multiple Node.js versions
 brew "nvm"
 # Version control system designed to be a better CVS
@@ -39,6 +41,8 @@ cask "alacritty"
 cask "docker"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
+# Collaborative team software
+cask "figma"
 # Web browser
 cask "firefox"
 cask "font-courier-prime"

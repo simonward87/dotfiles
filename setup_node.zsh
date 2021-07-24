@@ -13,6 +13,7 @@ nvm install node --latest-npm
 # Install Global NPM Packages
 npm i -g firebase-tools
 npm i -g typescript
+npm i -g neovim
 npm i -g json-server
 npm i -g http-server
 npm i -g trash-cli

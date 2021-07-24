@@ -1,4 +1,4 @@
-echo "Hello from .zshrc"
+#echo "Hello from .zshrc"
 
 # Variables
 export DOTFILES="$HOME/.dotfiles"

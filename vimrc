@@ -13,6 +13,7 @@ set iskeyword+=-                                " treat dash-separation as word 
 set mouse=nicr                                  " enable mouse 
 set nobackup                                    " coc recommendation
 set noerrorbells                                " mute error sound
+set nohlsearch
 set noswapfile                                  " new buffers created without swapfiles
 set nowrap                                      " disable line wrapping
 set nowritebackup                               " coc recommendation
@@ -64,6 +65,9 @@ Plug 'davidosomething/vim-colors-meh'
 Plug 'jacoborus/tender.vim'
 Plug 'morhetz/gruvbox'
 Plug 'rakr/vim-one'
+
+" Nvim
+" Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
 
@@ -128,7 +132,7 @@ endif
 if has("nvim-0.5.0") || has("patch-8.1.1564")
   set signcolumn=number
 else
-  set signcolumn=yes
+  set signcolumn=auto
 endif
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
