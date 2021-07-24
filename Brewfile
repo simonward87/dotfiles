@@ -19,8 +19,6 @@ brew "less"
 brew "mas"
 # NCurses Disk Usage
 brew "ncdu"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
 # Manage multiple Node.js versions
 brew "nvm"
 # Version control system designed to be a better CVS

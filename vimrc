@@ -57,17 +57,12 @@ Plug 'pangloss/vim-javascript'                  " syntax highlighting & indentat
 Plug 'tpope/vim-commentary'                     " comment stuff out
 Plug 'tpope/vim-fugitive'                       " git wrapper
 Plug 'tpope/vim-surround'                       " streamline surroundings workflow
-
-" Themes
-Plug 'arcticicestudio/nord-vim'
-Plug 'axvr/photon.vim'
-Plug 'davidosomething/vim-colors-meh'
-Plug 'jacoborus/tender.vim'
-Plug 'morhetz/gruvbox'
-Plug 'rakr/vim-one'
-
-" Nvim
-" Plug 'neovim/nvim-lspconfig'
+Plug 'arcticicestudio/nord-vim'                 " theme
+Plug 'axvr/photon.vim'                          " theme
+Plug 'davidosomething/vim-colors-meh'           " theme
+Plug 'jacoborus/tender.vim'                     " theme
+Plug 'morhetz/gruvbox'                          " theme
+Plug 'rakr/vim-one'                             " theme
 
 call plug#end()
 
