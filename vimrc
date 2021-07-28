@@ -13,14 +13,13 @@ set iskeyword+=-                                " treat dash-separation as word 
 set mouse=nicr                                  " enable mouse 
 set nobackup                                    " coc recommendation
 set noerrorbells                                " mute error sound
-set nohlsearch
 set noswapfile                                  " new buffers created without swapfiles
-set nowrap                                      " disable line wrapping
+" set nowrap                                      " disable line wrapping
 set nowritebackup                               " coc recommendation
 set number                                      " enable line numbers
 set relativenumber                              " enable relative line numbers
 set ruler                                       " show cursor location
-set scrolloff=5                                 " scroll limit from screenY boundaries
+set scrolloff=7                                 " scroll limit from screenY boundaries
 set shiftwidth=2                                " updates shift-width value
 set shortmess+=c                                " avoid file message prompts
 set sidescrolloff=5                             " scroll limit from screenX boundaries
@@ -63,6 +62,8 @@ Plug 'davidosomething/vim-colors-meh'           " theme
 Plug 'jacoborus/tender.vim'                     " theme
 Plug 'morhetz/gruvbox'                          " theme
 Plug 'rakr/vim-one'                             " theme
+Plug 'zefei/simple-dark'                        " theme
+Plug 'smallwat3r/vim-efficient'                 " theme
 
 call plug#end()
 
@@ -146,17 +147,6 @@ if &t_Co == 8 && $TERM !~# '^Eterm'
   set t_Co=16
 endif
 
-" inoremap <silent><expr> <TAB>
-"       \ pumvisible() ? "\<C-n>" :
-"       \ <SID>check_back_space() ? "\<Tab>" :
-"       \ coc#refresh()
-" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-" 
-" function! s:check_back_space() abort
-"   let col = col('.') - 1
-"   return !col || getline('.')[col - 1]  =~# '\s'
-" endfunction
-
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
@@ -170,11 +160,10 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
-set bg=light
-colo antiphoton
-
-" if strftime("%H") < 12
-"   set bg=light
-" else
-"   set bg=dark
-" endif
+if strftime("%H") < 18
+  set bg=light
+  colo antiphoton
+else
+  set bg=dark
+  colo photon
+endif

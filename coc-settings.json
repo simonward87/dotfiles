@@ -1,5 +1,5 @@
 {
-  "tsserver.npm": "/Users/simonward/.nvm/versions/node/v16.5.0/bin/node",
+  "coc.preferences.extensionUpdateCheck": "daily",
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "markdown",
@@ -15,5 +15,10 @@
     "javascriptreact": ["javascript"],
     "typescript": ["javascript"],
     "typescriptreact": ["javascript"]
+  },
+  "suggest.removeDuplicateItems": true,
+  "tsserver.npm": "$(which npm)",
+  "yaml.schemas": {
+    "kubernetes": ["/*.ya?ml"]
   }
 }

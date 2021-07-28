@@ -1,3 +1,5 @@
 [user]
 	name = Simon Ward
 	email = 39803787+simonward87@users.noreply.github.com
+[init]
+	defaultBranch = main
