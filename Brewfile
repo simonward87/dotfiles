@@ -19,8 +19,6 @@ brew "less"
 brew "mas"
 # NCurses Disk Usage
 brew "ncdu"
-# Manage multiple Node.js versions
-brew "nvm"
 # Version control system designed to be a better CVS
 brew "subversion"
 # Terminal multiplexer
@@ -31,8 +29,6 @@ brew "tree"
 brew "vim"
 # UNIX shell (command interpreter)
 brew "zsh"
-# Bash scripts that integrate bat with various command-line tools
-brew "eth-p/software/bat-extras"
 # GPU-accelerated terminal emulator
 cask "alacritty"
 # App to build and share containerized applications and microservices

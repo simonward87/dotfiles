@@ -23,15 +23,15 @@ font:
   bold_italic:
     family: "Courier Prime Code"
     style: Bold Italic
-  size: 16
+  size: 15
   offset:
     x: 0
-    y: 4
+    y: 5
   glyph_offset:
     x: 0
     y: 0
   use_thin_strokes: false
-  draw_bold_text_with_bright_colors: true
+  draw_bold_text_with_bright_colors: false
 
 # Colors (Photon)
 # colors:

@@ -19,3 +19,10 @@ I'm learning about dotfiles at [dotfiles.eieio.xyz](http://dotfiles.eieio.xyz)
 - Git (config and SSH)
 - Enable Kubernetes in Docker preferences
 - _Changed Shell to ZSH_ **now default**
+
+## M1 MacBook Air Install Issues
+
+1. [`/usr/local` is for Intel binaries, `/opt/homebrew` for ARM](https://docs.brew.sh/Installation)
+1. `zsh` installed through Homebrew currently runs inside Rosetta rather than natively
+1. Issues with using the Homebrew install of nvm, updated the install script to use the `curl` install as a temporary fix
+1. The scripts failed the first time around as the settings in `zshrc`, `zprofile` and `zshenv` can't be sourced until the symlinks have been set up for them. These problems were solved by closing the terminal and running the script again

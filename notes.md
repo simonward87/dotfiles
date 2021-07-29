@@ -91,6 +91,15 @@ $ brew search <package>
 
 # Detail a package:
 $ brew info <package>
+
+# export installed packages to Brewfile
+$ brew bundle dump --force --describe # alias 'bbd' in .zshrc
+
+# Remove stale lock files and outdated downloads
+$ brew cleanup --prune=all
+
+# Remove unused dependencies
+$ brew autoremove
 ```
 
 ### Useful Packages Installed During Course
