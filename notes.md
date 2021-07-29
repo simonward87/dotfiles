@@ -98,6 +98,15 @@ $ brew bundle dump --force --describe # alias 'bbd' in .zshrc
 # Remove stale lock files and outdated downloads
 $ brew cleanup --prune=all
 
+# See a packages dependencies
+$ brew deps <package-name>
+
+# See all dependencies
+$ brew deps --installed
+
+# See what depends on a package
+$ brew uses <package-name> --installed
+
 # Remove unused dependencies
 $ brew autoremove
 ```
