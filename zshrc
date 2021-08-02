@@ -26,16 +26,6 @@ alias ls='exa -laFh --git -s type'
 alias rm=trash
 alias trail='<<<${(F)path}'
 
-# M1 mac specific config for homebrew and vim
-# if [[ "$CPUTYPE" == "arm64" ]]; then
-#   export PATH="$NVM_BIN:/opt/homebrew/bin:$PATH"
-#   export EDITOR=/opt/homebrew/bin/vim
-#   alias oldbrew=/usr/local/bin/brew
-# else
-#   export PATH="$NVM_BIN:/usr/local/bin:$PATH"
-#   export EDITOR="/usr/local/bin/vim"
-# fi
-
 # Prompt Customization
 PROMPT='
 %1~ %L %# '

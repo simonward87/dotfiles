@@ -23,16 +23,22 @@ fi
 # above works, but the version number is hardcoded
 # in, so not very future-proof.
 
-# Install and activate latest stable node and npm
-nvm install node --latest-npm
-nvm use node
+if exists node; then
+  echo "node exists, skipping install"
+else
+  echo "node doesn't exist, continuing with install"
+  # Install and activate latest stable node and npm
+  nvm install node --latest-npm
+  nvm use node
+fi
 
 # Install Global NPM Packages
 npm i -g firebase-tools
-npm i -g typescript
-npm i -g json-server
 npm i -g http-server
+npm i -g json-server
+npm i -g surge
 npm i -g trash-cli
+npm i -g typescript
 
 echo "Global NPM Packages Installed:"
 npm list --global --depth=0

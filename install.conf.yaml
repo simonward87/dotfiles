@@ -19,6 +19,7 @@
 
 - create:
     - ~/.vim/undodir
+    - ~/Study
     - ~/Work
 
 - shell:
