@@ -48,8 +48,8 @@ function mkcd() {
 # ZSH Plugins
 zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-completions'
-zplug 'zsh-users/zsh-history-substring-search'
 zplug 'zsh-users/zsh-syntax-highlighting'
+zplug 'zsh-users/zsh-history-substring-search'
 
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
