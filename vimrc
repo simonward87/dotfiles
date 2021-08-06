@@ -14,7 +14,7 @@ set mouse=nicr                                  " enable mouse
 set nobackup                                    " coc recommendation
 set noerrorbells                                " mute error sound
 set noswapfile                                  " new buffers created without swapfiles
-" set nowrap                                      " disable line wrapping
+set nowrap                                      " disable line wrapping
 set nowritebackup                               " coc recommendation
 set number                                      " enable line numbers
 set relativenumber                              " enable relative line numbers
@@ -32,6 +32,8 @@ set undodir=~/.vim/undodir                      " directory for undo history fil
 set undofile                                    " save undo history to dedicated file
 set updatetime=300                              " swapfile written after time in ms
 set wildmenu                                    " enhanced command completion
+
+autocmd FileType markdown setlocal wrap
 
 " Auto-initialize Vim Plug if not already set up
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -61,9 +63,6 @@ Plug 'axvr/photon.vim'                          " theme
 Plug 'davidosomething/vim-colors-meh'           " theme
 Plug 'jacoborus/tender.vim'                     " theme
 Plug 'morhetz/gruvbox'                          " theme
-Plug 'rakr/vim-one'                             " theme
-Plug 'zefei/simple-dark'                        " theme
-Plug 'smallwat3r/vim-efficient'                 " theme
 
 call plug#end()
 
@@ -160,10 +159,13 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
-if strftime("%H") < 18
-  set bg=light
-  colo antiphoton
-else
-  set bg=dark
-  colo photon
-endif
+set bg=dark
+colo tender
+
+" if strftime("%H") < 18
+"   set bg=light
+"   colo antiphoton
+" else
+"   set bg=dark
+"   colo photon
+" endif

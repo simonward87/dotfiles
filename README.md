@@ -12,13 +12,16 @@ I'm learning about dotfiles at [dotfiles.eieio.xyz](http://dotfiles.eieio.xyz)
   - Turn off trash confirmation
 - Mission Control preferences
   - Don't rearrange spaces
+- Finder preferences
+  - Show path bar
+  - Sidebar favourites
 - Finder show path bar
 - Trackpad settings
   - Enable tap to click
   - Enable three-finger swipe between workspaces
 - Git (config and SSH)
 - Enable Kubernetes in Docker preferences
-- _Changed Shell to ZSH_ **now default**
+- Changed default Shell to ZSH
 
 ## M1 MacBook Air Install Issues
 

@@ -11,13 +11,14 @@
     "graphql",
     "yaml"
   ],
+  "prettier.proseWrap": "always",
   "snippets.extends": {
     "javascriptreact": ["javascript"],
     "typescript": ["javascript"],
     "typescriptreact": ["javascript"]
   },
   "suggest.removeDuplicateItems": true,
-  "tsserver.npm": "/Users/simonward/.nvm/versions/node/v16.5.0/bin/npm",
+  "tsserver.npm": "/Users/simonward/.nvm/versions/node/v16.6.0/bin/npm",
   "yaml.schemas": {
     "kubernetes": ["/*.ya?ml"]
   }

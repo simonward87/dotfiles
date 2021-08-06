@@ -11,9 +11,13 @@ export HOMEBREW_CASK_OPTS="--no-quarantine --no-binaries"
 export NULLCMD=bat
 
 ## Loads nvm and nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+    [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
+    [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+
 
 ## Loads zplug
 export ZPLUG_HOME=$(brew --prefix)/opt/zplug
@@ -23,10 +27,11 @@ source $ZPLUG_HOME/init.zsh
  
 # Aliases
 alias bbd='brew bundle dump --force --describe'
+alias dtfs='cd $DOTFILES; vim .'
 alias exa='exa -laFh --git -s type'
 alias k=kubectl
-# alias ls='ls -lAFGh'
 alias ls='exa'
+# alias ls='ls -lAFGh'
 alias rm=trash
 alias trail='<<<${(F)path}'
 
@@ -64,6 +69,5 @@ zplug load
 
 # The two lines below setup kubectl completion
 # Run them after enabling Kubernetes
-
-# source <(kubectl completion zsh)
-# complete -F __start_kubectl k
+source <(kubectl completion zsh)
+complete -F __start_kubectl k

@@ -18,6 +18,8 @@ brew "less"
 brew "mas"
 # NCurses Disk Usage
 brew "ncdu"
+# Manage multiple Node.js versions
+brew "nvm"
 # Version control system designed to be a better CVS
 brew "subversion"
 # Terminal multiplexer
@@ -32,6 +34,8 @@ brew "zplug"
 brew "zsh"
 # GPU-accelerated terminal emulator
 cask "alacritty"
+# 3D creation suite
+cask "blender"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Client for the Dropbox cloud storage service
@@ -44,12 +48,18 @@ cask "font-courier-prime"
 cask "font-courier-prime-code"
 cask "font-courier-prime-medium-and-semi-bold"
 cask "font-courier-prime-sans"
+cask "font-dm-mono"
+cask "font-dm-sans"
+cask "font-dm-serif-text"
 cask "font-fira-code"
 cask "font-fira-mono"
 cask "font-fira-sans"
 cask "font-inconsolata"
 cask "font-lato"
 cask "font-open-sans"
+cask "font-pt-mono"
+cask "font-pt-sans"
+cask "font-pt-serif"
 cask "font-roboto"
 cask "font-roboto-mono"
 cask "font-roboto-slab"
@@ -61,4 +71,5 @@ cask "karabiner-elements"
 cask "rectangle"
 # Video chat, voice call and instant messaging application
 cask "skype"
+mas "Logic Pro", id: 634148309
 mas "Todoist", id: 585829637

@@ -18,15 +18,16 @@
     ~/.zprofile:
 
 - create:
+    - ~/.nvm
     - ~/.vim/undodir
     - ~/Study
     - ~/Work
 
 - shell:
-    - command: ./setup_node.zsh
+    - command: ./setup_homebrew.zsh
       stdout: true
       stderr: true
-    - command: ./setup_homebrew.zsh
+    - command: ./setup_node.zsh
       stdout: true
       stderr: true
     - command: ./setup_zsh.zsh
