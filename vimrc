@@ -58,11 +58,15 @@ Plug 'pangloss/vim-javascript'                  " syntax highlighting & indentat
 Plug 'tpope/vim-commentary'                     " comment stuff out
 Plug 'tpope/vim-fugitive'                       " git wrapper
 Plug 'tpope/vim-surround'                       " streamline surroundings workflow
+Plug 'acarapetis/vim-colors-github'
 Plug 'arcticicestudio/nord-vim'                 " theme
 Plug 'axvr/photon.vim'                          " theme
 Plug 'davidosomething/vim-colors-meh'           " theme
+Plug 'everard/vim-aurora'
 Plug 'jacoborus/tender.vim'                     " theme
+Plug 'meain/hima-vim'
 Plug 'morhetz/gruvbox'                          " theme
+Plug 'yasukotelin/notelight'
 
 call plug#end()
 
@@ -97,8 +101,7 @@ let g:coc_global_extensions = [
       \ 'coc-yaml',
       \ ]
 let g:ctrlp_use_caching=0
-let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git\|__sapper__\|dist'
-" let g:gruvbox_bold=0
+let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git\|__sapper__\|dist\|dotbot\|build'
 let g:netrw_banner=0
 let g:netrw_browse_split=2
 let g:netrw_winsize=25
@@ -159,8 +162,8 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
-set bg=dark
-colo tender
+set bg=light
+colo notelight
 
 " if strftime("%H") < 18
 "   set bg=light

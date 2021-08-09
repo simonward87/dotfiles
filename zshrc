@@ -24,11 +24,19 @@ export ZPLUG_HOME=$(brew --prefix)/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 # ZSH Options
+## Case-insensitive globbing
+setopt NO_CASE_GLOB
+## Automatic CD
+setopt AUTO_CD
+## Correction
+setopt CORRECT
+setopt CORRECT_ALL
  
 # Aliases
 alias bbd='brew bundle dump --force --describe'
 alias dtfs='cd $DOTFILES; vim .'
 alias exa='exa -laFh --git -s type'
+alias gs='git status'
 alias k=kubectl
 alias ls='exa'
 # alias ls='ls -lAFGh'
@@ -36,10 +44,12 @@ alias rm=trash
 alias trail='<<<${(F)path}'
 
 # Prompt Customization
+# PROMPT='
+# %1~ %L %# '
+# RPROMPT='%*'
 PROMPT='
-%1~ %L %# '
+%(?..%F{red}[%?]%f )%1~ %# '
 
-RPROMPT='%*'
 
 # Add Locations to $path Array
 ## Remove duplicates
