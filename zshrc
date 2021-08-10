@@ -44,12 +44,12 @@ alias rm=trash
 alias trail='<<<${(F)path}'
 
 # Prompt Customization
-# PROMPT='
-# %1~ %L %# '
-# RPROMPT='%*'
 PROMPT='
 %(?..%F{red}[%?]%f )%1~ %# '
 
+## Alternative that shows host:
+# PROMPT='
+# %(?.%F{green}%m%f.%F{red}[%?] %m%f) %1~ %# '
 
 # Add Locations to $path Array
 ## Remove duplicates

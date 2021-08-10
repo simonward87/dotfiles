@@ -40,6 +40,22 @@ cask "blender"
 cask "docker"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
+# Filter plug-in
+cask "fabfilter-micro"
+# Compressor plug-in
+cask "fabfilter-pro-c"
+# Gate/expander plug-in
+cask "fabfilter-pro-g"
+# Limiter plug-in
+cask "fabfilter-pro-l"
+# Equalizer plug-in
+cask "fabfilter-pro-q"
+# Reverb plug-in
+cask "fabfilter-pro-r"
+# Multiband distorsion/saturation plug-in
+cask "fabfilter-saturn"
+# Tape delay plug-in
+cask "fabfilter-timeless"
 # Collaborative team software
 cask "figma"
 # Web browser

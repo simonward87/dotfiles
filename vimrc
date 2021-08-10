@@ -165,6 +165,9 @@ let g:coc_snippet_next = '<tab>'
 set bg=light
 colo notelight
 
+" set bg=dark
+" colo tender
+
 " if strftime("%H") < 18
 "   set bg=light
 "   colo antiphoton
