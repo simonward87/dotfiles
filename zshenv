@@ -1,4 +1,4 @@
-echo 'Hello from .zshenv'
+#echo 'Hello from .zshenv'
 
 function exists() {
   # `command -v` is similar to `which`

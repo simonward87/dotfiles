@@ -1,7 +1,7 @@
-tap "eth-p/software"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
@@ -9,6 +9,8 @@ brew "bat"
 brew "deno"
 # Modern replacement for 'ls'
 brew "exa"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # Distributed revision control system
 brew "git"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -29,28 +31,55 @@ brew "tmux"
 brew "tree"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Next-generation plugin manager for zsh
+brew "zplug"
 # UNIX shell (command interpreter)
 brew "zsh"
-# Bash scripts that integrate bat with various command-line tools
-brew "eth-p/software/bat-extras"
 # GPU-accelerated terminal emulator
 cask "alacritty"
+# 3D creation suite
+cask "blender"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
+# Filter plug-in
+cask "fabfilter-micro"
+# Compressor plug-in
+cask "fabfilter-pro-c"
+# Gate/expander plug-in
+cask "fabfilter-pro-g"
+# Limiter plug-in
+cask "fabfilter-pro-l"
+# Equalizer plug-in
+cask "fabfilter-pro-q"
+# Reverb plug-in
+cask "fabfilter-pro-r"
+# Multiband distorsion/saturation plug-in
+cask "fabfilter-saturn"
+# Tape delay plug-in
+cask "fabfilter-timeless"
+# Collaborative team software
+cask "figma"
 # Web browser
 cask "firefox"
 cask "font-courier-prime"
 cask "font-courier-prime-code"
 cask "font-courier-prime-medium-and-semi-bold"
 cask "font-courier-prime-sans"
+cask "font-dm-mono"
+cask "font-dm-sans"
+cask "font-dm-serif-text"
 cask "font-fira-code"
 cask "font-fira-mono"
 cask "font-fira-sans"
 cask "font-inconsolata"
 cask "font-lato"
+cask "font-noto-mono"
 cask "font-open-sans"
+cask "font-pt-mono"
+cask "font-pt-sans"
+cask "font-pt-serif"
 cask "font-roboto"
 cask "font-roboto-mono"
 cask "font-roboto-slab"
@@ -62,4 +91,5 @@ cask "karabiner-elements"
 cask "rectangle"
 # Video chat, voice call and instant messaging application
 cask "skype"
+mas "Logic Pro", id: 634148309
 mas "Todoist", id: 585829637

@@ -1,21 +1,47 @@
 #!/usr/bin/env zsh
 
-echo "\n<<< Starting Node Setup >>>\n"
+echo -e "\n<<< Starting Node Packages Setup >>>\n"
 
-# Node versions are managed with `nvm`, which is in the Brewfile.
+# TODO:
+# - setup conditionals for NVM
+# - setup conditionals for node
 
-# Make sure the nvm function is available for the following commands
-source $(brew --prefix nvm)/nvm.sh
+# if exists nvm; then
+#   echo "nvm exists, skipping install"
+# else
+#   echo "nvm doesn't exist, continuing with install"
+#   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
-# Install and activate latest stable node and npm
-nvm install node --latest-npm
+#   # Set up vars, load nvm and nvm bash completion
+#   export NVM_DIR="$HOME/.nvm"
+#   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+#   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+# fi
 
-# Install Global NPM Packages
-npm i -g firebase-tools
-npm i -g typescript
-npm i -g json-server
-npm i -g http-server
-npm i -g trash-cli
+# TODO: Keep an eye out for native M1 support
+# for nvm installed with Homebrew. The solution
+# above works, but the version number is hardcoded
+# in, so not very future-proof.
 
-echo "Global NPM Packages Installed:"
-npm list --global --depth=0
+# if exists node; then
+#   echo "node exists, skipping install"
+# else
+#   echo "node doesn't exist, continuing with install"
+#   # Install and activate latest stable node and npm
+#   nvm install node --latest-npm
+#   nvm use node
+# fi
+if exists node; then
+  # Install Global NPM Packages
+  npm i -g firebase-tools
+  npm i -g http-server
+  npm i -g json-server
+  npm i -g surge
+  npm i -g trash-cli
+  npm i -g typescript
+
+  echo "Global NPM Packages Installed:"
+  npm list --global --depth=0
+else
+  echo "node doesn't exist, install node before trying to install packages!"
+fi

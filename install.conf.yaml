@@ -3,30 +3,33 @@
       relink: true
       create: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
-    ~/.config/alacritty: alacritty
-    ~/.config/bat: bat
-    ~/.config/karabiner: karabiner
+    ~/.config/alacritty: config/alacritty
+    ~/.config/bat: config/bat
+    ~/.config/karabiner: config/karabiner
     ~/.gitconfig:
     ~/.tmux.conf:
     ~/.vim/coc-settings.json: coc-settings.json
     ~/.vimrc:
     ~/.zshrc:
     ~/.zshenv:
+    ~/.zprofile:
 
 - create:
     - ~/.nvm
+    - ~/.vim/undodir
+    - ~/Study
     - ~/Work
 
 - shell:
-  - command: ./setup_homebrew.zsh
-    stdout: true
-    stderr: true
-  - command: ./setup_zsh.zsh
-    stdout: true
-    stderr: true
-  - command: ./setup_node.zsh
-    stdout: true
-    stderr: true
+    - command: ./setup_homebrew.zsh
+      stdout: true
+      stderr: true
+    - command: ./setup_node.zsh
+      stdout: true
+      stderr: true
+    - command: ./setup_zsh.zsh
+      stdout: true
+      stderr: true

@@ -18,8 +18,8 @@ set nowrap                                      " disable line wrapping
 set nowritebackup                               " coc recommendation
 set number                                      " enable line numbers
 set relativenumber                              " enable relative line numbers
-set noruler                                       " show cursor location
-set scrolloff=5                                 " scroll limit from screenY boundaries
+set ruler                                       " show cursor location
+set scrolloff=7                                 " scroll limit from screenY boundaries
 set shiftwidth=2                                " updates shift-width value
 set shortmess+=c                                " avoid file message prompts
 set sidescrolloff=5                             " scroll limit from screenX boundaries
@@ -32,6 +32,8 @@ set undodir=~/.vim/undodir                      " directory for undo history fil
 set undofile                                    " save undo history to dedicated file
 set updatetime=300                              " swapfile written after time in ms
 set wildmenu                                    " enhanced command completion
+
+autocmd FileType markdown setlocal wrap
 
 " Auto-initialize Vim Plug if not already set up
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -56,14 +58,15 @@ Plug 'pangloss/vim-javascript'                  " syntax highlighting & indentat
 Plug 'tpope/vim-commentary'                     " comment stuff out
 Plug 'tpope/vim-fugitive'                       " git wrapper
 Plug 'tpope/vim-surround'                       " streamline surroundings workflow
-
-" Themes
-Plug 'arcticicestudio/nord-vim'
-Plug 'axvr/photon.vim'
-Plug 'davidosomething/vim-colors-meh'
-Plug 'jacoborus/tender.vim'
-Plug 'morhetz/gruvbox'
-Plug 'rakr/vim-one'
+Plug 'acarapetis/vim-colors-github'
+Plug 'arcticicestudio/nord-vim'                 " theme
+Plug 'axvr/photon.vim'                          " theme
+Plug 'davidosomething/vim-colors-meh'           " theme
+Plug 'everard/vim-aurora'
+Plug 'jacoborus/tender.vim'                     " theme
+Plug 'meain/hima-vim'
+Plug 'morhetz/gruvbox'                          " theme
+Plug 'yasukotelin/notelight'
 
 call plug#end()
 
@@ -80,25 +83,25 @@ let g:closetag_regions = {
     \ }
 let g:closetag_shortcut = '>'
 let g:coc_global_extensions = [
-      \ 'coc-snippets',
-      \ 'coc-pairs',
-      \ 'coc-tsserver',
-      \ 'coc-html',
-      \ 'coc-htmlhint',
       \ 'coc-css',
       \ 'coc-deno',
-      \ 'coc-go',
-      \ 'coc-prettier',
-      \ 'coc-json',
+      \ 'coc-emmet',
       \ 'coc-eslint',
-      \ 'coc-toml',
-      \ 'coc-svelte',
-      \ 'coc-styled-components',
+      \ 'coc-go',
+      \ 'coc-html',
+      \ 'coc-htmlhint',
+      \ 'coc-json',
+      \ 'coc-pairs',
+      \ 'coc-prettier',
       \ 'coc-sh',
+      \ 'coc-snippets',
+      \ 'coc-styled-components',
+      \ 'coc-svelte',
+      \ 'coc-tsserver',
+      \ 'coc-yaml',
       \ ]
 let g:ctrlp_use_caching=0
-let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git\|__sapper__\|dist'
-" let g:gruvbox_bold=0
+let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git\|__sapper__\|dist\|dotbot\|build'
 let g:netrw_banner=0
 let g:netrw_browse_split=2
 let g:netrw_winsize=25
@@ -127,7 +130,7 @@ endif
 if has("nvim-0.5.0") || has("patch-8.1.1564")
   set signcolumn=number
 else
-  set signcolumn=yes
+  set signcolumn=auto
 endif
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
@@ -147,21 +150,28 @@ if &t_Co == 8 && $TERM !~# '^Eterm'
 endif
 
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-set bg=dark
-colo photon
+let g:coc_snippet_next = '<tab>'
 
-" if strftime("%H") < 12
+set bg=light
+colo notelight
+
+" set bg=dark
+" colo tender
+
+" if strftime("%H") < 18
 "   set bg=light
+"   colo antiphoton
 " else
 "   set bg=dark
+"   colo photon
 " endif
