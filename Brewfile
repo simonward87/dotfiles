@@ -9,6 +9,8 @@ brew "bat"
 brew "deno"
 # Modern replacement for 'ls'
 brew "exa"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # Distributed revision control system
 brew "git"
 # User-friendly cURL replacement (command-line HTTP client)

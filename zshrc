@@ -81,3 +81,5 @@ zplug load
 # Run them after enabling Kubernetes
 source <(kubectl completion zsh)
 complete -F __start_kubectl k
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
