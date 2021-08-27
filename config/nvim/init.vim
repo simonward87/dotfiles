@@ -4,7 +4,7 @@ filetype plugin indent on
 set backspace=indent,eol,start                  " restore default backspace behaviour
 set completeopt=menuone,longest                 " text completion
 set cursorline                                  " current line highlight
-set encoding=utf-8                              " set internal encoding
+set encoding=utf8                               " set internal encoding
 set expandtab                                   " convert tabs to spaces
 set hidden                                      " keep multiple buffers open
 set ignorecase                                  " case-insensitive search
@@ -19,16 +19,15 @@ set nowritebackup                               " coc recommendation
 set number                                      " enable line numbers
 set relativenumber                              " enable relative line numbers
 set ruler                                       " show cursor location
-set scrolloff=7                                 " scroll limit from screenY boundaries
+set scrolloff=8                                 " scroll limit from screenY boundaries
 set shiftwidth=2                                " updates shift-width value
 set shortmess+=c                                " avoid file message prompts
-set sidescrolloff=5                             " scroll limit from screenX boundaries
+set sidescrolloff=8                             " scroll limit from screenX boundaries
 set smartcase                                   " case-sensitive search on capital letter
 set smarttab                                    " indents according to shiftwidth 
 set softtabstop=2                               " 2 spaces for tabs during editing
 set tabstop=2                                   " 2 spaces for tabs 
-set ttyfast                                     " optimize for fast terminal connections
-set undodir=~/.vim/undodir                      " directory for undo history files
+" set undodir=~/.vim/undodir                      " directory for undo history files
 set undofile                                    " save undo history to dedicated file
 set updatetime=300                              " swapfile written after time in ms
 set wildmenu                                    " enhanced command completion
@@ -103,6 +102,7 @@ let g:coc_global_extensions = [
       \ ]
 let g:ctrlp_use_caching=0
 let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git\|__sapper__\|dist\|dotbot\|build'
+let g:loaded_perl_provider=0
 let g:netrw_banner=0
 let g:netrw_browse_split=2
 let g:netrw_winsize=25
@@ -163,16 +163,5 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
-" set bg=light
-" colo notelight
-
 set bg=dark
 colo tender
-
-" if strftime("%H") < 18
-"   set bg=light
-"   colo antiphoton
-" else
-"   set bg=dark
-"   colo photon
-" endif
