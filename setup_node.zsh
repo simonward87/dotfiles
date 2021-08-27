@@ -36,6 +36,7 @@ if exists node; then
   npm i -g firebase-tools
   npm i -g http-server
   npm i -g json-server
+  npm i -g neovim
   npm i -g surge
   npm i -g trash-cli
   npm i -g typescript
