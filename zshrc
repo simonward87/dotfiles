@@ -76,6 +76,9 @@ fi
 zplug load
 
 # Other
+fpath=(~/.zsh $fpath)
+autoload -Uz compinit
+compinit -u
 
 # The two lines below setup kubectl completion
 # Run them after enabling Kubernetes

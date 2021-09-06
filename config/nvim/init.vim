@@ -1,41 +1,28 @@
-syntax enable
-filetype plugin indent on
-
-set backspace=indent,eol,start                  " restore default backspace behaviour
-set completeopt=menuone,longest                 " text completion
-set cursorline                                  " current line highlight
-set encoding=utf8                               " set internal encoding
-set expandtab                                   " convert tabs to spaces
-set hidden                                      " keep multiple buffers open
-set ignorecase                                  " case-insensitive search
-set incsearch                                   " updates search results per-character
-set iskeyword+=-                                " treat dash-separation as word text object
-set mouse=nicr                                  " enable mouse 
-set nobackup                                    " coc recommendation
-set noerrorbells                                " mute error sound
-set noswapfile                                  " new buffers created without swapfiles
-set nowrap                                      " disable line wrapping
-set nowritebackup                               " coc recommendation
-set number                                      " enable line numbers
-set relativenumber                              " enable relative line numbers
-set ruler                                       " show cursor location
-set scrolloff=8                                 " scroll limit from screenY boundaries
-set shiftwidth=2                                " updates shift-width value
-set shortmess+=c                                " avoid file message prompts
-set sidescrolloff=8                             " scroll limit from screenX boundaries
-set smartcase                                   " case-sensitive search on capital letter
-set smarttab                                    " indents according to shiftwidth 
-set softtabstop=2                               " 2 spaces for tabs during editing
-set tabstop=2                                   " 2 spaces for tabs 
-" set undodir=~/.vim/undodir                      " directory for undo history files
-set undofile                                    " save undo history to dedicated file
-set updatetime=300                              " swapfile written after time in ms
-set wildmenu                                    " enhanced command completion
-
+set completeopt=menuone,longest,noinsert,noselect   " text completion
+set cursorline                                      " current line highlight
+set expandtab                                       " convert tabs to spaces
+set ignorecase                                      " case-insensitive search
+set iskeyword+=-                                    " treat dash-separation as word text object
+set mouse=nicr                                      " enable mouse 
+set noerrorbells                                    " mute error sound
+set nohlsearch
+set noswapfile                                      " new buffers created without swapfiles
+set nowrap                                          " disable line wrapping
+set number                                          " enable line numbers
+set relativenumber                                  " enable relative line numbers
+set scrolloff=8                                     " scroll limit from screenY boundaries
+set shiftwidth=2                                    " updates shift-width value
+set shortmess+=c                                    " avoid file message prompts
+set sidescrolloff=8                                 " scroll limit from screenX boundaries
+set smartcase                                       " case-sensitive search on capital letter
+set softtabstop=2                                   " 2 spaces for tabs during editing
+set tabstop=2                                       " 2 spaces for tabs 
+set undofile                                        " save undo history to dedicated file
+set updatetime=300                                  " swapfile written after time in ms
 
 autocmd FileType markdown setlocal wrap
 
-" Auto-initialize Vim Plug if not already set up
+" autoinitialize Vim Plug if not already set up
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -44,28 +31,32 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" Plugins
-Plug 'alvan/vim-closetag'                       " auto-close html, jsx, tsx tags
-Plug 'ctrlpvim/ctrlp.vim'                       " fuzzy finder
-Plug 'djoshea/vim-autoread'                     " auto reload files when changed externally
-Plug 'evanleck/vim-svelte', {'branch': 'main'}  " syntax highlighting & indentation, Svelte
-Plug 'leafgarland/typescript-vim'               " ts syntax files
-Plug 'lilydjwg/colorizer'                       " hex code colourizer
-Plug 'mattn/emmet-vim'                          " expanding abbreviations
-Plug 'mbbill/undotree'                          " undo history visualizer
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " extensions and language servers
-Plug 'pangloss/vim-javascript'                  " syntax highlighting & indentation, JavaScript
-Plug 'tpope/vim-commentary'                     " comment stuff out
-Plug 'tpope/vim-fugitive'                       " git wrapper
-Plug 'tpope/vim-surround'                       " streamline surroundings workflow
-Plug 'acarapetis/vim-colors-github'
-Plug 'arcticicestudio/nord-vim'                 " theme
-Plug 'axvr/photon.vim'                          " theme
-Plug 'davidosomething/vim-colors-meh'           " theme
-Plug 'everard/vim-aurora'
-Plug 'jacoborus/tender.vim'                     " theme
-Plug 'meain/hima-vim'
-Plug 'morhetz/gruvbox'                          " theme
+" plugins
+Plug 'alvan/vim-closetag'                                   " auto-close html, jsx, tsx tags
+Plug 'ctrlpvim/ctrlp.vim'                                   " fuzzy finder
+Plug 'djoshea/vim-autoread'                                 " auto reload files when changed externally
+Plug 'evanleck/vim-svelte', {'branch': 'main'}              " syntax highlighting & indentation, Svelte
+Plug 'leafgarland/typescript-vim'                           " ts syntax files
+Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }   " hex code colourizer
+Plug 'pangloss/vim-javascript'                              " syntax highlighting & indentation, JavaScript
+Plug 'tpope/vim-commentary'                                 " comment stuff out
+Plug 'tpope/vim-fugitive'                                   " git wrapper
+Plug 'tpope/vim-surround'                                   " streamline surroundings workflow
+Plug 'neovim/nvim-lspconfig'                                " lsp client configs
+Plug 'hrsh7th/nvim-compe'                                   " lsp completion
+Plug 'hrsh7th/vim-vsnip'                                    " lsp snippets
+Plug 'simrat39/rust-tools.nvim'                             " config and tools for ls
+Plug 'rust-analyzer/rust-analyzer'                          " rust language server
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " better syntax highlighting
+Plug 'nvim-treesitter/playground'                           " playground for nvim-treesitter
+
+" themes
+Plug 'axvr/photon.vim'
+Plug 'davidosomething/vim-colors-meh'
+Plug 'jacoborus/tender.vim'
+Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
+Plug 'sainnhe/everforest'
 Plug 'yasukotelin/notelight'
 
 call plug#end()
@@ -82,26 +73,13 @@ let g:closetag_regions = {
     \ 'javascript.jsx': 'jsxRegion',
     \ }
 let g:closetag_shortcut = '>'
-let g:coc_global_extensions = [
-      \ 'coc-css',
-      \ 'coc-deno',
-      \ 'coc-emmet',
-      \ 'coc-eslint',
-      \ 'coc-go',
-      \ 'coc-html',
-      \ 'coc-htmlhint',
-      \ 'coc-json',
-      \ 'coc-pairs',
-      \ 'coc-prettier',
-      \ 'coc-sh',
-      \ 'coc-snippets',
-      \ 'coc-styled-components',
-      \ 'coc-svelte',
-      \ 'coc-tsserver',
-      \ 'coc-yaml',
-      \ ]
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 let g:ctrlp_use_caching=0
 let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git\|__sapper__\|dist\|dotbot\|build'
+" let g:gruvbox_material_palette='mix'
+" let g:gruvbox_material_background='hard'
+" let g:everforest_background='hard'
+let g:Hexokinase_highlighters=['backgroundfull']
 let g:loaded_perl_provider=0
 let g:netrw_banner=0
 let g:netrw_browse_split=2
@@ -119,7 +97,6 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>o :wincmd o<CR>
 nnoremap <leader>gs :G<CR>
-nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 
 if has('unnamedplus')
@@ -134,34 +111,18 @@ else
   set signcolumn=auto
 endif
 
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
-vmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
 
-" Allow color schemes to do bright colors without forcing bold.
+" Allow color schemes to do bright colors without forcing bold
 if &t_Co == 8 && $TERM !~# '^Eterm'
   set t_Co=16
 endif
 
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-let g:coc_snippet_next = '<tab>'
-
 set bg=dark
 colo tender
+
+lua require("lsp-config")

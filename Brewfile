@@ -13,6 +13,8 @@ brew "exa"
 brew "fzf"
 # Distributed revision control system
 brew "git"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -23,6 +25,8 @@ brew "less"
 brew "mas"
 # NCurses Disk Usage
 brew "ncdu"
+# Parser generator tool and incremental parsing library
+brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Manage multiple Node.js versions
@@ -33,8 +37,6 @@ brew "subversion"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Vi 'workalike' with many additional features
-brew "vim"
 # Next-generation plugin manager for zsh
 brew "zplug"
 # UNIX shell (command interpreter)

@@ -23,7 +23,7 @@ font:
   bold_italic:
     family: "Courier Prime Code"
     style: Bold Italic
-  size: 17
+  size: 15
   offset:
     x: 0
     y: 5
@@ -85,6 +85,32 @@ font:
 #     magenta: "#C06CFF"
 #     cyan: "#D18200"
 #     white: "#FFFFFF"
+
+# Colors (Everforest)
+# colors:
+#   primary:
+#     background: "#2A333A"
+#     foreground: "#D4C6A7"
+#   cursor:
+#     text: "#2A333A"
+#     cursor: "#D4C6A7"
+#   normal:
+#     black: "#2A333A"
+#     red: "#F27983"
+#     green: "#76C38E"
+#     yellow: "#DBB976"
+#     blue: "#72BCB2"
+#     magenta: "#DD95B8"
+#     cyan: "#A2C278"
+#     white: "#7F8F85"
+#   bright:
+#     black: "#767676"
+#     red: "#FCC6C5"
+#     green: "#ADE0C2"
+#     yellow: "#EBD4AE"
+#     blue: "#AEDAF9"
+#     magenta: "#E8CCFC"
+#     cyan: "#DADAAD"
 
 # Colors (Tender)
 colors:
@@ -168,6 +194,66 @@ colors:
 #     magenta: "#8f3f71"
 #     cyan: "#427b58"
 #     white: "#928374"
+#   #   indexed_colors: []
+
+## Colors (Gruvbox Material)
+# colors:
+#   primary:
+#     # hard contrast background - '#1d2021'
+#     background: &gruvbox_dark_bg "#282828"
+#     # soft contrast background - '#32302f'
+#     foreground: "#D6BE93"
+#     bright_foreground: "#fbf1c7"
+#     dim_foreground: "#a89984"
+#   cursor:
+#     text: CellBackground
+#     cursor: CellForeground
+#   vi_mode_cursor:
+#     text: CellBackground
+#     cursor: CellForeground
+#     search:
+#       matches:
+#         foreground: "#000000"
+#         background: "#ffffff"
+#       focused_match:
+#         foreground: CellBackground
+#         background: CellForeground
+#       bar:
+#         background: ""
+#         foreground: ""
+#     line_indicator:
+#       foreground: None
+#       background: None
+#   selection:
+#     text: CellBackground
+#     background: CellForeground
+#   bright:
+#     black: "#928374"
+#     red: "#fb4934"
+#     green: "#b8bb26"
+#     yellow: "#fabd2f"
+#     blue: "#83a598"
+#     magenta: "#d3869b"
+#     cyan: "#8ec07c"
+#     white: "#ebdbb2"
+#   normal:
+#     black: *gruvbox_dark_bg
+#     red: "#F55E5D"
+#     green: "#A5B859"
+#     yellow: "#DDA548"
+#     blue: "#7DAEA3"
+#     magenta: "#D37D97"
+#     cyan: "#80B77D"
+#     white: "#D6BE93"
+#   # dim:
+#   #   black: "#32302f"
+#   #   red: "#9d0006"
+#   #   green: "#79740e"
+#   #   yellow: "#b57614"
+#   #   blue: "#076678"
+#   #   magenta: "#8f3f71"
+#   #   cyan: "#427b58"
+#   #   white: "#928374"
 #   #   indexed_colors: []
 
 ## gruvbox_light: &gruvbox_light
