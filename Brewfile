@@ -91,6 +91,8 @@ cask "font-roboto-mono"
 cask "font-roboto-slab"
 # Web browser
 cask "google-chrome"
+# HTTP and GraphQL Client
+cask "insomnia"
 # Keyboard customizer
 cask "karabiner-elements"
 # Move and resize windows using keyboard shortcuts or snap areas
