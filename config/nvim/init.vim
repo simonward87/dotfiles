@@ -122,7 +122,7 @@ if &t_Co == 8 && $TERM !~# '^Eterm'
   set t_Co=16
 endif
 
-set bg=dark
-colo tender
+set bg=light
+colo antiphoton
 
 lua require("lsp-config")
