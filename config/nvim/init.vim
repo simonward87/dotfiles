@@ -54,10 +54,10 @@ Plug 'nvim-treesitter/playground'                           " playground for nvi
 Plug 'axvr/photon.vim'
 Plug 'davidosomething/vim-colors-meh'
 Plug 'jacoborus/tender.vim'
+Plug 'mcchrish/zenbones.nvim'
 Plug 'morhetz/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 Plug 'sainnhe/everforest'
-Plug 'yasukotelin/notelight'
 
 call plug#end()
 
@@ -123,6 +123,6 @@ if &t_Co == 8 && $TERM !~# '^Eterm'
 endif
 
 set bg=light
-colo antiphoton
+colo zenbones
 
 lua require("lsp-config")
