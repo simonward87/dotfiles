@@ -23,7 +23,7 @@ font:
   bold_italic:
     family: "Courier Prime Code"
     style: Bold Italic
-  size: 16
+  size: 17
   offset:
     x: 0
     y: 5
