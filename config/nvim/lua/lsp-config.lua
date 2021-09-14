@@ -144,16 +144,16 @@ local formatFiletypes = {
 }
 
 -- TEMPORARILY DISABLED FOR DENO DEV
--- nvim_lsp.diagnosticls.setup {
---     on_attach = on_attach,
---     filetypes = vim.tbl_keys(filetypes),
---     init_options = {
---         filetypes = filetypes,
---         linters = linters,
---         formatters = formatters,
---         formatFiletypes = formatFiletypes
---     }
--- }
+nvim_lsp.diagnosticls.setup {
+    on_attach = on_attach,
+    filetypes = vim.tbl_keys(filetypes),
+    init_options = {
+        filetypes = filetypes,
+        linters = linters,
+        formatters = formatters,
+        formatFiletypes = formatFiletypes
+    }
+}
 
 -- use .ts snippets in .tsx files
 vim.g.vsnip_filetypes = {
