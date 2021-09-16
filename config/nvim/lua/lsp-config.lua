@@ -143,7 +143,6 @@ local formatFiletypes = {
     typescriptreact = "prettier"
 }
 
--- TEMPORARILY DISABLED FOR DENO DEV
 nvim_lsp.diagnosticls.setup {
     on_attach = on_attach,
     filetypes = vim.tbl_keys(filetypes),
