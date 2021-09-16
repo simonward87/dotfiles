@@ -101,7 +101,6 @@ nvim_lsp.svelte.setup{}
 
 nvim_lsp.vimls.setup{}
 
--- TEMPORARILY DISABLED FOR DENO DEVELOPMENT
 -- nvim_lsp.tsserver.setup {
 --     on_attach = function(client)
 --         client.resolved_capabilities.document_formatting = false
@@ -143,7 +142,6 @@ local formatFiletypes = {
     typescriptreact = "prettier"
 }
 
--- TEMPORARILY DISABLED FOR DENO DEVELOPMENT
 nvim_lsp.diagnosticls.setup {
     on_attach = on_attach,
     filetypes = vim.tbl_keys(filetypes),
