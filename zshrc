@@ -42,6 +42,7 @@ alias ls='exa'
 # alias ls='ls -lAFGh'
 alias rm=trash
 alias trail='<<<${(F)path}'
+alias vim='nvim'
 
 # Prompt Customization
 PROMPT='
