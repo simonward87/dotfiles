@@ -95,18 +95,18 @@ nvim_lsp.dockerls.setup{}
 
 nvim_lsp.rust_analyzer.setup{}
 
-nvim_lsp.denols.setup {}
+-- nvim_lsp.denols.setup {}
 
 nvim_lsp.svelte.setup{}
 
 nvim_lsp.vimls.setup{}
 
--- nvim_lsp.tsserver.setup {
---     on_attach = function(client)
---         client.resolved_capabilities.document_formatting = false
---         on_attach(client)
---     end
--- }
+nvim_lsp.tsserver.setup {
+    on_attach = function(client)
+        client.resolved_capabilities.document_formatting = false
+        on_attach(client)
+    end
+}
 
 local filetypes = {
     typescript = "eslint",
