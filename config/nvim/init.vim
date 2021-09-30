@@ -123,6 +123,6 @@ if &t_Co == 8 && $TERM !~# '^Eterm'
 endif
 
 set bg=light
-colo zenbones
+colo antiphoton
 
 lua require("lsp-config")
