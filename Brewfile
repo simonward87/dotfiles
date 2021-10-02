@@ -31,6 +31,8 @@ brew "tree-sitter"
 brew "neovim"
 # Manage multiple Node.js versions
 brew "nvm"
+# Safe, concurrent, practical language
+brew "rust"
 # Version control system designed to be a better CVS
 brew "subversion"
 # Terminal multiplexer
