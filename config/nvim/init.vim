@@ -46,9 +46,10 @@ Plug 'neovim/nvim-lspconfig'                                " lsp client configs
 Plug 'hrsh7th/nvim-compe'                                   " lsp completion
 Plug 'hrsh7th/vim-vsnip'                                    " lsp snippets
 Plug 'simrat39/rust-tools.nvim'                             " config and tools for ls
-Plug 'rust-analyzer/rust-analyzer'                          " rust language server
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " better syntax highlighting
 Plug 'nvim-treesitter/playground'                           " playground for nvim-treesitter
+Plug 'SirVer/ultisnips'                                     " Utility snippets
+Plug 'mlaursen/vim-react-snippets'                          " React snippets
 
 " themes
 Plug 'axvr/photon.vim'
