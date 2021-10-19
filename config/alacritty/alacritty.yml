@@ -15,13 +15,13 @@ font:
     family: "Roboto Mono For Powerline"
     style: Regular
   bold:
-    family: "Courier Prime Code"
+    family: "Roboto Mono For Powerline"
     style: Bold
   italic:
-    family: "Courier Prime Code"
+    family: "Roboto Mono For Powerline"
     style: Italic
   bold_italic:
-    family: "Courier Prime Code"
+    family: "Roboto Mono For Powerline"
     style: Bold Italic
   size: 15
   offset:
