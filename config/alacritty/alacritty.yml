@@ -12,21 +12,21 @@ scrolling:
   multiplier: 3
 font:
   normal:
-    family: "Courier Prime Code"
+    family: "Roboto Mono For Powerline"
     style: Regular
   bold:
-    family: "Courier Prime Code"
+    family: "Roboto Mono For Powerline"
     style: Bold
   italic:
-    family: "Courier Prime Code"
+    family: "Roboto Mono For Powerline"
     style: Italic
   bold_italic:
-    family: "Courier Prime Code"
+    family: "Roboto Mono For Powerline"
     style: Bold Italic
   size: 16
   offset:
     x: 0
-    y: 8
+    y: 0
   glyph_offset:
     x: 0
     y: 0
