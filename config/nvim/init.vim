@@ -57,6 +57,9 @@ Plug 'davidosomething/vim-colors-meh'
 Plug 'jacoborus/tender.vim'
 Plug 'mcchrish/zenbones.nvim'
 Plug 'morhetz/gruvbox'
+Plug 'projekt0n/github-nvim-theme'
+Plug 'rakr/vim-one'
+Plug 'rakr/vim-two-firewatch'
 Plug 'sainnhe/gruvbox-material'
 Plug 'sainnhe/everforest'
 
@@ -124,6 +127,6 @@ if &t_Co == 8 && $TERM !~# '^Eterm'
 endif
 
 set bg=light
-colo antiphoton
+colo github_light
 
 lua require("lsp-config")

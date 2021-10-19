@@ -12,7 +12,7 @@ scrolling:
   multiplier: 3
 font:
   normal:
-    family: "Courier Prime Code"
+    family: "Roboto Mono For Powerline"
     style: Regular
   bold:
     family: "Courier Prime Code"
@@ -23,15 +23,81 @@ font:
   bold_italic:
     family: "Courier Prime Code"
     style: Bold Italic
-  size: 16
+  size: 15
   offset:
     x: 0
-    y: 8
+    y: 0
   glyph_offset:
     x: 0
     y: 0
   use_thin_strokes: false
 # draw_bold_text_with_bright_colors: false
+
+# github Alacritty Colors
+colors:
+  # Default colors
+  primary:
+    background: '0xffffff'
+    foreground: '0x4d5566'
+
+  # Normal colors
+  normal:
+    black:   '0x24292e'
+    red:     '0xd73a49'
+    green:   '0x22863a'
+    yellow:  '0xb08800'
+    blue:    '0x0366d6'
+    magenta: '0x6f42c1'
+    cyan:    '0x1b7c83'
+    white:   '0x4d5566'
+
+  # Bright colors
+  bright:
+    black:   '0x586069'
+    red:     '0xcb2431'
+    green:   '0x28a745'
+    yellow:  '0xdbab09'
+    blue:    '0x2188ff'
+    magenta: '0x8a63d2'
+    cyan:    '0x1b7c83'
+    white:   '0x4d5566'
+
+  indexed_colors:
+    - { index: 16, color: '0xd18616' }
+    - { index: 17, color: '0xcb2431' }
+
+# Colors (Github Light)
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0xffffff'
+#     foreground: '0x586069'
+# 
+#   # Normal colors
+#   normal:
+#     black:   '0x697179'
+#     red:     '0xd03d3d'
+#     green:   '0x14ce14'
+#     yellow:  '0x949800'
+#     blue:    '0x0451a5'
+#     magenta: '0xbc05bc'
+#     cyan:    '0x0598bc'
+#     white:   '0x586069'
+# 
+#   # Bright colors
+#   bright:
+#     black:   '0x666666'
+#     red:     '0xcd3131'
+#     green:   '0x14ce14'
+#     yellow:  '0xb5ba00'
+#     blue:    '0x0451a5'
+#     magenta: '0xbc05bc'
+#     cyan:    '0x0598bc'
+#     white:   '0x586069'
+# 
+#   indexed_colors:
+#     - { index: 16, color: '0xd18616' }
+#     - { index: 17, color: '0xcd3131' }
 
 # Colors (Photon)
 # colors:
@@ -60,31 +126,31 @@ font:
 #     cyan: "#DADAAD"
 
 # Colors (AntiPhoton)
-colors:
-  primary:
-    background: "#FFFFFF"
-    foreground: "#121212"
-  cursor:
-    text: "#121212"
-    cursor: "#FFFFFF"
-  normal:
-    black: "#121212"
-    red: "#E72222"
-    green: "#0F8841"
-    yellow: "#7A790E"
-    blue: "#0A7BC2"
-    magenta: "#9F4FDA"
-    cyan: "#A66801"
-    white: "#949494"
-  bright:
-    black: "#6C6C6C"
-    red: "#FF5E3D"
-    green: "#00AB47"
-    yellow: "#9a9800"
-    blue: "#0099FA"
-    magenta: "#C06CFF"
-    cyan: "#D18200"
-    white: "#FFFFFF"
+# colors:
+#   primary:
+#     background: "#FFFFFF"
+#     foreground: "#121212"
+#   cursor:
+#     text: "#121212"
+#     cursor: "#FFFFFF"
+#   normal:
+#     black: "#121212"
+#     red: "#E72222"
+#     green: "#0F8841"
+#     yellow: "#7A790E"
+#     blue: "#0A7BC2"
+#     magenta: "#9F4FDA"
+#     cyan: "#A66801"
+#     white: "#949494"
+#   bright:
+#     black: "#6C6C6C"
+#     red: "#FF5E3D"
+#     green: "#00AB47"
+#     yellow: "#9a9800"
+#     blue: "#0099FA"
+#     magenta: "#C06CFF"
+#     cyan: "#D18200"
+#     white: "#FFFFFF"
 
 # Colors (Everforest)
 # colors:
