@@ -23,7 +23,7 @@ font:
   bold_italic:
     family: "Roboto Mono For Powerline"
     style: Bold Italic
-  size: 16
+  size: 15.5
   offset:
     x: 0
     y: 0
