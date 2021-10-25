@@ -1,5 +1,7 @@
 local nvim_lsp = require("lspconfig")
+
 require("rust-tools").setup({})
+
 require("nvim-treesitter.configs").setup({
   highlight = { enable = true },
   incremental_selection = { enable = true },
@@ -95,7 +97,6 @@ nvim_lsp.dockerls.setup{}
 
 nvim_lsp.rust_analyzer.setup{}
 
--- TEMPORARILY DISABLED FOR DENO DEV
 -- nvim_lsp.denols.setup {}
 
 nvim_lsp.svelte.setup{}
@@ -159,7 +160,7 @@ vim.g.vsnip_filetypes = {
     typescriptreact = {"typescript"}
 }
 
-require"compe".setup {
+require("compe").setup {
     preselect = "always",
     source = {
         path = true,
