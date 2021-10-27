@@ -15,8 +15,6 @@ brew "fzf"
 brew "git"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Pager program similar to more
@@ -31,6 +29,8 @@ brew "tree-sitter"
 brew "neovim"
 # Manage multiple Node.js versions
 brew "nvm"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 # Safe, concurrent, practical language
 brew "rust"
 # Version control system designed to be a better CVS

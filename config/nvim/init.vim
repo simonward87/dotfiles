@@ -11,12 +11,12 @@ set nowrap                                          " disable line wrapping
 set number                                          " enable line numbers
 set relativenumber                                  " enable relative line numbers
 set scrolloff=8                                     " scroll limit from screenY boundaries
-set shiftwidth=2                                    " updates shift-width value
+set shiftwidth=4                                    " updates shift-width value
 set shortmess+=c                                    " avoid file message prompts
 set sidescrolloff=8                                 " scroll limit from screenX boundaries
 set smartcase                                       " case-sensitive search on capital letter
-set softtabstop=2                                   " 2 spaces for tabs during editing
-set tabstop=2                                       " 2 spaces for tabs 
+set softtabstop=4                                   " 2 spaces for tabs during editing
+set tabstop=4                                       " 2 spaces for tabs 
 set undofile                                        " save undo history to dedicated file
 set updatetime=300                                  " swapfile written after time in ms
 
@@ -101,7 +101,10 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>o :wincmd o<CR>
 nnoremap <leader>gs :G<CR>
-nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <leader>gc :G commit<CR>
+nnoremap <leader>gp :G push<CR>
+nnoremap <leader>pv :Ex<CR>
+nnoremap <leader>dtfs :Ex ~/.dotfiles<CR>
 
 if has('unnamedplus')
   set clipboard=unnamedplus
@@ -129,4 +132,4 @@ endif
 set bg=dark
 colo tender
 
-lua require("lsp-config")
+" lua require("lsp-config")
