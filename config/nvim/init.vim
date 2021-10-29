@@ -18,7 +18,7 @@ set smartcase                                       " case-sensitive search on c
 set softtabstop=4                                   " 2 spaces for tabs during editing
 set tabstop=4                                       " 2 spaces for tabs 
 set undofile                                        " save undo history to dedicated file
-set updatetime=300                                  " swapfile written after time in ms
+set updatetime
 
 autocmd FileType markdown setlocal wrap
 
@@ -56,6 +56,7 @@ Plug 'axvr/photon.vim'
 Plug 'davidosomething/vim-colors-meh'
 Plug 'jacoborus/tender.vim'
 Plug 'morhetz/gruvbox'
+Plug 'projekt0n/github-nvim-theme'
 Plug 'sainnhe/gruvbox-material'
 Plug 'sainnhe/everforest'
 Plug 'yasukotelin/notelight'
@@ -132,4 +133,4 @@ endif
 set bg=dark
 colo tender
 
-" lua require("lsp-config")
+lua require("lsp-config")
