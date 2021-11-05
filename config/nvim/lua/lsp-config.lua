@@ -160,7 +160,7 @@ vim.g.vsnip_filetypes = {
     typescriptreact = {"typescript"}
 }
 
-require("compe").setup {
+require"compe".setup {
     preselect = "always",
     source = {
         path = true,

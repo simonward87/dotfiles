@@ -23,7 +23,7 @@ font:
   bold_italic:
     family: "Roboto Mono For Powerline"
     style: Bold Italic
-  size: 15
+  size: 16
   offset:
     x: 0
     y: 0
@@ -115,10 +115,10 @@ font:
 # Colors (Tender)
 colors:
   primary:
-    background: "0x262626"
+    background: "0x282828"
     foreground: "0xeeeeee"
   normal:
-    black: "0x262626"
+    black: "0x282828"
     red: "0xf43753"
     green: "0xc9d05c"
     yellow: "0xffc24b"
