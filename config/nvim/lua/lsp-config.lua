@@ -1,9 +1,11 @@
 local nvim_lsp = require("lspconfig")
+
 require("rust-tools").setup({})
+
 require("nvim-treesitter.configs").setup({
-  highlight = { enable = true },
-  incremental_selection = { enable = true },
-  textobjects = { enable = true }
+    highlight = { enable = true },
+    incremental_selection = { enable = true },
+    textobjects = { enable = true }
 })
 
 local format_async = function(err, _, result, _, bufnr)
@@ -73,22 +75,22 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 nvim_lsp.cssls.setup {
-  capabilities = capabilities,
+    capabilities = capabilities,
 }
 
 nvim_lsp.html.setup {
-  capabilities = capabilities,
+    capabilities = capabilities,
 }
 
 nvim_lsp.jsonls.setup {
-  capabilities = capabilities,
-  commands = {
-    Format = {
-      function()
-        vim.lsp.buf.range_formatting({},{0,0},{vim.fn.line("$"),0})
-      end
+    capabilities = capabilities,
+    commands = {
+        Format = {
+            function()
+                vim.lsp.buf.range_formatting({},{0,0},{vim.fn.line("$"),0})
+            end
+        }
     }
-  }
 }
 
 nvim_lsp.dockerls.setup{}

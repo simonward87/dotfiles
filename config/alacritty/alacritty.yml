@@ -23,7 +23,7 @@ font:
   bold_italic:
     family: "Roboto Mono For Powerline"
     style: Bold Italic
-  size: 15
+  size: 16
   offset:
     x: 0
     y: 0
@@ -179,28 +179,28 @@ colors:
 #     cyan: "#DADAAD"
 
 # Colors (Tender)
-# colors:
-#   primary:
-#     background: "0x262626"
-#     foreground: "0xeeeeee"
-#   normal:
-#     black: "0x262626"
-#     red: "0xf43753"
-#     green: "0xc9d05c"
-#     yellow: "0xffc24b"
-#     blue: "0xb3deef"
-#     magenta: "0xd3b987"
-#     cyan: "0x73cef4"
-#     white: "0xeeeeee"
-#   bright:
-#     black: "0x4c4c4c"
-#     red: "0xf43753"
-#     green: "0xc9d05c"
-#     yellow: "0xffc24b"
-#     blue: "0xb3deef"
-#     magenta: "0xd3b987"
-#     cyan: "0x73cef4"
-#     white: "0xfeffff"
+colors:
+  primary:
+    background: "0x282828"
+    foreground: "0xeeeeee"
+  normal:
+    black: "0x282828"
+    red: "0xf43753"
+    green: "0xc9d05c"
+    yellow: "0xffc24b"
+    blue: "0xb3deef"
+    magenta: "0xd3b987"
+    cyan: "0x73cef4"
+    white: "0xeeeeee"
+  bright:
+    black: "0x4c4c4c"
+    red: "0xf43753"
+    green: "0xc9d05c"
+    yellow: "0xffc24b"
+    blue: "0xb3deef"
+    magenta: "0xd3b987"
+    cyan: "0x73cef4"
+    white: "0xfeffff"
 
 ## Colors (Gruvbox dark)
 # colors:
