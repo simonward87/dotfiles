@@ -67,6 +67,7 @@ Plug 'everard/vim-aurora'
 Plug 'jacoborus/tender.vim'                     " theme
 Plug 'meain/hima-vim'
 Plug 'morhetz/gruvbox'                          " theme
+Plug 'projekt0n/github-nvim-theme'              " theme
 Plug 'yasukotelin/notelight'
 
 call plug#end()
@@ -166,8 +167,8 @@ let g:coc_snippet_next = '<tab>'
 " set bg=light
 " colo notelight
 
-set bg=light
-colo notelight
+set bg=dark
+colo tender
 
 " if strftime("%H") < 18
 "   set bg=light

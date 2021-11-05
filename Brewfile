@@ -15,8 +15,6 @@ brew "fzf"
 brew "git"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Pager program similar to more
@@ -31,6 +29,10 @@ brew "tree-sitter"
 brew "neovim"
 # Manage multiple Node.js versions
 brew "nvm"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
+# Safe, concurrent, practical language
+brew "rust"
 # Version control system designed to be a better CVS
 brew "subversion"
 # Terminal multiplexer
@@ -49,22 +51,6 @@ cask "blender"
 cask "docker"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
-# Filter plug-in
-cask "fabfilter-micro"
-# Compressor plug-in
-cask "fabfilter-pro-c"
-# Gate/expander plug-in
-cask "fabfilter-pro-g"
-# Limiter plug-in
-cask "fabfilter-pro-l"
-# Equalizer plug-in
-cask "fabfilter-pro-q"
-# Reverb plug-in
-cask "fabfilter-pro-r"
-# Multiband distorsion/saturation plug-in
-cask "fabfilter-saturn"
-# Tape delay plug-in
-cask "fabfilter-timeless"
 # Collaborative team software
 cask "figma"
 # Web browser

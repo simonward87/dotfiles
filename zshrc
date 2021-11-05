@@ -34,7 +34,7 @@ setopt CORRECT_ALL
  
 # Aliases
 alias bbd='brew bundle dump --force --describe'
-alias dtfs='cd $DOTFILES; nvim .'
+alias dtfs='cd $DOTFILES'
 alias exa='exa -laFh --git -s type'
 alias gs='git status'
 alias k=kubectl
@@ -42,6 +42,7 @@ alias ls='exa'
 # alias ls='ls -lAFGh'
 alias rm=trash
 alias trail='<<<${(F)path}'
+alias vim='nvim'
 
 # Prompt Customization
 PROMPT='
