@@ -103,12 +103,13 @@ nvim_lsp.svelte.setup{}
 
 nvim_lsp.vimls.setup{}
 
-nvim_lsp.tsserver.setup {
-    on_attach = function(client)
-        client.resolved_capabilities.document_formatting = false
-        on_attach(client)
-    end
-}
+-- TEMPORARILY DISABLED FOR DENO DEVELOPMENT
+-- nvim_lsp.tsserver.setup {
+--     on_attach = function(client)
+--         client.resolved_capabilities.document_formatting = false
+--         on_attach(client)
+--     end
+-- }
 
 local filetypes = {
     typescript = "eslint",
@@ -144,16 +145,17 @@ local formatFiletypes = {
     typescriptreact = "prettier"
 }
 
-nvim_lsp.diagnosticls.setup {
-    on_attach = on_attach,
-    filetypes = vim.tbl_keys(filetypes),
-    init_options = {
-        filetypes = filetypes,
-        linters = linters,
-        formatters = formatters,
-        formatFiletypes = formatFiletypes
-    }
-}
+-- TEMPORARILY DISABLED FOR DENO DEVELOPMENT
+-- nvim_lsp.diagnosticls.setup {
+--     on_attach = on_attach,
+--     filetypes = vim.tbl_keys(filetypes),
+--     init_options = {
+--         filetypes = filetypes,
+--         linters = linters,
+--         formatters = formatters,
+--         formatFiletypes = formatFiletypes
+--     }
+-- }
 
 -- use .ts snippets in .tsx files
 vim.g.vsnip_filetypes = {

@@ -60,31 +60,31 @@ font:
 #     cyan: "#DADAAD"
 
 # Colors (AntiPhoton)
-# colors:
-#   primary:
-#     background: "#FFFFFF"
-#     foreground: "#121212"
-#   cursor:
-#     text: "#121212"
-#     cursor: "#FFFFFF"
-#   normal:
-#     black: "#121212"
-#     red: "#E72222"
-#     green: "#0F8841"
-#     yellow: "#7A790E"
-#     blue: "#0A7BC2"
-#     magenta: "#9F4FDA"
-#     cyan: "#A66801"
-#     white: "#949494"
-#   bright:
-#     black: "#6C6C6C"
-#     red: "#FF5E3D"
-#     green: "#00AB47"
-#     yellow: "#9a9800"
-#     blue: "#0099FA"
-#     magenta: "#C06CFF"
-#     cyan: "#D18200"
-#     white: "#FFFFFF"
+colors:
+  primary:
+    background: "#FFFFFF"
+    foreground: "#121212"
+  cursor:
+    text: "#121212"
+    cursor: "#FFFFFF"
+  normal:
+    black: "#121212"
+    red: "#E72222"
+    green: "#0F8841"
+    yellow: "#7A790E"
+    blue: "#0A7BC2"
+    magenta: "#9F4FDA"
+    cyan: "#A66801"
+    white: "#949494"
+  bright:
+    black: "#6C6C6C"
+    red: "#FF5E3D"
+    green: "#00AB47"
+    yellow: "#9a9800"
+    blue: "#0099FA"
+    magenta: "#C06CFF"
+    cyan: "#D18200"
+    white: "#FFFFFF"
 
 # Colors (Everforest)
 # colors:
