@@ -21,6 +21,8 @@ set colorcolumn=80                          " 80 character guide rule
 set signcolumn=number
 set updatetime=50
 set clipboard=unnamedplus                   " used system clipboard
+set ignorecase
+set smartcase
 
 " autoinitialize Vim Plug if not already set up
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
