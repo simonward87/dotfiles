@@ -43,10 +43,10 @@ Plug 'axvr/photon.vim'
 Plug 'davidosomething/vim-colors-meh'
 Plug 'gruvbox-community/gruvbox'
 Plug 'jacoborus/tender.vim'
+Plug 'mcchrish/zenbones.nvim'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'sainnhe/gruvbox-material'
 Plug 'sainnhe/everforest'
-Plug 'yasukotelin/notelight'
 
 call plug#end()
 
