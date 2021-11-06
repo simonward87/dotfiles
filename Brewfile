@@ -9,8 +9,8 @@ brew "bat"
 brew "deno"
 # Modern replacement for 'ls'
 brew "exa"
-# Command-line fuzzy finder written in Go
-brew "fzf"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # Distributed revision control system
 brew "git"
 # Open source programming language to build simple/reliable/efficient software
@@ -31,6 +31,8 @@ brew "neovim"
 brew "nvm"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Safe, concurrent, practical language
 brew "rust"
 # Version control system designed to be a better CVS

@@ -5,7 +5,26 @@ require("rust-tools").setup({})
 require("nvim-treesitter.configs").setup({
     highlight = { enable = true },
     incremental_selection = { enable = true },
-    textobjects = { enable = true }
+    textobjects = { enable = true },
+    ensure_installed = {
+        "css",
+        "dockerfile",
+        "go",
+        "graphql",
+        "html",
+        "javascript",
+        "json",
+        "lua",
+        "python",
+        "rust",
+        "scss",
+        "svelte",
+        "toml",
+        "tsx",
+        "typescript",
+        "vim",
+        "yaml"
+    }
 })
 
 local format_async = function(err, _, result, _, bufnr)
@@ -192,20 +211,3 @@ vim.api.nvim_set_keymap("i", "<CR>", [[compe#confirm("<CR>")]],
                         {expr = true, silent = true})
 vim.api.nvim_set_keymap("i", "<C-e>", [[compe#close("<C-e>")]],
                         {expr = true, silent = true})
-
--- local nvim_lsp = require('lspconfig')
--- 
--- local on_attach = function(client, bufnr)
--- local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
--- 
---   -- Mappings
---   local opts = { noremap=true, silent=true }
--- 
---   buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
---   buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
--- end
--- 
--- -- Typescript
--- nvim_lsp.tsserver.setup {
---   on_attach = require'completion'.on_attach
--- }
