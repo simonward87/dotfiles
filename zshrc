@@ -31,7 +31,7 @@ setopt AUTO_CD
 ## Correction
 setopt CORRECT
 setopt CORRECT_ALL
- 
+
 # Aliases
 alias bbd='brew bundle dump --force --describe'
 alias dtfs='cd $DOTFILES'
@@ -85,5 +85,3 @@ compinit -u
 # Run them after enabling Kubernetes
 source <(kubectl completion zsh)
 complete -F __start_kubectl k
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
