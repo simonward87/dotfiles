@@ -19,6 +19,8 @@ brew "go"
 brew "httpie"
 # Pager program similar to more
 brew "less"
+# Just-In-Time Compiler (JIT) for the Lua programming language
+brew "luajit", args: ["HEAD"]
 # Mac App Store command-line interface
 brew "mas"
 # NCurses Disk Usage
@@ -33,8 +35,8 @@ brew "nvm"
 brew "python@3.9"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Safe, concurrent, practical language
-brew "rust"
+# Rust toolchain installer
+brew "rustup-init"
 # Version control system designed to be a better CVS
 brew "subversion"
 # Terminal multiplexer
@@ -45,8 +47,6 @@ brew "tree"
 brew "zplug"
 # UNIX shell (command interpreter)
 brew "zsh"
-# GPU-accelerated terminal emulator
-cask "alacritty"
 # 3D creation suite
 cask "blender"
 # App to build and share containerized applications and microservices
