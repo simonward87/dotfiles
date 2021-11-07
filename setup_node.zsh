@@ -37,6 +37,7 @@ if exists node; then
   npm i -g http-server
   npm i -g json-server
   npm i -g neovim
+  npm i -g prettier
   npm i -g surge
   npm i -g trash-cli
   npm i -g typescript
@@ -44,7 +45,7 @@ if exists node; then
   # Language servers
   npm i -g diagnostic-languageserver         # prettier support
   npm i -g dockerfile-language-server-nodejs # docker
-  npm i -g eslint_d                          # eslint
+  npm i -g eslint_d                          # eslint daemon
   npm i -g svelte-language-server            # svelte
   npm i -g typescript-language-server        # typescript
   npm i -g vim-language-server               # vimscript

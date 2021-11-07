@@ -3,13 +3,14 @@ set completeopt=menuone,longest,noinsert,noselect   " text completion
 set cursorline                                      " highlight current line
 set expandtab
 set exrc 			                                " allow local vimrc
-set guicursor=		                                " block cursor
+" set guicursor=		                                " block cursor
 set hidden                                          " allow background unsaved buffers
 set ignorecase
 set incsearch                                       " show search results per keystroke
 set number
 set nobackup
 set nohlsearch                                      " highlight doesn't persist after search
+set noshowmode                                      " hide mode indicator
 set noswapfile
 set nowrap                                          " no line-wrapping
 set relativenumber

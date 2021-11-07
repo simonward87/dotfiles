@@ -31,40 +31,43 @@ font:
     x: 0
     y: 0
   use_thin_strokes: false
+  # NOTE: opacity will be required in future version, but current does not
+  # support it (despite the warning). Currently use 'background_opacity'
+  # opacity: 0.95
 # draw_bold_text_with_bright_colors: false
 
 # github Alacritty Colors
-colors:
-  # Default colors
-  primary:
-    background: '0xffffff'
-    foreground: '0x4d5566'
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0xffffff'
+#     foreground: '0x4d5566'
 
-  # Normal colors
-  normal:
-    black:   '0x24292e'
-    red:     '0xd73a49'
-    green:   '0x22863a'
-    yellow:  '0xb08800'
-    blue:    '0x0366d6'
-    magenta: '0x6f42c1'
-    cyan:    '0x1b7c83'
-    white:   '0x4d5566'
+#   # Normal colors
+#   normal:
+#     black:   '0x24292e'
+#     red:     '0xd73a49'
+#     green:   '0x22863a'
+#     yellow:  '0xb08800'
+#     blue:    '0x0366d6'
+#     magenta: '0x6f42c1'
+#     cyan:    '0x1b7c83'
+#     white:   '0x4d5566'
 
-  # Bright colors
-  bright:
-    black:   '0x586069'
-    red:     '0xcb2431'
-    green:   '0x28a745'
-    yellow:  '0xdbab09'
-    blue:    '0x2188ff'
-    magenta: '0x8a63d2'
-    cyan:    '0x1b7c83'
-    white:   '0x4d5566'
+#   # Bright colors
+#   bright:
+#     black:   '0x586069'
+#     red:     '0xcb2431'
+#     green:   '0x28a745'
+#     yellow:  '0xdbab09'
+#     blue:    '0x2188ff'
+#     magenta: '0x8a63d2'
+#     cyan:    '0x1b7c83'
+#     white:   '0x4d5566'
 
-  indexed_colors:
-    - { index: 16, color: '0xd18616' }
-    - { index: 17, color: '0xcb2431' }
+#   indexed_colors:
+#     - { index: 16, color: '0xd18616' }
+#     - { index: 17, color: '0xcb2431' }
 
 # Colors (Github Light)
 # colors:
@@ -179,28 +182,28 @@ colors:
 #     cyan: "#DADAAD"
 
 # Colors (Tender)
-# colors:
-#   primary:
-#     background: "0x282828"
-#     foreground: "0xeeeeee"
-#   normal:
-#     black: "0x282828"
-#     red: "0xf43753"
-#     green: "0xc9d05c"
-#     yellow: "0xffc24b"
-#     blue: "0xb3deef"
-#     magenta: "0xd3b987"
-#     cyan: "0x73cef4"
-#     white: "0xeeeeee"
-#   bright:
-#     black: "0x4c4c4c"
-#     red: "0xf43753"
-#     green: "0xc9d05c"
-#     yellow: "0xffc24b"
-#     blue: "0xb3deef"
-#     magenta: "0xd3b987"
-#     cyan: "0x73cef4"
-#     white: "0xfeffff"
+colors:
+  primary:
+    background: "0x282828"
+    foreground: "0xeeeeee"
+  normal:
+    black: "0x282828"
+    red: "0xf43753"
+    green: "0xc9d05c"
+    yellow: "0xffc24b"
+    blue: "0xb3deef"
+    magenta: "0xd3b987"
+    cyan: "0x73cef4"
+    white: "0xeeeeee"
+  bright:
+    black: "0x4c4c4c"
+    red: "0xf43753"
+    green: "0xc9d05c"
+    yellow: "0xffc24b"
+    blue: "0xb3deef"
+    magenta: "0xd3b987"
+    cyan: "0x73cef4"
+    white: "0xfeffff"
 
 ## Colors (Gruvbox dark)
 # colors:
@@ -438,7 +441,7 @@ colors:
 
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-#background_opacity: 0.9
+#background_opacity: 0.95
 #selection:
 # This string contains all characters that are used as separators for
 # "semantic words" in Alacritty.

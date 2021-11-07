@@ -1,11 +1,10 @@
 " Imports
-runtime ./plugin/plug.vim
-runtime ./plugin/sets.vim
-runtime ./plugin/lets.vim
-runtime ./plugin/remaps.vim
-runtime ./plugin/autocommands.vim
-runtime ./plugin/colours.vim
-runtime ./plugin/telescope.vim
+runtime ./plug.vim
+runtime ./sets.vim
+runtime ./lets.vim
+runtime ./maps.vim
+runtime ./autocommands.vim
+runtime ./colours.vim
 
 if has("unix")
     let s:uname = system("uname -s")
@@ -26,10 +25,15 @@ set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 " -----------------------------------------------------------------------------
 
-" Colours
-set background=light
-colorscheme github_light
+" Colourschemes
+
+" set background=light
+" colorscheme github_light
+
+colorscheme tender
+
+highlight Normal guibg=none
 " -----------------------------------------------------------------------------
 
-" LSP
+" Lua Imports
 lua require("lsp-config")

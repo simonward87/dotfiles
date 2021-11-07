@@ -10,7 +10,7 @@ set hidden                                      " keep multiple buffers open
 set ignorecase                                  " case-insensitive search
 set incsearch                                   " updates search results per-character
 set iskeyword+=-                                " treat dash-separation as word text object
-set mouse=nicr                                  " enable mouse 
+set mouse=nicr                                  " enable mouse
 set nobackup                                    " coc recommendation
 set noerrorbells                                " mute error sound
 set noswapfile                                  " new buffers created without swapfiles
@@ -24,9 +24,9 @@ set shiftwidth=2                                " updates shift-width value
 set shortmess+=c                                " avoid file message prompts
 set sidescrolloff=5                             " scroll limit from screenX boundaries
 set smartcase                                   " case-sensitive search on capital letter
-set smarttab                                    " indents according to shiftwidth 
+set smarttab                                    " indents according to shiftwidth
 set softtabstop=2                               " 2 spaces for tabs during editing
-set tabstop=2                                   " 2 spaces for tabs 
+set tabstop=2                                   " 2 spaces for tabs
 set ttyfast                                     " optimize for fast terminal connections
 set undodir=~/.vim/undodir                      " directory for undo history files
 set undofile                                    " save undo history to dedicated file
@@ -169,11 +169,3 @@ let g:coc_snippet_next = '<tab>'
 
 set bg=dark
 colo tender
-
-" if strftime("%H") < 18
-"   set bg=light
-"   colo antiphoton
-" else
-"   set bg=dark
-"   colo photon
-" endif
