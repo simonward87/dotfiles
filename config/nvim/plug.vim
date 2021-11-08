@@ -23,21 +23,29 @@ Plug 'tpope/vim-surround'                                   " streamline surroun
 " ---------------------------------------------------------------- NVIM PLUGINS
 
 if has("nvim")
+
+    " -- Completion
+    Plug 'hrsh7th/nvim-cmp'         " base completion
+    Plug 'hrsh7th/cmp-buffer'       " complete words from the current buffer
+    Plug 'hrsh7th/cmp-path'         " complete filepaths
+    Plug 'hrsh7th/cmp-nvim-lua'     " complete neovim lua
+    Plug 'hrsh7th/cmp-nvim-lsp'     " auto-import, snippet expansion etc
+    Plug 'hrsh7th/cmp-cmdline'      " complete vim command line
+    Plug 'L3MON4D3/LuaSnip'         " snippet completion
+    Plug 'saadparwaiz1/cmp_luasnip' " snippet completion
+    Plug 'onsails/lspkind-nvim'     " pictograms to completion
+
+    " -- Telescope
     Plug 'BurntSushi/ripgrep'                                   " Telescope dependency
-    Plug 'hrsh7th/cmp-nvim-lsp'
-    Plug 'hrsh7th/cmp-buffer'
-    Plug 'hrsh7th/cmp-path'
-    Plug 'hrsh7th/cmp-cmdline'
-    Plug 'hrsh7th/nvim-cmp'                                     " lsp completion
-    Plug 'hrsh7th/cmp-vsnip'
-    Plug 'hrsh7th/vim-vsnip'                                    " lsp snippets
+    Plug 'nvim-lua/plenary.nvim'                                " Telescope dependency
+    Plug 'nvim-telescope/telescope.nvim'                        " fuzzy finder over lists
+    Plug 'nvim-telescope/telescope-fzy-native.nvim'             " native sorter
+
+    " Plug 'hrsh7th/vim-vsnip'                                    " lsp snippets
     Plug 'neovim/nvim-lspconfig'                                " lsp client configs
     Plug 'jose-elias-alvarez/null-ls.nvim'                      " in-memory language server for diagnostics & formatting
     Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'                 " integrates ESLint and file formatting with Prettier
     Plug 'nvim-lua/popup.nvim'                                  " overlay popups
-    Plug 'nvim-lua/plenary.nvim'                                " Telescope dependency
-    Plug 'nvim-telescope/telescope.nvim'                        " fuzzy finder over lists
-    Plug 'nvim-telescope/telescope-fzy-native.nvim'             " native sorter
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " better syntax highlighting
     Plug 'nvim-treesitter/playground'                           " playground for nvim-treesitter
     Plug 'sharkdp/fd'                                           " finder for telescope
@@ -50,9 +58,9 @@ endif
 
 Plug 'axvr/photon.vim'
 Plug 'davidosomething/vim-colors-meh'
+Plug 'gosukiwi/vim-atom-dark'
 Plug 'gruvbox-community/gruvbox'
 Plug 'jacoborus/tender.vim'
-Plug 'mcchrish/zenbones.nvim'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'sainnhe/gruvbox-material'
 Plug 'sainnhe/everforest'

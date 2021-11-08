@@ -16,10 +16,12 @@ set noswapfile
 set nowrap                                          " no line-wrapping
 set relativenumber
 set scrolloff=8
-set shiftwidth=4
+set shiftwidth=2
+" set shiftwidth=4
 set signcolumn=number
 set smartcase
-set tabstop=4 softtabstop=4
+set tabstop=2 softtabstop=2
+" set tabstop=4 softtabstop=4
 set undodir=~/.vim/undodir
 set undofile
 set updatetime=50

@@ -12,18 +12,18 @@ scrolling:
   multiplier: 3
 font:
   normal:
-    family: "Roboto Mono For Powerline"
+    family: "RobotoMono Nerd Font"
     style: Regular
   bold:
-    family: "Roboto Mono For Powerline"
+    family: "RobotoMono Nerd Font"
     style: Bold
   italic:
-    family: "Roboto Mono For Powerline"
+    family: "RobotoMono Nerd Font"
     style: Italic
   bold_italic:
-    family: "Roboto Mono For Powerline"
+    family: "RobotoMono Nerd Font"
     style: Bold Italic
-  size: 15.5
+  size: 15
   offset:
     x: 0
     y: 0

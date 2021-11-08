@@ -76,6 +76,7 @@ cask "font-pt-sans"
 cask "font-pt-serif"
 cask "font-roboto"
 cask "font-roboto-mono"
+cask "font-roboto-mono-nerd-font"
 cask "font-roboto-slab"
 # Web browser
 cask "google-chrome"
