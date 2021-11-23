@@ -43,20 +43,21 @@ cmp.setup {
     { name = 'nvim_lua' },
     { name = 'path' },
     { name = 'luasnip' },
-    { name = 'buffer', keyword_length = 5 },
+    -- { name = 'buffer', keyword_length = 5 },
+    { name = 'buffer' },
   },
 
   cmdline = cmp.setup.cmdline(':', {
     sources = {
-      { name = 'cmdline', keyword_length = 3 }
+      {
+          name = 'cmdline',
+      }
     }
   }),
 
   formatting = {
     format = lspkind.cmp_format {
-      -- with_text = false,
-      with_text = true,
-      -- maxwidth = 50,
+      with_text = false,
       menu = {
         buffer = "[buf]",
         nvim_lsp = "[LSP]",

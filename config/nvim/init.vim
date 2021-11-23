@@ -1,13 +1,11 @@
 "  Sets
-
 set colorcolumn=80                                  " 80 character guide rule
 set completeopt=menuone,longest,noinsert,noselect   " text completion
 set cursorline                                      " highlight current line
 set expandtab
-set exrc 			                                " allow local vimrc
+set exrc 			                                      " allow local vimrc
 set hidden                                          " allow background unsaved buffers
 set ignorecase
-set incsearch                                       " show search results per keystroke
 set number
 set nobackup
 set nohlsearch                                      " highlight doesn't persist after search
@@ -16,12 +14,11 @@ set noswapfile
 set nowrap                                          " no line-wrapping
 set relativenumber
 set scrolloff=8
+set sidescrolloff=12
 set shiftwidth=2
-" set shiftwidth=4
 set signcolumn=number
 set smartcase
 set tabstop=2 softtabstop=2
-" set tabstop=4 softtabstop=4
 set undodir=~/.vim/undodir
 set undofile
 set updatetime=50
@@ -39,34 +36,27 @@ endif
 " -----------------------------------------------------------------------------
 
 " Theme
-
 if exists("&termguicolors") && exists("&winblend")
     set pumblend=5                                      " pop up menu transparency
     set termguicolors                                   " allow true color
-    set winblend=0
+    set winblend=0                                      " window transparency
     " set background=light
     " colorscheme github_light
     colorscheme tender
 
     highlight Normal guibg=none
 endif
-
-filetype plugin indent on
 " -----------------------------------------------------------------------------
 
 " Filetypes
-
 au BufNewFile,BufRead *.tsx setf typescriptreact
 au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.mdx set filetype=markdown
 
 set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
-
-autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 " -----------------------------------------------------------------------------
 
 " Customisations
-
 let mapleader=" "
 
 let g:closetag_filenames = '*.html,*.xhtml,*.jsx,*.js,*.tsx,*.svelte'
@@ -84,7 +74,6 @@ let g:ctrlp_use_caching=0
 let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git\|__sapper__\|dist\|dotbot\|build'
 let g:Hexokinase_highlighters=['backgroundfull']
 let g:loaded_perl_provider=0
-let g:netrw_banner=0
 let g:svelte_preprocessor_tags = [
 \ { 'name': 'ts', 'tag': 'script', 'as': 'typescript'}
 \ ]
@@ -97,20 +86,13 @@ runtime ./maps.vim
 " -----------------------------------------------------------------------------
 
 " Terminal Colours
-
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
-
-" Allow color schemes to do bright colors without forcing bold
-if &t_Co == 8 && $TERM !~# '^Eterm'
-  set t_Co=16
-endif
 " -----------------------------------------------------------------------------
 
 " Autocommands
-
 fun! TrimWhitespace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e

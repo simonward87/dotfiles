@@ -34,7 +34,7 @@ setopt CORRECT_ALL
 
 # Aliases
 alias bbd='brew bundle dump --force --describe'
-alias dtfs='cd $DOTFILES'
+alias dtfs='cd $DOTFILES; vim .'
 alias exa='exa -laFh --git -s type'
 alias gs='git status'
 alias k=kubectl

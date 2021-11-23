@@ -41,14 +41,17 @@ if exists node; then
   npm i -g surge
   npm i -g trash-cli
   npm i -g typescript
+  npm i -g vls
+  npm i -g @vue/cli
 
   # Language servers
-  npm i -g diagnostic-languageserver         # prettier support
   npm i -g dockerfile-language-server-nodejs # docker
   npm i -g eslint_d                          # eslint daemon
   npm i -g svelte-language-server            # svelte
   npm i -g typescript-language-server        # typescript
+  npm i -g @tailwindcss/language-server      # tailwind css
   npm i -g vim-language-server               # vimscript
+  npm i -g vls                               # vue
   npm i -g vscode-langservers-extracted      # css, json & html
 
   echo "Global NPM Packages Installed:"

@@ -15,6 +15,8 @@ brew "fd"
 brew "git"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Language server for the Go language
+brew "gopls"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Pager program similar to more
@@ -57,6 +59,7 @@ cask "dropbox"
 cask "figma"
 # Web browser
 cask "firefox"
+cask "font-consolas-for-powerline"
 cask "font-courier-prime"
 cask "font-courier-prime-code"
 cask "font-courier-prime-medium-and-semi-bold"

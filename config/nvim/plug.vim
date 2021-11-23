@@ -16,9 +16,12 @@ Plug 'leafgarland/typescript-vim'                           " ts syntax files
 Plug 'mlaursen/vim-react-snippets'                          " React snippets
 Plug 'pangloss/vim-javascript'                              " syntax highlighting & indentation, JavaScript
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }   " hex code colourizer
+Plug 'tpope/vim-capslock'                                   " software capslock
 Plug 'tpope/vim-commentary'                                 " comment stuff out
 Plug 'tpope/vim-fugitive'                                   " git wrapper
+Plug 'tpope/vim-sensible'                                   " useful defaults
 Plug 'tpope/vim-surround'                                   " streamline surroundings workflow
+Plug 'tpope/vim-vinegar'                                    " enhance Netrw
 
 " ---------------------------------------------------------------- NVIM PLUGINS
 

@@ -23,7 +23,7 @@ font:
   bold_italic:
     family: "RobotoMono Nerd Font"
     style: Bold Italic
-  size: 15
+  size: 16
   offset:
     x: 0
     y: 0
@@ -42,7 +42,7 @@ font:
 #   primary:
 #     background: '0xffffff'
 #     foreground: '0x4d5566'
-
+#
 #   # Normal colors
 #   normal:
 #     black:   '0x24292e'
@@ -53,7 +53,7 @@ font:
 #     magenta: '0x6f42c1'
 #     cyan:    '0x1b7c83'
 #     white:   '0x4d5566'
-
+#
 #   # Bright colors
 #   bright:
 #     black:   '0x586069'
@@ -64,7 +64,7 @@ font:
 #     magenta: '0x8a63d2'
 #     cyan:    '0x1b7c83'
 #     white:   '0x4d5566'
-
+#
 #   indexed_colors:
 #     - { index: 16, color: '0xd18616' }
 #     - { index: 17, color: '0xcb2431' }

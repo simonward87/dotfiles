@@ -3,9 +3,8 @@ if !exists('g:lspconfig') | finish | endif
 lua << EOF
 local nvim_lsp = require("lspconfig")
 
-require("rust-tools").setup({})
-
-require('nvim-autopairs').setup{}
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local on_attach = function(client, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -34,16 +33,35 @@ local on_attach = function(client, bufnr)
     end
 end
 
--- ----------------------------------------------------------- Language Servers
+-- Language Servers -----------------------------------------------------------
 
-nvim_lsp.cssls.setup { capabilities = capabilities }
+require"rust-tools".setup{}
 
-nvim_lsp.dockerls.setup { capabilities = capabilities }
+require"nvim-autopairs".setup{}
 
-nvim_lsp.html.setup { capabilities = capabilities }
+nvim_lsp.cssls.setup {
+    capabilities = capabilities,
+    on_attach = on_attach
+}
+
+nvim_lsp.dockerls.setup {
+    capabilities = capabilities,
+    on_attach = on_attach
+}
+
+nvim_lsp.gopls.setup{
+    capabilities = capabilities,
+    on_attach = on_attach
+}
+
+nvim_lsp.html.setup {
+    capabilities = capabilities,
+    on_attach = on_attach
+}
 
 nvim_lsp.jsonls.setup {
     capabilities = capabilities,
+    on_attach = on_attach,
     commands = {
         Format = {
             function()
@@ -53,18 +71,47 @@ nvim_lsp.jsonls.setup {
     }
 }
 
--- nvim_lsp.denols.setup { capabilities = capabilities }
+nvim_lsp.svelte.setup {
+    capabilities = capabilities,
+    on_attach = on_attach
+}
 
-nvim_lsp.svelte.setup { capabilities = capabilities }
+nvim_lsp.tailwindcss.setup {
+    capabilities = capabilities,
+    on_attach = on_attach
+}
+
+nvim_lsp.denols.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  init_options = {
+    enable = false
+  }
+}
 
 nvim_lsp.tsserver.setup {
     capabilities = capabilities,
     on_attach = on_attach,
-    filetypes = { "typescript", "typescriptreact", "typescript.tsx" }
+--     filetypes = {
+--       "javascript",
+--       "javascriptreact",
+--       "javascript.jsx",
+--       "typescript",
+--       "typescriptreact",
+--       "typescript.tsx"
+--     }
 }
 
 
-nvim_lsp.vimls.setup { capabilities = capabilities }
+nvim_lsp.vimls.setup {
+    capabilities = capabilities,
+    on_attach = on_attach
+}
+
+nvim_lsp.vuels.setup{
+  capabilities = capabilities,
+  on_attach = on_attach
+}
 
 -- ----------------------------------------------------------------------------
 EOF
