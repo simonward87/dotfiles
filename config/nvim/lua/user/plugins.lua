@@ -53,7 +53,7 @@ return packer.startup(function(use)
     run = "make hexokinase",
     config = function()
       vim.g.Hexokinase_highlighters = { "backgroundfull" }
-      vim.g.Hexokinase_ftEnabled = { "css" }
+      -- vim.g.Hexokinase_ftEnabled = { "css" }
     end
   }                                      -- hex code colourizer
   use "tpope/vim-capslock"               -- software capslock
