@@ -46,10 +46,6 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim"  -- fixes lsp doc highlight
   use "lewis6991/impatient.nvim"         -- speeds up loading lua modules
   use "moll/vim-bbye"                    -- improve buffer deletion behaviour
-  -- use {
-  --   'nvim-lualine/lualine.nvim',
-  --   requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  -- }
   use "nvim-lua/popup.nvim"              -- An implementation of vim Popup API
   use "nvim-lua/plenary.nvim"            -- lua function library (dependency for other plugs)
   use {
