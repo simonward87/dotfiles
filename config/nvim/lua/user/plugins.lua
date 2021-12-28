@@ -44,6 +44,7 @@ return packer.startup(function(use)
   -- general utilities
   use "alvan/vim-closetag"               -- fixes lsp doc highlight
   use "antoinemadec/FixCursorHold.nvim"  -- fixes lsp doc highlight
+  use "lewis6991/impatient.nvim"         -- speeds up loading lua modules
   use "nvim-lua/popup.nvim"              -- An implementation of vim Popup API
   use "nvim-lua/plenary.nvim"            -- lua function library (dependency for other plugs)
   use "tpope/vim-capslock"               -- software capslock
@@ -62,7 +63,6 @@ return packer.startup(function(use)
 --   use "nvim-lualine/lualine.nvim"
 --   use "akinsho/toggleterm.nvim"
 --   use "ahmedkhalf/project.nvim"
---   use "lewis6991/impatient.nvim"
 --   use "lukas-reineke/indent-blankline.nvim"
 --   use "goolord/alpha-nvim"
 --   use "folke/which-key.nvim"
