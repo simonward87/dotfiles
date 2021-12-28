@@ -11,6 +11,8 @@ nnoremap <leader>gs :G<CR>
 nnoremap <leader>gc :G commit<CR>
 nnoremap <leader>gp :G push<CR>
 
+nnoremap <leader>x :w\|bd<cr>
+
 " nnoremap <leader>pv :Ex<CR>
 " nnoremap <leader>dtfs :Ex ~/.dotfiles<CR>
 

@@ -1,0 +1,115 @@
+local fn = vim.fn
+local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+
+-- autoinstall plugin manager
+if fn.empty(fn.glob(install_path)) > 0 then
+  PACKER_BOOTSTRAP = fn.system {
+    "git",
+    "clone",
+    "--depth",
+    "1",
+    "https://github.com/wbthomason/packer.nvim",
+    install_path,
+  }
+  print "Installing packer close and reopen Neovim..."
+  vim.cmd [[packadd packer.nvim]]
+end
+
+-- reload nvim whenever changes to this file are saved
+vim.cmd [[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]]
+
+-- protected call stops errors on first load
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+  return
+end
+
+-- use popup window
+packer.init {
+  display = {
+    open_fn = function()
+      return require("packer.util").float({ border = "rounded" })
+      -- return require("packer.util").float
+    end,
+  },
+}
+
+-- plugin installs
+return packer.startup(function(use)
+  -- general utilities
+  use "alvan/vim-closetag"               -- fixes lsp doc highlight
+  use "antoinemadec/FixCursorHold.nvim"  -- fixes lsp doc highlight
+  use "nvim-lua/popup.nvim"              -- An implementation of vim Popup API
+  use "nvim-lua/plenary.nvim"            -- lua function library (dependency for other plugs)
+  use "tpope/vim-capslock"               -- software capslock
+  use "tpope/vim-commentary"             -- comment stuff out
+  use "tpope/vim-fugitive"               -- git wrapper
+  use "tpope/vim-sensible"               -- useful defaults
+  use "tpope/vim-surround"               -- streamline surroundings workflow
+  use "tpope/vim-vinegar"                -- Netrw enhancements
+  use "wbthomason/packer.nvim"           -- Let packer manage itself
+  use "windwp/nvim-autopairs"            -- Autopairs with cmp and treesitter integration
+--   use "numToStr/Comment.nvim"            -- Easily comment stuff
+--   use "kyazdani42/nvim-web-devicons"
+--   use "kyazdani42/nvim-tree.lua"
+--   use "akinsho/bufferline.nvim"
+--   use "moll/vim-bbye"
+--   use "nvim-lualine/lualine.nvim"
+--   use "akinsho/toggleterm.nvim"
+--   use "ahmedkhalf/project.nvim"
+--   use "lewis6991/impatient.nvim"
+--   use "lukas-reineke/indent-blankline.nvim"
+--   use "goolord/alpha-nvim"
+--   use "folke/which-key.nvim"
+
+  -- colorschemes
+  use "cocopon/iceberg.vim"
+  use "jacoborus/tender.vim"
+  use "zefei/cake16"
+  use "lunarvim/colorschemes"
+--   use "lunarvim/darkplus.nvim"
+
+  -- completion
+  use "hrsh7th/nvim-cmp"                 -- completion plugin
+  use "hrsh7th/cmp-buffer"               -- buffer completions
+  use "hrsh7th/cmp-path"                 -- path completions
+  use "hrsh7th/cmp-cmdline"              -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip"         -- snippet completions
+  use "hrsh7th/cmp-nvim-lsp"             -- lsp completions
+  use "hrsh7th/cmp-nvim-lua"             -- complete neovim lua
+
+  -- snippets
+  use "L3MON4D3/LuaSnip"                 -- snippet engine
+  use "rafamadriz/friendly-snippets"     -- snippet library
+
+  -- LSP
+  use "neovim/nvim-lspconfig"            -- enable LSP
+  use "williamboman/nvim-lsp-installer"  -- language server installer
+  use "tamago324/nlsp-settings.nvim"     -- language server settings defined in json for
+  use "jose-elias-alvarez/null-ls.nvim"  -- for formatters and linters
+
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use "JoosepAlviste/nvim-ts-context-commentstring" -- simple code commenting
+  -- use "p00f/nvim-ts-rainbow"                     -- rainbow pairs
+
+  -- Gitsigns
+  use "lewis6991/gitsigns.nvim"
+
+  -- Automatically set up configuration after cloning packer
+  -- NOTE: must run after all plugins
+  if PACKER_BOOTSTRAP then
+    require("packer").sync()
+  end
+end)

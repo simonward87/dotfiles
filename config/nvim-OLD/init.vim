@@ -1,62 +1,70 @@
 "  Sets
+
 set colorcolumn=80                                  " 80 character guide rule
 set completeopt=menuone,longest,noinsert,noselect   " text completion
 set cursorline                                      " highlight current line
-set expandtab
+set expandtab                                       " insert spaces for tabs
 set exrc 			                                      " allow local vimrc
 set hidden                                          " allow background unsaved buffers
-set ignorecase
-set number
-set nobackup
+set ic                                              " ignore case in search patterns
+set iskeyword+=-                                    " treat split words as single words
+set nu                                              " line numbers
+set nobk                                            " stop autocreating backups
 set nohlsearch                                      " highlight doesn't persist after search
 set noshowmode                                      " hide mode indicator
-set noswapfile
+set noswf                                           " stop autocreating swapfiles
 set nowrap                                          " no line-wrapping
-set relativenumber
-set scrolloff=8
-set sidescrolloff=12
-set shiftwidth=2
-set signcolumn=number
-set smartcase
-set tabstop=2 softtabstop=2
-set undodir=~/.vim/undodir
-set undofile
-set updatetime=50
-" -----------------------------------------------------------------------------
+set rnu                                             " relative line numbers
+set scrolloff=8                                     " vertical scroll boundaries
+set sidescrolloff=12                                " horizontal scroll boundaries
+set sw=2                                            " number of spaces to use for autoindent
+set signcolumn=number                               " use line number column for signs
+set smartcase                                       " smart case-insensitive search
+set ts=2 sts=2                                      " number of spaces that a tab counts for
+set undodir=~/.vim/undodir                          " directory for undo files
+set undofile                                        " create undo files
+set updatetime=50                                   " delay until swapfile is written
 
+" -----------------------------------------------------------------------------
 " Imports
+
 runtime ./plug.vim
 
+" Mac-specific config
 if has("unix")
     let s:uname = system("uname -s")
     if s:uname == "Darwin\n"
         runtime ./macos.vim
     endif
 endif
-" -----------------------------------------------------------------------------
 
+" -----------------------------------------------------------------------------
 " Theme
+
 if exists("&termguicolors") && exists("&winblend")
     set pumblend=5                                      " pop up menu transparency
     set termguicolors                                   " allow true color
     set winblend=0                                      " window transparency
     " set background=light
-    " colorscheme github_light
+    " colorscheme cake16
     colorscheme tender
+    " colorscheme iceberg
 
-    highlight Normal guibg=none
+    " highlight Normal guibg=none
 endif
-" -----------------------------------------------------------------------------
 
+" -----------------------------------------------------------------------------
 " Filetypes
+
 au BufNewFile,BufRead *.tsx setf typescriptreact
 au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.mdx set filetype=markdown
 
 set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
-" -----------------------------------------------------------------------------
 
+" -----------------------------------------------------------------------------
 " Customisations
+
 let mapleader=" "
 
 let g:closetag_filenames = '*.html,*.xhtml,*.jsx,*.js,*.tsx,*.svelte'
@@ -69,6 +77,7 @@ let g:closetag_regions = {
     \ 'javascript.jsx': 'jsxRegion',
     \ }
 let g:closetag_shortcut = '>'
+let g:colors_off_a_little=1
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 let g:ctrlp_use_caching=0
 let g:ctrlp_custom_ignore='node_modules\|DS_Store\|git\|__sapper__\|dist\|dotbot\|build'
@@ -83,16 +92,18 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 runtime ./maps.vim
-" -----------------------------------------------------------------------------
 
+" -----------------------------------------------------------------------------
 " Terminal Colours
+
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
-" -----------------------------------------------------------------------------
 
+" -----------------------------------------------------------------------------
 " Autocommands
+
 fun! TrimWhitespace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e

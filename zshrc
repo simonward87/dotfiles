@@ -37,12 +37,15 @@ alias bbd='brew bundle dump --force --describe'
 alias dtfs='cd $DOTFILES; vim .'
 alias exa='exa -laFh --git -s type'
 alias gs='git status'
+alias ip='ipconfig getifaddr en0'
 alias k=kubectl
-alias ls='exa'
+alias ls=exa
 # alias ls='ls -lAFGh'
 alias rm=trash
+alias serve=http-server
 alias trail='<<<${(F)path}'
-alias vim='nvim'
+alias vim=/opt/homebrew/bin/nvim
+alias vi=/opt/homebrew/bin/nvim
 
 # Prompt Customization
 PROMPT='

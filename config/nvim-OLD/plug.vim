@@ -40,7 +40,7 @@ if has("nvim")
 
     " -- Telescope
     Plug 'BurntSushi/ripgrep'                                   " Telescope dependency
-    Plug 'nvim-lua/plenary.nvim'                                " Telescope dependency
+    Plug 'nvim-lua/plenary.nvim'                                " useful lua functions used by many plugins
     Plug 'nvim-telescope/telescope.nvim'                        " fuzzy finder over lists
     Plug 'nvim-telescope/telescope-fzy-native.nvim'             " native sorter
 
@@ -64,8 +64,13 @@ Plug 'davidosomething/vim-colors-meh'
 Plug 'gosukiwi/vim-atom-dark'
 Plug 'gruvbox-community/gruvbox'
 Plug 'jacoborus/tender.vim'
+Plug 'pbrisbin/vim-colors-off'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'sainnhe/gruvbox-material'
 Plug 'sainnhe/everforest'
+
+Plug 'cocopon/iceberg.vim'
+Plug 'ldelossa/vimdark'
+Plug 'zefei/cake16'
 
 call plug#end()

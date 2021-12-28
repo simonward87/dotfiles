@@ -35,7 +35,7 @@ end
 
 -- Language Servers -----------------------------------------------------------
 
-require"rust-tools".setup{}
+-- require"rust-tools".setup{}
 
 require"nvim-autopairs".setup{}
 
@@ -76,18 +76,15 @@ nvim_lsp.svelte.setup {
     on_attach = on_attach
 }
 
-nvim_lsp.tailwindcss.setup {
-    capabilities = capabilities,
-    on_attach = on_attach
-}
+-- nvim_lsp.tailwindcss.setup {
+--     capabilities = capabilities,
+--     on_attach = on_attach
+-- }
 
-nvim_lsp.denols.setup {
-  capabilities = capabilities,
-  on_attach = on_attach,
-  init_options = {
-    enable = false
-  }
-}
+-- nvim_lsp.denols.setup {
+--   capabilities = capabilities,
+--   on_attach = on_attach,
+-- }
 
 nvim_lsp.tsserver.setup {
     capabilities = capabilities,
