@@ -70,8 +70,8 @@ return packer.startup(function(use)
   -- colorschemes
   use "cocopon/iceberg.vim"
   use "jacoborus/tender.vim"
+  use 'eddyekofo94/gruvbox-flat.nvim'
   use "zefei/cake16"
-  use "lunarvim/colorschemes"
 --   use "lunarvim/darkplus.nvim"
 
   -- completion
