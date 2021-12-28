@@ -20,7 +20,8 @@ keymap("n", "<leader>h", "<C-w>h", opts)     -- move left
 keymap("n", "<leader>j", "<C-w>j", opts)     -- move down
 keymap("n", "<leader>k", "<C-w>k", opts)     -- move up
 keymap("n", "<leader>l", "<C-w>l", opts)     -- move right
-keymap("n", "<leader>x", ":w|bd<CR>", opts)  -- write and close buffer
+keymap("n", "<leader>d", ":Bdelete<CR>", opts)     -- delete buffer
+-- keymap("n", "<leader>x", ":w|bd<CR>", opts)  -- write and close buffer
 
 -- buffer navigation
 keymap("n", "L", ":bn<CR>", opts)  -- next buffer

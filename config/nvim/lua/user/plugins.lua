@@ -45,8 +45,21 @@ return packer.startup(function(use)
   use "alvan/vim-closetag"               -- fixes lsp doc highlight
   use "antoinemadec/FixCursorHold.nvim"  -- fixes lsp doc highlight
   use "lewis6991/impatient.nvim"         -- speeds up loading lua modules
+  use "moll/vim-bbye"                    -- improve buffer deletion behaviour
+  -- use {
+  --   'nvim-lualine/lualine.nvim',
+  --   requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  -- }
   use "nvim-lua/popup.nvim"              -- An implementation of vim Popup API
   use "nvim-lua/plenary.nvim"            -- lua function library (dependency for other plugs)
+  use {
+    "RRethy/vim-hexokinase",
+    run = "make hexokinase",
+    config = function()
+      vim.g.Hexokinase_highlighters = { "backgroundfull" }
+      vim.g.Hexokinase_ftEnabled = { "css" }
+    end
+  }                                      -- hex code colourizer
   use "tpope/vim-capslock"               -- software capslock
   use "tpope/vim-commentary"             -- comment stuff out
   use "tpope/vim-fugitive"               -- git wrapper
@@ -55,12 +68,9 @@ return packer.startup(function(use)
   use "tpope/vim-vinegar"                -- Netrw enhancements
   use "wbthomason/packer.nvim"           -- Let packer manage itself
   use "windwp/nvim-autopairs"            -- Autopairs with cmp and treesitter integration
---   use "numToStr/Comment.nvim"            -- Easily comment stuff
 --   use "kyazdani42/nvim-web-devicons"
 --   use "kyazdani42/nvim-tree.lua"
 --   use "akinsho/bufferline.nvim"
---   use "moll/vim-bbye"
---   use "nvim-lualine/lualine.nvim"
 --   use "akinsho/toggleterm.nvim"
 --   use "ahmedkhalf/project.nvim"
 --   use "lukas-reineke/indent-blankline.nvim"
@@ -68,9 +78,15 @@ return packer.startup(function(use)
 --   use "folke/which-key.nvim"
 
   -- colorschemes
+  use "axvr/photon.vim"
   use "cocopon/iceberg.vim"
   use "jacoborus/tender.vim"
-  use 'eddyekofo94/gruvbox-flat.nvim'
+  use {
+    "eddyekofo94/gruvbox-flat.nvim",
+    config = function ()
+      vim.g.gruvbox_flat_style = "dark"
+    end
+  }
   use "zefei/cake16"
 --   use "lunarvim/darkplus.nvim"
 
