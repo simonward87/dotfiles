@@ -10,12 +10,14 @@ vim.opt.hidden = true                                                   -- allow
 vim.opt.hlsearch = false                                                -- highlight doesn't persist after search
 vim.opt.ic = true                                                       -- ignore case in search patterns
 vim.opt.iskeyword:append('-')                                           -- treat split words as single words
+vim.opt.laststatus = 0
 vim.opt.nu = true                                                       -- line numbers
 vim.opt.rnu = true                                                      -- relative line numbers
 vim.opt.scrolloff = 8                                                   -- vertical scroll boundaries
 vim.opt.showmode = false                                                -- hide mode indicator
 vim.opt.sidescrolloff = 12                                              -- horizontal scroll boundaries
-vim.opt.signcolumn = 'number'                                           -- use line number column for signs
+-- vim.opt.signcolumn = 'number'                                           -- use line number column for signs
+vim.opt.signcolumn = "auto"                                           -- use line number column for signs
 vim.opt.smartcase = true                                                -- smart case-insensitive search
 vim.opt.sts = 2                                                         -- number of spaces that a tab counts for
 vim.opt.sw = 2                                                          -- number of spaces to use for autoindent

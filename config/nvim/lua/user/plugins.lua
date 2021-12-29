@@ -76,11 +76,17 @@ return packer.startup(function(use)
   -- colorschemes
   use "axvr/photon.vim"
   use "cocopon/iceberg.vim"
-  use "jacoborus/tender.vim"
   use {
     "eddyekofo94/gruvbox-flat.nvim",
     config = function ()
       vim.g.gruvbox_flat_style = "dark"
+    end
+  }
+  use "jacoborus/tender.vim"
+  use {
+    "sainnhe/everforest",
+    config = function ()
+      vim.g.everforest_background = "hard"
     end
   }
   use "zefei/cake16"
