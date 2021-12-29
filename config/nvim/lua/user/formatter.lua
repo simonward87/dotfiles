@@ -14,18 +14,15 @@ end
 
 formatter.setup {
   filetype = {
-    javascript = {
-      prettier
-    },
-    typescript = {
-      prettier
-    },
-    javascriptreact = {
-      prettier
-    },
-    typescriptreact = {
-      prettier
-    },
+    css = { prettier },
+    javascript = { prettier },
+    javascriptreact = { prettier },
+    json = { prettier },
+    markdown = { prettier },
+    scss = { prettier },
+    typescript = { prettier },
+    typescriptreact = { prettier },
+    yaml = { prettier }
   }
 }
 

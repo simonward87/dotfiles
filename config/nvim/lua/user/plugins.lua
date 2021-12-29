@@ -83,6 +83,7 @@ return packer.startup(function(use)
     end
   }
   use "jacoborus/tender.vim"
+  use "rebelot/kanagawa.nvim"
   use {
     "sainnhe/everforest",
     config = function ()
