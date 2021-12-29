@@ -21,7 +21,6 @@ keymap("n", "<leader>j", "<C-w>j", opts)     -- move down
 keymap("n", "<leader>k", "<C-w>k", opts)     -- move up
 keymap("n", "<leader>l", "<C-w>l", opts)     -- move right
 keymap("n", "<leader>d", ":Bdelete<CR>", opts)     -- delete buffer
--- keymap("n", "<leader>x", ":w|bd<CR>", opts)  -- write and close buffer
 
 -- buffer navigation
 keymap("n", "L", ":bn<CR>", opts)  -- next buffer
@@ -39,6 +38,9 @@ keymap("v", ">", ">gv", opts)  -- prev buffer
 keymap("n", "<leader>gs", ":G<CR>", opts)
 keymap("n", "<leader>gc", ":G commit<CR>", opts)
 keymap("n", "<leader>gp", ":G push<CR>", opts)
+
+-- formatter
+keymap("n", "<leader>p", ":Format<CR>", opts)
 
 -- telescope
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
