@@ -1,6 +1,6 @@
 vim.opt.backup = false                                                  -- stop autocreating backups
 vim.opt.clipboard:append('unnamedplus')                                 -- use mac system clipboard by default
-vim.opt.colorcolumn = '80'                                              -- 80 character guide rule
+-- vim.opt.colorcolumn = '80'                                              -- 80 character guide rule
 vim.opt.completeopt = { 'menuone', 'longest', 'noinsert', 'noselect' }  -- text completion
 vim.opt.cursorline = true                                               -- highlight current line
 vim.opt.expandtab = true                                                -- insert spaces for tabs
