@@ -39,6 +39,8 @@ brew "python@3.9"
 brew "ripgrep"
 # Rust toolchain installer
 brew "rustup-init"
+# Opinionated Lua code formatter
+brew "stylua"
 # Version control system designed to be a better CVS
 brew "subversion"
 # Terminal multiplexer
