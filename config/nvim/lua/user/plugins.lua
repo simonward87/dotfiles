@@ -42,12 +42,12 @@ packer.init {
 -- plugin installs
 return packer.startup(function(use)
   -- general utilities
-  use "alvan/vim-closetag"               -- fixes lsp doc highlight
-  use "antoinemadec/FixCursorHold.nvim"  -- fixes lsp doc highlight
-  use "lewis6991/impatient.nvim"         -- speeds up loading lua modules
-  use "moll/vim-bbye"                    -- improve buffer deletion behaviour
-  use "nvim-lua/popup.nvim"              -- An implementation of vim Popup API
-  use "nvim-lua/plenary.nvim"            -- lua function library (dependency for other plugs)
+  use "antoinemadec/FixCursorHold.nvim"      -- fixes lsp doc highlight
+  use "lewis6991/impatient.nvim"             -- speeds up loading lua modules
+  use "lukas-reineke/indent-blankline.nvim"  -- add guide rules to indentation
+  use "moll/vim-bbye"                        -- improve buffer deletion behaviour
+  use "nvim-lua/popup.nvim"                  -- An implementation of vim Popup API
+  use "nvim-lua/plenary.nvim"                -- lua function library (dependency for other plugs)
   use {
     "RRethy/vim-hexokinase",
     run = "make hexokinase",
@@ -55,21 +55,19 @@ return packer.startup(function(use)
       vim.g.Hexokinase_highlighters = { "backgroundfull" }
       -- vim.g.Hexokinase_ftEnabled = { "css" }
     end
-  }                                      -- hex code colourizer
-  use "tpope/vim-capslock"               -- software capslock
-  use "tpope/vim-commentary"             -- comment stuff out
-  use "tpope/vim-fugitive"               -- git wrapper
-  use "tpope/vim-sensible"               -- useful defaults
-  use "tpope/vim-surround"               -- streamline surroundings workflow
-  use "tpope/vim-vinegar"                -- Netrw enhancements
-  use "wbthomason/packer.nvim"           -- Let packer manage itself
-  use "windwp/nvim-autopairs"            -- Autopairs with cmp and treesitter integration
+  }                                          -- hex code colourizer
+  use "tpope/vim-capslock"                   -- software capslock
+  use "tpope/vim-commentary"                 -- comment stuff out
+  use "tpope/vim-fugitive"                   -- git wrapper
+  use "tpope/vim-sensible"                   -- useful defaults
+  use "tpope/vim-surround"                   -- streamline surroundings workflow
+  use "tpope/vim-vinegar"                    -- Netrw enhancements
+  use "wbthomason/packer.nvim"               -- Let packer manage itself
 --   use "kyazdani42/nvim-web-devicons"
 --   use "kyazdani42/nvim-tree.lua"
 --   use "akinsho/bufferline.nvim"
 --   use "akinsho/toggleterm.nvim"
 --   use "ahmedkhalf/project.nvim"
---   use "lukas-reineke/indent-blankline.nvim"
 --   use "goolord/alpha-nvim"
 --   use "folke/which-key.nvim"
 
@@ -94,26 +92,26 @@ return packer.startup(function(use)
 --   use "lunarvim/darkplus.nvim"
 
   -- completion
-  use "hrsh7th/nvim-cmp"                 -- completion plugin
-  use "hrsh7th/cmp-buffer"               -- buffer completions
-  use "hrsh7th/cmp-path"                 -- path completions
-  use "hrsh7th/cmp-cmdline"              -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip"         -- snippet completions
-  use "hrsh7th/cmp-nvim-lsp"             -- lsp completions
-  use "hrsh7th/cmp-nvim-lua"             -- complete neovim lua
+  use "hrsh7th/nvim-cmp"                     -- completion plugin
+  use "hrsh7th/cmp-buffer"                   -- buffer completions
+  use "hrsh7th/cmp-path"                     -- path completions
+  use "hrsh7th/cmp-cmdline"                  -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip"             -- snippet completions
+  use "hrsh7th/cmp-nvim-lsp"                 -- lsp completions
+  use "hrsh7th/cmp-nvim-lua"                 -- complete neovim lua
 
   -- formatting
-  use "mhartington/formatter.nvim"       -- auto-formatter
+  use "mhartington/formatter.nvim"           -- auto-formatter
 
   -- snippets
-  use "L3MON4D3/LuaSnip"                 -- snippet engine
-  use "rafamadriz/friendly-snippets"     -- snippet library
+  use "L3MON4D3/LuaSnip"                     -- snippet engine
+  use "rafamadriz/friendly-snippets"         -- snippet library
 
   -- LSP
-  use "neovim/nvim-lspconfig"            -- enable LSP
-  use "williamboman/nvim-lsp-installer"  -- language server installer
-  use "tamago324/nlsp-settings.nvim"     -- language server settings defined in json for
-  use "jose-elias-alvarez/null-ls.nvim"  -- for formatters and linters
+  use "neovim/nvim-lspconfig"                -- enable LSP
+  use "williamboman/nvim-lsp-installer"      -- language server installer
+  use "tamago324/nlsp-settings.nvim"         -- language server settings defined in json for
+  use "jose-elias-alvarez/null-ls.nvim"      -- for formatters and linters
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -125,6 +123,8 @@ return packer.startup(function(use)
   }
   use "JoosepAlviste/nvim-ts-context-commentstring" -- simple code commenting
   -- use "p00f/nvim-ts-rainbow"                     -- rainbow pairs
+  use "windwp/nvim-autopairs"                -- Autopairs with cmp and treesitter integration
+  use "windwp/nvim-ts-autotag"               -- auto-close & auto-rename html tags
 
   -- Gitsigns
   use "lewis6991/gitsigns.nvim"
