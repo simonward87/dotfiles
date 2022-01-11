@@ -209,55 +209,55 @@ font:
 #     white:   '#d2d4de'
 
 # Colors (Iceberg Light)
-colors:
-  # Default colors
-  primary:
-    background: '#e8e9ec'
-    foreground: '#33374c'
-  # Normal colors
-  normal:
-    black: '#dcdfe7'
-    red: '#cc517a'
-    green: '#668e3d'
-    yellow: '#c57339'
-    blue: '#2d539e'
-    magenta: '#7759b4'
-    cyan: '#3f83a6'
-    white: '#33374c'
-  # Bright colors
-  bright:
-    black: '#8389a3'
-    red: '#cc3768'
-    green: '#598030'
-    yellow: '#b6662d'
-    blue: '#22478e'
-    magenta: '#6845ad'
-    cyan: '#327698'
-    white: '#262a3f'
+# colors:
+#   # Default colors
+#   primary:
+#     background: '#e8e9ec'
+#     foreground: '#33374c'
+#   # Normal colors
+#   normal:
+#     black: '#dcdfe7'
+#     red: '#cc517a'
+#     green: '#668e3d'
+#     yellow: '#c57339'
+#     blue: '#2d539e'
+#     magenta: '#7759b4'
+#     cyan: '#3f83a6'
+#     white: '#33374c'
+#   # Bright colors
+#   bright:
+#     black: '#8389a3'
+#     red: '#cc3768'
+#     green: '#598030'
+#     yellow: '#b6662d'
+#     blue: '#22478e'
+#     magenta: '#6845ad'
+#     cyan: '#327698'
+#     white: '#262a3f'
 
 # Colors (Tender)
-# colors:
-#   primary:
-#     background: '0x282828'
-#     foreground: '0xeeeeee'
-#   normal:
-#     black: '0x282828'
-#     red: '0xf43753'
-#     green: '0xc9d05c'
-#     yellow: '0xffc24b'
-#     blue: '0xb3deef'
-#     magenta: '0xd3b987'
-#     cyan: '0x73cef4'
-#     white: '0xeeeeee'
-#   bright:
-#     black: '0x4c4c4c'
-#     red: '0xf43753'
-#     green: '0xc9d05c'
-#     yellow: '0xffc24b'
-#     blue: '0xb3deef'
-#     magenta: '0xd3b987'
-#     cyan: '0x73cef4'
-#     white: '0xfeffff'
+colors:
+  primary:
+    background: '0x282828'
+    foreground: '0xeeeeee'
+  normal:
+    black: '0x282828'
+    red: '0xf43753'
+    green: '0xc9d05c'
+    yellow: '0xffc24b'
+    blue: '0xb3deef'
+    magenta: '0xd3b987'
+    cyan: '0x73cef4'
+    white: '0xeeeeee'
+  bright:
+    black: '0x4c4c4c'
+    red: '0xf43753'
+    green: '0xc9d05c'
+    yellow: '0xffc24b'
+    blue: '0xb3deef'
+    magenta: '0xd3b987'
+    cyan: '0x73cef4'
+    white: '0xfeffff'
 
 ## Colors (Gruvbox dark)
 # colors:
