@@ -1,22 +1,11 @@
 # Set Variables
 export DOTFILES="$HOME/.dotfiles"
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
-
-## Switch off OSX gatekeeper for homebrew installs
-export HOMEBREW_CASK_OPTS="--no-quarantine --no-binaries"
-
-## change default command from cat to bat
 export NULLCMD=bat
-
-## Loads nvm and nvm bash_completion
 export NVM_DIR="$HOME/.nvm"
     [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
     [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
-
-
-## Loads zplug
 export ZPLUG_HOME=$(brew --prefix)/opt/zplug
-source $ZPLUG_HOME/init.zsh
 
 # ZSH Options
 setopt NO_CASE_GLOB # Case-insensitive globbing
@@ -29,6 +18,9 @@ alias bbd='brew bundle dump --force --describe'
 alias dtfs='vim $DOTFILES'
 alias exa='exa -laFh --git -s type'
 alias gs='git status'
+alias ga.='git add .'
+alias gc='git commit'
+alias gp='git push'
 alias ip='ipconfig getifaddr en0'
 alias k=kubectl
 alias ls=exa
@@ -54,6 +46,7 @@ function mkcd() {
 }
 
 # ZSH Plugins
+source $ZPLUG_HOME/init.zsh
 zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-completions'
 zplug 'zsh-users/zsh-syntax-highlighting'
