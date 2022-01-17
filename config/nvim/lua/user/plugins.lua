@@ -48,6 +48,7 @@ return packer.startup(function(use)
 	use("moll/vim-bbye") -- improve buffer deletion behaviour
 	use("nvim-lua/popup.nvim") -- An implementation of vim Popup API
 	use("nvim-lua/plenary.nvim") -- lua function library (dependency for other plugs)
+	use("petertriho/nvim-scrollbar") -- diagnostics scrollbar
 	use({
 		"RRethy/vim-hexokinase",
 		run = "make hexokinase",

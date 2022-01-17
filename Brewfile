@@ -79,6 +79,7 @@ cask "font-open-sans"
 cask "font-pt-mono"
 cask "font-pt-sans"
 cask "font-pt-serif"
+# Font with a mechanical skeleton and the forms are largely geometric
 cask "font-roboto"
 cask "font-roboto-mono"
 cask "font-roboto-mono-nerd-font"
@@ -89,6 +90,8 @@ cask "google-chrome"
 cask "insomnia"
 # Keyboard customizer
 cask "karabiner-elements"
+# Minimal browser that protects privacy
+cask "min"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Video chat, voice call and instant messaging application
