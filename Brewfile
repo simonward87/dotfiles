@@ -25,6 +25,8 @@ brew "less"
 brew "luajit", args: ["HEAD"]
 # Mac App Store command-line interface
 brew "mas"
+# Node version management
+brew "n"
 # NCurses Disk Usage
 brew "ncdu"
 # Parser generator tool and incremental parsing library
