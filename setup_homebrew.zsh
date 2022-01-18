@@ -12,16 +12,12 @@ else
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# TODO: Keep an eye out for a different '--no-quarantine' solution.
-# Currently, you can't do `brew bundle --no-quarantine` as an option.
-# export HOMEBREW_CASK_OPTS="--no-quarantine"
+# TODO: Look out for a different '--no-quarantine' solution. Currently, 
+# you can't do `brew bundle --no-quarantine` as an option — instead, 
+# it is exported as an enviornment variable in zshenv
 # https://github.com/Homebrew/homebrew-bundle/issues/474
 
 brew bundle --verbose
-
-echo "Enter superuser (sudo) password to accept Xcode license"
-sudo xcodebuild -license accept
-sudo xcodebuild -runFirstLaunch
 
 # This works to solve the Insecure Directories issue:
 # compaudit | xargs chmod go-w

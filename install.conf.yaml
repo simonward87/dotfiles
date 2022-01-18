@@ -20,12 +20,13 @@
     ~/.zprofile:
 
 - create:
-    - ~/.nvm
+    - ~/.n
     - ~/.config/nvim/undo
     - ~/Study
     - ~/Work
 
 - shell:
     - command: ./setup_homebrew.zsh
-    - command: ./setup_node.zsh
     - command: ./setup_zsh.zsh
+    - command: ./setup_node.zsh
+    - command: ./setup_macos.zsh

@@ -1,7 +1,3 @@
-# Right now this file breaks things when trying to set up
-# on an M1 Mac. For more details, see m1-notes.md
-#
-#
 #!/usr/bin/env zsh
 
 echo -e "\n<<< Starting ZSH Setup >>>\n"
@@ -29,10 +25,10 @@ if sh --version | grep -q zsh; then
   echo '/private/var/select/sh already linked to /bin/zsh'
 else
   echo "Enter superuser (sudo) password to symlink sh to zsh"
-  # Looked cute, might delete later, idk
+
   sudo ln -sfv /bin/zsh /private/var/select/sh
 
-  # I'd like for this to work instead.
+  # I'd like for this to work instead, but currently not supported
   # sudo ln -sfv /opt/homebrew/bin/zsh /private/var/select/sh
 fi
 
