@@ -9,7 +9,7 @@ defaults write com.apple.finder ShowPathbar -bool true
 
 # Finder > Preferences > General > New Finder windows show:
 defaults write com.apple.finder NewWindowTarget -string 'PfLo'
-defaults write com.apple.finder NewWindowTargetPath -string "file://$HOME/.dotfiles"
+defaults write com.apple.finder NewWindowTargetPath -string "file://$HOME"
 
 # System Preferences > Dock
 defaults write com.apple.dock magnification -bool true
