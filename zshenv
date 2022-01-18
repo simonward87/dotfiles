@@ -1,3 +1,7 @@
+# Putting these environment variables here (instead of in 
+# zshrc) makes them available to Homebrew for the first 
+# install
+
 export HOMEBREW_CASK_OPTS="--no-quarantine --no-binaries"
 export N_PREFIX="$HOME/.n"
 export PREFIX="$N_PREFIX"

@@ -1,58 +1,37 @@
 #!/usr/bin/env zsh
 
-echo -e "\n<<< Starting Node Packages Setup >>>\n"
+echo -e "\n<<< Starting Node Setup >>>\n"
 
-# TODO:
-# - setup conditionals for NVM
-# - setup conditionals for node
+# Node versions are managed with `n`, which is in the Brewfile.
+# See `zshenv` for the setting of the `N_PREFIX` variable,
+# making it available below during the first install.
+# See `zshrc` where `N_PREFIX/bin` is added to PATH
 
-# if exists nvm; then
-#   echo "nvm exists, skipping install"
-# else
-#   echo "nvm doesn't exist, continuing with install"
-#   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-
-#   # Set up vars, load nvm and nvm bash completion
-#   export NVM_DIR="$HOME/.nvm"
-#   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-#   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-# fi
-
-# TODO: Keep an eye out for native M1 support
-# for nvm installed with Homebrew. The solution
-# above works, but the version number is hardcoded
-# in, so not very future-proof.
-
-# if exists node; then
-#   echo "node exists, skipping install"
-# else
-#   echo "node doesn't exist, continuing with install"
-#   # Install and activate latest stable node and npm
-#   nvm install node --latest-npm
-#   nvm use node
-# fi
-if exists node; then
-  # Install Global NPM Packages
-  npm i -g firebase-tools
-  npm i -g http-server
-  npm i -g json-server
-  npm i -g neovim
-  npm i -g prettier
-  npm i -g prettier-plugin-svelte
-  npm i -g surge
-  npm i -g trash-cli
-  npm i -g typescript
-
-  # Language servers
-  npm i -g dockerfile-language-server-nodejs # docker
-  npm i -g eslint_d                          # eslint daemon
-  npm i -g svelte-language-server            # svelte
-  npm i -g typescript-language-server        # typescript
-  npm i -g vscode-langservers-extracted      # css, json & html
-  npm i -g yaml-language-server              # yaml
-
-  echo "Global NPM Packages Installed:"
-  npm list --global --depth=0
+if exists $N_PREFIX/bin/node; then
+  echo "Node $($N_PREFIX/bin/node --version) & NPM $($N_PREFIX/bin/npm --version) already installed with n"
 else
-  echo "node doesn't exist, install node before trying to install packages!"
+  echo "Intalled Node & NPM with n..."
+  n lts
 fi
+
+# Install Global NPM Packages
+npm i -g firebase-tools
+npm i -g http-server
+npm i -g json-server
+npm i -g neovim
+npm i -g prettier
+npm i -g prettier-plugin-svelte
+npm i -g surge
+npm i -g trash-cli
+npm i -g typescript
+
+# Language servers
+npm i -g dockerfile-language-server-nodejs # docker
+npm i -g eslint_d                          # eslint daemon
+npm i -g svelte-language-server            # svelte
+npm i -g typescript-language-server        # typescript
+npm i -g vscode-langservers-extracted      # css, json & html
+npm i -g yaml-language-server              # yaml
+
+echo "Global NPM Packages Installed:"
+npm list --global --depth=0
