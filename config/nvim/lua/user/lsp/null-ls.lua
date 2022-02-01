@@ -9,7 +9,8 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.prettier.with({
-			extra_args = { "--single-quote" },
+			extra_args = { "--single-quote", "--prose-wrap=always" },
+			-- filetypes = { "markdown" },
 			extra_filetypes = { "svelte" },
 		}),
 		formatting.stylua,
