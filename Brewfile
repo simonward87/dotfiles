@@ -33,8 +33,6 @@ brew "ncdu"
 brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Manage multiple Node.js versions
-brew "nvm"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # Search tool like grep and The Silver Searcher
@@ -92,11 +90,10 @@ cask "google-chrome"
 cask "insomnia"
 # Keyboard customizer
 cask "karabiner-elements"
-# Minimal browser that protects privacy
-cask "min"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Video chat, voice call and instant messaging application
 cask "skype"
+mas "Kindle", id: 405399194
 mas "Logic Pro", id: 634148309
 mas "Todoist", id: 585829637

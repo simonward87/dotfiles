@@ -15,7 +15,7 @@ setopt CORRECT_ALL
 
 # Aliases
 alias bbd='brew bundle dump --force --describe'
-alias dtfs='vim $DOTFILES'
+alias dtfs='cd $DOTFILES; vim .'
 alias exa='exa -laFh --git -s type'
 alias gs='git status'
 alias ga.='git add .'
@@ -71,5 +71,5 @@ compinit -u
 
 # The two lines below setup kubectl completion
 # Run them after enabling Kubernetes
-source <(kubectl completion zsh)
-complete -F __start_kubectl k
+# source <(kubectl completion zsh)
+# complete -F __start_kubectl k
