@@ -51,6 +51,8 @@ brew "tree"
 brew "zplug"
 # UNIX shell (command interpreter)
 brew "zsh"
+# GPU-accelerated terminal emulator
+cask "alacritty"
 # 3D creation suite
 cask "blender"
 # App to build and share containerized applications and microservices
