@@ -69,7 +69,10 @@ fpath=(~/.zsh $fpath)
 autoload -Uz compinit
 compinit -u
 
-# The two lines below setup kubectl completion
-# Run them after enabling Kubernetes
-# source <(kubectl completion zsh)
-# complete -F __start_kubectl k
+# kubectl completion - if check only works if running
+# k8s via Docker desktop
+if (pgrep -f Docker.app > /dev/null 2>&1); then
+  # Extend shell completion to work with k alias:
+  compdef __start_kubectl k
+  source <(kubectl completion zsh)
+fi
