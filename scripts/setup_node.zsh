@@ -15,6 +15,8 @@ else
 fi
 
 # Install Global NPM Packages
+npm i -g dockerfile-language-server-nodejs
+npm i -g eslint_d
 npm i -g firebase-tools
 npm i -g http-server
 npm i -g json-server
@@ -22,16 +24,12 @@ npm i -g neovim
 npm i -g prettier
 npm i -g prettier-plugin-svelte
 npm i -g surge
+npm i -g svelte-language-server
 npm i -g trash-cli
+npm i -g typescript-language-server
 npm i -g typescript
-
-# Language servers
-npm i -g dockerfile-language-server-nodejs # docker
-npm i -g eslint_d                          # eslint daemon
-npm i -g svelte-language-server            # svelte
-npm i -g typescript-language-server        # typescript
-npm i -g vscode-langservers-extracted      # css, json & html
-npm i -g yaml-language-server              # yaml
+npm i -g vscode-langservers-extracted
+npm i -g yaml-language-server
 
 echo "Global NPM Packages Installed:"
 npm list --global --depth=0

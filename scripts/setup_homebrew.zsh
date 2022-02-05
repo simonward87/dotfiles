@@ -12,6 +12,11 @@ else
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+# Ensure n is installed before doing brew bundle, else a seperate copy of
+# node will be installed as it is a dependency of various packages
+brew install n
+n lts
+
 # TODO: Look out for a different '--no-quarantine' solution. Currently, 
 # you can't do `brew bundle --no-quarantine` as an option — instead, 
 # it is exported as an enviornment variable in zshenv

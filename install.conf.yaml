@@ -12,9 +12,12 @@
     ~/.config/alacritty: config/alacritty
     ~/.config/bat: config/bat
     ~/.config/karabiner: config/karabiner
-    ~/.config/nvim: config/nvim
-    ~/.gitconfig: config/gitconfig
-    ~/.tmux.conf: config/tmux.conf
+    ~/.config/nvim/:
+      glob: true
+      path: config/nvim/*
+    ~/.config/tmux: config/tmux
+    ~/.gitconfig:
+    ~/.tmux.conf:
     ~/.zshrc:
     ~/.zshenv:
     ~/.zprofile:
@@ -30,3 +33,5 @@
     - command: ./scripts/setup_zsh.zsh
     - command: ./scripts/setup_node.zsh
     - command: ./scripts/setup_macos.zsh
+    # try globbing here instead?:
+    # - command: ./scripts/*zsh
