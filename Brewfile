@@ -57,8 +57,6 @@ cask "alacritty"
 cask "blender"
 # App to build and share containerized applications and microservices
 cask "docker"
-# Client for the Dropbox cloud storage service
-cask "dropbox"
 # Collaborative team software
 cask "figma"
 # Web browser
