@@ -23,7 +23,6 @@
     ~/.zprofile:
 
 - create:
-    - ~/.n
     - ~/.config/nvim/undo
     - ~/Study
     - ~/Work
@@ -33,5 +32,3 @@
     - command: ./scripts/setup_zsh.zsh
     - command: ./scripts/setup_node.zsh
     - command: ./scripts/setup_macos.zsh
-    # try globbing here instead?:
-    # - command: ./scripts/*zsh

@@ -2,9 +2,6 @@
 export DOTFILES="$HOME/.dotfiles"
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
 export NULLCMD=bat
-# export NVM_DIR="$HOME/.nvm"
-#     [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
-#     [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 export ZPLUG_HOME=$(brew --prefix)/opt/zplug
 
 # ZSH Options
@@ -31,11 +28,11 @@ alias vim=/opt/homebrew/bin/nvim
 alias vi=/opt/homebrew/bin/nvim
 
 # Prompt Customization
-PROMPT='
-%(?..%F{red}[%?]%f )%1~ %# ' # Alternative
-
 # PROMPT='
-# %(?.%F{green}%m%f.%F{red}[%?] %m%f) %1~ %# '
+# %(?..%F{red}[%?]%f )%1~ %# ' # Alternative
+
+PROMPT='
+%(?.%F{green}%m%f.%F{red}[%?] %m%f) %1~ %# '
 
 # Add Locations to $path Array
 export PATH="$PATH:$N_PREFIX/bin"
@@ -47,7 +44,7 @@ function mkcd() {
   mkdir -p "$@" && cd "$_";
 }
 
-# ZSH Plugins
+# Plugins
 source $ZPLUG_HOME/init.zsh
 
 zplug 'zsh-users/zsh-autosuggestions'
@@ -69,10 +66,7 @@ fpath=(~/.zsh $fpath)
 autoload -Uz compinit
 compinit -u
 
-# kubectl completion - if check only works if running
-# k8s via Docker desktop
-if (pgrep -f Docker.app > /dev/null 2>&1); then
-  # Extend shell completion to work with k alias:
-  compdef __start_kubectl k
-  source <(kubectl completion zsh)
-fi
+# K8s completion
+# Extend completion to work with k alias
+compdef __start_kubectl k
+source $DOTFILES/completion/kubectl_completion.zsh

@@ -88,6 +88,8 @@ cask "font-roboto-mono-nerd-font"
 cask "font-roboto-slab"
 # Web browser
 cask "google-chrome"
+# Client for the Google Drive storage service
+cask "google-drive"
 # HTTP and GraphQL Client
 cask "insomnia"
 # Keyboard customizer

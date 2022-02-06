@@ -1,12 +1,58 @@
-# Dotfiles
+# MacOS Dotfiles
 
-I'm learning a ton about [dotfiles, command line use, Homebrew, zsh, git, macOS and more with the course **_Dotfiles from Start to Finish-ish_**](http://dotfiles.eieio.xyz/) by [@EIEIOxyz](https://twitter.com/EIEIOxyz/), and you can too!
+I learned a ton about
+[dotfiles, command line use, Homebrew, zsh, git, macOS and more with the course **_Dotfiles from Start to Finish-ish_**](http://dotfiles.eieio.xyz/)
+by [@EIEIOxyz](https://twitter.com/EIEIOxyz/), and you can too!
 
-## TODO
+## Restore Instructions
 
-- Terminal preferences
-- Displays settings
-  - Set resolution preferences
+1. `xcode-select --install` (Command Line Tools are required for Git and
+   Homebrew)
+1. `git clone https://github.com/simonward87/dotfiles.git ~/.dotfiles`. We'll
+   start with `https` but switch to `ssh` after everything is installed.
+1. `cd ~/.dotfiles`
+1. Check [Brewfile](Brewfile) and audit software to be installed, adjust if
+   required.
+1. [`./install`](install)
+1. Restart computer.
+1. Login to Google Drive (and multifactor authentication) and allow files to
+   sync.
+1. Enable Kubernetes (if required) in Docker preferences
+1. [Generate ssh key](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh),
+   add to GitHub, and switch remotes.
+
+```zsh
+# Generate SSH key in default location (~/.ssh/config)
+ssh-keygen -t ed25519 -C "39803787+simonward87@users.noreply.github.com"
+
+# Start the ssh-agent
+eval "$(ssh-agent -s)"
+
+# Create config file with necessary settings
+<< EOF > ~/.ssh/config
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+EOF
+
+# Add private key to ssh-agent
+ssh-add -K ~/.ssh/id_ed25519
+
+# Copy public key and add to github.com > Settings > SSH and GPG keys
+pbcopy < ~/.ssh/id_ed25519.pub
+
+# Test SSH connection, then verify fingerprint and username
+# https://help.github.com/en/github/authenticating-to-github/testing-your-ssh-connection
+ssh -T git@github.com
+
+# Switch from HTTPS to SSH
+git remote set-url origin git@github.com:simonward87/dotfiles.git
+```
+
+### Preferences
+
+- Display resolution
 - Dock preferences
   - Remove recently used apps
   - Turn off trash confirmation
@@ -17,16 +63,5 @@ I'm learning a ton about [dotfiles, command line use, Homebrew, zsh, git, macOS 
   - Sidebar favourites
 - Finder show path bar
 - Trackpad settings
-  - Enable tap to click
   - Enable three-finger swipe between workspaces
-- Git (config and SSH)
-- Enable Kubernetes in Docker preferences
 - Changed default Shell to ZSH
-- Share this repo with a million people
-
-## M1 MacBook Air Install Issues
-
-- [`/usr/local` is for Intel binaries, `/opt/homebrew` for ARM](https://docs.brew.sh/Installation)
-- `zsh` installed through Homebrew currently runs inside Rosetta rather than natively
-- Issues with using the Homebrew install of nvm, updated the install script to use the `curl` install as a temporary fix
-- The scripts failed the first time around as the settings in `zshrc`, `zprofile` and `zshenv` can't be sourced until the symlinks have been set up for them. These problems were solved by closing the terminal and running the script again

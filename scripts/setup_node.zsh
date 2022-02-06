@@ -10,7 +10,7 @@ echo -e "\n<<< Starting Node Setup >>>\n"
 if exists $N_PREFIX/bin/node; then
   echo "Node $($N_PREFIX/bin/node --version) & NPM $($N_PREFIX/bin/npm --version) already installed with n"
 else
-  echo "Intalled Node & NPM with n..."
+  echo "Installing Node & NPM with n..."
   n lts
 fi
 
