@@ -69,4 +69,4 @@ compinit -u
 # K8s completion
 # Extend completion to work with k alias
 compdef __start_kubectl k
-source $DOTFILES/completion/kubectl_completion.zsh
+source $DOTFILES/util/kubectl_completion.zsh
