@@ -8,21 +8,21 @@ by [@EIEIOxyz](https://twitter.com/EIEIOxyz/), and you can too!
 
 1. `xcode-select --install` (Command Line Tools are required for Git and
    Homebrew)
-1. We'll start with `https` and switch to `ssh` later
+2. We'll start with `https` and switch to `ssh` later
 
 ```sh
 git clone https://github.com/simonward87/dotfiles.git ~/.dotfiles
 ```
 
-1. `cd ~/.dotfiles`
-1. Check [Brewfile](Brewfile) and audit software to be installed, adjust if
+3. `cd ~/.dotfiles`
+4. Check [Brewfile](Brewfile) and audit software to be installed, adjust if
    required.
-1. [`./install`](install)
-1. Restart computer.
-1. Login to Google Drive (and multifactor authentication) and allow files to
+5. [`./install`](install)
+6. Restart computer.
+7. Login to Google Drive (and multifactor authentication) and allow files to
    sync.
-1. Enable Kubernetes (if required) in Docker preferences
-1. [Generate ssh key](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh),
+8. Enable Kubernetes (if required) in Docker preferences
+9. [Generate ssh key](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh),
    add to GitHub, and switch remotes.
 
 ```zsh
