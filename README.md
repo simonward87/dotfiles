@@ -8,8 +8,12 @@ by [@EIEIOxyz](https://twitter.com/EIEIOxyz/), and you can too!
 
 1. `xcode-select --install` (Command Line Tools are required for Git and
    Homebrew)
-1. `git clone https://github.com/simonward87/dotfiles.git ~/.dotfiles`. We'll
-   start with `https` but switch to `ssh` after everything is installed.
+1. We'll start with `https` and switch to `ssh` later
+
+```sh
+git clone https://github.com/simonward87/dotfiles.git ~/.dotfiles
+```
+
 1. `cd ~/.dotfiles`
 1. Check [Brewfile](Brewfile) and audit software to be installed, adjust if
    required.
