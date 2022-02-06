@@ -6,22 +6,19 @@ by [@EIEIOxyz](https://twitter.com/EIEIOxyz/), and you can too!
 
 ## Restore Instructions
 
-1. `xcode-select --install` (Command Line Tools are required for Git and
-   Homebrew)
-2. We'll start with `https` and switch to `ssh` later
+1. `xcode-select --install` (required for Git and Homebrew)
+2. Clone dotfiles repo. Use `https` and switch to `ssh` later
 
 ```sh
 git clone https://github.com/simonward87/dotfiles.git ~/.dotfiles
 ```
 
 3. `cd ~/.dotfiles`
-4. Check [Brewfile](Brewfile) and audit software to be installed, adjust if
-   required.
+4. Check [Brewfile](Brewfile) and audit software to be installed
 5. [`./install`](install)
-6. Restart computer.
-7. Login to Google Drive (and multifactor authentication) and allow files to
-   sync.
-8. Enable Kubernetes (if required) in Docker preferences
+6. Restart computer
+7. Login to Google Drive (and multifactor authentication)
+8. If required, enable Kubernetes in Docker preferences
 9. [Generate ssh key](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh),
    add to GitHub, and switch remotes.
 
