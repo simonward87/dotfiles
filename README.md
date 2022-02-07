@@ -90,6 +90,12 @@ $ ls $(which http)
 - `>` redirects output to something other than `STDOUT`, and **overwrites** it
 - `>>` redirects output to something other than `STDOUT`,and **appends** it
 - Both will create the file if it doesn't exist
+- `<` redirects **input** — in other words, instead of manually entering input,
+  it can be drawn from a file:
+
+```zsh
+$ pbcopy < ~/.ssh/id_rsa.pub
+```
 
 ### Environment Variables
 
@@ -101,14 +107,17 @@ $ ls $(which http)
 - `$$`: PID (process ID)
 - `$?`: exit code of the previously issued command
 
+The command `set` without any arguments can be used to view **all** environment
+variables — the stdout from `set` can then be filtered and sorted as required.
+
 | Unix Exit Codes                                                                               |
 | :-------------------------------------------------------------------------------------------- |
 | [More info on exit codes](https://shapeshed.com/unix-exit-codes/#what-exit-code-should-i-use) |
 
-## Aliases
+### Aliases
 
-We have overwritten the default `ls` command with an alias to the more useful
-`ls -lAFh`. This is done in `~/.zshrc`:
+We have overwritten the default `ls` command with an alias to the more
+informative `ls -lAFh`. This is done in `~/.zshrc`:
 
 ```zsh
 alias ls='ls -lAFh'
@@ -119,16 +128,16 @@ this will work the same way for other aliases that will be set up.
 
 | Note:                                                                                                                                                                                                                                |
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `zshrc` is sourced when a new interactive shell is started. `zshenv` is sourced on **all invocations** of the shell, allowing it to be referenced by scripts.                                                                        |
+| `zshrc` is sourced when a **new** interactive shell is started. `zshenv` is sourced on **all** invocations of the shell, allowing it to be referenced by scripts.                                                                    |
 | While zsh is now the default interactive shell on MacOS, for some reason the default shell is `sh`. Although, on further inspection, `sh` just symlinks to the `bash` executable. We will likely switch the default to be zsh later. |
 
-## Shebangs
+### Shebangs
 
 A word from combining 'hash' and 'bang' (another word used for `!`), the
-_shebang_ tells your computer what programme to use when it encounters this
-line.
+_shebang_ tells your computer what programme to use when executing the script
+below.
 
-## Git
+### Git
 
 ```zsh
 $ git config --global user.name # outputs the variable
@@ -146,27 +155,24 @@ $ git checkout -b <branch>
 $ git push -u <remote> <branch>
 ```
 
-## Symlinks
+### Symlinks
 
-Initially, we set up a symbolic link (or symlink) manually, using the `ln -s`
-command, and passing both the path to the source file as well as where we want
-to link it to. This works as expected, but we can do better. In the next
-section, we will use
+Initially we set up manual symbolic links (or symlinks), using `ln -s`, and
+passing both the path to the source file as well as where we want to link it to.
+This works as expected, but we can do better. In the next section, we will use
 [dotbot to automate this process](https://github.com/anishathalye/dotbot).
 
 ```zsh
 $ ln -s /path/to/original /path/to/link
 ```
 
-### Dotbot
-
-## Homebrew
+### Homebrew
 
 ```zsh
 # Search for a package:
 $ brew search <package>
 
-# Detail a package:
+# Package details:
 $ brew info <package>
 
 # export installed packages to Brewfile
@@ -190,5 +196,6 @@ $ brew autoremove
 
 ### Useful Packages Installed During Course
 
-- `httpie`: simplified `curl` clone
-- `bat`: `cat` clone with syntax highlighting
+- [httpie](https://httpie.io/docs/cli): Command-line HTTP and API testing client
+- [bat](https://github.com/sharkdp/bat#how-to-use): `cat` clone with syntax
+  highlighting
