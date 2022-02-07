@@ -67,6 +67,8 @@ git remote set-url origin git@github.com:simonward87/dotfiles.git
   - Enable three-finger swipe between workspaces
 - Changed default Shell to ZSH
 
+---
+
 ## Study Notes
 
 ### Commands
