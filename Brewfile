@@ -53,6 +53,8 @@ brew "zplug"
 brew "zsh"
 # GPU-accelerated terminal emulator
 cask "alacritty"
+# Configuration tool for the Betaflight firmware
+cask "betaflight-configurator"
 # 3D creation suite
 cask "blender"
 # App to build and share containerized applications and microservices
@@ -96,6 +98,8 @@ cask "karabiner-elements"
 cask "rectangle"
 # Video chat, voice call and instant messaging application
 cask "skype"
+# Unpacks archive files
+cask "the-unarchiver"
 mas "Kindle", id: 405399194
 mas "Logic Pro", id: 634148309
 mas "Todoist", id: 585829637

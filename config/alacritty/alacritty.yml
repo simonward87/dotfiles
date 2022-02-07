@@ -6,8 +6,8 @@ window:
     x: 8
     y: 8
   decorations: none
-  # startup_mode: Windowed
-  startup_mode: Fullscreen
+  startup_mode: Windowed
+  # startup_mode: Fullscreen
   # startup_mode: SimpleFullscreen
 scrolling:
   history: 10000
