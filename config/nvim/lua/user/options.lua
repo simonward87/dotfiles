@@ -1,3 +1,6 @@
+-- Sets sensible defaults. Running immediately allows defaults to be overriden as required
+vim.cmd("runtime! plugin/sensible.vim")
+
 vim.opt.backup = false -- stop autocreating backups
 vim.opt.clipboard:append("unnamedplus") -- use mac system clipboard by default
 vim.opt.completeopt = { "menuone", "longest", "noinsert", "noselect" } -- text completion
@@ -9,7 +12,7 @@ vim.opt.hidden = true -- allow background unsaved buffers
 vim.opt.hlsearch = false -- highlight doesn't persist after search
 vim.opt.ic = true -- ignore case in search patterns
 vim.opt.iskeyword:append("-") -- treat split words as single words
-vim.opt.laststatus = 0
+vim.opt.laststatus = 1 -- resets custom statusline colours
 vim.opt.nu = true -- line numbers
 vim.opt.rnu = true -- relative line numbers
 vim.opt.scrolloff = 4 -- vertical scroll boundaries
@@ -25,9 +28,6 @@ vim.opt.undodir = vim.fn.stdpath("config") .. "/undo" -- directory for undo file
 vim.opt.undofile = true -- create undo files
 vim.opt.updatetime = 50 -- delay until swapfile is written
 vim.opt.wrap = false -- no line-wrapping
-
--- vim.opt.colorcolumn = "80" -- 80 character guide rule
--- vim.opt.signcolumn = "number" -- use line number column for signs
 
 vim.cmd("au FileType go setl noet sw=0")
 vim.cmd("au FileType html setl sts=2 sw=2 ts=2")

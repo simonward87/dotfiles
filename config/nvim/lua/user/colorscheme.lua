@@ -1,8 +1,5 @@
 -- vim.o.background = "light"
 
--- local colorscheme = "everforest"
--- local colorscheme = "gruvbox-flat"
--- local colorscheme = "kanagawa"
 -- local colorscheme = "iceberg"
 local colorscheme = "tender"
 
