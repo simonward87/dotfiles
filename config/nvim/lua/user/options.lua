@@ -1,6 +1,5 @@
 vim.opt.backup = false -- stop autocreating backups
 vim.opt.clipboard:append("unnamedplus") -- use mac system clipboard by default
--- vim.opt.colorcolumn = '80'                                              -- 80 character guide rule
 vim.opt.completeopt = { "menuone", "longest", "noinsert", "noselect" } -- text completion
 vim.opt.cursorline = true -- highlight current line
 vim.opt.expandtab = true -- insert spaces for tabs
@@ -16,14 +15,22 @@ vim.opt.rnu = true -- relative line numbers
 vim.opt.scrolloff = 4 -- vertical scroll boundaries
 vim.opt.showmode = false -- hide mode indicator
 vim.opt.sidescrolloff = 12 -- horizontal scroll boundaries
--- vim.opt.signcolumn = "number" -- use line number column for signs
 vim.opt.signcolumn = "auto" -- use dedicated smart column for signs
 vim.opt.smartcase = true -- smart case-insensitive search
-vim.opt.sts = 2 -- number of spaces that a tab counts for
-vim.opt.sw = 2 -- number of spaces to use for autoindent
+vim.opt.sts = 4 -- number of spaces that a tab counts for
+vim.opt.sw = 4 -- number of spaces to use for autoindent
 vim.opt.swf = false -- stop autocreating swapfiles
-vim.opt.ts = 2 -- number of spaces that a tab counts for
+vim.opt.ts = 8 -- number of spaces that a tab counts for
 vim.opt.undodir = vim.fn.stdpath("config") .. "/undo" -- directory for undo files
 vim.opt.undofile = true -- create undo files
 vim.opt.updatetime = 50 -- delay until swapfile is written
 vim.opt.wrap = false -- no line-wrapping
+
+-- vim.opt.colorcolumn = "80" -- 80 character guide rule
+-- vim.opt.signcolumn = "number" -- use line number column for signs
+
+vim.cmd("au FileType go setl noet sw=0")
+vim.cmd("au FileType javascript setl sts=2 sw=2 ts=2")
+vim.cmd("au FileType svelte setl sts=2 sw=2 ts=2")
+vim.cmd("au FileType typescript setl sts=2 sw=2 ts=2")
+vim.cmd("au FileType yaml setl sts=2 sw=2 ts=2")

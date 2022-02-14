@@ -53,8 +53,6 @@ brew "zplug"
 brew "zsh"
 # GPU-accelerated terminal emulator
 cask "alacritty"
-# Configuration tool for the Betaflight firmware
-cask "betaflight-configurator"
 # 3D creation suite
 cask "blender"
 # App to build and share containerized applications and microservices

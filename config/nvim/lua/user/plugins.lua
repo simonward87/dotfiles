@@ -81,6 +81,7 @@ return packer.startup(function(use)
 			vim.g.gruvbox_flat_style = "dark"
 		end,
 	})
+	use("gosukiwi/vim-atom-dark")
 	use("jacoborus/tender.vim")
 	use("rebelot/kanagawa.nvim")
 	use({
