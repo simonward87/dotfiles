@@ -8,9 +8,9 @@ local formatting = null_ls.builtins.formatting
 null_ls.setup({
 	debug = false,
 	sources = {
+		formatting.gofmt,
 		formatting.prettier.with({
 			extra_args = { "--single-quote", "--prose-wrap=always" },
-			-- filetypes = { "markdown" },
 			extra_filetypes = { "svelte" },
 		}),
 		formatting.stylua,

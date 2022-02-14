@@ -65,33 +65,13 @@ return packer.startup(function(use)
 	use("tpope/vim-vinegar") -- Netrw enhancements
 	use("wbthomason/packer.nvim") -- Let packer manage itself
 	--   use "kyazdani42/nvim-web-devicons"
-	--   use "kyazdani42/nvim-tree.lua"
-	--   use "akinsho/bufferline.nvim"
-	--   use "akinsho/toggleterm.nvim"
-	--   use "ahmedkhalf/project.nvim"
-	--   use "goolord/alpha-nvim"
-	--   use "folke/which-key.nvim"
 
 	-- colorschemes
 	use("axvr/photon.vim")
 	use("cocopon/iceberg.vim")
-	use({
-		"eddyekofo94/gruvbox-flat.nvim",
-		config = function()
-			vim.g.gruvbox_flat_style = "dark"
-		end,
-	})
 	use("gosukiwi/vim-atom-dark")
 	use("jacoborus/tender.vim")
-	use("rebelot/kanagawa.nvim")
-	use({
-		"sainnhe/everforest",
-		config = function()
-			vim.g.everforest_background = "hard"
-		end,
-	})
-	use("zefei/cake16")
-	--   use "lunarvim/darkplus.nvim"
+	use("mcchrish/zenbones.nvim")
 
 	-- completion
 	use("hrsh7th/nvim-cmp") -- completion plugin
