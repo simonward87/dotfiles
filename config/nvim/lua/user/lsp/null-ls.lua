@@ -10,7 +10,7 @@ null_ls.setup({
 	sources = {
 		formatting.gofmt,
 		formatting.nginx_beautifier,
-		formatting.prettierd.with({
+		formatting.prettier.with({
 			extra_args = { "--single-quote", "--prose-wrap=always" },
 			extra_filetypes = { "svelte" },
 		}),
