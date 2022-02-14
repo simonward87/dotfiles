@@ -29,10 +29,11 @@ vim.opt.undofile = true -- create undo files
 vim.opt.updatetime = 50 -- delay until swapfile is written
 vim.opt.wrap = false -- no line-wrapping
 
-vim.cmd("au FileType go setl noet sw=0")
+vim.cmd("au FileType go setl noet")
 vim.cmd("au FileType html setl sts=2 sw=2 ts=2")
 vim.cmd("au FileType javascript setl sts=2 sw=2 ts=2")
 vim.cmd("au FileType javascriptreact setl sts=2 sw=2 ts=2")
+vim.cmd("au FileType make setl noet sts=0 sw=8 ts=8")
 vim.cmd("au FileType svelte setl sts=2 sw=2 ts=2")
 vim.cmd("au FileType typescript setl sts=2 sw=2 ts=2")
 vim.cmd("au FileType typescriptreact setl sts=2 sw=2 ts=2")
