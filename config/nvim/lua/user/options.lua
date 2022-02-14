@@ -20,6 +20,7 @@ vim.opt.smartcase = true -- smart case-insensitive search
 vim.opt.sts = 4 -- number of spaces that a tab counts for while editing
 vim.opt.sw = 4 -- number of spaces to use for autoindent
 vim.opt.swf = false -- stop autocreating swapfiles
+vim.opt.ts = 4 -- number of spaces that a tab counts for
 vim.opt.undodir = vim.fn.stdpath("config") .. "/undo" -- directory for undo files
 vim.opt.undofile = true -- create undo files
 vim.opt.updatetime = 50 -- delay until swapfile is written

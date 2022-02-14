@@ -9,10 +9,12 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.gofmt,
-		formatting.prettier.with({
+		formatting.nginx_beautifier,
+		formatting.prettierd.with({
 			extra_args = { "--single-quote", "--prose-wrap=always" },
 			extra_filetypes = { "svelte" },
 		}),
+		formatting.rustfmt,
 		formatting.stylua,
 	},
 	on_attach = function()
