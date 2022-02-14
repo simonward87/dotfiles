@@ -84,10 +84,11 @@ Plug 'tpope/vim-vinegar'                          " netrw enhancements
 
 call plug#end()
 
-autocmd FileType go setlocal noet sw=0
+autocmd FileType go setlocal noet
 autocmd FileType html setlocal sts=2 sw=2 ts=2
 autocmd FileType javascript setlocal sts=2 sw=2 ts=2
 autocmd FileType javascriptreact setlocal sts=2 sw=2 ts=2
+autocmd FileType make setlocal noet sts=0 sw=8 ts=8
 autocmd FileType markdown setlocal wrap
 autocmd FileType svelte setlocal sts=2 sw=2 ts=2
 autocmd FileType typescript setlocal sts=2 sw=2 ts=2
