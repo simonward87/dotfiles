@@ -23,12 +23,12 @@ alias k=kubectl
 alias ls=exa
 alias rm=trash
 alias serve=http-server
-alias study='cd $HOME/Study; ls'
+alias study='cd $HOME/Study; clear && ls'
 alias ts='tmux new -s "${PWD##*/}"'
 alias trail='<<<${(F)path}'
 alias vim=/opt/homebrew/bin/nvim
 alias vi=/opt/homebrew/bin/nvim
-alias work='cd $HOME/Work; ls'
+alias work='cd $HOME/Work; clear && ls'
 
 # Prompt Customization
 # PROMPT='
