@@ -60,7 +60,6 @@ return packer.startup(function(use)
 	use("tpope/vim-capslock") -- software capslock
 	use("tpope/vim-commentary") -- comment stuff out
 	use("tpope/vim-fugitive") -- git wrapper
-	use("tpope/vim-sensible") -- useful defaults
 	use("tpope/vim-surround") -- streamline surroundings workflow
 	use("tpope/vim-vinegar") -- Netrw enhancements
 	use("wbthomason/packer.nvim") -- Let packer manage itself
