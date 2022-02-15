@@ -23,7 +23,6 @@
     ~/.zprofile:
 
 - create:
-    - ~/.config/nvim/undo
     - ~/Study
     - ~/Work
 

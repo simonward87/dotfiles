@@ -37,6 +37,8 @@ brew "neovim"
 brew "python@3.9"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Format Rust code
+brew "rustfmt"
 # Rust toolchain installer
 brew "rustup-init"
 # Opinionated Lua code formatter
@@ -47,6 +49,8 @@ brew "subversion"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Internet file retriever
+brew "wget"
 # Next-generation plugin manager for zsh
 brew "zplug"
 # UNIX shell (command interpreter)

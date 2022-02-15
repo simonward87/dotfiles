@@ -21,6 +21,7 @@ npm i -g firebase-tools
 npm i -g http-server
 npm i -g json-server
 npm i -g neovim
+npm i -g nginxbeautifier
 npm i -g prettier
 npm i -g prettier-plugin-svelte
 npm i -g surge
