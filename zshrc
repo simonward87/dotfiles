@@ -1,4 +1,5 @@
 # Variables
+export PATH="$PATH:$N_PREFIX/bin"
 export DOTFILES="$HOME/.dotfiles"
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
 export NULLCMD=bat
@@ -23,12 +24,12 @@ alias k=kubectl
 alias ls=exa
 alias rm=trash
 alias serve=http-server
-alias study='cd $HOME/Study; clear && ls'
+alias study='cd $HOME/Study; clear && command exa -lFh --git -s type'
 alias ts='tmux new -s "${PWD##*/}"'
 alias trail='<<<${(F)path}'
 alias vim=/opt/homebrew/bin/nvim
 alias vi=/opt/homebrew/bin/nvim
-alias work='cd $HOME/Work; clear && ls'
+alias work='cd $HOME/Work; clear && command exa -lFh --git -s type'
 
 # Custom prompt
 PROMPT='
