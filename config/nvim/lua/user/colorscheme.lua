@@ -1,6 +1,7 @@
 -- vim.o.background = "light"
 
 -- local colorscheme = "iceberg"
+-- local colorscheme = "antiphoton"
 local colorscheme = "tender"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
