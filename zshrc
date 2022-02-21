@@ -13,6 +13,7 @@ setopt CORRECT_ALL
 
 # Aliases
 alias bbd='brew bundle dump --force --describe'
+alias cat=bat
 alias dtfs='cd $DOTFILES; vim .'
 alias gs='git status'
 alias ga.='git add .'

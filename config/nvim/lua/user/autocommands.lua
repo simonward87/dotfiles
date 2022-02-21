@@ -1,12 +1,23 @@
+vim.cmd("au BufNewFile,BufReadPost '*.md' set filetype=markdown")
 vim.cmd("au FileType gitcommit setl wrap spell")
 vim.cmd("au FileType go setl noet")
-vim.cmd("au FileType html setl sts=2 sw=2 ts=2")
-vim.cmd("au FileType javascript setl sts=2 sw=2 ts=2")
-vim.cmd("au FileType javascriptreact setl sts=2 sw=2 ts=2")
 vim.cmd("au FileType make setl noet sts=0 sw=8 ts=8")
 vim.cmd("au FileType markdown setl spell sts=2 sw=2 ts=2")
-vim.cmd("au FileType svelte setl sts=2 sw=2 ts=2")
-vim.cmd("au FileType typescript setl sts=2 sw=2 ts=2")
-vim.cmd("au FileType typescriptreact setl sts=2 sw=2 ts=2")
-vim.cmd("au FileType yaml setl sts=2 sw=2 ts=2")
-vim.cmd("au BufNewFile,BufReadPost '*.md' set filetype=markdown")
+
+local frontend = {
+	"css",
+	"graphql",
+	"html",
+	"javascript",
+	"javascriptreact",
+	"less",
+	"scss",
+	"svelte",
+	"typescript",
+	"typescriptreact",
+	"vue",
+}
+
+for i = 1, #frontend do
+	vim.cmd("au FileType " .. frontend[i] .. " setl sts=2 sw=2 ts=2")
+end

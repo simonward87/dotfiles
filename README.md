@@ -18,7 +18,7 @@ git clone https://github.com/simonward87/dotfiles.git ~/.dotfiles
 5. [`./install`](install)
 6. Restart computer
 7. Login to Google Drive (and multifactor authentication)
-8. If required, enable Kubernetes in Docker preferences
+8. Login to Mac App store so `brew mas` will work correctly
 9. [Generate ssh key](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh),
    add to GitHub, and switch remotes.
 
