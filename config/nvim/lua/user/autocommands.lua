@@ -10,12 +10,14 @@ local frontend = {
 	"html",
 	"javascript",
 	"javascriptreact",
+	"json",
 	"less",
 	"scss",
 	"svelte",
 	"typescript",
 	"typescriptreact",
 	"vue",
+	"yaml",
 }
 
 for i = 1, #frontend do
