@@ -6,33 +6,31 @@ window:
     x: 8
     y: 8
   decorations: none
-  startup_mode: Windowed
-  # startup_mode: Fullscreen
-  # startup_mode: SimpleFullscreen
+  startup_mode: Windowed # Fullscreen | SimpleFullscreen
 scrolling:
   history: 10000
   multiplier: 3
 font:
   normal:
-    family: 'RobotoMono Nerd Font'
-    style: Regular
+    family: 'Fira Mono'
+    style: Medium
   bold:
-    family: 'RobotoMono Nerd Font'
+    family: 'Fira Code'
     style: Bold
-  italic:
-    family: 'RobotoMono Nerd Font'
-    style: Italic
-  bold_italic:
-    family: 'RobotoMono Nerd Font'
-    style: Bold Italic
-  size: 15
+  # italic:
+  #   family: 'Fira Code'
+  #   style: Italic
+  # bold_italic:
+  #   family: 'Fira Code'
+  #   style: Bold Italic
+  size: 14.5
   offset:
     x: 0
     y: 0
   glyph_offset:
     x: 0
     y: 0
-  use_thin_strokes: false
+  use_thin_strokes: true
   # NOTE: opacity will be required in future version, but current does not
   # support it (despite the warning). Currently use 'background_opacity'
   # opacity: 0.95
