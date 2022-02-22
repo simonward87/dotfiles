@@ -1,5 +1,6 @@
 # Variables
 export DOTFILES="$HOME/.dotfiles"
+export EDITOR="/opt/homebrew/bin/nvim"
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
 export NULLCMD=bat
 export PATH="$PATH:$N_PREFIX/bin"

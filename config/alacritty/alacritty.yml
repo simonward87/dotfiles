@@ -12,7 +12,7 @@ scrolling:
   multiplier: 3
 font:
   normal:
-    family: 'Fira Mono'
+    family: 'Fira Code'
     style: Medium
   bold:
     family: 'Fira Code'
