@@ -7,8 +7,6 @@ tap "homebrew/core"
 brew "bat"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
-# Modern replacement for 'ls'
-brew "exa"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Distributed revision control system
@@ -99,6 +97,8 @@ cask "google-drive"
 cask "insomnia"
 # Keyboard customizer
 cask "karabiner-elements"
+# GPU-based terminal emulator
+cask "kitty"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Video chat, voice call and instant messaging application

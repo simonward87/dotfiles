@@ -14,7 +14,6 @@ setopt CORRECT_ALL
 
 # Aliases
 alias bbd='brew bundle dump --force --describe'
-alias cat=bat
 alias dtfs='cd $DOTFILES; vim .'
 alias gs='git status'
 alias ga.='git add .'
@@ -22,9 +21,9 @@ alias gc='git commit'
 alias gp='git push'
 alias ip='ipconfig getifaddr en0'
 alias k=kubectl
-alias la='exa -laFh --git -s type'
-alias ll='exa -lFh --git -s type'
-alias ls=exa
+alias la='ls -oAFhG'
+alias ll='ls -oFhG'
+alias ls='ls -G'
 alias rm=trash
 alias serve=http-server
 alias study='cd $HOME/Study; clear && ll'
