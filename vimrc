@@ -84,15 +84,23 @@ Plug 'tpope/vim-vinegar'                          " netrw enhancements
 
 call plug#end()
 
+autocmd BufNewFile,BufReadPost '*.md' set filetype=markdown
+autocmd FileType css setlocal sts=2 sw=2 ts=2
+autocmd FileType gitcommit setlocal wrap spell
 autocmd FileType go setlocal noet
+autocmd FileType graphql setlocal sts=2 sw=2 ts=2
 autocmd FileType html setlocal sts=2 sw=2 ts=2
 autocmd FileType javascript setlocal sts=2 sw=2 ts=2
 autocmd FileType javascriptreact setlocal sts=2 sw=2 ts=2
+autocmd FileType json setlocal sts=2 sw=2 ts=2
+autocmd FileType less setlocal sts=2 sw=2 ts=2
 autocmd FileType make setlocal noet sts=0 sw=8 ts=8
-autocmd FileType markdown setlocal wrap
+autocmd FileType markdown setlocal wrap spell sts=2 sw=2 ts=2
+autocmd FileType scss setlocal sts=2 sw=2 ts=2
 autocmd FileType svelte setlocal sts=2 sw=2 ts=2
 autocmd FileType typescript setlocal sts=2 sw=2 ts=2
 autocmd FileType typescriptreact setlocal sts=2 sw=2 ts=2
+autocmd FileType vue setlocal sts=2 sw=2 ts=2
 autocmd FileType yaml setlocal sts=2 sw=2 ts=2
 
 let mapleader=" "
