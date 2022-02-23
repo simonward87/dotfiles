@@ -97,8 +97,6 @@ cask "google-drive"
 cask "insomnia"
 # Keyboard customizer
 cask "karabiner-elements"
-# GPU-based terminal emulator
-cask "kitty"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Video chat, voice call and instant messaging application
