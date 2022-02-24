@@ -15,10 +15,13 @@ setopt CORRECT_ALL
 # Aliases
 alias bbd='brew bundle dump --force --describe'
 alias dtfs='cd $DOTFILES; vim .'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
 alias gs='git status'
 alias ga.='git add .'
 alias gc='git commit'
 alias gp='git push'
+alias grep='grep --color=auto'
 alias ip='ipconfig getifaddr en0'
 alias k=kubectl
 alias la='gls -AFho --color --group-directories-first'

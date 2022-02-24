@@ -66,11 +66,8 @@ return packer.startup(function(use)
 	--   use "kyazdani42/nvim-web-devicons"
 
 	-- colorschemes
-	use("axvr/photon.vim")
 	use("cocopon/iceberg.vim")
-	use("gosukiwi/vim-atom-dark")
 	use("jacoborus/tender.vim")
-	use("mcchrish/zenbones.nvim")
 
 	-- completion
 	use("hrsh7th/nvim-cmp") -- completion plugin

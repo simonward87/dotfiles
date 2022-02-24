@@ -169,19 +169,21 @@ local schemas = {
 	},
 }
 
-local function extend(tab1, tab2)
-	for _, value in ipairs(tab2) do
-		table.insert(tab1, value)
-	end
-	return tab1
-end
+-- Disabled temporarily as default_schemas were not loading for some reason
+-- local function extend(tab1, tab2)
+-- 	for _, value in ipairs(tab2) do
+-- 		table.insert(tab1, value)
+-- 	end
+-- 	return tab1
+-- end
 
-local extended_schemas = extend(schemas, default_schemas)
+-- local extended_schemas = extend(schemas, default_schemas)
 
 local opts = {
 	settings = {
 		json = {
-			schemas = extended_schemas,
+			-- schemas = extended_schemas,
+			schemas = schemas,
 		},
 	},
 	setup = {
