@@ -33,6 +33,8 @@ brew "tree-sitter"
 brew "neovim"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# File browser
+brew "ranger"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Format Rust code
