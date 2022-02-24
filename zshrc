@@ -21,17 +21,17 @@ alias gc='git commit'
 alias gp='git push'
 alias ip='ipconfig getifaddr en0'
 alias k=kubectl
-alias la='ls -oAFhG'
-alias ll='ls -oFhG'
-alias ls='ls -GF'
+alias la='gls -AFho --color --group-directories-first'
+alias ll='gls -Fho --color --group-directories-first'
+alias ls='gls -F --color --group-directories-first'
 alias rm=trash
 alias serve=http-server
-alias study='cd $HOME/Study; clear && ll'
+alias study='cd $HOME/Study; clear; ll'
 alias ts='tmux new -s "${PWD##*/}"'
 alias trail='<<<${(F)path}'
 alias vi=/opt/homebrew/bin/nvim
 alias vim=/opt/homebrew/bin/nvim
-alias work='cd $HOME/Work; clear && ll'
+alias work='cd $HOME/Work; clear; ll'
 
 # Custom prompt
 PROMPT='

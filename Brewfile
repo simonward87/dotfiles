@@ -5,6 +5,8 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
 # Simple, fast and user-friendly alternative to find
