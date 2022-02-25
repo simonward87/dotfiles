@@ -37,6 +37,7 @@ keymap("v", ">", ">gv", opts) -- prev buffer
 -- git
 keymap("n", "<leader>gs", ":G<CR>", opts)
 keymap("n", "<leader>gc", ":G commit<CR>", opts)
+keymap("n", "<leader>gl", ":G log<CR>", opts)
 keymap("n", "<leader>gp", ":G push<CR>", opts)
 
 -- formatter
