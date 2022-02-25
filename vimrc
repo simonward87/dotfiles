@@ -2,7 +2,7 @@ filetype plugin indent on
 syntax enable
 
 if filereadable($HOME."/.vim/plugged/vim-sensible/plugin/sensible.vim")
-    runtime! plugin/sensible.vim                  " run immediately so overrides function as desired
+    runtime! plugin/sensible.vim                  " run immediately, allowing overrides to function below
 endif
 
 set backspace=indent,eol,start                    " restore default backspace behaviour
@@ -27,8 +27,7 @@ set ruler                                         " show cursor location
 set scrolloff=4                                   " scroll limit from screenY boundaries
 set shiftwidth=4                                  " updates shift-width value
 set shortmess+=c                                  " avoid file message prompts
-set sidescrolloff=12                               " scroll limit from screenX boundaries
-set signcolumn=auto
+set sidescrolloff=12                              " scroll limit from screenX boundaries
 set smartcase                                     " case-sensitive search on capital letter
 set smarttab                                      " indents according to shiftwidth
 set softtabstop=4                                 " 2 spaces for tabs during editing
