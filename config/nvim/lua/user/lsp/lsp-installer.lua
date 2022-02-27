@@ -11,34 +11,30 @@ lsp_installer.on_server_ready(function(server)
 		capabilities = require("user.lsp.handlers").capabilities,
 	}
 
-	-- TODO:
-	-- turn this messy pile of code-duplication into a loop!
-	if server.name == "denols" then
-		local denols_opts = require("user.lsp.settings.denols")
-		opts = vim.tbl_deep_extend("force", denols_opts, opts)
+	-- List of servers with custom config files
+	local custom_configs = {
+		"denols",
+		"jsonls",
+		"sumneko_lua",
+		"tsserver",
+		"yamlls",
+	}
+
+	-- Loads custom config and combines it with capabilities and on_attach function
+	local load_custom_config = function(server_name)
+		if server.name == server_name then
+			-- Relies on config lua file being located in ./settings and using
+			-- the server name as the filename
+			local custom_opts = require("user.lsp.settings." .. server_name)
+			opts = vim.tbl_deep_extend("force", custom_opts, opts)
+		end
 	end
 
-	if server.name == "jsonls" then
-		local jsonls_opts = require("user.lsp.settings.jsonls")
-		opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
+	for i = 1, #custom_configs do
+		load_custom_config(custom_configs[i])
 	end
 
-	if server.name == "sumneko_lua" then
-		local sumneko_opts = require("user.lsp.settings.sumneko_lua")
-		opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
-	end
-
-	if server.name == "tsserver" then
-		local tsserver_opts = require("user.lsp.settings.tsserver")
-		opts = vim.tbl_deep_extend("force", tsserver_opts, opts)
-	end
-
-	if server.name == "yamlls" then
-		local yamlls_opts = require("user.lsp.settings.yamlls")
-		opts = vim.tbl_deep_extend("force", yamlls_opts, opts)
-	end
-
-	-- This setup() function is exactly the same as lspconfig's setup function.
+	-- setup() is the default lspconfig setup function.
 	-- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 	server:setup(opts)
 end)

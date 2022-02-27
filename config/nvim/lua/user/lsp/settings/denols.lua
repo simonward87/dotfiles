@@ -1,10 +1,8 @@
 local util = require("lspconfig").util
 
 return {
-	settings = {
-		root_dir = util.root_pattern("deno.json"),
-		init_options = {
-			lint = true,
-		},
+	root_dir = util.root_pattern("deno.json", "deno.jsonc", "mod.ts"),
+	init_options = {
+		lint = true,
 	},
 }
