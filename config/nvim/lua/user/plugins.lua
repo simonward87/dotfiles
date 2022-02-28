@@ -67,6 +67,7 @@ return packer.startup(function(use)
 
 	-- colorschemes
 	use("cocopon/iceberg.vim")
+	use("cormacrelf/vim-colors-github")
 	use("jacoborus/tender.vim")
 
 	-- completion

@@ -1,5 +1,5 @@
--- vim.o.background = "light"
-local colorscheme = "tender"
+vim.o.background = "light"
+local colorscheme = "github"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 
