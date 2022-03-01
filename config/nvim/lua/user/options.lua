@@ -3,7 +3,6 @@ vim.opt.clipboard:append("unnamedplus") -- use mac system clipboard by default
 vim.opt.completeopt = { "menuone", "longest", "noinsert", "noselect" } -- text completion
 vim.opt.cursorline = true -- highlight current line
 vim.opt.expandtab = true -- insert spaces for tabs
-vim.opt.exrc = true -- allow local vimrc
 vim.opt.hlsearch = false -- highlight doesn't persist after search
 vim.opt.ignorecase = true -- ignore case in search patterns
 vim.opt.iskeyword:append("-") -- treat split words as single words
