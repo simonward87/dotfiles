@@ -17,6 +17,8 @@ brew "git"
 brew "go"
 # Language server for the Go language
 brew "gopls"
+# Improved top (interactive process viewer)
+brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Pager program similar to more
