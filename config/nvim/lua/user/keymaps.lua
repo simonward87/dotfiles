@@ -27,6 +27,21 @@ keymap("n", "<Left>", ":bp<CR>", opts) -- prev buffer
 -- shift text blocks vertically
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+keymap("i", "<C-j>", "<esc>:move .+1<CR>==a", opts)
+keymap("i", "<C-k>", "<esc>:move .-2<CR>==a", opts)
+keymap("n", "<leader>j", ":move .+1<CR>==", opts)
+keymap("n", "<leader>k", ":move .-2<CR>==", opts)
+
+-- undo breakpoints
+keymap("i", ",", ",<c-g>u", opts)
+keymap("i", ".", ".<c-g>u", opts)
+keymap("i", "!", "!<c-g>u", opts)
+keymap("i", "?", "?<c-g>u", opts)
+
+-- autocenter when word searching
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
+keymap("n", "J", "mzJ`z", opts)
 
 -- git
 keymap("n", "<leader>gs", ":G<CR>", opts)
