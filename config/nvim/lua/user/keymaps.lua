@@ -43,6 +43,9 @@ keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 keymap("n", "J", "mzJ`z", opts)
 
+-- reload colourschemes
+keymap("n", "<leader><CR>", ":source ~/.config/nvim/lua/user/colorscheme.lua<CR>", opts)
+
 -- git
 keymap("n", "<leader>gs", ":G<CR>", opts)
 keymap("n", "<leader>gc", ":G commit<CR>", opts)
