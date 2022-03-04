@@ -70,10 +70,13 @@ fpath=(~/.zsh $fpath)
 autoload -Uz compinit
 compinit -u
 
-# case insensitive path-completion 
+# Case insensitive path-completion 
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 
 
 # K8s completion
 source $DOTFILES/util/kubectl_completion.zsh
 # Extend completion to work with k alias
 compdef __start_kubectl k
+
+# Show system specs on terminal startup
+neofetch

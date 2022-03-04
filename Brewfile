@@ -31,6 +31,8 @@ brew "mas"
 brew "n"
 # NCurses Disk Usage
 brew "ncdu"
+# Fast, highly customisable system info script
+brew "neofetch"
 # Parser generator tool and incremental parsing library
 brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
