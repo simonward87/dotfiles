@@ -1,4 +1,6 @@
-vim.cmd("au BufNewFile,BufReadPost '*.md' set filetype=markdown")
+-- vim incorrectly reading go.mod files as lprolog, temporary fix:
+vim.cmd("au BufRead,BufNewFile go.mod setf gomod")
+vim.cmd("au BufRead,BufNewFile Dockerfile.dev setf dockerfile")
 vim.cmd("au FileType gitcommit setl wrap spell")
 vim.cmd("au FileType go setl noet")
 vim.cmd("au FileType lua setl noet")
