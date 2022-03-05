@@ -19,6 +19,8 @@ brew "go"
 brew "gopls"
 # Improved top (interactive process viewer)
 brew "htop"
+# General-purpose data compression with high compression ratio
+brew "xz"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Pager program similar to more
@@ -109,8 +111,6 @@ cask "karabiner-elements"
 cask "rectangle"
 # Video chat, voice call and instant messaging application
 cask "skype"
-# Unpacks archive files
-cask "the-unarchiver"
 mas "Kindle", id: 405399194
 mas "Logic Pro", id: 634148309
 mas "Todoist", id: 585829637
