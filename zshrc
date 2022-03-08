@@ -6,15 +6,17 @@ export NULLCMD=bat
 export PATH="$PATH:$N_PREFIX/bin"
 export ZPLUG_HOME=$(brew --prefix)/opt/zplug
 
-# Options
+# Options (man zshoptions)
 setopt NO_CASE_GLOB # Case-insensitive globbing
 setopt AUTO_CD # Automatic CD
 setopt CORRECT # Correction
 setopt CORRECT_ALL
+unsetopt BEEP
 
 # Aliases
 alias bbd='brew bundle dump --force --describe'
-alias dtfs='cd $DOTFILES; vim .'
+alias df='df -h'
+alias dtfs='cd $DOTFILES; nvim .'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias gs='git status'
@@ -27,6 +29,7 @@ alias k=kubectl
 alias la='gls -AFho --color --group-directories-first'
 alias ll='gls -Fho --color --group-directories-first'
 alias ls='gls -F --color --group-directories-first'
+alias nvimrc='cd $DOTFILES/config/nvim/; nvim .'
 alias rm=trash
 alias serve=http-server
 alias study='cd $HOME/Study; clear; ll'
@@ -36,7 +39,7 @@ alias vi=/opt/homebrew/bin/nvim
 alias vim=/opt/homebrew/bin/nvim
 alias work='cd $HOME/Work; clear; ll'
 
-# Custom prompt
+# Customised prompt
 PROMPT='
 %(?.%F{green}%m%f.%F{red}[%?] %m%f) %1~ %# '
 
