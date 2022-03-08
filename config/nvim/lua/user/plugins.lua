@@ -46,17 +46,10 @@ return packer.startup(function(use)
 	use("lewis6991/impatient.nvim") -- speeds up loading lua modules
 	use("lukas-reineke/indent-blankline.nvim") -- add guide rules to indentation
 	use("moll/vim-bbye") -- improve buffer deletion behaviour
+	use("norcalli/nvim-colorizer.lua") -- hex code colourizer
 	use("nvim-lua/popup.nvim") -- An implementation of vim Popup API
 	use("nvim-lua/plenary.nvim") -- lua function library (dependency for other plugs)
 	use("petertriho/nvim-scrollbar") -- diagnostics scrollbar
-	use({
-		"RRethy/vim-hexokinase",
-		run = "make hexokinase",
-		config = function()
-			vim.g.Hexokinase_highlighters = { "backgroundfull" }
-			-- vim.g.Hexokinase_ftEnabled = { "css" }
-		end,
-	}) -- hex code colourizer
 	use("tpope/vim-capslock") -- software capslock
 	use("tpope/vim-commentary") -- comment stuff out
 	use("tpope/vim-fugitive") -- git wrapper
