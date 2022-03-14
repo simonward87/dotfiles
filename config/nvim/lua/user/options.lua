@@ -6,7 +6,7 @@ vim.opt.expandtab = true -- insert spaces for tabs
 vim.opt.hlsearch = false -- highlight doesn't persist after search
 vim.opt.ignorecase = true -- ignore case in search patterns
 vim.opt.iskeyword:append("-") -- treat split words as single words
-vim.opt.laststatus = 1 -- resets custom statusline colours
+-- vim.opt.laststatus = 1 -- resets custom statusline colours
 vim.opt.nu = true -- line numbers
 vim.opt.rnu = true -- relative line numbers
 vim.opt.scrolloff = 4 -- vertical scroll boundaries

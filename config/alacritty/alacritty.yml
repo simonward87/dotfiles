@@ -156,7 +156,7 @@ font:
   # style: Bold Italic
 
   # Point size
-  size: 14.5
+  size: 14
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -227,29 +227,29 @@ font:
 #   primary:
 #     background: '0xffffff'
 #     foreground: '0x586069'
-#
+
 #   # Normal colors
 #   normal:
-#     black:   '0x697179'
-#     red:     '0xd03d3d'
-#     green:   '0x14ce14'
-#     yellow:  '0x949800'
-#     blue:    '0x0451a5'
+#     black: '0x697179'
+#     red: '0xd03d3d'
+#     green: '0x14ce14'
+#     yellow: '0x949800'
+#     blue: '0x0451a5'
 #     magenta: '0xbc05bc'
-#     cyan:    '0x0598bc'
-#     white:   '0x586069'
-#
+#     cyan: '0x0598bc'
+#     white: '0x586069'
+
 #   # Bright colors
 #   bright:
-#     black:   '0x666666'
-#     red:     '0xcd3131'
-#     green:   '0x14ce14'
-#     yellow:  '0xb5ba00'
-#     blue:    '0x0451a5'
+#     black: '0x666666'
+#     red: '0xcd3131'
+#     green: '0x14ce14'
+#     yellow: '0xb5ba00'
+#     blue: '0x0451a5'
 #     magenta: '0xbc05bc'
-#     cyan:    '0x0598bc'
-#     white:   '0x586069'
-#
+#     cyan: '0x0598bc'
+#     white: '0x586069'
+
 #   indexed_colors:
 #     - { index: 16, color: '0xd18616' }
 #     - { index: 17, color: '0xcd3131' }
@@ -387,6 +387,33 @@ font:
 #     magenta: '#6845ad'
 #     cyan: '#327698'
 #     white: '#262a3f'
+
+# Colors (Hybrid)
+# colors:
+#   primary:
+#     background: '0x1d1f21'
+#     foreground: '0xc4c8c6'
+#   # cursor:
+#   #   text: '0x1d1f21'
+#   #   cursor: '0x6f7881'
+#   normal:
+#     black: '0x1d1f21'
+#     red: '0xd55e64'
+#     green: '0xb2bf5b'
+#     yellow: '0xf4c666'
+#     blue: '0x7da2c1'
+#     magenta: '0xb691be'
+#     cyan: '0x80c0b7'
+#     white: '0xc4c8c6'
+#   bright:
+#     black: '0x4c4c4c'
+#     red: '0xd55e64'
+#     green: '0xb2bf5b'
+#     yellow: '0xf4c666'
+#     blue: '0x7da2c1'
+#     magenta: '0xb691be'
+#     cyan: '0x80c0b7'
+#     white: '0xc4c8c6'
 
 # Colors (Tender)
 colors:

@@ -62,6 +62,7 @@ return packer.startup(function(use)
 	use("cocopon/iceberg.vim")
 	use("cormacrelf/vim-colors-github")
 	use("jacoborus/tender.vim")
+	use("w0ng/vim-hybrid")
 
 	-- completion
 	use("hrsh7th/nvim-cmp") -- completion plugin

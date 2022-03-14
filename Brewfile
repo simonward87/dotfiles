@@ -65,6 +65,8 @@ brew "zplug"
 brew "zsh"
 # GPU-accelerated terminal emulator
 cask "alacritty"
+# Tool to flash OS images to SD cards & USB drives
+cask "balenaetcher"
 # 3D creation suite
 cask "blender"
 # App to build and share containerized applications and microservices
