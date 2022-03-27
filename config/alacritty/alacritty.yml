@@ -120,7 +120,7 @@ font:
     family: 'FiraCode Nerd Font'
 
     # The `style` can be specified to pick a specific face.
-    style: Medium
+    style: Retina
 
   # Bold font face
   bold:
@@ -156,7 +156,7 @@ font:
   # style: Bold Italic
 
   # Point size
-  size: 14
+  size: 13
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -188,13 +188,13 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# github Alacritty Colors
+# Colors (Github Light Main)
 # colors:
 #   # Default colors
 #   primary:
 #     background: '0xffffff'
 #     foreground: '0x4d5566'
-#
+
 #   # Normal colors
 #   normal:
 #     black: '0x24292e'
@@ -205,7 +205,7 @@ font:
 #     magenta: '0x6f42c1'
 #     cyan: '0x1b7c83'
 #     white: '0x4d5566'
-#
+
 #   # Bright colors
 #   bright:
 #     black: '0x586069'
@@ -216,12 +216,12 @@ font:
 #     magenta: '0x8a63d2'
 #     cyan: '0x1b7c83'
 #     white: '0x4d5566'
-#
+
 #   indexed_colors:
 #     - { index: 16, color: '0xd18616' }
 #     - { index: 17, color: '0xcb2431' }
 
-# Colors (Github Light)
+# Colors (Github Light Alt)
 # colors:
 #   # Default colors
 #   primary:
@@ -418,7 +418,9 @@ font:
 # Colors (Tender)
 colors:
   primary:
-    background: '0x282828'
+    # background: '0x282828' # default
+    background: '0x1E1E1E' # darker
+    # background: '0x141414' # darkest
     foreground: '0xeeeeee'
   # cursor:
   #   text: '0x282828'

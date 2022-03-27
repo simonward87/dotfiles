@@ -11,6 +11,7 @@ setopt NO_CASE_GLOB # Case-insensitive globbing
 setopt AUTO_CD # Automatic CD
 setopt CORRECT # Correction
 setopt CORRECT_ALL
+setopt EXTENDED_HISTORY
 unsetopt BEEP
 
 # Aliases
@@ -45,6 +46,10 @@ typeset -U path
 # Functions
 function mkcd() {
   mkdir -p "$@" && cd "$_";
+}
+
+function hgrep() {
+    fc -Dlim "*$@*" 1
 }
 
 # Plugins
