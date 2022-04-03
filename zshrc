@@ -41,7 +41,7 @@ alias work='cd $HOME/Work; clear; ll'
 # PROMPT='
 # %(?.%F{green}%m%f.%F{red}[%?] %m%f) %1~ %# '
 PROMPT='
-%(?.%F{242}%m%f.%F{red}[%?]%f %F{242}%m%f) %1~ %# '
+%(?.%F{245}%m%f.%F{red}[%?]%f %F{245}%m%f) %1~ %# '
 
 # Prompt git integration
 autoload -Uz vcs_info
@@ -50,7 +50,7 @@ precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 RPROMPT=\$vcs_info_msg_0_
 # zstyle ':vcs_info:git:*' formats '%F{244}(%b) %r%f'
-zstyle ':vcs_info:git:*' formats '%F{242}(%b)%f'
+zstyle ':vcs_info:git:*' formats '%F{245}(%b)%f'
 zstyle ':vcs_info:*' enable git
 
 # Remove $PATH duplicates
