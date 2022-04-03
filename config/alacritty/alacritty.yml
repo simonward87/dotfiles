@@ -117,10 +117,10 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: 'FiraCode Nerd Font'
+    family: 'RobotoMono Nerd Font'
 
     # The `style` can be specified to pick a specific face.
-    style: Retina
+    style: Regular
 
   # Bold font face
   bold:
@@ -128,7 +128,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: 'FiraCode Nerd Font'
+    family: 'RobotoMono Nerd Font'
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -156,7 +156,7 @@ font:
   # style: Bold Italic
 
   # Point size
-  size: 13
+  size: 13.5
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -194,7 +194,6 @@ font:
 #   primary:
 #     background: '0xffffff'
 #     foreground: '0x4d5566'
-
 #   # Normal colors
 #   normal:
 #     black: '0x24292e'
@@ -205,7 +204,6 @@ font:
 #     magenta: '0x6f42c1'
 #     cyan: '0x1b7c83'
 #     white: '0x4d5566'
-
 #   # Bright colors
 #   bright:
 #     black: '0x586069'
@@ -216,7 +214,6 @@ font:
 #     magenta: '0x8a63d2'
 #     cyan: '0x1b7c83'
 #     white: '0x4d5566'
-
 #   indexed_colors:
 #     - { index: 16, color: '0xd18616' }
 #     - { index: 17, color: '0xcb2431' }
