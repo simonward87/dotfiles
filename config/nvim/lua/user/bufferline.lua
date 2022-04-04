@@ -5,13 +5,16 @@ end
 
 bufferline.setup({
 	options = {
-		indicator_icon = "",
+		indicator_icon = " ",
+		-- color_icons = false,
 		max_name_length = 30,
 		max_prefix_length = 30, -- prefix used when a buffer is de-duplicated
-		tab_size = 21,
+		tab_size = 0,
 		show_buffer_icons = true,
 		show_buffer_close_icons = false,
+		show_tab_indicators = false,
 		show_close_icon = false,
 		separator_style = { "", "" },
+		-- always_show_bufferline = false,
 	},
 })
