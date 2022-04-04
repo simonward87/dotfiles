@@ -40,10 +40,10 @@ alias work='cd $HOME/Work; clear; ll'
 
 # Customised prompt
 if [ $HOST = "MacBook-Air.localdomain" ]; then
-    PROMPT="${BR}%(?..%F{red}[%?] %f)%1~ %# "
+    PROMPT="${BR}%(?..%F{red}[%?] %f)%2~ %# "
 else
     # Shows hostname in prompt when using remote machines
-    PROMPT="${BR}%(?.%F{245}%m%f.%F{red}[%?]%f %F{245}%m%f) %1~ %# "
+    PROMPT="${BR}%(?.%F{245}%m%f.%F{red}[%?]%f %F{245}%m%f) %2~ %# "
 fi
 
 # Git prompt integration

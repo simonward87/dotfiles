@@ -23,6 +23,8 @@ keymap("n", "<leader>l", "<C-w>l", opts) -- move right
 -- buffer navigation
 keymap("n", "<Right>", ":bn<CR>", opts) -- next buffer
 keymap("n", "<Left>", ":bp<CR>", opts) -- prev buffer
+keymap("n", "<C-l>", ":bn<CR>", opts) -- next buffer
+keymap("n", "<C-h>", ":bp<CR>", opts) -- prev buffer
 
 -- shift text blocks vertically
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
@@ -63,3 +65,6 @@ keymap(
 	opts
 )
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+
+-- nvim-tree
+keymap("n", "-", ":NvimTreeToggle<cr>", opts)

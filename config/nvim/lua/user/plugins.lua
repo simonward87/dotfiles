@@ -42,7 +42,14 @@ packer.init({
 -- plugin installs
 return packer.startup(function(use)
 	-- general utilities
+	use("akinsho/bufferline.nvim") -- bufferline along top of window
 	use("antoinemadec/FixCursorHold.nvim") -- fixes lsp doc highlight
+	use({
+		"kyazdani42/nvim-tree.lua", -- file explorer
+		requires = {
+			"kyazdani42/nvim-web-devicons", -- icons
+		},
+	})
 	use("lewis6991/impatient.nvim") -- speeds up loading lua modules
 	use("lukas-reineke/indent-blankline.nvim") -- add guide rules to indentation
 	use("moll/vim-bbye") -- improve buffer deletion behaviour
@@ -54,9 +61,7 @@ return packer.startup(function(use)
 	use("tpope/vim-commentary") -- comment stuff out
 	use("tpope/vim-fugitive") -- git wrapper
 	use("tpope/vim-surround") -- streamline surroundings workflow
-	use("tpope/vim-vinegar") -- Netrw enhancements
 	use("wbthomason/packer.nvim") -- Let packer manage itself
-	--   use "kyazdani42/nvim-web-devicons"
 
 	-- colorschemes
 	use("cocopon/iceberg.vim")
