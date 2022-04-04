@@ -1,4 +1,5 @@
 # Variables
+export BR=$'\n'
 export DOTFILES="$HOME/.dotfiles"
 export EDITOR="/opt/homebrew/bin/nvim"
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
@@ -38,19 +39,20 @@ alias vim=/opt/homebrew/bin/nvim
 alias work='cd $HOME/Work; clear; ll'
 
 # Customised prompt
-# PROMPT='
-# %(?.%F{green}%m%f.%F{red}[%?] %m%f) %1~ %# '
-PROMPT='
-%(?.%F{245}%m%f.%F{red}[%?]%f %F{245}%m%f) %1~ %# '
+if [ $HOST = "MacBook-Air.localdomain" ]; then
+    PROMPT="${BR}%(?..%F{red}[%?] %f)%1~ %# "
+else
+    # Shows hostname in prompt when using remote machines
+    PROMPT="${BR}%(?.%F{245}%m%f.%F{red}[%?]%f %F{245}%m%f) %1~ %# "
+fi
 
-# Prompt git integration
+# Git prompt integration
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 RPROMPT=\$vcs_info_msg_0_
-# zstyle ':vcs_info:git:*' formats '%F{244}(%b) %r%f'
-zstyle ':vcs_info:git:*' formats '%F{245}(%b)%f'
+zstyle ':vcs_info:git:*' formats '%F{245}(%b) %r%f'
 zstyle ':vcs_info:*' enable git
 
 # Remove $PATH duplicates
