@@ -9,6 +9,8 @@ brew "bat"
 brew "coreutils"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
+# Command-line tool to interact with exercism.io
+brew "exercism"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Distributed revision control system
@@ -113,6 +115,7 @@ cask "karabiner-elements"
 cask "rectangle"
 # Video chat, voice call and instant messaging application
 cask "skype"
+mas "Bluetooth MIDI Connect", id: 1074606480
 mas "Kindle", id: 405399194
 mas "Logic Pro", id: 634148309
 mas "Todoist", id: 585829637

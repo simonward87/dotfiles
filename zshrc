@@ -1,16 +1,16 @@
 # Variables
 export BR=$'\n'
 export DOTFILES="$HOME/.dotfiles"
-export EDITOR="/opt/homebrew/bin/nvim"
+export EDITOR="$HOMEBREW_PREFIX/bin/nvim"
 export HISTCONTROL=ignoreboth
 export HISTFILESIZE=409600
 export HISTIGNORE=":pwd:id:uptime:resize:ls:clear:history"
 export HISTSIZE=100000
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
 export NULLCMD=bat
-export PATH="$PATH:$N_PREFIX/bin"
+export PATH="$PATH:$N_PREFIX/bin:$HOME/Study/bin"
 export VISUAL="$EDITOR"
-export ZPLUG_HOME=$(brew --prefix)/opt/zplug
+export ZPLUG_HOME="$HOMEBREW_PREFIX/opt/zplug"
 
 # Options (man zshoptions)
 setopt NO_CASE_GLOB # Case-insensitive globbing
@@ -34,13 +34,14 @@ alias ll='gls -Fho --color --group-directories-first'
 alias ls='gls -F --color --group-directories-first'
 alias lx='gls -oXBFh --color --group-directories-first'
 alias nvimrc='cd $DOTFILES/config/nvim/; nvim .'
+alias pi='ssh pi'
 alias rm=trash
 alias serve=http-server
 alias study='cd $HOME/Study; clear; ll'
 alias ts='tmux new -s "${PWD##*/}"'
 alias trail='<<<${(F)path}'
-alias vi=/opt/homebrew/bin/nvim
-alias vim=/opt/homebrew/bin/nvim
+alias vi="$HOMEBREW_PREFIX/bin/nvim"
+alias vim="$HOMEBREW_PREFIX/bin/nvim"
 alias work='cd $HOME/Work; clear; ll'
 
 # Customised prompt
