@@ -4,9 +4,45 @@ if not status_ok then
 end
 
 configs.setup({
-	ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+	ensure_installed = {
+		"bash",
+		"css",
+		"dart",
+		"dockerfile",
+		"go",
+		"gomod",
+		"gowork",
+		"graphql",
+		"hjson",
+		"html",
+		"http",
+		"javascript",
+		"jsdoc",
+		"json",
+		"json5",
+		"jsonc",
+		"lua",
+		"markdown",
+		"prisma",
+		"pug",
+		"python",
+		"query",
+		"regex",
+		"rust",
+		"scss",
+		"solidity",
+		"svelte",
+		"swift",
+		"todotxt",
+		"toml",
+		"tsx",
+		"typescript",
+		"vim",
+		"vue",
+		"yaml",
+	}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
 	sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
-	ignore_install = { "" }, -- List of parsers to ignore installing
+	-- ignore_install = { "" }, -- List of parsers to ignore installing
 	autopairs = {
 		enable = true,
 	},
