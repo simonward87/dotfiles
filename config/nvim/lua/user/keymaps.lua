@@ -15,26 +15,25 @@ vim.g.maplocalleader = " "
 --   command = "c"
 
 -- window navigation
-keymap("n", "<leader>h", "<C-w>h", opts) -- move left
-keymap("n", "<leader>l", "<C-w>l", opts) -- move right
-keymap("n", "<leader>j", "<C-w>j", opts) -- move down
-keymap("n", "<leader>k", "<C-w>k", opts) -- move up
+-- keymap("n", "<leader>h", "<C-w>h", opts) -- move left
+-- keymap("n", "<leader>l", "<C-w>l", opts) -- move right
+-- keymap("n", "<leader>j", "<C-w>j", opts) -- move down
+-- keymap("n", "<leader>k", "<C-w>k", opts) -- move up
 
 -- buffer navigation
 keymap("n", "<Right>", ":bn<CR>", opts) -- next buffer
 keymap("n", "<Left>", ":bp<CR>", opts) -- prev buffer
-keymap("n", "<C-l>", ":bn<CR>", opts) -- next buffer
-keymap("n", "<C-h>", ":bp<CR>", opts) -- prev buffer
-keymap("n", "<leader>d", ":bd<cr>", opts)
+keymap("n", "<C-n>", ":bn<CR>", opts) -- next buffer
+keymap("n", "<C-p>", ":bp<CR>", opts) -- prev buffer
+keymap("n", "<leader>d", ":bd<CR>", opts)
 
 -- shift text blocks vertically
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("i", "<C-j>", "<esc>:move .+1<CR>==a", opts)
 keymap("i", "<C-k>", "<esc>:move .-2<CR>==a", opts)
--- commented out as clashes with window navigation
--- keymap("n", "<leader>j", ":move .+1<CR>==", opts)
--- keymap("n", "<leader>k", ":move .-2<CR>==", opts)
+keymap("n", "<leader>j", ":move .+1<CR>==", opts) -- clashes with window navigation custom maps
+keymap("n", "<leader>k", ":move .-2<CR>==", opts) -- clashes with window navigation custom maps
 
 -- undo breakpoints
 keymap("i", ",", ",<c-g>u", opts)
@@ -69,5 +68,5 @@ keymap(
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- nvim-tree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
--- keymap("n", "-", ":NvimTreeToggle<cr>", opts)
+-- keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "-", ":NvimTreeToggle<cr>", opts)
