@@ -3,6 +3,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "homebrew/services"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # GNU File, Shell, and Text utilities
@@ -41,6 +42,8 @@ brew "neofetch"
 brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Object-relational database system
+brew "postgresql", restart_service: true
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # File browser

@@ -44,11 +44,11 @@ alias vi="$HOMEBREW_PREFIX/bin/nvim"
 alias vim="$HOMEBREW_PREFIX/bin/nvim"
 alias work='cd $HOME/Work; clear; ll'
 
-# Customised prompt
-if [ $HOST = "MacBook-Air.localdomain" ]; then
+# Custom prompt
+if echo "$HOST" | grep -qi macbook; then
+    # Shows simplified prompt on local
     PROMPT="${BR}%(?..%F{red}[%?] %f)%2~ %# "
 else
-    # Shows hostname in prompt when using remote machines
     PROMPT="${BR}%(?.%F{245}%m%f.%F{red}[%?]%f %F{245}%m%f) %2~ %# "
 fi
 

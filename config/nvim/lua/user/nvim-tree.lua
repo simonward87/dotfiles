@@ -85,12 +85,12 @@ nvim_tree.setup({
 		number = true,
 		relativenumber = true,
 	},
-	quit_on_open = 1,
-	git_hl = 1,
-	show_icons = {
-		git = 1,
-		folders = 1,
-		files = 1,
-		folder_arrows = 1,
-	},
+	-- quit_on_open = 1,
+	-- git_hl = 1,
+	-- show_icons = {
+	-- 	git = 1,
+	-- 	folders = 1,
+	-- 	files = 1,
+	-- 	folder_arrows = 1,
+	-- },
 })

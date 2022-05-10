@@ -69,6 +69,7 @@ return packer.startup(function(use)
 	use("gosukiwi/vim-atom-dark")
 	use("jacoborus/tender.vim")
 	use("rebelot/kanagawa.nvim")
+	use("sainnhe/gruvbox-material")
 
 	-- completion
 	use("hrsh7th/nvim-cmp") -- completion plugin
