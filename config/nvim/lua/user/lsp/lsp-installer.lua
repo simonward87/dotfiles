@@ -4,8 +4,13 @@ if not status_ok then
 end
 local lspconfig = require("lspconfig")
 local servers = {
+	"cssmodules_ls",
 	"denols",
+	"dockerls",
+	"gopls",
+	"graphql",
 	"jsonls",
+	"rust_analyzer",
 	"sumneko_lua",
 	"tsserver",
 	"yamlls",
