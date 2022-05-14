@@ -156,14 +156,14 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 13
+  size: 14
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
   offset:
     x: 0
-    y: 2
+    y: 1
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
@@ -505,11 +505,12 @@ colors:
 # colors:
 #   primary:
 #     # hard contrast background - '#1d2021'
-#     background: &gruvbox_dark_bg "#282828"
+#     # background: &gruvbox_dark_bg '#282828'
+#     background: &gruvbox_dark_bg '0x1E1E1E' # darker
 #     # soft contrast background - '#32302f'
-#     foreground: "#D6BE93"
-#     bright_foreground: "#fbf1c7"
-#     dim_foreground: "#a89984"
+#     foreground: '#D6BE93'
+#     bright_foreground: '#fbf1c7'
+#     dim_foreground: '#a89984'
 #   cursor:
 #     text: CellBackground
 #     cursor: CellForeground
@@ -518,14 +519,14 @@ colors:
 #     cursor: CellForeground
 #     search:
 #       matches:
-#         foreground: "#000000"
-#         background: "#ffffff"
+#         foreground: '#000000'
+#         background: '#ffffff'
 #       focused_match:
 #         foreground: CellBackground
 #         background: CellForeground
 #       bar:
-#         background: ""
-#         foreground: ""
+#         background: ''
+#         foreground: ''
 #     line_indicator:
 #       foreground: None
 #       background: None
@@ -533,23 +534,23 @@ colors:
 #     text: CellBackground
 #     background: CellForeground
 #   bright:
-#     black: "#928374"
-#     red: "#fb4934"
-#     green: "#b8bb26"
-#     yellow: "#fabd2f"
-#     blue: "#83a598"
-#     magenta: "#d3869b"
-#     cyan: "#8ec07c"
-#     white: "#ebdbb2"
+#     black: '#928374'
+#     red: '#fb4934'
+#     green: '#b8bb26'
+#     yellow: '#fabd2f'
+#     blue: '#83a598'
+#     magenta: '#d3869b'
+#     cyan: '#8ec07c'
+#     white: '#ebdbb2'
 #   normal:
 #     black: *gruvbox_dark_bg
-#     red: "#F55E5D"
-#     green: "#A5B859"
-#     yellow: "#DDA548"
-#     blue: "#7DAEA3"
-#     magenta: "#D37D97"
-#     cyan: "#80B77D"
-#     white: "#D6BE93"
+#     red: '#F55E5D'
+#     green: '#A5B859'
+#     yellow: '#DDA548'
+#     blue: '#7DAEA3'
+#     magenta: '#D37D97'
+#     cyan: '#80B77D'
+#     white: '#D6BE93'
 #   # dim:
 #   #   black: "#32302f"
 #   #   red: "#9d0006"

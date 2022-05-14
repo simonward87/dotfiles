@@ -44,9 +44,8 @@ alias vi="$HOMEBREW_PREFIX/bin/nvim"
 alias vim="$HOMEBREW_PREFIX/bin/nvim"
 alias work='cd $HOME/Work; clear; ll'
 
-# Custom prompt
-if echo "$HOST" | grep -qi macbook; then
-    # Shows simplified prompt on local
+# Custom prompts — simplified when running inside tmux
+if [ -n "$TMUX" ]; then
     PROMPT="${BR}%(?..%F{red}[%?] %f)%2~ %# "
 else
     PROMPT="${BR}%(?.%F{245}%m%f.%F{red}[%?]%f %F{245}%m%f) %2~ %# "
