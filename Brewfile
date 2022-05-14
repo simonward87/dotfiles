@@ -114,6 +114,8 @@ cask "google-drive"
 cask "insomnia"
 # Keyboard customizer
 cask "karabiner-elements"
+# GUI client for PostgreSQL databases
+cask "postico"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Video chat, voice call and instant messaging application
