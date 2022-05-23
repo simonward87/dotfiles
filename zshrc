@@ -103,3 +103,12 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}
 source $DOTFILES/util/kubectl_completion.zsh
 # Extend completion to work with k alias
 compdef __start_kubectl k
+
+# Heroku completion
+if type brew &>/dev/null
+then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+    autoload -Uz compinit
+    compinit
+fi

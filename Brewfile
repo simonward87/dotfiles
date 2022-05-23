@@ -1,3 +1,4 @@
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -26,6 +27,8 @@ brew "htop"
 brew "xz"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Configurable static site generator
+brew "hugo"
 # Pager program similar to more
 brew "less"
 # Just-In-Time Compiler (JIT) for the Lua programming language
@@ -68,6 +71,8 @@ brew "wget"
 brew "zplug"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Everything you need to get started with Heroku
+brew "heroku/brew/heroku"
 # GPU-accelerated terminal emulator
 cask "alacritty"
 # Tool to flash OS images to SD cards & USB drives
