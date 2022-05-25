@@ -57,6 +57,8 @@ brew "ripgrep"
 brew "rustfmt"
 # Rust toolchain installer
 brew "rustup-init"
+# HTTP regression testing and benchmarking utility
+brew "siege"
 # Opinionated Lua code formatter
 brew "stylua"
 # Version control system designed to be a better CVS
