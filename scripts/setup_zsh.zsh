@@ -17,7 +17,7 @@ if [ "$SHELL" = "$HOMEBREW_PREFIX/bin/zsh" ]; then
   echo "\$SHELL is already $HOMEBREW_PREFIX/bin/zsh"
 else
   echo "Enter user password to change login shell"
-  chsh -s "$HOMEBREW_PREFIX/bin/zsh"
+  chsh -s "$HOMEBREW_PREFIX/bin/zsh" $USER
 fi
 
 
