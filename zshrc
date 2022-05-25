@@ -8,7 +8,7 @@ export HISTIGNORE=":pwd:id:uptime:resize:ls:clear:history"
 export HISTSIZE=100000
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
 export NULLCMD=bat
-export PATH="$PATH:$N_PREFIX/bin:$HOME/Study/bin"
+export PATH="$PATH:$N_PREFIX/bin:$(go env GOPATH)/bin:$HOME/Study/bin"
 export VISUAL="$EDITOR"
 export ZPLUG_HOME="$HOMEBREW_PREFIX/opt/zplug"
 
