@@ -77,6 +77,8 @@ brew "zsh"
 brew "heroku/brew/heroku"
 # GPU-accelerated terminal emulator
 cask "alacritty"
+# Memory training application
+cask "anki"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
 # 3D creation suite
