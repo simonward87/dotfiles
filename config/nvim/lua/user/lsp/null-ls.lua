@@ -29,7 +29,7 @@ null_ls.setup({
 				"vue",
 				"yaml",
 			},
-			extra_args = { "--single-quote" },
+			extra_args = { "--jsx-single-quote" },
 			extra_filetypes = { "svelte" },
 		}),
 		formatting.rustfmt,
