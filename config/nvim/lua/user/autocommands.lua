@@ -1,5 +1,4 @@
--- go.mod files incorrectly read as 'lprolog'. Fix coming in
--- next version, temporary fix:
+-- go.mod files incorrectly read as 'rapid' — temporary fix:
 vim.cmd("au BufRead,BufNewFile go.mod setf gomod")
 vim.cmd("au BufRead,BufNewFile Dockerfile.dev setf dockerfile")
 vim.cmd("au BufRead,BufNewFile zprofile setf zsh")
