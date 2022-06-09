@@ -51,6 +51,8 @@ brew "neovim"
 brew "postgresql", restart_service: true
 # File browser
 brew "ranger"
+# Persistent key-value database, with built-in net interface
+brew "redis", restart_service: true
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Format Rust code
