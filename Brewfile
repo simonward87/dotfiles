@@ -25,6 +25,8 @@ brew "git"
 brew "go"
 # Language server for the Go language
 brew "gopls"
+# Reliable, high performance TCP/HTTP load balancer
+brew "haproxy"
 # Improved top (interactive process viewer)
 brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -48,11 +50,11 @@ brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Object-relational database system
-brew "postgresql", restart_service: true
+brew "postgresql"
 # File browser
 brew "ranger"
 # Persistent key-value database, with built-in net interface
-brew "redis", restart_service: true
+brew "redis"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Format Rust code
