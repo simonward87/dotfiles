@@ -1,7 +1,7 @@
--- vim.o.background = "light"
+vim.o.background = "light"
 -- vim.g["gruvbox_material_palette"] = "mix"
 
-local colorscheme = "tender"
+local colorscheme = "github"
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE") -- transparent bg

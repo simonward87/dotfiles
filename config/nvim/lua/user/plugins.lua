@@ -102,8 +102,7 @@ return packer.startup(function(use)
 		run = ":TSUpdate",
 	})
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- simple code commenting
-	-- use("p00f/nvim-ts-rainbow") -- rainbow pairs
-	use("windwp/nvim-autopairs") -- Autopairs with cmp and treesitter integration
+	use("windwp/nvim-autopairs") -- autopairs with cmp and treesitter integration
 	use("windwp/nvim-ts-autotag") -- auto-close & auto-rename html tags
 
 	-- Gitsigns
