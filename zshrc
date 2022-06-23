@@ -47,9 +47,9 @@ alias work='cd $HOME/Work; clear; ll'
 
 # Custom prompts — simplified when running inside tmux
 if [ -n "$TMUX" ]; then
-    PROMPT="${BR}%(?..%F{red}[%?] %f)%2~ %# "
+    PROMPT="$BR%(?..%F{red}[%?] %f)%2~ %# "
 else
-    PROMPT="${BR}%(?.%F{245}%m%f.%F{red}[%?]%f %F{245}%m%f) %2~ %# "
+    PROMPT="$BR%(?.%F{245}%m%f.%F{red}[%?]%f %F{245}%m%f) %2~ %# "
 fi
 
 # Git prompt integration
