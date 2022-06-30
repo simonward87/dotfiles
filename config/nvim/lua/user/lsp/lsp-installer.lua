@@ -15,6 +15,7 @@ local servers = {
 	"rust_analyzer",
 	"sumneko_lua",
 	"svelte",
+	"tailwindcss",
 	"tsserver",
 	"yamlls",
 }

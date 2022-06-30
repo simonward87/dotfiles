@@ -28,6 +28,7 @@ npm i -g prettier-plugin-svelte
 npm i -g prettier
 npm i -g surge
 npm i -g svelte-language-server
+npm i -g @tailwindcss/language-server
 npm i -g trash-cli
 npm i -g typescript-language-server
 npm i -g typescript
