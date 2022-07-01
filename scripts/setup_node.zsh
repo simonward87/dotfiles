@@ -25,6 +25,7 @@ npm i -g json-server
 npm i -g neovim
 npm i -g nginxbeautifier
 npm i -g prettier-plugin-svelte
+npm i -g prettier-plugin-tailwindcss
 npm i -g prettier
 npm i -g surge
 npm i -g svelte-language-server
