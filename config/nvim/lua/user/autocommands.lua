@@ -1,6 +1,7 @@
 -- go.mod files incorrectly read as 'rapid' — temporary fix:
 vim.cmd("au BufRead,BufNewFile go.mod setf gomod")
 vim.cmd("au BufRead,BufNewFile Dockerfile.dev setf dockerfile")
+vim.cmd("au BufRead,BufNewFile *.gohtml setf html")
 vim.cmd("au BufRead,BufNewFile zprofile setf zsh")
 vim.cmd("au FileType gitcommit setl wrap spell")
 vim.cmd("au FileType go setl noet")
