@@ -27,6 +27,7 @@ npm i -g nginxbeautifier
 npm i -g prettier-plugin-svelte
 npm i -g prettier-plugin-tailwindcss
 npm i -g prettier
+npm i -g @prisma/language-server
 npm i -g surge
 npm i -g svelte-language-server
 npm i -g @tailwindcss/language-server
