@@ -18,6 +18,7 @@ local frontend_filetypes = {
 	"javascript.jsx",
 	"json",
 	"less",
+	"prisma",
 	"scss",
 	"svelte",
 	"typescript",
