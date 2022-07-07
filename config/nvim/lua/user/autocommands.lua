@@ -8,6 +8,7 @@ vim.cmd("au FileType go setl noet")
 vim.cmd("au FileType lua setl noet")
 vim.cmd("au FileType make setl noet sts=0 sw=8 ts=8")
 vim.cmd("au FileType markdown setl spell sts=2 sw=2 ts=2")
+vim.cmd("au FileType prisma setl cindent")
 
 local frontend_filetypes = {
 	"css",

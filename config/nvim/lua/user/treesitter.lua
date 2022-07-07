@@ -54,7 +54,14 @@ configs.setup({
 		disable = { "" }, -- list of language that will be disabled
 		additional_vim_regex_highlighting = true,
 	},
-	indent = { enable = true, disable = { "yaml", "go" } },
+	indent = {
+		enable = true,
+		disable = {
+			"prisma",
+			"yaml",
+			-- "go"
+		},
+	},
 	context_commentstring = {
 		enable = true,
 		enable_autocmd = false,
