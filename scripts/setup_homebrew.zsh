@@ -29,3 +29,6 @@ brew bundle --verbose
 # But this is from the Homebrew site, though `-R` was needed:
 # https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
 chmod -R go-w "$(brew --prefix)/share"
+
+# install rust & cargo
+rustup-init -y

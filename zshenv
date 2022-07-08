@@ -15,3 +15,18 @@ function exists() {
   # More explicitly written:
   # command -v $1 1>/dev/null 2>/dev/null
 }
+
+function tmx () {
+    # -d to allow the rest of the function to run
+    tmux new-session -d -s "${PWD##*/}" -n "Source" nvim .
+    # -d to prevent current window from changing
+    tmux new-window -d -n Server
+    # -d to detach any other client (which there shouldn't be,
+    # since you just created the session).
+    tmux attach-session -d -t "${PWD##*/}"
+}
+
+if type cargo &>/dev/null
+then
+    . "$HOME/.cargo/env"
+fi
