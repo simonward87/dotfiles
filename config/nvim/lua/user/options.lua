@@ -21,3 +21,6 @@ vim.opt.termguicolors = true
 vim.opt.ts = 4 -- the width of a hardtab measured in spaces
 vim.opt.undofile = true -- create undo files
 vim.opt.wrap = false -- no line-wrapping
+
+-- global variables
+vim.g["hardtime_default_on"] = 1 -- limit hjkl use by default

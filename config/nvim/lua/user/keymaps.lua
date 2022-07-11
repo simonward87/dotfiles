@@ -67,6 +67,9 @@ keymap(
 )
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
+-- hardmode
+keymap("n", "<leader>h", ":HardTimeToggle<CR>", opts)
+
 -- nvim-tree
 -- keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "-", ":NvimTreeToggle<cr>", opts)
