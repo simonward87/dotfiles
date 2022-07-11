@@ -22,3 +22,4 @@ vim.opt.undofile = true -- create undo files
 vim.opt.wrap = false -- no line-wrapping
 
 vim.g["hardtime_default_on"] = 1 -- limit hjkl use by default
+-- vim.g["gruvbox_material_palette"] = "mix"
