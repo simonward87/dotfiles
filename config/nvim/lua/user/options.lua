@@ -10,7 +10,6 @@ vim.opt.laststatus = 1 -- resets custom statusline colours
 vim.opt.nu = true -- line numbers
 vim.opt.rnu = true -- relative line numbers
 vim.opt.scrolloff = 4 -- vertical scroll boundaries
-vim.opt.showmode = false -- hide mode indicator
 vim.opt.sidescrolloff = 12 -- horizontal scroll boundaries
 vim.opt.signcolumn = "auto" -- combine signcolumn into number column
 vim.opt.smartcase = true -- smart case-insensitive search
@@ -22,5 +21,4 @@ vim.opt.ts = 4 -- the width of a hardtab measured in spaces
 vim.opt.undofile = true -- create undo files
 vim.opt.wrap = false -- no line-wrapping
 
--- global variables
 vim.g["hardtime_default_on"] = 1 -- limit hjkl use by default
