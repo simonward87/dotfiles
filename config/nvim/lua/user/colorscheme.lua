@@ -1,5 +1,4 @@
 vim.o.background = "light"
--- vim.g["gruvbox_material_palette"] = "mix"
 
 local colorscheme = "github"
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
