@@ -9,6 +9,7 @@ vim.opt.iskeyword:append("-") -- treat split words as single words
 vim.opt.laststatus = 1 -- resets custom statusline colours
 vim.opt.nu = true -- line numbers
 vim.opt.rnu = true -- relative line numbers
+vim.opt.ru = false -- hide character and line number ruler
 vim.opt.scrolloff = 4 -- vertical scroll boundaries
 vim.opt.sidescrolloff = 12 -- horizontal scroll boundaries
 vim.opt.signcolumn = "auto" -- combine signcolumn into number column
