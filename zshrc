@@ -7,6 +7,7 @@ export HISTFILESIZE=409600
 export HISTIGNORE=":pwd:id:uptime:resize:ls:clear:history"
 export HISTSIZE=100000
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
+export HOMEBREW_NO_ENV_HINTS=1
 export NULLCMD=bat
 export PATH="$PATH:$N_PREFIX/bin:$(go env GOPATH)/bin:$HOME/Study/bin"
 export PGDATA="$HOMEBREW_PREFIX/var/postgres"
