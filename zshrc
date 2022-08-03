@@ -1,18 +1,24 @@
 # Variables
 export BR=$'\n'
+export CARGO_HOME="$HOME/.cargo"
 export DOTFILES="$HOME/.dotfiles"
 export EDITOR="$HOMEBREW_PREFIX/bin/nvim"
 export HISTCONTROL=ignoreboth
 export HISTFILESIZE=409600
-export HISTIGNORE=":pwd:id:uptime:resize:ls:clear:history"
+export HISTIGNORE=":pwd:id:uptime:resize:ls:ll:la:clear:history"
 export HISTSIZE=100000
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
 export HOMEBREW_NO_ENV_HINTS=1
 export NULLCMD=bat
-export PATH="$PATH:$N_PREFIX/bin:$(go env GOPATH)/bin:$HOME/Study/bin"
 export PGDATA="$HOMEBREW_PREFIX/var/postgres"
+export RUSTUP_HOME="$HOME/.rustup"
 export VISUAL="$EDITOR"
 export ZPLUG_HOME="$HOMEBREW_PREFIX/opt/zplug"
+
+export PATH="$PATH:$N_PREFIX/bin"
+export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:$CARGO_HOME/bin"
+export PATH="$PATH:$HOME/Study/bin"
 
 # Options (man zshoptions)
 setopt NO_CASE_GLOB # Case-insensitive globbing
@@ -94,7 +100,7 @@ fi
 zplug load
 
 # Other
-fpath=(~/.zsh $fpath)
+fpath=(~/.zsh $fpath ~/.zfunc)
 autoload -Uz compinit
 compinit -u
 
@@ -114,3 +120,6 @@ then
     autoload -Uz compinit
     compinit
 fi
+
+# Cargo completion and bin
+source $HOME/.cargo/env

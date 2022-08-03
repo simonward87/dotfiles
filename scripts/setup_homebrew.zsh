@@ -32,3 +32,6 @@ chmod -R go-w "$(brew --prefix)/share"
 
 # install rust & cargo
 rustup-init -y
+rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy
+mkdir ~/.zfunc
+rustup completions zsh > ~/.zfunc/_rustup
