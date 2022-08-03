@@ -54,7 +54,7 @@ brew "postgresql"
 # File browser
 brew "ranger"
 # Persistent key-value database, with built-in net interface
-brew "redis"
+brew "redis", restart_service: true
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Format Rust code
@@ -85,6 +85,8 @@ cask "alacritty"
 cask "anki"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
+# Cross platform SQL editor and database management app
+cask "beekeeper-studio"
 # 3D creation suite
 cask "blender"
 # App to build and share containerized applications and microservices
