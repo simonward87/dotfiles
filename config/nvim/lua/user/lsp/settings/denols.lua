@@ -5,4 +5,5 @@ return {
 	init_options = {
 		lint = true,
 	},
+	single_file_support = false,
 }

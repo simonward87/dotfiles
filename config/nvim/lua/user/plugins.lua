@@ -92,6 +92,7 @@ return packer.startup(function(use)
 	use("tamago324/nlsp-settings.nvim") -- language server settings defined in json for
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 	use("b0o/SchemaStore.nvim") -- schemastore catalog access
+	use("j-hui/fidget.nvim") -- UI for nvim-lsp install progress
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
