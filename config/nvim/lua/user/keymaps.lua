@@ -53,7 +53,7 @@ keymap("n", "<leader><CR>", ":source ~/.config/nvim/lua/user/colorscheme.lua<CR>
 keymap("n", "<leader>gs", ":Git<CR>", opts)
 keymap("n", "<leader>gc", ":Git commit --verbose<CR>", opts)
 keymap("n", "<leader>gl", ":Git log<CR>", opts)
-keymap("n", "<leader>gp", ":Git! push<CR>", opts)
+keymap("n", "<leader>gp", ":Git push<CR>", opts)
 
 -- formatter
 keymap("n", "<leader>p", ":Format<CR>", opts)
