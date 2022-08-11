@@ -15,14 +15,12 @@ vim.g.maplocalleader = " "
 --   command = "c"
 
 -- window navigation
--- keymap("n", "<leader>h", "<C-w>h", opts) -- move left
--- keymap("n", "<leader>l", "<C-w>l", opts) -- move right
--- keymap("n", "<leader>j", "<C-w>j", opts) -- move down
--- keymap("n", "<leader>k", "<C-w>k", opts) -- move up
+keymap("n", "<Left>", "<C-w>h", opts) -- move left
+keymap("n", "<Right>", "<C-w>l", opts) -- move right
+keymap("n", "<Down>", "<C-w>j", opts) -- move down
+keymap("n", "<Up>", "<C-w>k", opts) -- move up
 
 -- buffer navigation
-keymap("n", "<Right>", ":bn<CR>", opts) -- next buffer
-keymap("n", "<Left>", ":bp<CR>", opts) -- prev buffer
 keymap("n", "<C-n>", ":bn<CR>", opts) -- next buffer
 keymap("n", "<C-p>", ":bp<CR>", opts) -- prev buffer
 keymap("n", "<leader>d", ":bd<CR>", opts)
@@ -32,8 +30,8 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("i", "<C-j>", "<esc>:move .+1<CR>==a", opts)
 keymap("i", "<C-k>", "<esc>:move .-2<CR>==a", opts)
-keymap("n", "<leader>j", ":move .+1<CR>==", opts) -- clashes with window navigation custom maps
-keymap("n", "<leader>k", ":move .-2<CR>==", opts) -- clashes with window navigation custom maps
+keymap("n", "<leader>j", ":move .+1<CR>==", opts)
+keymap("n", "<leader>k", ":move .-2<CR>==", opts)
 
 -- undo breakpoints
 keymap("i", ",", ",<c-g>u", opts)
@@ -50,10 +48,11 @@ keymap("n", "J", "mzJ`z", opts)
 keymap("n", "<leader><CR>", ":source ~/.config/nvim/lua/user/colorscheme.lua<CR>", opts)
 
 -- git
-keymap("n", "<leader>gs", ":Git<CR>", opts)
-keymap("n", "<leader>gc", ":Git commit --verbose<CR>", opts)
-keymap("n", "<leader>gl", ":Git log<CR>", opts)
-keymap("n", "<leader>gp", ":Git push<CR>", opts)
+keymap("n", "<leader>gs", ":G<CR>", opts)
+keymap("n", "<leader>gc", ":G commit -v -q<CR>", opts)
+keymap("n", "<leader>gd", ":G diff<CR>", opts)
+keymap("n", "<leader>gl", ":G log<CR>", opts)
+keymap("n", "<leader>gp", ":G push<CR>", opts)
 
 -- formatter
 keymap("n", "<leader>p", ":Format<CR>", opts)
@@ -67,9 +66,5 @@ keymap(
 )
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
--- hardmode
-keymap("n", "<leader>h", ":HardTimeToggle<CR>", opts)
-
 -- nvim-tree
--- keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "-", ":NvimTreeToggle<cr>", opts)

@@ -56,7 +56,6 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of vim Popup API
 	use("nvim-lua/plenary.nvim") -- lua function library (dependency for other plugs)
 	-- use("petertriho/nvim-scrollbar") -- diagnostics scrollbar
-	use("takac/vim-hardtime") -- increases hjkl timeout to train movements habits
 	use("tpope/vim-capslock") -- software capslock
 	use("tpope/vim-commentary") -- comment stuff out
 	use("tpope/vim-fugitive") -- git wrapper
