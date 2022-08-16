@@ -7,10 +7,6 @@ tap "homebrew/core"
 tap "homebrew/services"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# General-purpose data compression with high compression ratio
-brew "xz"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Secure runtime for JavaScript and TypeScript
@@ -29,6 +25,8 @@ brew "gopls"
 brew "haproxy"
 # Improved top (interactive process viewer)
 brew "htop"
+# General-purpose data compression with high compression ratio
+brew "xz"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Configurable static site generator
@@ -51,6 +49,8 @@ brew "tree-sitter"
 brew "neovim"
 # Object-relational database system
 brew "postgresql"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 # File browser
 brew "ranger"
 # Persistent key-value database, with built-in net interface
