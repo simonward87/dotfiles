@@ -1,6 +1,6 @@
-vim.o.background = "light"
+-- vim.o.background = "light"
 
-local colorscheme = "github"
+local colorscheme = "tender"
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE") -- transparent bg
