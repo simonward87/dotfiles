@@ -31,7 +31,8 @@ unsetopt BEEP
 # Aliases
 alias bbd='brew bundle dump --force --describe'
 alias df='df -h'
-alias dtfs='cd $DOTFILES; nvim .'
+alias dtfs='cd $DOTFILES && nvim .'
+alias dtfv='cd $DOTFILES'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
@@ -41,16 +42,15 @@ alias la='gls -AFho --color --group-directories-first'
 alias ll='gls -Fho --color --group-directories-first'
 alias ls='gls -F --color --group-directories-first'
 alias lx='gls -oXBFh --color --group-directories-first'
-alias nvimrc='cd $DOTFILES/config/nvim/; nvim .'
 alias pi='ssh pi'
 alias rm=trash
 alias serve=http-server
-alias study='cd $HOME/Study; clear; ll'
+alias study='cd $HOME/Study && clear && ll'
 # alias ts='tmux new -s "${PWD##*/}" -n Source'
 alias trail='<<<${(F)path}'
 alias vi="$HOMEBREW_PREFIX/bin/nvim"
 alias vim="$HOMEBREW_PREFIX/bin/nvim"
-alias work='cd $HOME/Work; clear; ll'
+alias work='cd $HOME/Work && clear && ll'
 
 # Custom prompts — simplified when running inside tmux
 if [ -n "$TMUX" ]; then
