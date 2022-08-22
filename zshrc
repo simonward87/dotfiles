@@ -1,12 +1,10 @@
 # Variables
-export BR=$'\n'
 export CARGO_HOME="$HOME/.cargo"
 export DOTFILES="$HOME/.dotfiles"
 export EDITOR="$HOMEBREW_PREFIX/bin/nvim"
-export HISTCONTROL=ignoreboth
-export HISTFILESIZE=409600
-export HISTIGNORE=":pwd:id:uptime:resize:ls:ll:la:clear:history"
-export HISTSIZE=100000
+export HISTORY_IGNORE="(pwd|id|uptime|resize|ls|ll|la|clear|history)" # command history ignore list
+export HISTSIZE=100000 # max number of cached commands
+export HISTTIMEFORMAT="%Y-%m-%d %T " # add timestamp to command history
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
 export HOMEBREW_NO_ENV_HINTS=1
 export NULLCMD=bat
@@ -20,12 +18,17 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH="$PATH:$CARGO_HOME/bin"
 export PATH="$PATH:$HOME/Study/bin"
 
+# use regular zsh history search binding in tmux
+bindkey '^R' history-incremental-search-backward
+
 # Options (man zshoptions)
-setopt NO_CASE_GLOB # Case-insensitive globbing
-setopt AUTO_CD # Automatic CD
-setopt CORRECT # Correction
-setopt CORRECT_ALL
-setopt EXTENDED_HISTORY
+setopt NO_CASE_GLOB # case-insensitive globbing
+setopt AUTO_CD # auto CD when a command is a directory name
+setopt CORRECT # try to correct command spelling
+setopt CORRECT_ALL # try to correct argument spelling
+setopt EXTENDED_HISTORY # save command timestamps
+setopt HIST_EXPIRE_DUPS_FIRST # remove oldest duplicates first when trimming
+setopt HIST_NO_STORE # remove history command from list when invoked
 unsetopt BEEP
 
 # Aliases
@@ -36,6 +39,7 @@ alias dtfv='cd $DOTFILES'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
+alias hist='fc -l -t "$HISTTIMEFORMAT"' # display formatted command history
 alias ip='ipconfig getifaddr en0'
 alias k=kubectl
 alias la='gls -AFho --color --group-directories-first'
@@ -54,9 +58,9 @@ alias work='cd $HOME/Work && clear && ll'
 
 # Custom prompts — simplified when running inside tmux
 if [ -n "$TMUX" ]; then
-    PROMPT="$BR%(?..%F{red}[%?] %f)%2~ %# "
+    PROMPT=$'\n'"%(?..%F{red}[%?] %f)%2~ %# "
 else
-    PROMPT="$BR%(?.%F{245}%m%f.%F{red}[%?]%f %F{245}%m%f) %2~ %# "
+    PROMPT=$'\n'"%(?.%F{245}%m%f.%F{red}[%?]%f %F{245}%m%f) %2~ %# "
 fi
 
 # Git prompt integration
