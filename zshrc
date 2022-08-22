@@ -2,7 +2,7 @@
 export CARGO_HOME="$HOME/.cargo"
 export DOTFILES="$HOME/.dotfiles"
 export EDITOR="$HOMEBREW_PREFIX/bin/nvim"
-export HISTORY_IGNORE="(pwd|id|uptime|resize|ls|ll|la|clear|history)" # command history ignore list
+export HISTORY_IGNORE='(pwd|id|uptime|resize|l[alsx]#( *)#|clear|hist[ory]#|cd ..)' # command history ignore list
 export HISTSIZE=100000 # max number of cached commands
 export HISTTIMEFORMAT="%Y-%m-%d %T " # add timestamp to command history
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
