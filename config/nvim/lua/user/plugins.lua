@@ -108,6 +108,9 @@ return packer.startup(function(use)
 	-- Gitsigns
 	use("lewis6991/gitsigns.nvim")
 
+	-- dap
+	use("mfussenegger/nvim-dap")
+
 	-- Automatically set up configuration after cloning packer
 	-- NOTE: must run after all plugins
 	if PACKER_BOOTSTRAP then
