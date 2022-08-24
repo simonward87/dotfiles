@@ -24,6 +24,7 @@ keymap("n", "<Up>", "<C-w>k", opts) -- move up
 keymap("n", "<C-n>", ":bn<CR>", opts) -- next buffer
 keymap("n", "<C-p>", ":bp<CR>", opts) -- prev buffer
 keymap("n", "<leader>d", ":bd<CR>", opts)
+keymap("n", "tt", ":tab split<CR>", opts)
 
 -- shift text blocks vertically
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
