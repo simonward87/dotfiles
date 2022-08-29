@@ -26,6 +26,7 @@ nvim_tree.setup({
 		},
 	},
 	renderer = {
+		add_trailing = true,
 		icons = {
 			glyphs = {
 				default = "",
