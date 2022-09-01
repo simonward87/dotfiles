@@ -48,7 +48,7 @@ brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Object-relational database system
-brew "postgresql"
+brew "postgresql@14"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # File browser
@@ -131,6 +131,8 @@ cask "insomnia"
 cask "karabiner-elements"
 # GUI client for PostgreSQL databases
 cask "postico"
+# Imaging utility to install operating systems to a microSD card
+cask "raspberry-pi-imager"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Video chat, voice call and instant messaging application
