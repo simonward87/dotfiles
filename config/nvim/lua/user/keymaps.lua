@@ -62,10 +62,14 @@ keymap("n", "<leader>p", ":Format<CR>", opts)
 keymap(
 	"n",
 	"<leader>f",
-	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>",
 	opts
 )
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<c-t>", "<cmd>Telescope live_grep<CR>", opts)
 
 -- nvim-tree
-keymap("n", "-", ":NvimTreeToggle<cr>", opts)
+keymap("n", "-", ":NvimTreeToggle<CR>", opts)
+
+-- commands
+keymap("n", "<leader>ll", ":!gls -Fho --group-directories-first<CR>", opts)
+keymap("n", "<leader>la", ":!gls -AFho --group-directories-first<CR>", opts)
