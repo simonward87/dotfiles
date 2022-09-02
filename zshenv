@@ -1,3 +1,6 @@
+# .zshenv is for all shells
+# It is always sourced
+
 # Putting these environment variables here (instead of in 
 # zshrc) makes them available to Homebrew for the first 
 # install

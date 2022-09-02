@@ -1,3 +1,6 @@
+# .zshrc is for 'interactive shells'
+# It is sourced each time a new terminal session is launched
+
 # Variables
 export CARGO_HOME="$HOME/.cargo"
 export DOTFILES="$HOME/.dotfiles"
@@ -124,6 +127,3 @@ then
     autoload -Uz compinit
     compinit
 fi
-
-# Cargo completion and bin
-source $HOME/.cargo/env
