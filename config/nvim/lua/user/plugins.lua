@@ -61,6 +61,7 @@ return packer.startup(function(use)
 	use("tpope/vim-fugitive") -- git wrapper
 	use("tpope/vim-surround") -- streamline surroundings workflow
 	use("wbthomason/packer.nvim") -- Let packer manage itself
+	use("nvim-treesitter/nvim-treesitter-context") -- pin code context (current block)
 
 	-- colorschemes
 	use("cocopon/iceberg.vim")
