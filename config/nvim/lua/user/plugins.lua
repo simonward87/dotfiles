@@ -94,10 +94,10 @@ return packer.startup(function(use)
 	use("b0o/SchemaStore.nvim") -- schemastore catalog access
 	use("j-hui/fidget.nvim") -- UI for nvim-lsp install progress
 
-	-- Telescope
+	-- telescope
 	use("nvim-telescope/telescope.nvim")
 
-	-- Treesitter
+	-- treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
@@ -106,13 +106,13 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs") -- autopairs with cmp and treesitter integration
 	use("windwp/nvim-ts-autotag") -- auto-close & auto-rename html tags
 
-	-- Gitsigns
+	-- gitsigns
 	use("lewis6991/gitsigns.nvim")
 
 	-- dap
 	use("mfussenegger/nvim-dap")
 
-	-- Automatically set up configuration after cloning packer
+	-- automatically set up configuration after cloning packer
 	-- NOTE: must run after all plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
