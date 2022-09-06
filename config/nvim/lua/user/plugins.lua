@@ -70,6 +70,15 @@ return packer.startup(function(use)
 	use("habamax/vim-habaurora")
 	use("jacoborus/tender.vim")
 	use("nelstrom/vim-mac-classic-theme")
+	use({
+		"olivercederborg/poimandres.nvim",
+		config = function()
+			require("poimandres").setup({
+				-- disable_background = true,
+				-- disable_float_background = true,
+			})
+		end,
+	})
 	use("rebelot/kanagawa.nvim")
 	use("sainnhe/gruvbox-material")
 
