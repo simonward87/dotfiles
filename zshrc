@@ -27,6 +27,7 @@ bindkey '^R' history-incremental-search-backward
 # Options (man zshoptions)
 setopt NO_CASE_GLOB # case-insensitive globbing
 setopt AUTO_CD # auto CD when a command is a directory name
+setopt CD_SILENT # Never print directory when CD -
 setopt CORRECT # try to correct command spelling
 setopt CORRECT_ALL # try to correct argument spelling
 setopt EXTENDED_HISTORY # save command timestamps
