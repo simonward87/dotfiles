@@ -48,7 +48,7 @@ brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Object-relational database system
-brew "postgresql@14"
+brew "postgresql@14", restart_service: true
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # File browser
