@@ -21,6 +21,12 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH="$PATH:$CARGO_HOME/bin"
 export PATH="$PATH:$HOME/Study/bin"
 
+# cs50 header files
+export CC="clang"
+export CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
+export LDLIBS="-lcrypt -lcs50 -lm"
+export LIBRARY_PATH=/usr/local/lib
+
 # use regular zsh history search binding in tmux
 bindkey '^R' history-incremental-search-backward
 
