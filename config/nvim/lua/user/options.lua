@@ -7,7 +7,7 @@ vim.opt.guicursor = "" -- use block cursor
 vim.opt.hlsearch = false -- highlight doesn't persist after search
 vim.opt.ignorecase = true -- ignore case in search patterns
 vim.opt.iskeyword:append("-") -- treat split words as single words
-vim.opt.laststatus = 1 -- resets custom statusline colours
+vim.opt.laststatus = 0 -- resets custom statusline colours
 vim.opt.number = true -- line numbers
 vim.opt.relativenumber = true -- relative line numbers
 vim.opt.ruler = false -- hide character and line number ruler
