@@ -64,5 +64,11 @@ nvim_tree.setup({
 		},
 		number = true,
 		relativenumber = true,
+		hide_root_folder = true,
+	},
+	filters = {
+		custom = {
+			"^.git$",
+		},
 	},
 })
