@@ -4,7 +4,6 @@ vim.opt.completeopt = { "menuone", "longest", "noinsert", "noselect" } -- text c
 vim.opt.cursorline = true -- highlight current line
 vim.opt.expandtab = true -- insert spaces for tabs
 vim.opt.guicursor = "" -- use block cursor
-vim.opt.hlsearch = false -- highlight doesn't persist after search
 vim.opt.ignorecase = true -- ignore case in search patterns
 vim.opt.iskeyword:append("-") -- treat split words as single words
 vim.opt.laststatus = 0 -- resets custom statusline colours
