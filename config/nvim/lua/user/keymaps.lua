@@ -49,9 +49,6 @@ keymap("n", "J", "mzJ`z", opts)
 keymap("n", "<C-d>", "<C-d>zz", opts)
 keymap("n", "<C-u>", "<C-u>zz", opts)
 
--- clear search highlights
-keymap("n", "<C-l>", ":<C-u>nohlsearch<CR><C-l>", opts)
-
 -- reload colourschemes
 keymap("n", "<leader><CR>", ":source ~/.config/nvim/lua/user/colorscheme.lua<CR>", opts)
 
