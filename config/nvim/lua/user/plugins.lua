@@ -79,6 +79,7 @@ return packer.startup(function(use)
 			})
 		end,
 	})
+	use("projekt0n/github-nvim-theme")
 	use("rebelot/kanagawa.nvim")
 	use("sainnhe/gruvbox-material")
 

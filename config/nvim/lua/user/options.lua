@@ -12,7 +12,6 @@ vim.opt.relativenumber = true -- relative line numbers
 vim.opt.ruler = false -- hide character and line number ruler
 vim.opt.scrolloff = 8 -- vertical scroll boundaries
 vim.opt.sidescrolloff = 12 -- horizontal scroll boundaries
-vim.opt.signcolumn = "auto" -- combine signcolumn into number column
 vim.opt.smartcase = true -- smart case-insensitive search
 vim.opt.softtabstop = 4 -- number of spaces used in place of a tab when expandtab is enabled
 vim.opt.shiftwidth = 4 -- number of spaces to use for autoindent
@@ -21,3 +20,5 @@ vim.opt.termguicolors = true
 vim.opt.tabstop = 4 -- the width of a hardtab measured in spaces
 vim.opt.undofile = true -- create undo files
 vim.opt.wrap = false -- no line-wrapping
+
+-- vim.opt.signcolumn = "number" -- combine signcolumn into number column
