@@ -4,12 +4,17 @@ if not status_ok then
 end
 
 github_theme.setup({
-	theme_style = "light",
-	transparent = true,
-	sidebars = { "qf", "vista_kind", "terminal", "packer" },
+	comment_style = "italic",
+	dark_float = true,
+	dark_sidebar = false,
+	hide_end_of_buffer = true,
+	keyword_style = "NONE",
 	overrides = function(c)
 		return {
 			TreesitterContext = { fg = "#24292f", bg = "terminal" },
 		}
 	end,
+	sidebars = { "qf", "vista_kind", "terminal", "packer" },
+	theme_style = "light",
+	transparent = true,
 })
