@@ -104,6 +104,7 @@ cask "font-dm-mono"
 cask "font-dm-sans"
 cask "font-dm-serif-text"
 cask "font-fira-code"
+# Developer targeted fonts with a high number of glyphs
 cask "font-fira-code-nerd-font"
 cask "font-fira-mono"
 cask "font-fira-mono-nerd-font"
