@@ -64,21 +64,14 @@ return packer.startup(function(use)
 	use("nvim-treesitter/nvim-treesitter-context") -- pin code context (current block)
 
 	-- colorschemes
+	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("cocopon/iceberg.vim")
 	use("cormacrelf/vim-colors-github")
 	use("gosukiwi/vim-atom-dark")
 	use("habamax/vim-habaurora")
 	use("jacoborus/tender.vim")
 	use("nelstrom/vim-mac-classic-theme")
-	use({
-		"olivercederborg/poimandres.nvim",
-		config = function()
-			require("poimandres").setup({
-				-- disable_background = true,
-				-- disable_float_background = true,
-			})
-		end,
-	})
+	use("olivercederborg/poimandres.nvim")
 	use("projekt0n/github-nvim-theme")
 	use("rebelot/kanagawa.nvim")
 	use("sainnhe/gruvbox-material")

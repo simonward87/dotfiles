@@ -4,17 +4,17 @@ if not status_ok then
 end
 
 github_theme.setup({
-	comment_style = "italic",
 	dark_float = true,
 	dark_sidebar = false,
-	hide_end_of_buffer = true,
 	keyword_style = "NONE",
-	overrides = function(c)
+	overrides = function(_)
 		return {
 			TreesitterContext = { fg = "#24292f", bg = "terminal" },
 		}
 	end,
-	sidebars = { "qf", "vista_kind", "terminal", "packer" },
+	sidebars = { "qf", "vista_kind", "telescope", "terminal", "packer" },
 	theme_style = "light",
 	transparent = true,
 })
+
+vim.o.background = "light"
