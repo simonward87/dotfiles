@@ -1,9 +1,9 @@
 vim.opt.backup = false -- stop auto-creating backups
 vim.opt.clipboard:append("unnamedplus") -- use mac system clipboard by default
-vim.opt.cmdheight = 0
 vim.opt.completeopt = { "menuone", "longest", "noinsert", "noselect" } -- text completion
 vim.opt.cursorline = true -- highlight current line
 vim.opt.expandtab = true -- insert spaces for tabs
+vim.opt.fillchars = "eob: " -- hide end of buffer characters
 vim.opt.guicursor = "" -- use block cursor
 vim.opt.ignorecase = true -- ignore case in search patterns
 vim.opt.iskeyword:append("-") -- treat split words as single words
@@ -22,5 +22,6 @@ vim.opt.tabstop = 4 -- the width of a hard-tab measured in spaces
 vim.opt.undofile = true -- create undo files
 vim.opt.wrap = false -- no line-wrapping
 
+-- vim.opt.cmdheight = 0 -- hides command line when not active
 -- vim.opt.signcolumn = "number" -- combine signcolumn into number column
 -- vim.opt.spell = true -- spellcheck comments

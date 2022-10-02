@@ -12,7 +12,7 @@ github_theme.setup({
 			TreesitterContext = { fg = "#24292f", bg = "terminal" },
 		}
 	end,
-	sidebars = { "qf", "vista_kind", "telescope", "terminal", "packer" },
+	sidebars = { "qf", "vista_kind", "terminal", "packer" },
 	theme_style = "light",
 	transparent = true,
 })
