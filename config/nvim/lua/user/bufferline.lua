@@ -18,4 +18,18 @@ bufferline.setup({
 		show_close_icon = false,
 		separator_style = { "", "" },
 	},
+	highlights = {
+		fill = {
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		background = {
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+	},
 })
