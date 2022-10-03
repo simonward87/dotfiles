@@ -441,7 +441,7 @@ colors:
     cyan: "0x73cef4"
     white: "0xfeffff"
 
-## Colors (Poimandres)
+# # Colors (Poimandres)
 #colors:
 #  # Default colors
 #  primary:
