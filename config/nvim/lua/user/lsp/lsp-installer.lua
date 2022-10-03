@@ -12,6 +12,7 @@ local servers = {
 	"graphql",
 	"html",
 	"prismals",
+	"pyright",
 	"jsonls",
 	"rust_analyzer",
 	"sumneko_lua",
