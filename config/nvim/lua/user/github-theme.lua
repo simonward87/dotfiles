@@ -6,6 +6,7 @@ end
 github_theme.setup({
 	dark_float = true,
 	dark_sidebar = false,
+	hide_end_of_buffer = false,
 	keyword_style = "NONE",
 	overrides = function(_)
 		return {
