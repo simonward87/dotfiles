@@ -14,7 +14,7 @@ else
   n lts
 fi
 
-# Install Global NPM Packages
+# Install global packages
 npm i -g autocannon
 npm i -g dockerfile-language-server-nodejs
 npm i -g eslint_d
