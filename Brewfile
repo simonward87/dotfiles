@@ -7,6 +7,10 @@ tap "homebrew/core"
 tap "homebrew/services"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# General-purpose data compression with high compression ratio
+brew "xz"
+# Dependency Manager for PHP
+brew "composer"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Secure runtime for JavaScript and TypeScript
@@ -25,16 +29,18 @@ brew "gopls"
 brew "haproxy"
 # Improved top (interactive process viewer)
 brew "htop"
-# General-purpose data compression with high compression ratio
-brew "xz"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Configurable static site generator
 brew "hugo"
+# Fast, Dynamic Programming Language
+brew "julia"
 # Pager program similar to more
 brew "less"
 # Just-In-Time Compiler (JIT) for the Lua programming language
 brew "luajit", args: ["HEAD"]
+# Package manager for the Lua programming language
+brew "luarocks"
 # Mac App Store command-line interface
 brew "mas"
 # Node version management
@@ -47,6 +53,8 @@ brew "neofetch"
 brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Development kit for the Java programming language
+brew "openjdk"
 # Object-relational database system
 brew "postgresql@14", restart_service: true
 # Interpreted, interactive, object-oriented programming language
@@ -89,6 +97,8 @@ cask "balenaetcher"
 cask "beekeeper-studio"
 # 3D creation suite
 cask "blender"
+# Photography workflow application and raw developer
+cask "darktable"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Collaborative team software

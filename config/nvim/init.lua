@@ -17,7 +17,3 @@ require("user.scrollbar")
 require("user.colorizer")
 require("user.bufferline")
 require("user.treesitter-ctx")
-
--- require("user.github-theme")
--- require("user.poimandres-theme")
--- require("user.catppuccin-theme")

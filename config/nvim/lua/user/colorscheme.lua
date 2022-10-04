@@ -6,11 +6,15 @@ if not status_ok then
 	return
 end
 
+-- require("user.github-theme")
+-- require("user.poimandres-theme")
+-- require("user.catppuccin-theme")
+
 -- custom highlights
 -- vim.cmd("hi Normal guibg=NONE ctermbg=NONE") -- transparent bg
 
 -- global options
-vim.g["gruvbox_material_palette"] = "mix"
+-- vim.g["gruvbox_material_palette"] = "mix"
 
 if colorscheme == "tender" then
 	vim.cmd("hi Normal guibg=#1E1E1E ctermbg=NONE") -- transparent bg

@@ -22,7 +22,5 @@ vim.opt.tabstop = 4
 vim.opt.undofile = true
 vim.opt.wrap = false
 
--- vim.opt.cmdheight = 0 -- bugs when commiting with git fugitive plugin
--- vim.opt.guicursor = ""
--- vim.opt.signcolumn = "number" -- git signs plugin obstructs line numbers
--- vim.opt.spell = true -- works but only rudimentary spell checking
+vim.g["loaded_perl_provider"] = 0
+vim.g["python3_host_prog"] = "/opt/homebrew/bin/python3"
