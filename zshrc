@@ -21,17 +21,17 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH="$PATH:$CARGO_HOME/bin"
 export PATH="$PATH:$HOME/Study/bin"
 
-# cs50 header files
+# CS50 header files
 export CC="clang"
 export CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
 export LDLIBS="-lcrypt -lcs50 -lm"
 export LIBRARY_PATH=/usr/local/lib
 
-# use regular zsh history search binding in tmux
+# Use regular Zsh history search binding in Tmux
 bindkey '^R' history-incremental-search-backward
 
 # Options (man zshoptions)
-setopt NO_CASE_GLOB # case-insensitive globbing
+setopt NO_CASE_GLOB # case-insensitive glob
 setopt AUTO_CD # auto CD when a command is a directory name
 setopt CD_SILENT # Never print directory when CD -
 setopt CORRECT # try to correct command spelling
