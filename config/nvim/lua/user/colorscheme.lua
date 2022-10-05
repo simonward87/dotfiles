@@ -23,8 +23,8 @@ if colorscheme == "tender" then
 	bg = "#1d1d1d"
 
 	hl("LineNr", {
-		-- increase line number contrast
-		fg = "#666666", -- tinted: #476572
+		fg = "#666666", -- increase contrast
+		-- fg = "#476572", -- tinted alternative
 	})
 elseif colorscheme == "gruvbox-material" then
 	bg = "#1d2021"
@@ -43,7 +43,10 @@ elseif colorscheme == "github_light" then
 	bg = "#FFFFFF"
 
 	hl("SpellBad", {
-		fg = "#cb2431", -- increase spelling error visibility
+		fg = "#cb2431", -- increase visibility
+	})
+	hl("LineNr", {
+		fg = "#6a737d", -- reduce contrast
 	})
 elseif colorscheme == "github_dark" then
 	require("user.github-dark")
