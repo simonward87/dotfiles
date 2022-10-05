@@ -32,24 +32,30 @@ elseif colorscheme == "gruvbox-material" then
 	vim.g["gruvbox_material_palette"] = "mix"
 elseif colorscheme == "catppuccin" then
 	require("user.catppuccin-theme")
+	vim.cmd("colorscheme" .. colorscheme)
 
 	bg = "#1E1E2E"
 elseif colorscheme == "poimandres" then
-	bg = "#1B1E28"
 	require("user.poimandres-theme")
+	vim.cmd("colorscheme" .. colorscheme)
+
+	bg = "#1B1E28"
 elseif colorscheme == "github_light" then
 	require("user.github-light")
+	vim.cmd("colorscheme" .. colorscheme)
 
 	bg = "#FFFFFF"
 
 	hl("SpellBad", {
 		fg = "#cb2431", -- increase visibility
 	})
+
 	hl("LineNr", {
 		fg = "#6a737d", -- reduce contrast
 	})
 elseif colorscheme == "github_dark" then
 	require("user.github-dark")
+	vim.cmd("colorscheme" .. colorscheme)
 
 	bg = "#24292E"
 end

@@ -14,6 +14,7 @@ local servers = {
 	"prismals",
 	"pyright",
 	"jsonls",
+	"marksman",
 	"rust_analyzer",
 	"sumneko_lua",
 	"svelte",

@@ -47,3 +47,6 @@ zshrc
 CS50
 Zsh
 K8s
+zshenv
+Homebrew
+zprofile
