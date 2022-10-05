@@ -1,4 +1,4 @@
-local colorscheme = "github_light"
+local colorscheme = "tender"
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 
 if not status_ok then
@@ -10,27 +10,45 @@ local hl = function(group, opts)
 	vim.api.nvim_set_hl(0, group, opts)
 end
 
-local bg = "none"
 local hl_groups = {
+	"EndOfBuffer",
 	"Normal",
 	"SignColumn",
 	"TreesitterContext",
 }
+local bg = "none"
 
+-- Custom colours
 if colorscheme == "tender" then
-	bg = "#1E1E1E"
+	bg = "#1d1d1d"
+
+	hl("LineNr", {
+		-- increase line number contrast
+		fg = "#666666", -- tinted: #476572
+	})
 elseif colorscheme == "gruvbox-material" then
+	bg = "#1d2021"
+
 	vim.g["gruvbox_material_palette"] = "mix"
 elseif colorscheme == "catppuccin" then
 	require("user.catppuccin-theme")
+
+	bg = "#1E1E2E"
 elseif colorscheme == "poimandres" then
+	bg = "#1B1E28"
 	require("user.poimandres-theme")
 elseif colorscheme == "github_light" then
-	bg = "#FFFFFF"
 	require("user.github-light")
+
+	bg = "#FFFFFF"
+
+	hl("SpellBad", {
+		fg = "#cb2431", -- increase spelling error visibility
+	})
 elseif colorscheme == "github_dark" then
-	bg = "#24292E"
 	require("user.github-dark")
+
+	bg = "#24292E"
 end
 
 for i = 1, #hl_groups do
