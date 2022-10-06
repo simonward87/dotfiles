@@ -33,3 +33,19 @@ local frontend_filetypes = {
 for i = 1, #frontend_filetypes do
 	vim.cmd("au FileType " .. frontend_filetypes[i] .. " setl sts=2 sw=2 ts=2")
 end
+
+local augroup = vim.api.nvim_create_augroup
+local autocmd = vim.api.nvim_create_autocmd
+local yank_group = augroup("HighlightYank", {})
+
+-- Brief highlight when yanking
+autocmd("TextYankPost", {
+	group = yank_group,
+	pattern = "*",
+	callback = function()
+		vim.highlight.on_yank({
+			higroup = "IncSearch",
+			timeout = 100,
+		})
+	end,
+})
