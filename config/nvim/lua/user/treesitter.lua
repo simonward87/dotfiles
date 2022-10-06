@@ -24,7 +24,7 @@ configs.setup({
 		"jsonc",
 		"lua",
 		-- "markdown", -- doesn't work with tender theme
-		"markdown_inline",
+		-- "markdown_inline",
 		"prisma",
 		"pug",
 		"python",

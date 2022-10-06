@@ -36,16 +36,24 @@ end
 
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
-local yank_group = augroup("HighlightYank", {})
 
 -- Brief highlight when yanking
 autocmd("TextYankPost", {
-	group = yank_group,
+	group = augroup("HighlightYank", { clear = true }),
 	pattern = "*",
 	callback = function()
 		vim.highlight.on_yank({
 			higroup = "IncSearch",
-			timeout = 100,
+			timeout = 200,
 		})
+	end,
+})
+
+-- Don't spellcheck URLs and basic acronyms
+autocmd("BufEnter", {
+	group = augroup("SpellIgnore", { clear = true }),
+	callback = function()
+		vim.cmd([=[syn match UrlNoSpell '\w\+:\/\/[^[:space:]]\+' contains=@NoSpell]=])
+		vim.cmd([[syn match AcronymNoSpell '\<\(\u\|\d\)\{3,}s\?\>' contains=@NoSpell]])
 	end,
 })

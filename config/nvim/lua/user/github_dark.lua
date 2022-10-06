@@ -3,6 +3,8 @@ if not status_ok then
 	return
 end
 
+local appearance = "dark"
+
 github_theme.setup({
 	dark_float = true,
 	dark_sidebar = false,
@@ -14,8 +16,8 @@ github_theme.setup({
 		}
 	end,
 	sidebars = { "qf", "vista_kind", "terminal", "packer" },
-	theme_style = "dark",
+	theme_style = appearance,
 	transparent = true,
 })
 
-vim.o.background = "dark"
+vim.o.background = appearance

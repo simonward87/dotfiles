@@ -10,3 +10,5 @@ poimandres.setup({
 	disable_float_background = false, -- disable background for floats
 	disable_italics = false, -- disable italics
 })
+
+vim.cmd("colorscheme poimandres")
