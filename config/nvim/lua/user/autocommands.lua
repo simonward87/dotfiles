@@ -1,14 +1,14 @@
 -- go.mod files incorrectly read as 'rapid' — temporary fix:
-vim.cmd("au BufRead,BufNewFile go.mod setf gomod")
-vim.cmd("au BufRead,BufNewFile Dockerfile.dev setf dockerfile")
-vim.cmd("au BufRead,BufNewFile *.gohtml setf html")
-vim.cmd("au BufRead,BufNewFile zprofile setf zsh")
-vim.cmd("au FileType gitcommit setl wrap spell tw=72")
-vim.cmd("au FileType go setl noet")
-vim.cmd("au FileType lua setl noet")
-vim.cmd("au FileType make setl noet sts=0 sw=8 ts=8")
-vim.cmd("au FileType markdown setl spell")
-vim.cmd("au FileType prisma setl cindent")
+vim.cmd("autocmd BufRead,BufNewFile go.mod setfiletype gomod")
+vim.cmd("autocmd BufRead,BufNewFile Dockerfile.dev setfiletype dockerfile")
+vim.cmd("autocmd BufRead,BufNewFile *.gohtml setfiletype html")
+vim.cmd("autocmd BufRead,BufNewFile zprofile setfiletype zsh")
+vim.cmd("autocmd FileType gitcommit setlocal wrap spell textwidth=72")
+vim.cmd("autocmd FileType go setlocal noexpandtab")
+vim.cmd("autocmd FileType lua setlocal noexpandtab")
+vim.cmd("autocmd FileType make setlocal noexpandtab softtabstop=0 shiftwidth=8 tabstop=8")
+vim.cmd("autocmd FileType markdown setlocal spell") -- textwidth=80 desired but messes with tables
+vim.cmd("autocmd FileType prisma setlocal cindent")
 
 local frontend_filetypes = {
 	"css",
@@ -31,13 +31,13 @@ local frontend_filetypes = {
 }
 
 for i = 1, #frontend_filetypes do
-	vim.cmd("au FileType " .. frontend_filetypes[i] .. " setl sts=2 sw=2 ts=2")
+	vim.cmd("au FileType " .. frontend_filetypes[i] .. " setlocal softtabstop=2 shiftwidth=2 tabstop=2")
 end
 
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
--- Brief highlight when yanking
+-- Highlight on yank
 autocmd("TextYankPost", {
 	group = augroup("HighlightYank", { clear = true }),
 	pattern = "*",

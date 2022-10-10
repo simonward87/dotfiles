@@ -5,9 +5,9 @@ local custom_opts_loaded, _ = pcall(require, "user." .. c)
 if custom_opts_loaded then
 	return
 else
-	local status_ok, _ = pcall(vim.cmd, "colorscheme " .. c)
+	local colorscheme_found, _ = pcall(vim.cmd, "colorscheme " .. c)
 
-	if not status_ok then
+	if not colorscheme_found then
 		vim.notify('Colorscheme "' .. c .. '" not found!')
 		return
 	end
