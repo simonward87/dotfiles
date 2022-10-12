@@ -12,8 +12,6 @@ hl("LineNr", {
 hl("Search", {
 	fg = "#1d1d1d",
 	bg = "#c9d05c",
-	-- fg = "#eeeeee",
-	-- bg = "#666666",
 })
 
 local bg = "#1d1d1d"
