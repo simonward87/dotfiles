@@ -54,17 +54,15 @@ alias ip='ipconfig getifaddr en0'
 alias k=kubectl
 alias la='gls -AFho --color --group-directories-first'
 alias ll='gls -Fho --color --group-directories-first'
-alias ls='gls -F --color --group-directories-first'
-alias lx='gls -oXBFh --color --group-directories-first'
+alias ls='gls -1F --color --group-directories-first'
 alias pi='ssh pi'
 alias rm=trash
 alias serve=http-server
-alias study='cd $HOME/Study && clear && ll'
-# alias ts='tmux new -s "${PWD##*/}" -n Source'
+alias study='cd $HOME/Study && clear && ls'
 alias trail='<<<${(F)path}'
 alias vi="$HOMEBREW_PREFIX/bin/nvim"
 alias vim="$HOMEBREW_PREFIX/bin/nvim"
-alias work='cd $HOME/Work && clear && ll'
+alias work='cd $HOME/Work && clear && ls'
 
 # Custom prompts — simplified when running inside tmux
 if [ -n "$TMUX" ]; then
