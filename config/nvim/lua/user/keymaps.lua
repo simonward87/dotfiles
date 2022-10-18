@@ -14,6 +14,9 @@ vim.g.maplocalleader = " "
 --   terminal = "t"
 --   command = "c"
 
+-- temporary unbind <Tab> in INSERT to promote <C-t> and <C-d>
+keymap("i", "<Tab>", "<Nop>", opts)
+
 -- window navigation
 keymap("n", "<Left>", "<C-w>h", opts) -- move left
 keymap("n", "<Right>", "<C-w>l", opts) -- move right
