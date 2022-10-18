@@ -6,14 +6,21 @@ local hl = function(group, opts)
 end
 
 local bg = "#1d1d1d"
+local comment = "#666666"
+local green = "#c9d05c"
+-- local dim_blue = "#476572"
 
 hl("LineNr", {
-	fg = "#666666", -- increase contrast, alt: #476572
+	fg = comment, -- increase contrast
 })
 
 hl("Search", {
 	fg = bg,
-	bg = "#c9d05c",
+	bg = green,
+})
+
+hl("WhitespaceEOL", {
+	bg = comment,
 })
 
 local hl_groups = { "Normal", "SignColumn", "TreesitterContext" }

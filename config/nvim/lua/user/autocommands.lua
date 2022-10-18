@@ -57,3 +57,11 @@ autocmd("BufEnter", {
 		vim.cmd([[syn match AcronymNoSpell '\<\(\u\|\d\)\{3,}s\?\>' contains=@NoSpell]])
 	end,
 })
+
+-- Highlight EOL whitespace
+autocmd("BufEnter", {
+	group = augroup("WhitespaceEOL", { clear = true }),
+	callback = function()
+		vim.cmd([[syn match WhitespaceEOL '\s\+$']])
+	end,
+})
