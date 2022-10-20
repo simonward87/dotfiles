@@ -140,6 +140,8 @@ cask "google-drive"
 cask "insomnia"
 # Keyboard customizer
 cask "karabiner-elements"
+# Administration and development platform for PostgreSQL
+cask "pgadmin4"
 # GUI client for PostgreSQL databases
 cask "postico"
 # Imaging utility to install operating systems to a microSD card
