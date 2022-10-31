@@ -75,6 +75,8 @@ brew "siege"
 brew "stylua"
 # Version control system designed to be a better CVS
 brew "subversion"
+# Simplified and community-driven man pages
+brew "tldr"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
@@ -142,6 +144,8 @@ cask "insomnia"
 cask "karabiner-elements"
 # Administration and development platform for PostgreSQL
 cask "pgadmin4"
+# Colour picker for colours onscreen
+cask "pika"
 # GUI client for PostgreSQL databases
 cask "postico"
 # Imaging utility to install operating systems to a microSD card
