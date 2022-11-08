@@ -64,3 +64,4 @@ Redis
 WebSockets
 Sharding
 json
+sql
