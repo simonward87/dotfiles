@@ -115,6 +115,7 @@ cask "font-courier-prime-sans"
 cask "font-dm-mono"
 cask "font-dm-sans"
 cask "font-dm-serif-text"
+# Free monospaced font with programming ligatures
 cask "font-fira-code"
 # Developer targeted fonts with a high number of glyphs
 cask "font-fira-code-nerd-font"
