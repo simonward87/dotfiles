@@ -65,3 +65,7 @@ WebSockets
 Sharding
 json
 sql
+memoized
+useMemo
+useCallback
+useEffect
