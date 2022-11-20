@@ -122,6 +122,8 @@ cask "font-fira-code-nerd-font"
 cask "font-fira-mono"
 cask "font-fira-mono-nerd-font"
 cask "font-fira-sans"
+# Corporate typeface for IBM
+cask "font-ibm-plex-mono"
 cask "font-inconsolata"
 cask "font-lato"
 cask "font-noto-mono"
