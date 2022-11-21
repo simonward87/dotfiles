@@ -5,6 +5,8 @@
 export CARGO_HOME="$HOME/.cargo"
 export DOTFILES="$HOME/.dotfiles"
 export EDITOR="$HOMEBREW_PREFIX/bin/nvim"
+export GOBIN="$(go env GOPATH)/bin"
+export GOPATH="$(go env GOPATH)"
 export HISTORY_IGNORE='(pwd|id|uptime|resize|l[alsx]#( *)#|clear|hist[ory]#|cd ..)' # command history ignore list
 export HISTSIZE=100000 # max number of cached commands
 export HISTTIMEFORMAT="%Y-%m-%d %T " # add time-stamp to command history
@@ -17,7 +19,7 @@ export VISUAL="$EDITOR"
 export ZPLUG_HOME="$HOMEBREW_PREFIX/opt/zplug"
 
 export PATH="$PATH:$N_PREFIX/bin"
-export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:$GOBIN"
 export PATH="$PATH:$CARGO_HOME/bin"
 export PATH="$PATH:$HOME/Study/bin"
 
