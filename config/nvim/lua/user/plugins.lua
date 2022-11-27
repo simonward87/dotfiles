@@ -100,6 +100,7 @@ return packer.startup(function(use)
 	use("j-hui/fidget.nvim") -- UI for nvim-lsp install progress
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 	use("neovim/nvim-lspconfig") -- enable LSP
+	use("sago35/tinygo.vim") -- tinygo extension
 	use("tamago324/nlsp-settings.nvim") -- language server settings defined in json for
 	use("williamboman/nvim-lsp-installer") -- language server installer
 

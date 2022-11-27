@@ -1,3 +1,4 @@
+tap "armmbed/formulae"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -5,8 +6,13 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "tinygo-org/tools"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Cross-platform make
+brew "cmake"
+# Documentation for CMake
+brew "cmake-docs"
 # General-purpose data compression with high compression ratio
 brew "xz"
 # Dependency Manager for PHP
@@ -87,8 +93,11 @@ brew "wget"
 brew "zplug"
 # UNIX shell (command interpreter)
 brew "zsh"
+brew "armmbed/formulae/arm-none-eabi-gcc"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
+# TinyGo is a Go compiler for small places. Microcontrollers, WebAssembly, and command-line tools. Based on LLVM.
+brew "tinygo-org/tools/tinygo"
 # GPU-accelerated terminal emulator
 cask "alacritty"
 # Memory training application
@@ -120,6 +129,7 @@ cask "font-fira-code"
 # Developer targeted fonts with a high number of glyphs
 cask "font-fira-code-nerd-font"
 cask "font-fira-mono"
+# Developer targeted fonts with a high number of glyphs
 cask "font-fira-mono-nerd-font"
 cask "font-fira-sans"
 # Corporate typeface for IBM

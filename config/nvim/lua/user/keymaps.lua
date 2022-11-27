@@ -80,3 +80,8 @@ keymap("n", "-", ":NvimTreeToggle<CR>", opts)
 -- commands
 keymap("n", "<leader>ll", ":!gls -Fho --group-directories-first<CR>", opts)
 keymap("n", "<leader>la", ":!gls -AFho --group-directories-first<CR>", opts)
+
+-- tinygo
+keymap("n", "<leader>ta", ":TinygoTarget arduino<CR>", opts)
+keymap("n", "<leader>tp", ":TinygoTarget pico<CR>", opts)
+keymap("n", "<leader>ts", ":TinygoTarget -<CR>", opts)
