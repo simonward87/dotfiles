@@ -17,9 +17,9 @@ fi
 brew install n
 n lts
 
-# TODO: Look out for a different '--no-quarantine' solution. Currently, 
-# you can't do `brew bundle --no-quarantine` as an option — instead, 
-# it is exported as an enviornment variable in zshenv
+# TODO: Look out for a different '--no-quarantine' solution. Currently,
+# you can't do `brew bundle --no-quarantine` as an option — instead,
+# it is exported as an environment variable in zshenv
 # https://github.com/Homebrew/homebrew-bundle/issues/474
 
 brew bundle --verbose
