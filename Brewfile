@@ -6,15 +6,20 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "osx-cross/avr"
 tap "tinygo-org/tools"
+# Arduino command-line interface
+brew "arduino-cli"
+# General-purpose data compression with high compression ratio
+brew "xz"
+# Atmel AVR MCU programmer
+brew "avrdude"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Cross-platform make
 brew "cmake"
 # Documentation for CMake
 brew "cmake-docs"
-# General-purpose data compression with high compression ratio
-brew "xz"
 # Dependency Manager for PHP
 brew "composer"
 # GNU File, Shell, and Text utilities
@@ -87,6 +92,8 @@ brew "tldr"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Your favorite rust -> wasm workflow tool!
+brew "wasm-pack"
 # Internet file retriever
 brew "wget"
 # Next-generation plugin manager for zsh
@@ -96,6 +103,8 @@ brew "zsh"
 brew "armmbed/formulae/arm-none-eabi-gcc"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
+# GNU compiler collection for AVR 8-bit and 32-bit Microcontrollers
+brew "osx-cross/avr/avr-gcc@9"
 # TinyGo is a Go compiler for small places. Microcontrollers, WebAssembly, and command-line tools. Based on LLVM.
 brew "tinygo-org/tools/tinygo"
 # GPU-accelerated terminal emulator
@@ -151,23 +160,18 @@ cask "font-roboto-slab"
 cask "google-chrome"
 # Client for the Google Drive storage service
 cask "google-drive"
-# HTTP and GraphQL Client
-cask "insomnia"
 # Keyboard customizer
 cask "karabiner-elements"
 # Administration and development platform for PostgreSQL
 cask "pgadmin4"
 # Colour picker for colours onscreen
 cask "pika"
-# GUI client for PostgreSQL databases
-cask "postico"
 # Imaging utility to install operating systems to a microSD card
 cask "raspberry-pi-imager"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Video chat, voice call and instant messaging application
 cask "skype"
-mas "Bluetooth MIDI Connect", id: 1074606480
 mas "Kindle", id: 405399194
 mas "Logic Pro", id: 634148309
 mas "Todoist", id: 585829637

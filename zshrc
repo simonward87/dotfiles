@@ -44,7 +44,9 @@ setopt HIST_NO_STORE # remove history command from list when invoked
 unsetopt BEEP
 
 # Aliases
+alias bbc='brew bundle check'
 alias bbd='brew bundle dump --force --describe'
+alias bbl='brew bundle list --all'
 alias df='df -h'
 alias dtfs='cd $DOTFILES && nvim .'
 alias dtfv='cd $DOTFILES'
