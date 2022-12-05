@@ -2,7 +2,7 @@
 
 echo -e "\n<<< Starting ZSH Setup >>>\n"
 
-# Installation unnecessary; it's in the Brewfile.
+# zsh installation unnecessary; it's in the Brewfile.
 
 # https://stackoverflow.com/a/4749368/1341838
 if grep -Fxq "$HOMEBREW_PREFIX/bin/zsh" '/etc/shells'; then
@@ -28,7 +28,7 @@ else
 
   sudo ln -sfv /bin/zsh /private/var/select/sh
 
-  # I'd like for this to work instead, but currently not supported
+  # i'd like for this to work instead, but currently not supported
   # sudo ln -sfv /opt/homebrew/bin/zsh /private/var/select/sh
 fi
 

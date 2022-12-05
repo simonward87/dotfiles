@@ -12,7 +12,7 @@ else
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Ensure n is installed before doing brew bundle, else a seperate copy of
+# ensure n is installed before doing brew bundle, else a seperate copy of
 # node will be installed as it is a dependency of various packages
 brew install n
 n lts
@@ -24,14 +24,8 @@ n lts
 
 brew bundle --verbose
 
-# This works to solve the Insecure Directories issue:
+# this works to solve the Insecure Directories issue:
 # compaudit | xargs chmod go-w
 # But this is from the Homebrew site, though `-R` was needed:
 # https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
 chmod -R go-w "$(brew --prefix)/share"
-
-# install rust & cargo
-rustup-init -y
-rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy
-mkdir ~/.zfunc
-rustup completions zsh > ~/.zfunc/_rustup

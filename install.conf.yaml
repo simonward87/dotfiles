@@ -6,7 +6,7 @@
       stdout: true
       stderr: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     ~/.config/alacritty: config/alacritty
@@ -31,3 +31,5 @@
     - command: ./scripts/setup_zsh.zsh
     - command: ./scripts/setup_node.zsh
     - command: ./scripts/setup_macos.zsh
+    - command: ./scripts/setup_rust.zsh
+    - command: ./scripts/setup_alacritty.zsh

@@ -2,10 +2,10 @@
 
 echo -e "\n<<< Starting Node Setup >>>\n"
 
-# Node versions are managed with `n`, which is in the Brewfile.
-# See `zshenv` for the setting of the `N_PREFIX` variable,
-# making it available below during the first install.
-# See `zshrc` where `N_PREFIX/bin` is added to PATH
+# node versions are managed with `n`, which is in the Brewfile. See
+# `zshenv` for the setting of the `N_PREFIX` variable, making it available
+# below during the first install.
+# see `zshrc` where `N_PREFIX/bin` is added to PATH
 
 if exists $N_PREFIX/bin/node; then
   echo "Node $($N_PREFIX/bin/node --version) & NPM $($N_PREFIX/bin/npm --version) already installed with n"
@@ -14,7 +14,7 @@ else
   n lts
 fi
 
-# Install global packages
+# install global packages
 npm i -g autocannon
 npm i -g dockerfile-language-server-nodejs
 npm i -g eslint_d
