@@ -1,7 +1,7 @@
 # .zshrc is for 'interactive shells'
-# It is sourced each time a new terminal session is launched
+# it is sourced each time a new terminal session is launched
 
-# Variables
+# variables
 export CARGO_HOME="$HOME/.cargo"
 export DOTFILES="$HOME/.dotfiles"
 export EDITOR="$HOMEBREW_PREFIX/bin/nvim"
@@ -23,19 +23,19 @@ export PATH="$PATH:$GOBIN"
 export PATH="$PATH:$CARGO_HOME/bin"
 export PATH="$PATH:$HOME/Study/bin"
 
-# CS50 header files
+# header files for CS50
 export CC="clang"
 export CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
 export LDLIBS="-lcrypt -lcs50 -lm"
 export LIBRARY_PATH=/usr/local/lib
 
-# Use regular Zsh history search binding in Tmux
+# use regular Zsh history search binding in Tmux
 bindkey '^R' history-incremental-search-backward
 
-# Options (man zshoptions)
+# options (man zshoptions)
 setopt NO_CASE_GLOB # case-insensitive glob
 setopt AUTO_CD # auto CD when a command is a directory name
-setopt CD_SILENT # Never print directory when CD -
+setopt CD_SILENT # never print directory when CD -
 setopt CORRECT # try to correct command spelling
 setopt CORRECT_ALL # try to correct argument spelling
 setopt EXTENDED_HISTORY # save command timestamps
@@ -43,8 +43,7 @@ setopt HIST_EXPIRE_DUPS_FIRST # remove oldest duplicates first when trimming
 setopt HIST_NO_STORE # remove history command from list when invoked
 unsetopt BEEP
 
-# Aliases
-alias bbc='brew bundle check'
+# aliases
 alias bbd='brew bundle dump --force --describe'
 alias bbl='brew bundle list --all'
 alias df='df -h'
@@ -68,14 +67,18 @@ alias vi="$HOMEBREW_PREFIX/bin/nvim"
 alias vim="$HOMEBREW_PREFIX/bin/nvim"
 alias work='cd $HOME/Work && clear && ls'
 
-# Custom prompts — simplified when running inside tmux
+# custom prompt
 if [ -n "$TMUX" ]; then
-    PROMPT=$'\n'"%(?..%F{red}[%?] %f)%2~ %# "
+    # hostname removed as displayed in tmux status line
+    PROMPT="%(?..%F{red}[%?] %f)%2~ %# "
 else
-    PROMPT=$'\n'"%(?.%F{245}%m%f.%F{red}[%?]%f %F{245}%m%f) %2~ %# "
+    PROMPT="%(?.%F{245}%m%f.%F{red}[%?]%f %F{245}%m%f) %2~ %# "
 fi
 
-# Git prompt integration
+# prepend new-line to prompt
+precmd() $funcstack[1]() echo
+
+# git prompt integration
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
@@ -84,10 +87,10 @@ RPROMPT=\$vcs_info_msg_0_
 zstyle ':vcs_info:git:*' formats '%F{245}(%b) %r%f'
 zstyle ':vcs_info:*' enable git
 
-# Remove $PATH duplicates
+# remove $PATH duplicates
 typeset -U path
 
-# Functions
+# functions
 function mkcd() {
   mkdir -p "$@" && cd "$_";
 }
@@ -96,7 +99,7 @@ function hgrep() {
     fc -Dlim "*$@*" 1
 }
 
-# Plugins
+# plugins
 source $ZPLUG_HOME/init.zsh
 
 zplug 'le0me55i/zsh-extract'
@@ -115,20 +118,20 @@ fi
 
 zplug load
 
-# Other
+# other
 fpath=(~/.zsh $fpath ~/.zfunc)
 autoload -Uz compinit
 compinit -u
 
-# Case insensitive path-completion 
+# case insensitive path-completion 
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 
 
-# K8s completion
+# k8s completion
 source $DOTFILES/util/kubectl_completion.zsh
-# Extend completion to work with k alias
+# extend completion to work with k alias
 compdef __start_kubectl k
 
-# Heroku completion
+# heroku completion
 if type brew &>/dev/null
 then
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
