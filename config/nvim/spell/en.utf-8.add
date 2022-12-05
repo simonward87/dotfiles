@@ -75,3 +75,6 @@ WebAssembly
 Goroutines
 Goroutine
 Arduino
+alacritty
+terminfo
+neovim
