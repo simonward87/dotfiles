@@ -58,7 +58,6 @@ alias k=kubectl
 alias la='gls -AFho --color --group-directories-first'
 alias ll='gls -Fho --color --group-directories-first'
 alias ls='gls -1F --color --group-directories-first'
-alias pi='ssh pi'
 alias rm=trash
 alias serve=http-server
 alias study='cd $HOME/Study && clear && ls'
