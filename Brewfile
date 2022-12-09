@@ -38,6 +38,8 @@ brew "go"
 brew "gopls"
 # Reliable, high performance TCP/HTTP load balancer
 brew "haproxy"
+# Text-based UI library
+brew "ncurses"
 # Improved top (interactive process viewer)
 brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
