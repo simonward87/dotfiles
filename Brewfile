@@ -148,6 +148,7 @@ cask "font-ibm-plex-mono"
 cask "font-inconsolata"
 cask "font-lato"
 cask "font-noto-mono"
+# Developer targeted fonts with a high number of glyphs
 cask "font-noto-nerd-font"
 cask "font-open-sans"
 cask "font-pt-mono"
@@ -156,6 +157,7 @@ cask "font-pt-serif"
 # Font with a mechanical skeleton and the forms are largely geometric
 cask "font-roboto"
 cask "font-roboto-mono"
+# Developer targeted fonts with a high number of glyphs
 cask "font-roboto-mono-nerd-font"
 cask "font-roboto-slab"
 # Web browser
