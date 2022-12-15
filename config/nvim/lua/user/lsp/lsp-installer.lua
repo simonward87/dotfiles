@@ -8,7 +8,7 @@ local servers = {
 	"cssmodules_ls",
 	"denols",
 	"dockerls",
-	"gopls",
+	-- "gopls",
 	"graphql",
 	"html",
 	"prismals",

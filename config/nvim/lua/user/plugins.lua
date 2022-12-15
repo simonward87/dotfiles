@@ -92,7 +92,7 @@ return packer.startup(function(use)
 	use("hrsh7th/nvim-cmp") -- completion plugin
 	use("L3MON4D3/LuaSnip") -- snippet engine
 	use("rafamadriz/friendly-snippets") -- snippet library
-	use("saadparwaiz1/cmp_luasnip") -- snippet completions
+	-- use("saadparwaiz1/cmp_luasnip") -- snippet completions
 
 	-- LSP
 	use("b0o/SchemaStore.nvim") -- schemastore catalog access
