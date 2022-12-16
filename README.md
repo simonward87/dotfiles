@@ -23,13 +23,13 @@ git clone https://github.com/simonward87/dotfiles.git ~/.dotfiles
    add to GitHub, and switch remotes.
 
 ```zsh
-# Generate SSH key in default location (~/.ssh/config)
+# generate SSH key in default location (~/.ssh/config)
 ssh-keygen -t ed25519 -C "39803787+simonward87@users.noreply.github.com"
 
-# Start the ssh-agent
+# start the ssh-agent
 eval "$(ssh-agent -s)"
 
-# Create config file with necessary settings
+# create config file with necessary settings
 << EOF > ~/.ssh/config
 Host *
   AddKeysToAgent yes
@@ -37,17 +37,17 @@ Host *
   IdentityFile ~/.ssh/id_ed25519
 EOF
 
-# Add private key to ssh-agent
+# add private key to ssh-agent
 ssh-add -K ~/.ssh/id_ed25519
 
-# Copy public key and add to github.com > Settings > SSH and GPG keys
+# copy public key and add to github.com > Settings > SSH and GPG keys
 pbcopy < ~/.ssh/id_ed25519.pub
 
-# Test SSH connection, then verify fingerprint and username
+# test SSH connection, then verify fingerprint and username
 # https://help.github.com/en/github/authenticating-to-github/testing-your-ssh-connection
 ssh -T git@github.com
 
-# Switch from HTTPS to SSH
+# switch from HTTPS to SSH
 git remote set-url origin git@github.com:simonward87/dotfiles.git
 ```
 
@@ -147,13 +147,13 @@ $ git config --global user.name "John Smith" # updates the variable
 ```
 
 ```zsh
-# Output current branch:
+# output current branch:
 $ git branch
 
-# Create a new branch and switch to that branch:
+# create a new branch and switch to that branch:
 $ git checkout -b <branch>
 
-# Set upstream branch and push to remote repo:
+# set upstream branch and push to remote repo:
 $ git push -u <remote> <branch>
 ```
 
@@ -171,28 +171,28 @@ $ ln -s /path/to/original /path/to/link
 ### Homebrew
 
 ```zsh
-# Search for a package:
+# search for a package:
 $ brew search <package>
 
-# Package details:
+# package details:
 $ brew info <package>
 
 # export installed packages to Brewfile
 $ brew bundle dump --force --describe # alias 'bbd' in .zshrc
 
-# Remove stale lock files and outdated downloads
+# remove stale lock files and outdated downloads
 $ brew cleanup --prune=all
 
-# See a packages dependencies
+# see a packages dependencies
 $ brew deps <package-name>
 
-# See all dependencies
+# see all dependencies
 $ brew deps --installed
 
-# See what depends on a package
+# see what depends on a package
 $ brew uses <package-name> --installed
 
-# Remove unused dependencies
+# remove unused dependencies
 $ brew autoremove
 ```
 

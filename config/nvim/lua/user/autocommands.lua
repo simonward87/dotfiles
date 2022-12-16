@@ -7,7 +7,7 @@ vim.cmd("autocmd FileType gitcommit setlocal wrap spell textwidth=72")
 vim.cmd("autocmd FileType go setlocal noexpandtab")
 vim.cmd("autocmd FileType lua setlocal noexpandtab")
 vim.cmd("autocmd FileType make setlocal noexpandtab softtabstop=0 shiftwidth=8 tabstop=8")
-vim.cmd("autocmd FileType markdown setlocal spell") -- textwidth=80 desired but messes with tables
+vim.cmd("autocmd FileType markdown setlocal spell")
 vim.cmd("autocmd FileType prisma setlocal cindent")
 
 local frontend_filetypes = {
@@ -37,7 +37,7 @@ end
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
--- Highlight on yank
+-- highlight on yank
 autocmd("TextYankPost", {
 	group = augroup("HighlightYank", { clear = true }),
 	pattern = "*",
@@ -49,16 +49,17 @@ autocmd("TextYankPost", {
 	end,
 })
 
--- Don't spellcheck URLs and basic acronyms
-autocmd("BufEnter", {
-	group = augroup("SpellIgnore", { clear = true }),
-	callback = function()
-		vim.cmd([=[syn match UrlNoSpell '\w\+:\/\/[^[:space:]]\+' contains=@NoSpell]=])
-		vim.cmd([[syn match AcronymNoSpell '\<\(\u\|\d\)\{3,}s\?\>' contains=@NoSpell]])
-	end,
-})
+-- [disabled as not functional with treesitter spellcheck]
+-- don't spellcheck URLs and basic acronyms
+-- autocmd("BufEnter", {
+-- 	group = augroup("SpellIgnore", { clear = true }),
+-- 	callback = function()
+-- 		vim.cmd([=[syn match UrlNoSpell '\w\+:\/\/[^[:space:]]\+' contains=@NoSpell]=])
+-- 		vim.cmd([[syn match AcronymNoSpell '\<\(\u\|\d\)\{3,}s\?\>' contains=@NoSpell]])
+-- 	end,
+-- })
 
--- Highlight EOL whitespace
+-- highlight EOL whitespace
 autocmd("BufEnter", {
 	group = augroup("WhitespaceEOL", { clear = true }),
 	callback = function()
