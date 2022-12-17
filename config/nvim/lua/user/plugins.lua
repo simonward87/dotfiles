@@ -74,7 +74,6 @@ return packer.startup(function(use)
 	-- colorschemes
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("cocopon/iceberg.vim")
-	use("folke/tokyonight.nvim")
 	use("gosukiwi/vim-atom-dark")
 	use("habamax/vim-habaurora")
 	use("jacoborus/tender.vim")
