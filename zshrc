@@ -18,6 +18,7 @@ export RUSTUP_HOME="$HOME/.rustup"
 export VISUAL="$EDITOR"
 export ZPLUG_HOME="$HOMEBREW_PREFIX/opt/zplug"
 
+# custom path
 export PATH="$PATH:$N_PREFIX/bin"
 export PATH="$PATH:$GOBIN"
 export PATH="$PATH:$CARGO_HOME/bin"
