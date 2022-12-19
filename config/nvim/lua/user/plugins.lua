@@ -101,7 +101,8 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("sago35/tinygo.vim") -- tinygo extension
 	use("tamago324/nlsp-settings.nvim") -- language server settings defined in json for
-	use("williamboman/nvim-lsp-installer") -- language server installer
+	use("williamboman/mason.nvim") -- package manager
+	use("williamboman/mason-lspconfig.nvim") -- package manager
 
 	-- automatically set up configuration after cloning packer
 	-- NOTE: must run after all plugins
