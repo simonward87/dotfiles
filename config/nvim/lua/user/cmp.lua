@@ -127,7 +127,4 @@ cmp.setup({
 	experimental = {
 		ghost_text = false,
 	},
-	-- view = {
-	-- 	entries = "native",
-	-- },
 })
