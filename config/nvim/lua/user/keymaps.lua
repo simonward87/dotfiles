@@ -6,13 +6,14 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- ** available modes **
---   normal = "n"
---   insert = "i"
---   visual = "v"
---   visual block = "x"
---   terminal = "t"
---   command = "c"
+-- | modes              |
+-- |--------------------|
+-- | "n" | normal       |
+-- | "i" | insert       |
+-- | "v" | visual       |
+-- | "x" | visual block |
+-- | "t" | terminal     |
+-- | "c" | command      |
 
 -- temporary unbind <Tab> in INSERT to promote <C-t> and <C-d>
 keymap("i", "<Tab>", "<Nop>", opts)

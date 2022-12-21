@@ -60,9 +60,9 @@ autocmd("TextYankPost", {
 -- })
 
 -- highlight EOL whitespace
-autocmd("BufEnter", {
-	group = augroup("WhitespaceEOL", { clear = true }),
-	callback = function()
-		vim.cmd([[syn match WhitespaceEOL '\s\+$']])
-	end,
-})
+-- autocmd("BufEnter", {
+-- 	group = augroup("WhitespaceEOL", { clear = true }),
+-- 	callback = function()
+-- 		vim.cmd([[syn match WhitespaceEOL '\s\+$']])
+-- 	end,
+-- })
