@@ -68,6 +68,8 @@ brew "tree-sitter"
 brew "neovim"
 # Development kit for the Java programming language
 brew "openjdk"
+# Display the PID number for a given process name
+brew "pidof"
 # Object-relational database system
 brew "postgresql@14", restart_service: true
 # Interpreted, interactive, object-oriented programming language
