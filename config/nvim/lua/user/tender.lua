@@ -17,6 +17,7 @@ local blue_light = "#b3deef"
 -- local tabline = "#323232"
 -- local bg_light = "#444444"
 -- local bg_contrast = "#9a9a9a"
+-- local transparent = "none"
 
 hl("LineNr", { fg = comment }) -- increase contrast
 hl("Search", { fg = bg_dark, bg = green })
