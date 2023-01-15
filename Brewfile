@@ -8,10 +8,10 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "osx-cross/avr"
 tap "tinygo-org/tools"
-# Arduino command-line interface
-brew "arduino-cli"
 # General-purpose data compression with high compression ratio
 brew "xz"
+# Arduino command-line interface
+brew "arduino-cli"
 # Atmel AVR MCU programmer
 brew "avrdude"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -71,13 +71,15 @@ brew "openjdk"
 # Display the PID number for a given process name
 brew "pidof"
 # Object-relational database system
-brew "postgresql@14", restart_service: true
+brew "postgresql@14"
+# Protocol buffers library
+brew "protobuf-c"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # File browser
 brew "ranger"
 # Persistent key-value database, with built-in net interface
-brew "redis", restart_service: true
+brew "redis"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Format Rust code
@@ -90,6 +92,8 @@ brew "siege"
 brew "stylua"
 # Version control system designed to be a better CVS
 brew "subversion"
+# User interface to the TELNET protocol
+brew "telnet"
 # Simplified and community-driven man pages
 brew "tldr"
 # Terminal multiplexer
