@@ -72,8 +72,6 @@ brew "openjdk"
 brew "pidof"
 # Object-relational database system
 brew "postgresql@14"
-# Protocol buffers library
-brew "protobuf-c"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # File browser

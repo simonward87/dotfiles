@@ -31,6 +31,7 @@ configs.setup({
 		"markdown",
 		"markdown_inline",
 		"prisma",
+		"proto",
 		"pug",
 		"python",
 		"query",
