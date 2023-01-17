@@ -48,21 +48,3 @@ autocmd("TextYankPost", {
 		})
 	end,
 })
-
--- [disabled as not functional with treesitter spellcheck]
--- don't spellcheck URLs and basic acronyms
--- autocmd("BufEnter", {
--- 	group = augroup("SpellIgnore", { clear = true }),
--- 	callback = function()
--- 		vim.cmd([=[syn match UrlNoSpell '\w\+:\/\/[^[:space:]]\+' contains=@NoSpell]=])
--- 		vim.cmd([[syn match AcronymNoSpell '\<\(\u\|\d\)\{3,}s\?\>' contains=@NoSpell]])
--- 	end,
--- })
-
--- highlight EOL whitespace
--- autocmd("BufEnter", {
--- 	group = augroup("WhitespaceEOL", { clear = true }),
--- 	callback = function()
--- 		vim.cmd([[syn match WhitespaceEOL '\s\+$']])
--- 	end,
--- })
