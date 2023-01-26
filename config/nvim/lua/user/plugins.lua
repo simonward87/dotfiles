@@ -42,6 +42,7 @@ packer.init({
 return packer.startup(function(use)
 	use("akinsho/bufferline.nvim") -- bufferline along top of window
 	use("antoinemadec/FixCursorHold.nvim") -- fixes lsp doc highlight
+	use("folke/zen-mode.nvim") -- focus mode
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- simple code commenting
 	use({
 		"kyazdani42/nvim-tree.lua", -- file explorer
