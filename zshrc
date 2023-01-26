@@ -48,8 +48,6 @@ unsetopt BEEP
 alias bbd='brew bundle dump --force --describe'
 alias bbl='brew bundle list --all'
 alias df='df -h'
-alias dtfs='cd $DOTFILES && nvim .'
-alias dtfv='cd $DOTFILES'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
@@ -61,10 +59,14 @@ alias ll='gls -Fho --color --group-directories-first'
 alias ls='gls -1F --color --group-directories-first'
 alias rm=trash
 alias serve=http-server
-alias study='cd $HOME/Study && clear && ls'
 alias trail='<<<${(F)path}'
 alias vi="$HOMEBREW_PREFIX/bin/nvim"
 alias vim="$HOMEBREW_PREFIX/bin/nvim"
+
+# fast travel
+alias dtfs='cd $DOTFILES && nvim .'
+alias dtfv='cd $DOTFILES'
+alias study='cd $HOME/Study && clear && ls'
 alias work='cd $HOME/Work && clear && ls'
 
 # custom prompt
