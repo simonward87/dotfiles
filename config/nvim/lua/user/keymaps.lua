@@ -55,6 +55,9 @@ keymap("n", "<C-u>", "<C-u>zz", opts)
 
 -- reload colourschemes
 keymap("n", "<leader><CR>", ":source ~/.config/nvim/lua/user/colorscheme.lua<CR>", opts)
+--
+-- toggle ColorColumn
+keymap("n", "<leader>cc", [[:execute "set cc=" . (&colorcolumn == "" ? "74" : "")<CR>]], opts)
 
 -- git
 keymap("n", "<leader>gs", ":G<CR>", opts)

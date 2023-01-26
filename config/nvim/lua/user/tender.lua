@@ -19,13 +19,14 @@ local blue_light = "#b3deef"
 -- local bg_contrast = "#9a9a9a"
 -- local transparent = "none"
 
+hl("ColorColumn", { bg = bg })
 hl("LineNr", { fg = comment }) -- increase contrast
+hl("Pmenu", { bg = bg })
+hl("PmenuSbar", { fg = bg, bg = bg })
+hl("PmenuSel", { fg = bg, bg = blue_light })
+hl("PmenuThumb", { fg = comment, bg = comment })
 hl("Search", { fg = bg_dark, bg = green })
 hl("WhitespaceEOL", { bg = comment })
-hl("Pmenu", { bg = bg })
-hl("PmenuSel", { fg = bg, bg = blue_light })
-hl("PmenuSbar", { fg = bg, bg = bg })
-hl("PmenuThumb", { fg = comment, bg = comment })
 
 local hl_groups = { "Normal", "SignColumn", "TreesitterContext" }
 
