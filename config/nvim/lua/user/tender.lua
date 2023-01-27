@@ -5,31 +5,37 @@ local hl = function(group, opts)
 	vim.api.nvim_set_hl(0, group, opts)
 end
 
-local bg_dark = "#1d1d1d"
-local bg = "#282828"
-local comment = "#666666"
-local green = "#c9d05c"
-local blue_light = "#b3deef"
--- local blue = "#73cef4"
--- local fg = "#eeeeee"
--- local brown = "#d3b987"
--- local dim_blue = "#476572"
--- local tabline = "#323232"
--- local bg_light = "#444444"
--- local bg_contrast = "#9a9a9a"
--- local transparent = "none"
+local palette = {
+	-- Background Colors
+	bg_dark = "#1d1d1d",
+	bg = "#282828",
+	tabline = "#323232",
+	bg_light = "#444444",
+	bg_contrast = "#9a9a9a",
 
-hl("ColorColumn", { bg = bg })
-hl("LineNr", { fg = comment }) -- increase contrast
-hl("Pmenu", { bg = bg })
-hl("PmenuSbar", { fg = bg, bg = bg })
-hl("PmenuSel", { fg = bg, bg = blue_light })
-hl("PmenuThumb", { fg = comment, bg = comment })
-hl("Search", { fg = bg_dark, bg = green })
-hl("WhitespaceEOL", { bg = comment })
+	-- foreground colors
+	fg = "#eeeeee",
+	comment = "#666666",
+
+	green = "#c9d05c",
+	blue_dim = "#476572",
+	blue = "#73cef4",
+	blue_light = "#b3deef",
+	brown = "#d3b987",
+	transparent = "none",
+}
+
+hl("ColorColumn", { bg = palette.bg })
+hl("LineNr", { fg = palette.comment }) -- increase contrast
+hl("Pmenu", { bg = palette.bg })
+hl("PmenuSbar", { fg = palette.bg, bg = palette.bg })
+hl("PmenuSel", { fg = palette.bg, bg = palette.blue_light })
+hl("PmenuThumb", { fg = palette.comment, bg = palette.comment })
+hl("Search", { fg = palette.bg_dark, bg = palette.green })
+hl("WhitespaceEOL", { bg = palette.comment })
 
 local hl_groups = { "Normal", "SignColumn", "TreesitterContext" }
 
 for i = 1, #hl_groups do
-	hl(hl_groups[i], { bg = bg_dark })
+	hl(hl_groups[i], { bg = palette.bg_dark })
 end
