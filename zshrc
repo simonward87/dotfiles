@@ -13,6 +13,7 @@ export HISTTIMEFORMAT="%Y-%m-%d %T " # add time-stamp to command history
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
 export HOMEBREW_NO_ENV_HINTS=1
 export NULLCMD=bat
+export NVIM_CONFIG="$DOTFILES/config/nvim/lua/user"
 export PGDATA="$HOMEBREW_PREFIX/var/postgres"
 export RUSTUP_HOME="$HOME/.rustup"
 export VISUAL="$EDITOR"
