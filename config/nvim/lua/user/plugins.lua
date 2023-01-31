@@ -73,6 +73,7 @@ return packer.startup(function(use)
 	use("windwp/nvim-ts-autotag") -- auto-close & auto-rename html tags
 
 	-- colorschemes
+	use("axvr/photon.vim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("cocopon/iceberg.vim")
 	use("gosukiwi/vim-atom-dark")
@@ -80,7 +81,10 @@ return packer.startup(function(use)
 	use("jacoborus/tender.vim")
 	use("nelstrom/vim-mac-classic-theme")
 	use("olivercederborg/poimandres.nvim")
-	use("projekt0n/github-nvim-theme")
+	use({
+		"projekt0n/github-nvim-theme",
+		branch = "0.0.x", -- currently required (https://github.com/projekt0n/github-nvim-theme#installation)
+	})
 	use("rebelot/kanagawa.nvim")
 	use("sainnhe/gruvbox-material")
 
