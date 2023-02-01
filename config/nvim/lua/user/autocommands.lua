@@ -11,6 +11,7 @@ vim.cmd("autocmd FileType markdown setlocal spell")
 vim.cmd("autocmd FileType prisma setlocal cindent")
 
 local frontend_filetypes = {
+	"astro",
 	"css",
 	"graphql",
 	"html",
