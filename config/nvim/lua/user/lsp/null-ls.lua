@@ -30,7 +30,7 @@ null_ls.setup({
 				"yaml",
 			},
 			extra_args = { "--jsx-single-quote" },
-			extra_filetypes = { "svelte" },
+			extra_filetypes = { "astro", "svelte" },
 		}),
 		formatting.rustfmt,
 		formatting.stylua,

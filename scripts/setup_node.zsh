@@ -15,6 +15,8 @@ else
 fi
 
 # install global packages
+npm i -g @prisma/language-server
+npm i -g @tailwindcss/language-server
 npm i -g autocannon
 npm i -g dockerfile-language-server-nodejs
 npm i -g eslint_d
@@ -24,16 +26,15 @@ npm i -g http-server
 npm i -g json-server
 npm i -g neovim
 npm i -g nginxbeautifier
+npm i -g prettier
+npm i -g prettier-plugin-astro
 npm i -g prettier-plugin-svelte
 npm i -g prettier-plugin-tailwindcss
-npm i -g prettier
-npm i -g @prisma/language-server
 npm i -g surge
 npm i -g svelte-language-server
-npm i -g @tailwindcss/language-server
 npm i -g trash-cli
-npm i -g typescript-language-server
 npm i -g typescript
+npm i -g typescript-language-server
 npm i -g vscode-langservers-extracted
 npm i -g yaml-language-server
 

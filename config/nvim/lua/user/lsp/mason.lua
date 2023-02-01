@@ -1,4 +1,6 @@
 local servers = {
+	"astro",
+	"bashls",
 	"cssls",
 	"cssmodules_ls",
 	"denols",
@@ -6,10 +8,10 @@ local servers = {
 	"gopls",
 	"graphql",
 	"html",
-	"prismals",
-	"pyright",
 	"jsonls",
 	"marksman",
+	"prismals",
+	"pyright",
 	"rust_analyzer",
 	"sumneko_lua",
 	"svelte",
@@ -18,7 +20,16 @@ local servers = {
 	"yamlls",
 }
 
-require("mason").setup({})
+require("mason").setup({
+	ui = {
+		icons = {
+			package_installed = "✓",
+			package_pending = "➜",
+			package_uninstalled = "✗",
+		},
+	},
+})
+
 require("mason-lspconfig").setup({
 	ensure_installed = servers,
 	automatic_installation = true,

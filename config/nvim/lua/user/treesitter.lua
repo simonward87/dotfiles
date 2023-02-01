@@ -5,6 +5,8 @@ end
 
 configs.setup({
 	ensure_installed = {
+		"astro",
+		"awk",
 		"bash",
 		"c",
 		"cmake",
