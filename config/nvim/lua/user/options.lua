@@ -23,6 +23,3 @@ vim.opt.termguicolors = true
 vim.opt.tabstop = 4
 vim.opt.undofile = true
 vim.opt.wrap = false
-
-vim.g["loaded_perl_provider"] = 0
-vim.g["python3_host_prog"] = "/opt/homebrew/bin/python3"

@@ -1,3 +1,8 @@
+vim.g["loaded_perl_provider"] = 0
+vim.g["python3_host_prog"] = "/opt/homebrew/bin/python3"
+vim.g["loaded_netrw"] = 1 -- disable netrw
+vim.g["loaded_netrwPlugin"] = 1 -- disable netrw
+
 require("user.options")
 require("user.autocommands")
 require("user.keymaps")
