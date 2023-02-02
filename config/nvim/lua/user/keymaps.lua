@@ -29,6 +29,7 @@ keymap("n", "<C-n>", ":bn<CR>", opts) -- next buffer
 keymap("n", "<C-p>", ":bp<CR>", opts) -- prev buffer
 keymap("n", "<leader>d", ":bd<CR>", opts)
 keymap("n", "tt", ":tab split<CR>", opts)
+keymap("n", "<leader>nw", ":noa w<CR>", opts) -- save without format
 
 -- shift text blocks vertically
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
