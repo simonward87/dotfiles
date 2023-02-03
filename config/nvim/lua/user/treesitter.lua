@@ -52,18 +52,23 @@ configs.setup({
 		"vue",
 		"yaml",
 	},
+
 	sync_install = false,
+
 	autopairs = {
 		enable = true,
 	},
+
 	autotag = {
 		enable = true,
 	},
+
 	highlight = {
 		enable = true,
 		disable = { "" },
 		additional_vim_regex_highlighting = false,
 	},
+
 	indent = {
 		enable = true,
 		disable = {
@@ -71,6 +76,7 @@ configs.setup({
 			"yaml",
 		},
 	},
+
 	context_commentstring = {
 		enable = true,
 		enable_autocmd = false,
