@@ -6,16 +6,21 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "mongodb/brew"
 tap "osx-cross/avr"
 tap "tinygo-org/tools"
 # General-purpose data compression with high compression ratio
 brew "xz"
 # Arduino command-line interface
 brew "arduino-cli"
+# Library for USB device access
+brew "libusb"
 # Atmel AVR MCU programmer
 brew "avrdude"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Manage compile and link flags for libraries
+brew "pkg-config"
 # Cross-platform make
 brew "cmake"
 # Documentation for CMake
@@ -66,6 +71,8 @@ brew "neofetch"
 brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Port scanning utility for large networks
+brew "nmap"
 # Development kit for the Java programming language
 brew "openjdk"
 # Display the PID number for a given process name
@@ -109,6 +116,8 @@ brew "zsh"
 brew "armmbed/formulae/arm-none-eabi-gcc"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
+# High-performance, schema-free, document-oriented database
+brew "mongodb/brew/mongodb-community"
 # GNU compiler collection for AVR 8-bit and 32-bit Microcontrollers
 brew "osx-cross/avr/avr-gcc@9"
 # TinyGo is a Go compiler for small places. Microcontrollers, WebAssembly, and command-line tools. Based on LLVM.
@@ -174,6 +183,8 @@ cask "karabiner-elements"
 cask "pgadmin4"
 # Colour picker for colours onscreen
 cask "pika"
+# Peer to peer Bitorrent client
+cask "qbittorrent"
 # Imaging utility to install operating systems to a microSD card
 cask "raspberry-pi-imager"
 # Move and resize windows using keyboard shortcuts or snap areas
