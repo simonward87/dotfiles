@@ -12,11 +12,9 @@ local palette = {
 	tabline = "#323232",
 	bg_light = "#444444",
 	bg_contrast = "#9a9a9a",
-
 	-- foreground colors
 	fg = "#eeeeee",
 	comment = "#666666",
-
 	green = "#c9d05c",
 	blue_dim = "#476572",
 	blue = "#73cef4",
@@ -33,6 +31,7 @@ hl("PmenuSel", { fg = palette.bg, bg = palette.blue_light })
 hl("PmenuThumb", { fg = palette.comment, bg = palette.comment })
 hl("Search", { fg = palette.bg_dark, bg = palette.green })
 hl("WhitespaceEOL", { bg = palette.comment })
+hl("FloatBorder", { bg = palette.bg })
 
 local hl_groups = { "Normal", "SignColumn", "TreesitterContext" }
 

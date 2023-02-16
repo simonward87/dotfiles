@@ -9,36 +9,30 @@ local palette = {
 	-- Background Colors
 	bg = "#ffffff",
 	bg2 = "#f6f8fa",
-
 	-- foreground colors
 	fg = "#24292f",
 	fg_dark = "#666666",
 	fg_gutter = "#babbbd",
 	fg_light = "#586069",
 	fg_term = "#24292f",
-
 	-- Background Highlights Colors
 	bg_highlight = "#d5e5f6",
 	bg_search = "#fff2be",
 	bg_visual = "#e1e4e8",
 	bg_visual_selection = "#dbe9f9",
 	border = "#044289",
-
 	-- Cursor & LineNumber Colors
 	cursor = "#044289",
 	cursor_line_nr = "#24292e",
 	line_nr = "#babbbd",
-
 	-- LSP & Diagnostic Colors
 	error = "#cb2431",
 	warning = "#bf8803",
 	info = "#75beff",
 	hint = "#6c6c6c",
 	lsp = { ref_txt = "#c6eed2" },
-
 	-- Auto-Complication Colors
 	pmenu = { bg = "#f6f8fa", sbar = "#f0f1f3" },
-
 	-- Syntax Colors
 	syntax = {
 		comment = "#6a737d",
@@ -75,6 +69,10 @@ github_theme.setup({
 			LineNr = {
 				fg = palette.hint,
 				bg = "terminal",
+			},
+			FloatBorder = {
+				fg = palette.bg2,
+				bg = palette.bg2,
 			},
 			-- CursorLineNr = {
 			-- 	fg = palette.syntax.constant,
