@@ -2,27 +2,44 @@
 # it is sourced each time a new terminal session is launched
 
 # variables
-export CARGO_HOME="$HOME/.cargo"
 export DOTFILES="$HOME/.dotfiles"
-export EDITOR="$HOMEBREW_PREFIX/bin/nvim"
-export GOBIN="$(go env GOPATH)/bin"
-export GOPATH="$(go env GOPATH)"
 export HISTORY_IGNORE='(pwd|id|uptime|resize|l[alsx]#( *)#|clear|hist[ory]#|cd ..)' # command history ignore list
 export HISTSIZE=100000 # max number of cached commands
 export HISTTIMEFORMAT="%Y-%m-%d %T " # add time-stamp to command history
-export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
-export HOMEBREW_NO_ENV_HINTS=1
 export NULLCMD=bat
 export NVIM_CONFIG="$DOTFILES/config/nvim/lua/user"
-export PGDATA="$HOMEBREW_PREFIX/var/postgres"
-export RUSTUP_HOME="$HOME/.rustup"
 export VISUAL="$EDITOR"
-export ZPLUG_HOME="$HOMEBREW_PREFIX/opt/zplug"
+
+if exists brew; then
+    export EDITOR="$HOMEBREW_PREFIX/bin/nvim"
+    export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
+    export HOMEBREW_NO_ENV_HINTS=1
+    export PGDATA="$HOMEBREW_PREFIX/var/postgres"
+    export ZPLUG_HOME="$HOMEBREW_PREFIX/opt/zplug"
+
+    alias bbd='brew bundle dump --force --describe'
+    alias bbl='brew bundle list --all'
+    alias vi="$HOMEBREW_PREFIX/bin/nvim"
+    alias vim="$HOMEBREW_PREFIX/bin/nvim"
+fi
+
+if exists cargo; then
+    export CARGO_HOME="$HOME/.cargo"
+    export PATH="$PATH:$CARGO_HOME/bin"
+fi
+
+if exists go; then
+    export GOBIN="$(go env GOPATH)/bin"
+    export GOPATH="$(go env GOPATH)"
+    export PATH="$PATH:$GOBIN"
+fi
+
+if exists rustup; then
+    export RUSTUP_HOME="$HOME/.rustup"
+fi
 
 # custom path
 export PATH="$PATH:$N_PREFIX/bin"
-export PATH="$PATH:$GOBIN"
-export PATH="$PATH:$CARGO_HOME/bin"
 export PATH="$PATH:$HOME/Study/bin"
 
 # header files for CS50
@@ -46,8 +63,6 @@ setopt HIST_NO_STORE # remove history command from list when invoked
 unsetopt BEEP
 
 # aliases
-alias bbd='brew bundle dump --force --describe'
-alias bbl='brew bundle list --all'
 alias df='df -h'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -61,12 +76,10 @@ alias ls='gls -1F --color --group-directories-first'
 alias rm=trash
 alias serve=http-server
 alias trail='<<<${(F)path}'
-alias vi="$HOMEBREW_PREFIX/bin/nvim"
-alias vim="$HOMEBREW_PREFIX/bin/nvim"
 
 # fast travel
 alias dtfs='cd $DOTFILES && nvim .'
-alias dtfv='cd $DOTFILES'
+alias dtfv='cd $DOTFILES && clear && ls'
 alias study='cd $HOME/Study && clear && ls'
 alias work='cd $HOME/Work && clear && ls'
 
@@ -135,8 +148,7 @@ source $DOTFILES/util/kubectl_completion.zsh
 compdef __start_kubectl k
 
 # heroku completion
-if type brew &>/dev/null
-then
+if exists brew; then
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
     autoload -Uz compinit
