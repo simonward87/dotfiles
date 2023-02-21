@@ -34,6 +34,10 @@ if exists go; then
     export PATH="$PATH:$GOBIN"
 fi
 
+if exists psql; then
+    export PSQL_EDITOR="$HOMEBREW_PREFIX/bin/nvim"
+fi
+
 if exists rustup; then
     export RUSTUP_HOME="$HOME/.rustup"
 fi
