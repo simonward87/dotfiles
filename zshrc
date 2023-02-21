@@ -8,43 +8,33 @@ export HISTSIZE=100000 # max number of cached commands
 export HISTTIMEFORMAT="%Y-%m-%d %T " # add time-stamp to command history
 export NULLCMD=bat
 export NVIM_CONFIG="$DOTFILES/config/nvim/lua/user"
-export VISUAL="$EDITOR"
 
 if exists brew; then
     export EDITOR="$HOMEBREW_PREFIX/bin/nvim"
+    export GOBIN="$(go env GOPATH)/bin"
+    export GOPATH="$(go env GOPATH)"
     export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
     export HOMEBREW_NO_ENV_HINTS=1
+    export PATH="$PATH:$GOBIN:$N_PREFIX/bin:$HOME/Study/bin"
     export PGDATA="$HOMEBREW_PREFIX/var/postgres"
+    export PSQL_EDITOR="$HOMEBREW_PREFIX/bin/nvim"
+    export VISUAL=$EDITOR
     export ZPLUG_HOME="$HOMEBREW_PREFIX/opt/zplug"
 
     alias bbd='brew bundle dump --force --describe'
     alias bbl='brew bundle list --all'
     alias vi="$HOMEBREW_PREFIX/bin/nvim"
     alias vim="$HOMEBREW_PREFIX/bin/nvim"
-fi
-
-if exists cargo; then
-    export CARGO_HOME="$HOME/.cargo"
-    export PATH="$PATH:$CARGO_HOME/bin"
-fi
-
-if exists go; then
-    export GOBIN="$(go env GOPATH)/bin"
-    export GOPATH="$(go env GOPATH)"
-    export PATH="$PATH:$GOBIN"
-fi
-
-if exists psql; then
-    export PSQL_EDITOR="$HOMEBREW_PREFIX/bin/nvim"
+else
+    export EDITOR=/usr/bin/vi
+    export VISUAL=$EDITOR
 fi
 
 if exists rustup; then
+    export CARGO_HOME="$HOME/.cargo"
+    export PATH="$PATH:$CARGO_HOME/bin"
     export RUSTUP_HOME="$HOME/.rustup"
 fi
-
-# custom path
-export PATH="$PATH:$N_PREFIX/bin"
-export PATH="$PATH:$HOME/Study/bin"
 
 # header files for CS50
 export CC="clang"
