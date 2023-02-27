@@ -67,9 +67,6 @@ keymap("n", "<leader>gd", ":G diff<CR>", opts)
 keymap("n", "<leader>gl", ":G log<CR>", opts)
 keymap("n", "<leader>gp", ":G push<CR>", opts)
 
--- formatter
-keymap("n", "<leader>p", ":Format<CR>", opts)
-
 -- telescope
 keymap(
 	"n",

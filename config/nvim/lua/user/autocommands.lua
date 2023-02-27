@@ -38,7 +38,7 @@ end
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
--- highlight on yank
+-- highlight selection on yank
 autocmd("TextYankPost", {
 	group = augroup("HighlightYank", { clear = true }),
 	pattern = "*",
@@ -47,5 +47,13 @@ autocmd("TextYankPost", {
 			higroup = "IncSearch",
 			timeout = 200,
 		})
+	end,
+})
+
+-- clear command line output after CursorHold timeout
+autocmd("CursorHold", {
+	pattern = "*",
+	callback = function()
+		print(" ")
 	end,
 })
