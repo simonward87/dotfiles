@@ -45,9 +45,9 @@ return packer.startup(function(use)
 	use("folke/zen-mode.nvim") -- focus mode
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- simple code commenting
 	use({
-		"kyazdani42/nvim-tree.lua", -- file explorer
+		"nvim-tree/nvim-tree.lua", -- file explorer
 		requires = {
-			"kyazdani42/nvim-web-devicons", -- icons
+			"nvim-tree/nvim-web-devicons", -- icons
 		},
 	})
 	use("lewis6991/gitsigns.nvim") -- git info in sign column

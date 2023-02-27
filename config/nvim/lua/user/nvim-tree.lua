@@ -1,14 +1,52 @@
-local status_ok, nvim_tree = pcall(require, "nvim-tree")
-if not status_ok then
+local M = {}
+
+local api_status_ok, api = pcall(require, "nvim-tree.api")
+if not api_status_ok then
 	return
 end
 
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not config_status_ok then
+local tree_status_ok, nvim_tree = pcall(require, "nvim-tree")
+if not tree_status_ok then
 	return
 end
 
-local tree_cb = nvim_tree_config.nvim_tree_callback
+function M.on_attach(bufnr)
+	vim.keymap.set(
+		"n",
+		"l",
+		api.node.open.edit,
+		{ desc = "Edit", buffer = bufnr, noremap = true, silent = true, nowait = true }
+	)
+	vim.keymap.set(
+		"n",
+		"h",
+		api.node.navigate.parent_close,
+		{ desc = "Close node", buffer = bufnr, noremap = true, silent = true, nowait = true }
+	)
+	vim.keymap.set(
+		"n",
+		"h",
+		api.tree.toggle_help,
+		{ desc = "Help", buffer = bufnr, noremap = true, silent = true, nowait = true }
+	)
+	vim.keymap.set(
+		"n",
+		"?",
+		api.tree.toggle_help,
+		{ desc = "Help", buffer = bufnr, noremap = true, silent = true, nowait = true }
+	)
+	vim.keymap.set(
+		"n",
+		"p",
+		M.print_node_path,
+		{ desc = "Print", buffer = bufnr, noremap = true, silent = true, nowait = true }
+	)
+end
+
+function M.print_node_path()
+	local node = api.tree.get_node_under_cursor()
+	print(node.absolute_path)
+end
 
 nvim_tree.setup({
 	actions = {
@@ -25,6 +63,13 @@ nvim_tree.setup({
 			error = "",
 		},
 	},
+	disable_netrw = true,
+	filters = {
+		custom = {
+			"^.git$",
+		},
+	},
+	on_attach = M.on_attach,
 	renderer = {
 		add_trailing = true,
 		icons = {
@@ -54,22 +99,9 @@ nvim_tree.setup({
 	},
 	view = {
 		width = 40,
-		mappings = {
-			custom_only = false,
-			list = {
-				{ key = { "l", "<CR>" }, cb = tree_cb("edit") },
-				{ key = "h", cb = tree_cb("close_node") },
-				{ key = "v", cb = tree_cb("vsplit") },
-			},
-		},
 		number = true,
 		relativenumber = true,
 		hide_root_folder = true,
-	},
-	filters = {
-		custom = {
-			"^.git$",
-		},
 	},
 })
 
@@ -82,8 +114,7 @@ local function open_nvim_tree(data)
 	end
 
 	vim.cmd.cd(data.file)
-
-	require("nvim-tree.api").tree.open()
+	api.tree.open()
 end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
