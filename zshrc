@@ -1,11 +1,11 @@
 # .zshrc is for 'interactive shells'
-# it is sourced each time a new terminal session is launched
+# It is sourced each time a new terminal session is launched
 
-# variables
+# Variables
 export DOTFILES="$HOME/.dotfiles"
-export HISTORY_IGNORE='(pwd|id|uptime|resize|l[alsx]#( *)#|clear|hist[ory]#|cd ..)' # command history ignore list
-export HISTSIZE=100000 # max number of cached commands
-export HISTTIMEFORMAT="%Y-%m-%d %T " # add time-stamp to command history
+export HISTORY_IGNORE='(pwd|id|uptime|resize|l[alsx]#( *)#|clear|hist[ory]#|cd ..)' # Command history ignore list
+export HISTSIZE=100000 # Max number of cached commands
+export HISTTIMEFORMAT="%Y-%m-%d %T " # Add time-stamp to command history
 export NULLCMD=bat
 export NVIM_CONFIG="$DOTFILES/config/nvim/lua/user"
 
@@ -36,32 +36,32 @@ if exists rustup; then
     export RUSTUP_HOME="$HOME/.rustup"
 fi
 
-# header files for CS50
+# Header files for CS50
 export CC="clang"
 export CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
 export LDLIBS="-lcrypt -lcs50 -lm"
 export LIBRARY_PATH=/usr/local/lib
 
-# use regular Zsh history search binding in Tmux
+# Use regular Zsh history search binding in Tmux
 bindkey '^R' history-incremental-search-backward
 
-# options (man zshoptions)
-setopt NO_CASE_GLOB # case-insensitive glob
-setopt AUTO_CD # auto CD when a command is a directory name
-setopt CD_SILENT # never print directory when CD -
-setopt CORRECT # try to correct command spelling
-setopt CORRECT_ALL # try to correct argument spelling
-setopt EXTENDED_HISTORY # save command timestamps
-setopt HIST_EXPIRE_DUPS_FIRST # remove oldest duplicates first when trimming
-setopt HIST_NO_STORE # remove history command from list when invoked
+# Options (man zshoptions)
+setopt NO_CASE_GLOB # Case-insensitive glob
+setopt AUTO_CD # Auto CD when a command is a directory name
+setopt CD_SILENT # Never print directory when CD -
+setopt CORRECT # Try to correct command spelling
+setopt CORRECT_ALL # Try to correct argument spelling
+setopt EXTENDED_HISTORY # Save command timestamps
+setopt HIST_EXPIRE_DUPS_FIRST # Remove oldest duplicates first when trimming
+setopt HIST_NO_STORE # Remove history command from list when invoked
 unsetopt BEEP
 
-# aliases
+# Aliases
 alias df='df -h'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
-alias hist='fc -l -t "$HISTTIMEFORMAT"' # display formatted command history
+alias hist='fc -l -t "$HISTTIMEFORMAT"' # Display formatted command history
 alias ip='ipconfig getifaddr en0'
 alias k=kubectl
 alias la='gls -AFho --color --group-directories-first'
@@ -71,24 +71,24 @@ alias rm=trash
 alias serve=http-server
 alias trail='<<<${(F)path}'
 
-# fast travel
+# Fast travel
 alias dtfs='cd $DOTFILES && nvim .'
-alias dtfv='cd $DOTFILES && clear && ls'
+alias conf='nvim $DOTFILES/tmux.conf $NVIM_CONFIG/colorscheme.lua $DOTFILES/config/alacritty/alacritty.yml'
 alias study='cd $HOME/Study && clear && ls'
 alias work='cd $HOME/Work && clear && ls'
 
-# custom prompt
+# Custom prompt
 if [ -n "$TMUX" ]; then
-    # hostname removed as displayed in tmux status line
+    # Hostname removed as displayed in tmux status line
     PROMPT="%(?..%F{red}[%?] %f)%2~ %# "
 else
     PROMPT="%(?.%F{245}%m%f.%F{red}[%?]%f %F{245}%m%f) %2~ %# "
 fi
 
-# prepend new-line to prompt
+# Prepend new-line to prompt
 precmd() $funcstack[1]() echo
 
-# git prompt integration
+# Git prompt integration
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
@@ -97,10 +97,10 @@ RPROMPT=\$vcs_info_msg_0_
 zstyle ':vcs_info:git:*' formats '%F{245}(%b) %r%f'
 zstyle ':vcs_info:*' enable git
 
-# remove $PATH duplicates
+# Remove $PATH duplicates
 typeset -U path
 
-# functions
+# Functions
 function mkcd() {
   mkdir -p "$@" && cd "$_";
 }
@@ -109,7 +109,49 @@ function hgrep() {
     fc -Dlim "*$@*" 1
 }
 
-# plugins
+function tmx () {
+    # -d to allow the rest of the function to run
+    tmux new-session -d -s "${PWD##*/}" -n "Source" nvim .
+    # -d to prevent current window from changing
+    tmux new-window -d -n Server
+    # -d to detach any other client (which there shouldn't be,
+    # Since you just created the session).
+    tmux attach-session -d -t "${PWD##*/}"
+}
+
+# TODO: Uses three almost identical copies of alacritty config, find a
+# better way to do this. Maybe create a file from a common config file
+# and seperate dark / light theme config files
+function theme () {
+    if defaults read -g AppleInterfaceStyle &>/dev/null; then
+        # Dark mode
+        if grep "githubLight" $DOTFILES/tmux.conf; then
+            sed -i '' -E 's/githubLight/tender/g' $DOTFILES/tmux.conf
+            sed -i '' -E 's/github_light/tender/g' $NVIM_CONFIG/colorscheme.lua
+            cp $DOTFILES/config/alacritty/dark.yml $DOTFILES/config/alacritty/alacritty.yml
+
+            if [ -n "$TMUX" ]; then
+                tmux source-file ~/.tmux.conf &>/dev/null
+            fi
+        fi
+    else
+        # Light mode
+        if grep "tender" $DOTFILES/tmux.conf; then
+            sed -i '' -E 's/tender/githubLight/g' $DOTFILES/tmux.conf
+            sed -i '' -E 's/tender/github_light/g' $NVIM_CONFIG/colorscheme.lua
+            cp $DOTFILES/config/alacritty/light.yml $DOTFILES/config/alacritty/alacritty.yml
+
+            if [ -n "$TMUX" ]; then
+                tmux source-file ~/.tmux.conf &>/dev/null
+            fi
+        fi
+    fi
+}
+
+# Setup theme
+theme
+
+# Plugins
 source $ZPLUG_HOME/init.zsh
 
 zplug 'le0me55i/zsh-extract'
@@ -128,20 +170,20 @@ fi
 
 zplug load
 
-# other
+# Other
 fpath=(~/.zsh $fpath ~/.zfunc)
 autoload -Uz compinit
 compinit -u
 
-# case insensitive path-completion 
+# Case insensitive path-completion 
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 
 
-# k8s completion
+# K8s completion
 source $DOTFILES/util/kubectl_completion.zsh
-# extend completion to work with k alias
+# Extend completion to work with k alias
 compdef __start_kubectl k
 
-# heroku completion
+# Heroku completion
 if exists brew; then
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
