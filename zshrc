@@ -61,6 +61,7 @@ alias df='df -h'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
+alias gll='git log --stat -n 1'
 alias hist='fc -l -t "$HISTTIMEFORMAT"' # Display formatted command history
 alias ip='ipconfig getifaddr en0'
 alias k=kubectl
@@ -94,7 +95,7 @@ precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 RPROMPT=\$vcs_info_msg_0_
-zstyle ':vcs_info:git:*' formats '%F{245}(%b) %r%f'
+zstyle ':vcs_info:git:*' formats '%F{245} %b%f' # '%F{245}%r (%b)%f'
 zstyle ':vcs_info:*' enable git
 
 # Remove $PATH duplicates
