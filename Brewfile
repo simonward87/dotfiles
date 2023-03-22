@@ -85,6 +85,8 @@ brew "python@3.9"
 brew "ranger"
 # Persistent key-value database, with built-in net interface
 brew "redis"
+# Rename multiple files in a directory
+brew "ren"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Format Rust code
