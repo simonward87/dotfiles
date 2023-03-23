@@ -462,6 +462,33 @@ colors:
 #     cyan: "#73cef4"
 #     white: "#feffff"
 
+# # Colors (Joi)
+# colors:
+#   primary:
+#     background: "#111e29" # darker
+#     foreground: "#ffffff"
+#   # cursor:
+#   #   text: "#282828"
+#   #   cursor: "#bbbbbb"
+#   normal:
+#     black: "#111e29"
+#     red: "#ff8c93"
+#     green: "#8bfccb"
+#     yellow: "#d2ffc1"
+#     blue: "#bca6ff"
+#     magenta: "#ff88f3"
+#     cyan: "#8bc8f4"
+#     white: "#eeeeee"
+#   bright:
+#     black: "#7a8e9f"
+#     red: "#ff8c93"
+#     green: "#8bfccb"
+#     yellow: "#d2ffc1"
+#     blue: "#bca6ff"
+#     magenta: "#ff88f3"
+#     cyan: "#8bc8f4"
+#     white: "#ffffff"
+
 ## Colors (Poimandres)
 #colors:
 #  # Default colors

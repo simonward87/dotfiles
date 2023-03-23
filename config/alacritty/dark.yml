@@ -433,34 +433,61 @@ font:
 #     cyan: '0x80c0b7'
 #     white: '0xc4c8c6'
 
-# Colors (Tender)
+# # Colors (Tender)
+# colors:
+#   primary:
+#     # background: "#282828" # default
+#     background: "#1d1d1d" # darker
+#     # background: "#141414" # darkest
+#     foreground: "#eeeeee"
+#   # cursor:
+#   #   text: "#282828"
+#   #   cursor: "#bbbbbb"
+#   normal:
+#     black: "#282828"
+#     red: "#f43753"
+#     green: "#c9d05c"
+#     yellow: "#ffc24b"
+#     blue: "#b3deef"
+#     magenta: "#d3b987"
+#     cyan: "#73cef4"
+#     white: "#eeeeee"
+#   bright:
+#     black: "#4c4c4c"
+#     red: "#f43753"
+#     green: "#c9d05c"
+#     yellow: "#ffc24b"
+#     blue: "#b3deef"
+#     magenta: "#d3b987"
+#     cyan: "#73cef4"
+#     white: "#feffff"
+
+# Colors (Joi)
 colors:
   primary:
-    # background: "#282828" # default
-    background: "#1d1d1d" # darker
-    # background: "#141414" # darkest
-    foreground: "#eeeeee"
+    background: "#111e29" # darker
+    foreground: "#ffffff"
   # cursor:
   #   text: "#282828"
   #   cursor: "#bbbbbb"
   normal:
-    black: "#282828"
-    red: "#f43753"
-    green: "#c9d05c"
-    yellow: "#ffc24b"
-    blue: "#b3deef"
-    magenta: "#d3b987"
-    cyan: "#73cef4"
+    black: "#111e29"
+    red: "#ff8c93"
+    green: "#8bfccb"
+    yellow: "#d2ffc1"
+    blue: "#bca6ff"
+    magenta: "#ff88f3"
+    cyan: "#8bc8f4"
     white: "#eeeeee"
   bright:
-    black: "#4c4c4c"
-    red: "#f43753"
-    green: "#c9d05c"
-    yellow: "#ffc24b"
-    blue: "#b3deef"
-    magenta: "#d3b987"
-    cyan: "#73cef4"
-    white: "#feffff"
+    black: "#7a8e9f"
+    red: "#ff8c93"
+    green: "#8bfccb"
+    yellow: "#d2ffc1"
+    blue: "#bca6ff"
+    magenta: "#ff88f3"
+    cyan: "#8bc8f4"
+    white: "#ffffff"
 
 ## Colors (Poimandres)
 #colors:

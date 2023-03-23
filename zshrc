@@ -127,8 +127,8 @@ function theme () {
     if defaults read -g AppleInterfaceStyle &>/dev/null; then
         # Dark mode
         if grep "githubLight" $DOTFILES/tmux.conf; then
-            sed -i '' -E 's/githubLight/tender/g' $DOTFILES/tmux.conf
-            sed -i '' -E 's/github_light/tender/g' $NVIM_CONFIG/colorscheme.lua
+            sed -i '' -E 's/githubLight/joi/g' $DOTFILES/tmux.conf
+            sed -i '' -E 's/github_light/joi/g' $NVIM_CONFIG/colorscheme.lua
             cp $DOTFILES/config/alacritty/dark.yml $DOTFILES/config/alacritty/alacritty.yml
 
             if [ -n "$TMUX" ]; then
@@ -137,9 +137,9 @@ function theme () {
         fi
     else
         # Light mode
-        if grep "tender" $DOTFILES/tmux.conf; then
-            sed -i '' -E 's/tender/githubLight/g' $DOTFILES/tmux.conf
-            sed -i '' -E 's/tender/github_light/g' $NVIM_CONFIG/colorscheme.lua
+        if grep "joi" $DOTFILES/tmux.conf; then
+            sed -i '' -E 's/joi/githubLight/g' $DOTFILES/tmux.conf
+            sed -i '' -E 's/joi/github_light/g' $NVIM_CONFIG/colorscheme.lua
             cp $DOTFILES/config/alacritty/light.yml $DOTFILES/config/alacritty/alacritty.yml
 
             if [ -n "$TMUX" ]; then

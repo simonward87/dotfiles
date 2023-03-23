@@ -87,3 +87,6 @@ keymap("n", "<leader>la", ":!gls -AFho --group-directories-first<CR>", opts)
 keymap("n", "<leader>ta", ":TinygoTarget arduino<CR>", opts)
 keymap("n", "<leader>tp", ":TinygoTarget pico<CR>", opts)
 keymap("n", "<leader>ts", ":TinygoTarget -<CR>", opts)
+
+-- under cursor TS capture group
+keymap("n", "<C-e>", ":TSHighlightCapturesUnderCursor<CR>", opts)
