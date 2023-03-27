@@ -41,6 +41,8 @@ brew "git"
 brew "go"
 # Language server for the Go language
 brew "gopls"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
 # Reliable, high performance TCP/HTTP load balancer
 brew "haproxy"
 # Text-based UI library
