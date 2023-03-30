@@ -78,12 +78,20 @@ alias conf='nvim $DOTFILES/tmux.conf $NVIM_CONFIG/colorscheme.lua $DOTFILES/conf
 alias study='cd $HOME/Study && clear && ls'
 alias work='cd $HOME/Work && clear && ls'
 
+if defaults read -g AppleInterfaceStyle &>/dev/null; then
+    export CLR_COMMENT="#7a8e9f"
+    export CLR_ERROR="#FF9AA0"
+else
+    export CLR_COMMENT="#626050"
+    export CLR_ERROR="#cd2b37"
+fi
+
 # Custom prompt
 if [ -n "$TMUX" ]; then
     # Hostname removed as displayed in tmux status line
-    PROMPT="%(?..%F{red}[%?] %f)%2~ %# "
+    PROMPT="%(?..%F{$CLR_ERROR}[%?] %f)%2~ %# "
 else
-    PROMPT="%(?.%F{245}%m%f.%F{red}[%?]%f %F{245}%m%f) %2~ %# "
+    PROMPT="%(?.%F{$CLR_COMMENT}%m%f.%F{$CLR_ERROR}[%?]%f %F{$CLR_COMMENT}%m%f) %2~ %# "
 fi
 
 # Prepend new-line to prompt
@@ -95,7 +103,7 @@ precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 RPROMPT=\$vcs_info_msg_0_
-zstyle ':vcs_info:git:*' formats '%F{245} %b%f' # '%F{245}%r (%b)%f'
+zstyle ':vcs_info:git:*' formats '%F{$CLR_COMMENT} %b%f' # '%F{245}%r (%b)%f'
 zstyle ':vcs_info:*' enable git
 
 # Remove $PATH duplicates
