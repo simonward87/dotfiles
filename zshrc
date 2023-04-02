@@ -103,7 +103,7 @@ precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 RPROMPT=\$vcs_info_msg_0_
-zstyle ':vcs_info:git:*' formats '%F{$CLR_COMMENT} %b%f' # '%F{245}%r (%b)%f'
+zstyle ':vcs_info:git:*' formats "%F{$CLR_COMMENT} %b%f" # '%F{245}%r (%b)%f'
 zstyle ':vcs_info:*' enable git
 
 # Remove $PATH duplicates
@@ -136,7 +136,7 @@ function theme () {
         # Dark mode
         if grep "githubLight" $DOTFILES/tmux.conf; then
             sed -i '' -E 's/githubLight/joi/g' $DOTFILES/tmux.conf
-            sed -i '' -E 's/github_light/joi/g' $NVIM_CONFIG/colorscheme.lua
+            sed -i '' -E 's/github_light/joi-dark/g' $NVIM_CONFIG/colorscheme.lua
             cp $DOTFILES/config/alacritty/dark.yml $DOTFILES/config/alacritty/alacritty.yml
 
             if [ -n "$TMUX" ]; then
@@ -147,7 +147,7 @@ function theme () {
         # Light mode
         if grep "joi" $DOTFILES/tmux.conf; then
             sed -i '' -E 's/joi/githubLight/g' $DOTFILES/tmux.conf
-            sed -i '' -E 's/joi/github_light/g' $NVIM_CONFIG/colorscheme.lua
+            sed -i '' -E 's/joi-dark/github_light/g' $NVIM_CONFIG/colorscheme.lua
             cp $DOTFILES/config/alacritty/light.yml $DOTFILES/config/alacritty/alacritty.yml
 
             if [ -n "$TMUX" ]; then
