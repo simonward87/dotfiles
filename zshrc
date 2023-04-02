@@ -82,8 +82,8 @@ if defaults read -g AppleInterfaceStyle &>/dev/null; then
     export CLR_COMMENT="#7a8e9f"
     export CLR_ERROR="#FF9AA0"
 else
-    export CLR_COMMENT="#626050"
-    export CLR_ERROR="#cd2b37"
+    export CLR_COMMENT="#757365"
+    export CLR_ERROR="#af0a16"
 fi
 
 # Custom prompt
@@ -134,9 +134,9 @@ function tmx () {
 function theme () {
     if defaults read -g AppleInterfaceStyle &>/dev/null; then
         # Dark mode
-        if grep "githubLight" $DOTFILES/tmux.conf; then
-            sed -i '' -E 's/githubLight/joi/g' $DOTFILES/tmux.conf
-            sed -i '' -E 's/github_light/joi-dark/g' $NVIM_CONFIG/colorscheme.lua
+        if grep "joiLight" $DOTFILES/tmux.conf; then
+            sed -i '' -E 's/joiLight/joiDark/g' $DOTFILES/tmux.conf
+            sed -i '' -E 's/joi-light/joi-dark/g' $NVIM_CONFIG/colorscheme.lua
             cp $DOTFILES/config/alacritty/dark.yml $DOTFILES/config/alacritty/alacritty.yml
 
             if [ -n "$TMUX" ]; then
@@ -145,9 +145,9 @@ function theme () {
         fi
     else
         # Light mode
-        if grep "joi" $DOTFILES/tmux.conf; then
-            sed -i '' -E 's/joi/githubLight/g' $DOTFILES/tmux.conf
-            sed -i '' -E 's/joi-dark/github_light/g' $NVIM_CONFIG/colorscheme.lua
+        if grep "joiDark" $DOTFILES/tmux.conf; then
+            sed -i '' -E 's/joiDark/joiLight/g' $DOTFILES/tmux.conf
+            sed -i '' -E 's/joi-dark/joi-light/g' $NVIM_CONFIG/colorscheme.lua
             cp $DOTFILES/config/alacritty/light.yml $DOTFILES/config/alacritty/alacritty.yml
 
             if [ -n "$TMUX" ]; then

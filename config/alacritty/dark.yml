@@ -462,7 +462,7 @@ font:
 #     cyan: "#73cef4"
 #     white: "#feffff"
 
-# Colors (Joi)
+# Colors (Joi Dark)
 colors:
   primary:
     background: "#111e29" # darker
@@ -488,6 +488,33 @@ colors:
     magenta: "#ff8cf4"
     cyan: "#71bff7"
     white: "#ffffff"
+
+# # Colors (Joi Light)
+# colors:
+#   primary:
+#     background: "#ffffff" # darker
+#     foreground: "#131311"
+#   # cursor:
+#   #   text: "#282828"
+#   #   cursor: "#bbbbbb"
+#   normal:
+#     black: "#131311"
+#     red: "#af0a16"
+#     green: "#006237"
+#     yellow: "#336121"
+#     blue: "#5e3ac3"
+#     magenta: "#8e2b82"
+#     cyan: "#005696"
+#     white: "#ffffff"
+#   bright:
+#     black: "#34332D"
+#     red: "#af0a16"
+#     green: "#006237"
+#     yellow: "#336121"
+#     blue: "#5e3ac3"
+#     magenta: "#8e2b82"
+#     cyan: "#005696"
+#     white: "#ffffff"
 
 ## Colors (Poimandres)
 #colors:

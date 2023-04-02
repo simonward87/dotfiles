@@ -182,35 +182,35 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (Github Light Main)
-colors:
-  # Default colors
-  primary:
-    background: "0xffffff"
-    foreground: "0x4d5566"
-  # Normal colors
-  normal:
-    black: "0x24292e"
-    red: "0xd73a49"
-    green: "0x22863a"
-    yellow: "0xb08800"
-    blue: "0x0366d6"
-    magenta: "0x6f42c1"
-    cyan: "0x1b7c83"
-    white: "0x4d5566"
-  # Bright colors
-  bright:
-    black: "0x586069"
-    red: "0xcb2431"
-    green: "0x28a745"
-    yellow: "0xdbab09"
-    blue: "0x2188ff"
-    magenta: "0x8a63d2"
-    cyan: "0x1b7c83"
-    white: "0x4d5566"
-  indexed_colors:
-    - { index: 16, color: "0xd18616" }
-    - { index: 17, color: "0xcb2431" }
+# # Colors (Github Light Main)
+# colors:
+#   # Default colors
+#   primary:
+#     background: "0xffffff"
+#     foreground: "0x4d5566"
+#   # Normal colors
+#   normal:
+#     black: "0x24292e"
+#     red: "0xd73a49"
+#     green: "0x22863a"
+#     yellow: "0xb08800"
+#     blue: "0x0366d6"
+#     magenta: "0x6f42c1"
+#     cyan: "0x1b7c83"
+#     white: "0x4d5566"
+#   # Bright colors
+#   bright:
+#     black: "0x586069"
+#     red: "0xcb2431"
+#     green: "0x28a745"
+#     yellow: "0xdbab09"
+#     blue: "0x2188ff"
+#     magenta: "0x8a63d2"
+#     cyan: "0x1b7c83"
+#     white: "0x4d5566"
+#   indexed_colors:
+#     - { index: 16, color: "0xd18616" }
+#     - { index: 17, color: "0xcb2431" }
 
 # Colors (Github Light Alt)
 # colors:
@@ -462,7 +462,7 @@ colors:
 #     cyan: "#73cef4"
 #     white: "#feffff"
 
-# # Colors (Joi)
+# # Colors (Joi Dark)
 # colors:
 #   primary:
 #     background: "#111e29" # darker
@@ -488,6 +488,33 @@ colors:
 #     magenta: "#ff8cf4"
 #     cyan: "#71bff7"
 #     white: "#ffffff"
+
+# Colors (Joi Light)
+colors:
+  primary:
+    background: "#ffffff" # darker
+    foreground: "#131311"
+  # cursor:
+  #   text: "#282828"
+  #   cursor: "#bbbbbb"
+  normal:
+    black: "#131311"
+    red: "#af0a16"
+    green: "#006237"
+    yellow: "#336121"
+    blue: "#5e3ac3"
+    magenta: "#8e2b82"
+    cyan: "#005696"
+    white: "#ffffff"
+  bright:
+    black: "#34332D"
+    red: "#af0a16"
+    green: "#006237"
+    yellow: "#336121"
+    blue: "#5e3ac3"
+    magenta: "#8e2b82"
+    cyan: "#005696"
+    white: "#ffffff"
 
 ## Colors (Poimandres)
 #colors:
