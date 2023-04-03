@@ -83,7 +83,7 @@ if defaults read -g AppleInterfaceStyle &>/dev/null; then
     export CLR_ERROR="#FF9AA0"
 else
     export CLR_COMMENT="#757365"
-    export CLR_ERROR="#af0a16"
+    export CLR_ERROR="#C50E3A"
 fi
 
 # Custom prompt

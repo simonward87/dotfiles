@@ -156,7 +156,7 @@ font:
   #  style: Bold Italic
 
   # Point size
-  size: 16.5
+  size: 17
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -499,21 +499,21 @@ colors:
 #   #   cursor: "#bbbbbb"
 #   normal:
 #     black: "#131311"
-#     red: "#af0a16"
-#     green: "#006237"
-#     yellow: "#336121"
-#     blue: "#5e3ac3"
-#     magenta: "#8e2b82"
-#     cyan: "#005696"
+#     red: "#C50E3A"
+#     green: "#00742E"
+#     yellow: "#8D5707"
+#     blue: "#6D4EC3"
+#     magenta: "#A724AE"
+#     cyan: "#0E6C8E"
 #     white: "#ffffff"
 #   bright:
 #     black: "#34332D"
-#     red: "#af0a16"
-#     green: "#006237"
-#     yellow: "#336121"
-#     blue: "#5e3ac3"
-#     magenta: "#8e2b82"
-#     cyan: "#005696"
+#     red: "#C50E3A"
+#     green: "#00742E"
+#     yellow: "#8D5707"
+#     blue: "#6D4EC3"
+#     magenta: "#A724AE"
+#     cyan: "#0E6C8E"
 #     white: "#ffffff"
 
 ## Colors (Poimandres)
