@@ -190,7 +190,7 @@ compinit -u
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 
 
 # K8s completion
-source $DOTFILES/util/kubectl_completion.zsh
+source $DOTFILES/util/kubectl_completion
 # Extend completion to work with k alias
 compdef __start_kubectl k
 
