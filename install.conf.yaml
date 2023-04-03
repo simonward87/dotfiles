@@ -9,6 +9,7 @@
 - clean: ["~"]
 
 - link:
+    ~/.cobra.yaml:
     ~/.config/alacritty: config/alacritty
     ~/.config/bat: config/bat
     ~/.config/karabiner: config/karabiner
