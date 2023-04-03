@@ -129,8 +129,10 @@ function tmx () {
 }
 
 # TODO: Uses three almost identical copies of alacritty config, find a
-# better way to do this. Maybe create a file from a common config file
-# and seperate dark / light theme config files
+#       better way to do this. Maybe create a file from a common config
+#       file and seperate dark / light theme config files
+# TODO: find a way to update PROMPT colours without resourcing zshrc and
+#       infinite looping
 function theme () {
     if defaults read -g AppleInterfaceStyle &>/dev/null; then
         # Dark mode
