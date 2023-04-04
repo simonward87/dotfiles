@@ -13,6 +13,7 @@
     ~/.config/alacritty: config/alacritty
     ~/.config/bat: config/bat
     ~/.config/karabiner: config/karabiner
+    ~/.config/ncdu: config/ncdu
     ~/.config/nvim/:
       glob: true
       path: config/nvim/*

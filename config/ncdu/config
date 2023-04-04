@@ -1,0 +1,16 @@
+# https://dev.yorhel.nl/ncdu/man
+
+# Always enable extended mode
+--extended
+
+# File deletion requires confirmation
+--confirm-delete
+
+# Exclude .git directories
+--exclude .git
+
+# Directories before files
+--group-directories-first
+
+# Palette
+--color off
