@@ -79,11 +79,11 @@ alias study='cd $HOME/Study && clear && ls'
 alias work='cd $HOME/Work && clear && ls'
 
 if defaults read -g AppleInterfaceStyle &>/dev/null; then
-    export CLR_COMMENT="#7a8e9f"
-    export CLR_ERROR="#FF9AA0"
+    export CLR_COMMENT="#798d9e"
+    export CLR_ERROR="#ff9aa0"
 else
-    export CLR_COMMENT="#757365"
-    export CLR_ERROR="#C50E3A"
+    export CLR_COMMENT="#767676"
+    export CLR_ERROR="#c1002f"
 fi
 
 # Custom prompt

@@ -470,52 +470,52 @@ font:
 #     background: "#111e29" # darker
 #     foreground: "#ffffff"
 #   # cursor:
-#   #   text: "#282828"
-#   #   cursor: "#bbbbbb"
+#   #   text: "#111e29"
+#   #   cursor: "#bcc6cf"
 #   normal:
 #     black: "#111e29"
 #     red: "#ff9aa0"
 #     green: "#5bfeb7"
-#     yellow: "#daffcc"
+#     yellow: "#d0ffbe"
 #     blue: "#bfaaff"
 #     magenta: "#ff8cf4"
-#     cyan: "#71bff7"
-#     white: "#eeeeee"
+#     cyan: "#b4e0ff"
+#     white: "#bcc6cf"
 #   bright:
-#     black: "#7a8e9f"
+#     black: "#1f3344"
 #     red: "#ff9aa0"
 #     green: "#5bfeb7"
-#     yellow: "#daffcc"
+#     yellow: "#d0ffbe"
 #     blue: "#bfaaff"
 #     magenta: "#ff8cf4"
-#     cyan: "#71bff7"
+#     cyan: "#b4e0ff"
 #     white: "#ffffff"
 
 # Colors (Joi Light)
 colors:
   primary:
     background: "#ffffff" # darker
-    foreground: "#131311"
+    foreground: "#181818"
   # cursor:
-  #   text: "#282828"
-  #   cursor: "#bbbbbb"
+  #   text: "#181818"
+  #   cursor: "#a3a3a3"
   normal:
-    black: "#131311"
-    red: "#C50E3A"
-    green: "#00742E"
-    yellow: "#8D5707"
-    blue: "#6D4EC3"
-    magenta: "#A724AE"
-    cyan: "#0E6C8E"
-    white: "#ffffff"
+    black: "#181818"
+    red: "#C1002F"
+    green: "#006E2C"
+    yellow: "#895200"
+    blue: "#5F45D2"
+    magenta: "#A512AC"
+    cyan: "#00668C"
+    white: "#F1F1F1"
   bright:
-    black: "#34332D"
-    red: "#C50E3A"
-    green: "#00742E"
-    yellow: "#8D5707"
-    blue: "#6D4EC3"
-    magenta: "#A724AE"
-    cyan: "#0E6C8E"
+    black: "#373737"
+    red: "#C1002F"
+    green: "#006E2C"
+    yellow: "#895200"
+    blue: "#5F45D2"
+    magenta: "#A512AC"
+    cyan: "#00668C"
     white: "#ffffff"
 
 ## Colors (Poimandres)
@@ -915,7 +915,7 @@ cursor:
     #   - Off: Disable blinking by default
     #   - On: Enable blinking by default
     #   - Always: Force the cursor to always blink
-    blinking: On
+    blinking: Always
 
   # Vi mode cursor style
   #
@@ -926,16 +926,16 @@ cursor:
   #vi_mode_style: None
 
   # Cursor blinking interval in milliseconds.
-  #blink_interval: 750
+  # blink_interval: 750
 
   # Time after which cursor stops blinking, in seconds.
   #
   # Specifying '0' will disable timeout for blinking.
-  #blink_timeout: 5
+  blink_timeout: 5
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
-  #unfocused_hollow: true
+  unfocused_hollow: true
 
   # Thickness of the cursor relative to the cell width as floating point number
   # from `0.0` to `1.0`.
