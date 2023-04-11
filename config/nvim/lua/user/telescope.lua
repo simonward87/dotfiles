@@ -10,15 +10,15 @@ end
 
 telescope.setup({
 	defaults = {
-		border = false,
 		prompt_prefix = " ",
 		-- selection_caret = " ",
 		path_display = { "smart" },
 		mappings = {
 			i = {
+				-- i is insert mode
 				["<esc>"] = actions.close,
 				["<C-u>"] = false,
-			}, -- i is insert mode
+			},
 			n = {}, -- n is normal mode
 		},
 	},

@@ -6,20 +6,22 @@ local hl = function(group, opts)
 end
 
 local palette = {
-	-- Background Colors
-	bg_dark = "#1d1d1d",
-	bg = "#282828",
-	tabline = "#323232",
-	bg_light = "#444444",
+	-- background colors
+	bg_dark     = "#1d1d1d",
+	bg          = "#282828",
+	tabline     = "#323232",
+	bg_light    = "#444444",
 	bg_contrast = "#9a9a9a",
 	-- foreground colors
-	fg = "#eeeeee",
-	comment = "#666666",
-	green = "#c9d05c",
-	blue_dim = "#476572",
-	blue = "#73cef4",
-	blue_light = "#b3deef",
-	brown = "#d3b987",
+	fg          = "#eeeeee",
+	comment     = "#666666",
+	red         = "#f43753",
+	green       = "#c9d05c",
+	yellow      = "#ffc24b",
+	blue_light  = "#b3deef",
+	brown       = "#d3b987",
+	blue        = "#73cef4",
+	blue_dim    = "#476572",
 	transparent = "none",
 }
 
