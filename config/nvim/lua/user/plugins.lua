@@ -64,13 +64,16 @@ return packer.startup(function(use)
 		run = ":TSUpdate",
 	})
 	use("nvim-treesitter/nvim-treesitter-context") -- pin code context (current block)
+	use("nvim-treesitter/playground") -- view treesitter info
 	use("tpope/vim-capslock") -- software capslock
 	use("tpope/vim-commentary") -- comment stuff out
 	use("tpope/vim-fugitive") -- git wrapper
 	use("tpope/vim-surround") -- streamline surroundings workflow
 	use("wbthomason/packer.nvim") -- Let packer manage itself
-	use("windwp/nvim-autopairs") -- autopairs with cmp and treesitter integration
-	use("windwp/nvim-ts-autotag") -- auto-close & auto-rename html tags
+	-- use("windwp/nvim-autopairs") -- autopairs with cmp and treesitter integration
+	-- use("windwp/nvim-ts-autotag") -- auto-close & auto-rename html tags
+	use("simonward87/nvim-autopairs")
+	use("simonward87/nvim-ts-autotag")
 
 	-- colorschemes
 	use("axvr/photon.vim")
