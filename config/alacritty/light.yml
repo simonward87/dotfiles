@@ -495,21 +495,21 @@ font:
 colors:
   primary:
     background: "#ffffff" # darker
-    foreground: "#181818"
+    foreground: "#000000"
   # cursor:
-  #   text: "#181818"
-  #   cursor: "#a3a3a3"
+  #   text: "#ffffff"
+  #   cursor: "#767676"
   normal:
-    black: "#181818"
+    black: "#000000"
     red: "#C1002F"
     green: "#006E2C"
     yellow: "#895200"
     blue: "#5F45D2"
     magenta: "#A512AC"
     cyan: "#00668C"
-    white: "#F1F1F1"
+    white: "#f5f5f5"
   bright:
-    black: "#373737"
+    black: "#3b3b3b"
     red: "#C1002F"
     green: "#006E2C"
     yellow: "#895200"
