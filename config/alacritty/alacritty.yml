@@ -464,7 +464,7 @@ font:
 #     cyan: "#73cef4"
 #     white: "#feffff"
 
-# Colors (Joi Dark)
+# Colors (Drift Dark)
 colors:
   primary:
     background: "#111e29" # darker
@@ -491,7 +491,7 @@ colors:
     cyan: "#cdeaff"
     white: "#ffffff"
 
-# # Colors (Joi Light)
+# # Colors (Drift Light)
 # colors:
 #   primary:
 #     background: "#ffffff" # darker

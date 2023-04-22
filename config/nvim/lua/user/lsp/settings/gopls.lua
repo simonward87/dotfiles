@@ -6,7 +6,7 @@ return {
 				-- https://github.com/golang/go/issues/29202
 				-- more info about GOFLAGS:
 				-- https://pkg.go.dev/cmd/go#hdr-Environment_variables
-				GOFLAGS = "-tags=integration,linux,test,unittest,windows",
+				GOFLAGS = "-tags=inmemory,integration,linux,test,unittest,windows",
 			},
 		},
 	},

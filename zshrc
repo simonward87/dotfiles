@@ -136,9 +136,9 @@ function tmx () {
 function theme () {
     if defaults read -g AppleInterfaceStyle &>/dev/null; then
         # Dark mode
-        if grep "joiLight" $DOTFILES/tmux.conf; then
-            sed -i '' -E 's/joiLight/joiDark/g' $DOTFILES/tmux.conf
-            sed -i '' -E 's/joi-light/joi-dark/g' $NVIM_CONFIG/colorscheme.lua
+        if grep "driftLight" $DOTFILES/tmux.conf; then
+            sed -i '' -E 's/driftLight/driftDark/g' $DOTFILES/tmux.conf
+            sed -i '' -E 's/drift-light/drift-dark/g' $NVIM_CONFIG/colorscheme.lua
             cp $DOTFILES/config/alacritty/dark.yml $DOTFILES/config/alacritty/alacritty.yml
 
             if [ -n "$TMUX" ]; then
@@ -147,9 +147,9 @@ function theme () {
         fi
     else
         # Light mode
-        if grep "joiDark" $DOTFILES/tmux.conf; then
-            sed -i '' -E 's/joiDark/joiLight/g' $DOTFILES/tmux.conf
-            sed -i '' -E 's/joi-dark/joi-light/g' $NVIM_CONFIG/colorscheme.lua
+        if grep "driftDark" $DOTFILES/tmux.conf; then
+            sed -i '' -E 's/driftDark/driftLight/g' $DOTFILES/tmux.conf
+            sed -i '' -E 's/drift-dark/drift-light/g' $NVIM_CONFIG/colorscheme.lua
             cp $DOTFILES/config/alacritty/light.yml $DOTFILES/config/alacritty/alacritty.yml
 
             if [ -n "$TMUX" ]; then

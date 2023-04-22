@@ -25,6 +25,8 @@ brew "pkg-config"
 brew "cmake"
 # Documentation for CMake
 brew "cmake-docs"
+# Command-line interface for SQLite
+brew "sqlite"
 # Dependency Manager for PHP
 brew "composer"
 # GNU File, Shell, and Text utilities
