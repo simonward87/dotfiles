@@ -1,0 +1,21 @@
+-- more info:
+-- https://www.digitalocean.com/community/tutorials/how-to-customize-the-postgresql-prompt-with-psqlrc-on-ubuntu-14-04
+-- https://opensourcedbms.com/dbms/psqlrc-psql-startup-file-for-postgres/
+
+\set QUIET 1
+
+\set PROMPT1 '%M:%> %n@%/%R%#%x '
+
+\set PROMPT2 '%M %n@%/%R %# '
+
+\pset null '[null]'
+
+\set COMP_KEYWORD_CASE upper
+
+\timing
+
+\set HISTSIZE 2000
+
+\x auto
+
+\set QUIET 0

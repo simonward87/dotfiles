@@ -19,6 +19,7 @@
       path: config/nvim/*
     ~/.config/tmux: config/tmux
     ~/.gitconfig:
+    ~/.psqlrc:
     ~/.tmux.conf:
     ~/.zshrc:
     ~/.zshenv:
