@@ -83,6 +83,8 @@ brew "openjdk"
 brew "pidof"
 # Object-relational database system
 brew "postgresql@14", restart_service: true
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # File browser
