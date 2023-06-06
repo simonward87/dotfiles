@@ -21,8 +21,8 @@ if exists brew; then
     export VISUAL=$EDITOR
     export ZPLUG_HOME="$HOMEBREW_PREFIX/opt/zplug"
 
-    alias bbd='brew bundle dump --force --describe'
-    alias bbl='brew bundle list --all'
+    alias bbd='brew bundle dump --force'
+    alias bbl='brew bundle list --all | less'
     alias vi="$HOMEBREW_PREFIX/bin/nvim"
     alias vim="$HOMEBREW_PREFIX/bin/nvim"
 else

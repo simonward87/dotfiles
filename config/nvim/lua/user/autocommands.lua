@@ -2,6 +2,7 @@
 vim.cmd("autocmd BufRead,BufNewFile go.mod setfiletype gomod")
 vim.cmd("autocmd BufRead,BufNewFile Dockerfile.dev setfiletype dockerfile")
 vim.cmd("autocmd BufRead,BufNewFile *.gohtml setfiletype html")
+vim.cmd("autocmd BufRead,BufNewFile *.tmpl setfiletype html")
 vim.cmd("autocmd BufRead,BufNewFile zprofile setfiletype zsh")
 vim.cmd("autocmd FileType gitcommit setlocal wrap spell textwidth=72")
 vim.cmd("autocmd FileType go setlocal noexpandtab")
@@ -51,9 +52,9 @@ autocmd("TextYankPost", {
 })
 
 -- clear command line output after CursorHold timeout
-autocmd("CursorHold", {
-	pattern = "*",
-	callback = function()
-		print(" ")
-	end,
-})
+-- autocmd("CursorHold", {
+-- 	pattern = "*",
+-- 	callback = function()
+-- 		print(" ")
+-- 	end,
+-- })
