@@ -464,14 +464,14 @@ font:
 #     cyan: "#73cef4"
 #     white: "#feffff"
 
-# # Colors (Drift Dark)
+# # Colors (Drift Darker)
 # colors:
 #   primary:
 #     background: "#111e29" # darker
 #     foreground: "#ffffff"
 #   # cursor:
 #   #   text: "#111e29"
-#   #   cursor: "#c0c9d1"
+#   #   cursor: "#c8d1d8"
 #   normal:
 #     black: "#111e29"
 #     red: "#ff9aa0"
@@ -480,7 +480,7 @@ font:
 #     blue: "#bfaaff"
 #     magenta: "#ff8cf4"
 #     cyan: "#b4e0ff"
-#     white: "#c0c9d1"
+#     white: "#c8d1d8"
 #   bright:
 #     black: "#1f3344"
 #     red: "#ffbcc0"
@@ -491,14 +491,68 @@ font:
 #     cyan: "#cdeaff"
 #     white: "#ffffff"
 
-# Colors (Drift Light)
+# # Colors (Drift Dark)
+# colors:
+#   primary:
+#     background: "#162532" # darker
+#     foreground: "#ffffff"
+#   # cursor:
+#   #   text: "#162532"
+#   #   cursor: "#CCD4DA"
+#   normal:
+#     black: "#162532"
+#     red: "#ff9aa0"
+#     green: "#5bfeb7"
+#     yellow: "#d0ffbe"
+#     blue: "#bfaaff"
+#     magenta: "#ff8cf4"
+#     cyan: "#b4e0ff"
+#     white: "#CCD4DA"
+#   bright:
+#     black: "#1f3344"
+#     red: "#ffbcc0"
+#     green: "#92fecf"
+#     yellow: "#e0ffd4"
+#     blue: "#d4c6ff"
+#     magenta: "#ffb2f8"
+#     cyan: "#cdeaff"
+#     white: "#ffffff"
+
+# # Colors (Drift Light)
+# colors:
+#   primary:
+#     background: "#F5F5F3" # darker
+#     foreground: "#000000"
+#   # cursor:
+#   #   text: "#F5F5F3"
+#   #   cursor: "#65645E"
+#   normal:
+#     black: "#000000"
+#     red: "#AC002A"
+#     green: "#006227"
+#     yellow: "#7A4900"
+#     blue: "#543DBB"
+#     magenta: "#931099"
+#     cyan: "#005B7C"
+#     white: "#EBEBE6"
+#   bright:
+#     black: "#33322F"
+#     red: "#c1002f"
+#     green: "#006e2c"
+#     yellow: "#895200"
+#     blue: "#5f45d2"
+#     magenta: "#a512ac"
+#     cyan: "#00668c"
+#     white: "#F5F5F3"
+
+# Colors (Drift Lighter)
 colors:
   primary:
     background: "#ffffff" # darker
     foreground: "#000000"
   # cursor:
   #   text: "#ffffff"
-  #   cursor: "#6c6c6c"
+  #   cursor: "#6B6A64"
   normal:
     black: "#000000"
     red: "#AC002A"
@@ -507,7 +561,7 @@ colors:
     blue: "#543DBB"
     magenta: "#931099"
     cyan: "#005B7C"
-    white: "#eeeeee"
+    white: "#F5F5F3"
   bright:
     black: "#363636"
     red: "#c1002f"
