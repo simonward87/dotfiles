@@ -79,10 +79,10 @@ alias study='cd $HOME/Study && clear && ls'
 alias work='cd $HOME/Work && clear && ls'
 
 if defaults read -g AppleInterfaceStyle &>/dev/null; then
-    export CLR_COMMENT="#798d9e"
+    export CLR_COMMENT="#91A2B0"
     export CLR_ERROR="#ff9aa0"
 else
-    export CLR_COMMENT="#767676"
+    export CLR_COMMENT="#6B6A64"
     export CLR_ERROR="#c1002f"
 fi
 
@@ -141,9 +141,6 @@ function theme () {
             sed -i '' -E 's/drift-light/drift-dark/g' $NVIM_CONFIG/colorscheme.lua
             cp $DOTFILES/config/alacritty/dark.yml $DOTFILES/config/alacritty/alacritty.yml
 
-            if [ -n "$TMUX" ]; then
-                tmux source-file ~/.tmux.conf &>/dev/null
-            fi
         fi
     else
         # Light mode
@@ -151,11 +148,12 @@ function theme () {
             sed -i '' -E 's/driftDark/driftLight/g' $DOTFILES/tmux.conf
             sed -i '' -E 's/drift-dark/drift-light/g' $NVIM_CONFIG/colorscheme.lua
             cp $DOTFILES/config/alacritty/light.yml $DOTFILES/config/alacritty/alacritty.yml
-
-            if [ -n "$TMUX" ]; then
-                tmux source-file ~/.tmux.conf &>/dev/null
-            fi
         fi
+    fi
+
+    if [ -n "$TMUX" ]; then
+        tmux source-file ~/.tmux.conf
+        clear
     fi
 }
 
