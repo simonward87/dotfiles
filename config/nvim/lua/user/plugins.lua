@@ -71,9 +71,8 @@ return packer.startup(function(use)
 	use("tpope/vim-surround") -- streamline surroundings workflow
 	use("wbthomason/packer.nvim") -- Let packer manage itself
 	-- use("windwp/nvim-autopairs") -- autopairs with cmp and treesitter integration
-	-- use("windwp/nvim-ts-autotag") -- auto-close & auto-rename html tags
+	use("windwp/nvim-ts-autotag") -- auto-close & auto-rename html tags
 	use("simonward87/nvim-autopairs")
-	use("simonward87/nvim-ts-autotag")
 
 	-- colorschemes
 	use("axvr/photon.vim")
@@ -90,7 +89,7 @@ return packer.startup(function(use)
 	})
 	use("rebelot/kanagawa.nvim")
 	use("sainnhe/gruvbox-material")
-	use("simonward87/joi.nvim")
+	-- use("simonward87/drift.nvim")
 
 	-- completion
 	use("hrsh7th/cmp-buffer") -- buffer completions
