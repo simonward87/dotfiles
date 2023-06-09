@@ -35,8 +35,7 @@ brew "less"
 brew "luajit", args: ["HEAD"]
 brew "luarocks"
 brew "mas"
-brew "protobuf"
-brew "mysql", restart_service: true
+brew "mysql"
 brew "n"
 brew "ncdu"
 brew "neofetch"
@@ -46,6 +45,7 @@ brew "nmap"
 brew "openjdk"
 brew "pidof"
 brew "postgresql@15", restart_service: true
+brew "protobuf"
 brew "python@3.9"
 brew "ranger"
 brew "redis"
