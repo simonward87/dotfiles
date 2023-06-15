@@ -1,4 +1,4 @@
-local c = "drift-light"
+local c = "drift-lighter"
 
 local custom_opts_loaded, _ = pcall(require, "user." .. c)
 

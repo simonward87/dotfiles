@@ -158,14 +158,14 @@ font:
   #  style: Bold Italic
 
   # Point size
-  size: 16
+  size: 16.5
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
   offset:
     x: 0
-    y: 4
+    y: 3
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
@@ -518,41 +518,14 @@ font:
 #     cyan: "#cdeaff"
 #     white: "#ffffff"
 
-# Colors (Drift Light)
-colors:
-  primary:
-    background: "#F6F6F0" # darker
-    foreground: "#000000"
-  # cursor:
-  #   text: "#F6F6F0"
-  #   cursor: "#65645E"
-  normal:
-    black: "#000000"
-    red: "#AC002A"
-    green: "#006227"
-    yellow: "#7A4900"
-    blue: "#543DBB"
-    magenta: "#931099"
-    cyan: "#005B7C"
-    white: "#ECECE4"
-  bright:
-    black: "#33322F"
-    red: "#c1002f"
-    green: "#006e2c"
-    yellow: "#895200"
-    blue: "#5f45d2"
-    magenta: "#a512ac"
-    cyan: "#00668c"
-    white: "#F6F6F0"
-
-# # Colors (Drift Lighter)
+# # Colors (Drift Light)
 # colors:
 #   primary:
-#     background: "#ffffff" # darker
+#     background: "#F6F6F0" # darker
 #     foreground: "#000000"
 #   # cursor:
-#   #   text: "#ffffff"
-#   #   cursor: "#6B6A64"
+#   #   text: "#F6F6F0"
+#   #   cursor: "#65645E"
 #   normal:
 #     black: "#000000"
 #     red: "#AC002A"
@@ -561,16 +534,43 @@ colors:
 #     blue: "#543DBB"
 #     magenta: "#931099"
 #     cyan: "#005B7C"
-#     white: "#F5F5F3"
+#     white: "#ECECE4"
 #   bright:
-#     black: "#363636"
+#     black: "#33322F"
 #     red: "#c1002f"
 #     green: "#006e2c"
 #     yellow: "#895200"
 #     blue: "#5f45d2"
 #     magenta: "#a512ac"
 #     cyan: "#00668c"
-#     white: "#ffffff"
+#     white: "#F6F6F0"
+
+# Colors (Drift Lighter)
+colors:
+  primary:
+    background: "#ffffff" # darker
+    foreground: "#000000"
+  # cursor:
+  #   text: "#ffffff"
+  #   cursor: "#6B6A64"
+  normal:
+    black: "#000000"
+    red: "#AC002A"
+    green: "#006227"
+    yellow: "#7A4900"
+    blue: "#543DBB"
+    magenta: "#931099"
+    cyan: "#005B7C"
+    white: "#F5F5F3"
+  bright:
+    black: "#363636"
+    red: "#c1002f"
+    green: "#006e2c"
+    yellow: "#895200"
+    blue: "#5f45d2"
+    magenta: "#a512ac"
+    cyan: "#00668c"
+    white: "#ffffff"
 
 ## Colors (Poimandres)
 #colors:
