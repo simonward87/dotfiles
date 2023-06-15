@@ -70,9 +70,9 @@ return packer.startup(function(use)
 	use("tpope/vim-fugitive") -- git wrapper
 	use("tpope/vim-surround") -- streamline surroundings workflow
 	use("wbthomason/packer.nvim") -- Let packer manage itself
-	-- use("windwp/nvim-autopairs") -- autopairs with cmp and treesitter integration
+	use("windwp/nvim-autopairs") -- autopairs with cmp and treesitter integration
 	use("windwp/nvim-ts-autotag") -- auto-close & auto-rename html tags
-	use("simonward87/nvim-autopairs")
+	-- use("simonward87/nvim-autopairs")
 
 	-- colorschemes
 	use("axvr/photon.vim")
@@ -89,7 +89,7 @@ return packer.startup(function(use)
 	})
 	use("rebelot/kanagawa.nvim")
 	use("sainnhe/gruvbox-material")
-	-- use("simonward87/drift.nvim")
+	use("simonward87/drift.nvim")
 
 	-- completion
 	use("hrsh7th/cmp-buffer") -- buffer completions
@@ -104,7 +104,10 @@ return packer.startup(function(use)
 
 	-- LSP
 	use("b0o/SchemaStore.nvim") -- schemastore catalog access
-	use("j-hui/fidget.nvim") -- UI for nvim-lsp install progress
+	use({
+		"j-hui/fidget.nvim", -- UI for nvim-lsp install progress
+		tag = "legacy",
+	})
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("sago35/tinygo.vim") -- tinygo extension

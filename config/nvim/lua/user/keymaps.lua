@@ -107,3 +107,4 @@ keymap("n", "<C-e>", ":TSHighlightCapturesUnderCursor<CR>", opts())
 
 -- abbreviations
 vim.cmd("iabbrev @@ 39803787+simonward87@users.noreply.github.com")
+vim.cmd("iabbrev reutrn return")
