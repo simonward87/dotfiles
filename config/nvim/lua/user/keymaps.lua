@@ -74,6 +74,11 @@ keymap("n", "<leader><CR>", ":source ~/.config/nvim/lua/user/colorscheme.lua<CR>
 -- toggle ColorColumn
 keymap("n", "<leader>cc", [[:execute "set cc=" . (&colorcolumn == "" ? "74" : "")<CR>]], opts())
 
+-- remap to avoid collision with tmux prefix
+keymap("n", "<C-c>", "<C-a>", opts())
+keymap("v", "<C-c>", "<C-a>", opts())
+keymap("v", "g<C-c>", "g<C-a>", opts())
+
 -- git
 keymap("n", "<leader>gs", ":G<CR>", opts())
 keymap("n", "<leader>gc", ":G commit -v -q<CR>", opts())
