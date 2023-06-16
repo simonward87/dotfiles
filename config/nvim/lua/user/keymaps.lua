@@ -110,9 +110,12 @@ keymap("n", "<leader>ts", ":TinygoTarget -<CR>", opts())
 -- under cursor TS capture group
 keymap("n", "<C-e>", ":TSHighlightCapturesUnderCursor<CR>", opts())
 
--- format as markdown url
-keymap("n", "<leader>u", "ebi[<esc>ea]()<esc>i", opts("format word under cursor as markdown url"))
-keymap("v", "<leader>u", "<esc>`>a]<esc>`<<esc>i[<esc>%a()<esc>i", opts("format selection as markdown url"))
+-- markdown convenience mappings
+keymap("n", "<leader>u", "viw<esc>bi[<esc>ea]()<esc>i", opts("markdown format word under cursor as url"))
+keymap("v", "<leader>u", "<esc>`>a]<esc>`<<esc>i[<esc>%a()<esc>i", opts("markdown format selection as url"))
+keymap("i", "<C-b>", "****<esc>hi", opts("markdown format cursor position as bold"))
+keymap("n", "<leader>b", "viw<esc>bi**<esc>ea**<esc>", opts("markdown format word under cursor as bold"))
+keymap("v", "<leader>b", "<esc>`>a**<esc>`<<esc>i**<esc>`><esc>ll", opts("markdown format selection as bold"))
 
 -- convenience abbreviations
 vim.cmd("iabbrev @@ 39803787+simonward87@users.noreply.github.com")
