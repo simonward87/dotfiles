@@ -15,8 +15,8 @@ if exists brew; then
     export GOPATH="$(go env GOPATH)"
     export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
     export HOMEBREW_NO_ENV_HINTS=1
-    export PATH="$PATH:$GOBIN:$N_PREFIX/bin:$HOME/Study/bin"
-    export PGDATA="$HOMEBREW_PREFIX/var/postgres"
+    export PATH="$PATH:$HOMEBREW_PREFIX/opt/postgresql@15/bin:$GOBIN:$N_PREFIX/bin:$HOME/Study/bin"
+    export PGDATA="$HOMEBREW_PREFIX/var/postgresql@15"
     export PSQL_EDITOR="$HOMEBREW_PREFIX/bin/nvim"
     export VISUAL=$EDITOR
     export ZPLUG_HOME="$HOMEBREW_PREFIX/opt/zplug"
@@ -40,7 +40,7 @@ fi
 export CC="clang"
 export CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
 export LDLIBS="-lcrypt -lcs50 -lm"
-export LIBRARY_PATH=/usr/local/lib
+export LIBRARY_PATH="/usr/local/lib"
 
 # Use regular Zsh history search binding in Tmux
 bindkey '^R' history-incremental-search-backward

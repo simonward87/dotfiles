@@ -1,8 +1,11 @@
-local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
+local function map(mode, l, r, opts)
+	local defaults = { noremap = true, silent = true }
+	opts = opts or defaults
+	vim.keymap.set(mode, l, r, opts)
+end
 
 -- setup leader
-keymap("", "<Space>", "<Nop>", opts)
+map("", "<Space>", "<Nop>")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -15,98 +18,88 @@ vim.g.maplocalleader = " "
 -- | "t" | terminal     |
 -- | "c" | command      |
 
--- temporary unbinds to promote proper motions
-keymap("n", "<Left>", "<Nop>", opts)
-keymap("n", "<Right>", "<Nop>", opts)
-keymap("n", "<Down>", "<Nop>", opts)
-keymap("n", "<Up>", "<Nop>", opts)
-keymap("i", "<Tab>", "<Nop>", opts)
-
 -- window navigation
-keymap("n", "<Left>", "<C-w>h", opts) -- moves to left window
-keymap("n", "<Right>", "<C-w>l", opts) -- moves to right window
-keymap("n", "<Down>", "<C-w>j", opts) -- moves to window below
-keymap("n", "<Up>", "<C-w>k", opts) -- moves to window above
+map("n", "<Left>", "<C-w>h") -- moves to left window
+map("n", "<Right>", "<C-w>l") -- moves to right window
+map("n", "<Down>", "<C-w>j") -- moves to window below
+map("n", "<Up>", "<C-w>k") -- moves to window above
 
 -- buffer navigation
-keymap("n", "<C-n>", ":bn<CR>", opts) -- moves to next buffer
-keymap("n", "<C-p>", ":bp<CR>", opts) -- moves to previous buffer
-keymap("n", "<leader>d", ":bd<CR>", opts) -- deletes current buffer
-keymap("n", "tt", ":tab split<CR>", opts) -- opens current buffer in new tab
-keymap("n", "<leader>nw", ":noa w<CR>", opts) -- saves without formatting
+map("n", "<C-n>", ":bn<CR>") -- moves to next buffer
+map("n", "<C-p>", ":bp<CR>") -- moves to previous buffer
+map("n", "<leader>d", ":bd<CR>") -- deletes current buffer
+map("n", "tt", ":tab split<CR>") -- opens current buffer in new tab
+map("n", "<leader>nw", ":noa w<CR>") -- saves without formatting
 
 -- shift text blocks vertically
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("i", "<C-j>", "<esc>:move .+1<CR>==a", opts)
-keymap("i", "<C-k>", "<esc>:move .-2<CR>==a", opts)
-keymap("n", "<leader>j", ":move .+1<CR>==", opts)
-keymap("n", "<leader>k", ":move .-2<CR>==", opts)
+map("x", "J", ":move '>+1<CR>gv-gv")
+map("x", "K", ":move '<-2<CR>gv-gv")
+map("i", "<C-j>", "<esc>:move .+1<CR>==a")
+map("i", "<C-k>", "<esc>:move .-2<CR>==a")
+map("n", "<leader>j", ":move .+1<CR>==")
+map("n", "<leader>k", ":move .-2<CR>==")
 
 -- undo breakpoints
-keymap("i", ",", ",<c-g>u", opts)
-keymap("i", ".", ".<c-g>u", opts)
-keymap("i", "!", "!<c-g>u", opts)
-keymap("i", "?", "?<c-g>u", opts)
+map("i", ",", ",<c-g>u")
+map("i", ".", ".<c-g>u")
+map("i", "!", "!<c-g>u")
+map("i", "?", "?<c-g>u")
 
 -- autocenter when word searching
-keymap("n", "n", "nzzzv", opts)
-keymap("n", "N", "Nzzzv", opts)
-keymap("n", "J", "mzJ`z", opts)
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
+map("n", "J", "mzJ`z")
 
 -- autocenter when jumping
-keymap("n", "<C-d>", "<C-d>zz", opts)
-keymap("n", "<C-u>", "<C-u>zz", opts)
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
 
 -- reload colourschemes
-keymap("n", "<leader><CR>", ":source ~/.config/nvim/lua/user/colorscheme.lua<CR>", opts)
+map("n", "<leader><CR>", ":source ~/.config/nvim/lua/user/colorscheme.lua<CR>")
 
 -- toggle ColorColumn
-keymap("n", "<leader>cc", [[:execute "set cc=" . (&colorcolumn == "" ? "74" : "")<CR>]], opts)
+map("n", "<leader>cc", [[:execute "set cc=" . (&colorcolumn == "" ? "74" : "")<CR>]])
 
 -- remap to avoid collision with tmux prefix
-keymap("n", "<C-c>", "<C-a>", opts)
-keymap("v", "<C-c>", "<C-a>", opts)
-keymap("v", "g<C-c>", "g<C-a>", opts)
+map("n", "<C-c>", "<C-a>")
+map("v", "<C-c>", "<C-a>")
+map("v", "g<C-c>", "g<C-a>")
 
 -- git
-keymap("n", "<leader>gs", ":G<CR>", opts)
-keymap("n", "<leader>gc", ":G commit -v -q<CR>", opts)
-keymap("n", "<leader>gd", ":G diff<CR>", opts)
-keymap("n", "<leader>gl", ":G log<CR>", opts)
-keymap("n", "<leader>gp", ":G push<CR>", opts)
+map("n", "<leader>gs", ":G<CR>")
+map("n", "<leader>gc", ":G commit -v -q<CR>")
+map("n", "<leader>gd", ":G diff<CR>")
+map("n", "<leader>gl", ":G log<CR>")
+map("n", "<leader>gp", ":G push<CR>")
 
 -- telescope
-keymap(
+map(
 	"n",
 	"<leader>f",
-	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>",
-	opts
+	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>"
 )
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<CR>", opts)
+map("n", "<c-t>", "<cmd>Telescope live_grep<CR>")
 
 -- nvim-tree
-keymap("n", "-", ":NvimTreeToggle<CR>", opts)
+map("n", "-", ":NvimTreeToggle<CR>")
 
 -- commands
-keymap("n", "<leader>ll", ":!gls -Fho --group-directories-first<CR>", opts)
-keymap("n", "<leader>la", ":!gls -AFho --group-directories-first<CR>", opts)
-
--- tinygo
-keymap("n", "<leader>ta", ":TinygoTarget arduino<CR>", opts)
-keymap("n", "<leader>tp", ":TinygoTarget pico<CR>", opts)
-keymap("n", "<leader>ts", ":TinygoTarget -<CR>", opts)
+map("n", "<leader>ll", ":!gls -Fho --group-directories-first<CR>")
+map("n", "<leader>la", ":!gls -AFho --group-directories-first<CR>")
 
 -- under cursor TS capture group
-keymap("n", "<C-e>", ":TSHighlightCapturesUnderCursor<CR>", opts)
+map("n", "<C-e>", ":TSHighlightCapturesUnderCursor<CR>")
 
--- markdown convenience mappings
-keymap("n", "<leader>ui", "viw<esc>bi[<esc>ea]()<esc>i", opts) -- markdown format word under cursor as url, and enter INSERT
-keymap("v", "<leader>ui", "<esc>`>a]<esc>`<<esc>i[<esc>%a()<esc>i", opts) -- markdown format selection as url, and enter INSERT
-keymap("n", "<leader>up", "viw<esc>bi[<esc>ea](<C-r>+)<esc>", opts) -- markdown format word under cursor as url, and populate from unnamed register
-keymap("v", "<leader>up", "<esc>`>a]<esc>`<<esc>i[<esc>%a(<C-r>+)<esc>", opts) -- markdown format selection as url, and populate from unnamed register
-keymap("n", "<leader>b", "viw<esc>bi**<esc>ea**<esc>", opts) -- markdown format word under cursor as bold
-keymap("v", "<leader>b", "<esc>`>a**<esc>`<<esc>i**<esc>`><esc>ll", opts) -- markdown format selection as bold
+-- markdown convenience maps
+map("n", "<leader>cl", "viw<esc>bi[<esc>ea]()<esc>i") -- markdown format word under cursor as url, and enter INSERT
+map("v", "<leader>cl", "<esc>`>a]<esc>`<<esc>i[<esc>%a()<esc>i") -- markdown format selection as url, and enter INSERT
+map("n", "<leader>cL", "viw<esc>bi[<esc>ea](<C-r>+)<esc>") -- markdown format word under cursor as url, and populate from unnamed register
+map("v", "<leader>cL", "<esc>`>a]<esc>`<<esc>i[<esc>%a(<C-r>+)<esc>") -- markdown format selection as url, and populate from unnamed register
+map("n", "<leader>cb", "viw<esc>bi**<esc>ea**<esc>") -- markdown format word under cursor as bold
+map("v", "<leader>cb", "<esc>`>a**<esc>`<<esc>i**<esc>`><esc>ll") -- markdown format selection as bold
+
+-- go convenience maps
+map("n", "<leader>ct", 'vi}:norm A `json:""`<CR>vi}:lua vim.lsp.buf.format()<CR>`<$hi') -- add empty json struct tags to all fields inside struct under cursor, and enter INSERT
 
 -- convenience abbreviations
 vim.cmd("iabbrev @@ 39803787+simonward87@users.noreply.github.com")
