@@ -479,7 +479,7 @@ font:
 #     yellow: "#d0ffbe"
 #     blue: "#bfaaff"
 #     magenta: "#ff8cf4"
-#     cyan: "#b4e0ff"
+#     cyan: "#84ccff"
 #     white: "#c8d1d8"
 #   bright:
 #     black: "#1f3344"
@@ -488,7 +488,7 @@ font:
 #     yellow: "#e0ffd4"
 #     blue: "#d4c6ff"
 #     magenta: "#ffb2f8"
-#     cyan: "#cdeaff"
+#     cyan: "#adddff"
 #     white: "#ffffff"
 
 # # Colors (Drift Dark)
@@ -506,7 +506,7 @@ font:
 #     yellow: "#d0ffbe"
 #     blue: "#bfaaff"
 #     magenta: "#ff8cf4"
-#     cyan: "#b4e0ff"
+#     cyan: "#84ccff"
 #     white: "#CCD4DA"
 #   bright:
 #     black: "#1f3344"
@@ -515,7 +515,7 @@ font:
 #     yellow: "#e0ffd4"
 #     blue: "#d4c6ff"
 #     magenta: "#ffb2f8"
-#     cyan: "#cdeaff"
+#     cyan: "#adddff"
 #     white: "#ffffff"
 
 # # Colors (Drift Light)
