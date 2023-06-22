@@ -18,6 +18,9 @@ vim.g.maplocalleader = " "
 -- | "t" | terminal     |
 -- | "c" | command      |
 
+-- temporary unbinds
+map("i", "<Tab>", "<Nop>")
+
 -- window navigation
 map("n", "<Left>", "<C-w>h") -- moves to left window
 map("n", "<Right>", "<C-w>l") -- moves to right window
