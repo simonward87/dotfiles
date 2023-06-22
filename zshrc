@@ -184,13 +184,15 @@ fpath=(~/.zsh $fpath ~/.zfunc)
 autoload -Uz compinit
 compinit -u
 
-# Case insensitive path-completion 
-zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 
+# command completion bindings
+bindkey '^Y' autosuggest-accept  # ctrl+y
+bindkey '^T' autosuggest-toggle  # ctrl+t
+bindkey '^@' autosuggest-execute # ctrl+space
+bindkey '^N' expand-or-complete # ctrl+n
 
 # K8s completion
 source $DOTFILES/util/kubectl_completion
-# Extend completion to work with k alias
-compdef __start_kubectl k
+compdef __start_kubectl k # completion with k alias
 
 # Heroku completion
 if exists brew; then

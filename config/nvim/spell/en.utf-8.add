@@ -128,3 +128,5 @@ timestamp
 golang
 unhashed
 microservice
+CSRF
+SameSite
