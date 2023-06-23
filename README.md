@@ -1,7 +1,7 @@
 # MacOS Dotfiles
 
 I learned a ton about
-[dotfiles, command line use, Homebrew, zsh, git, macOS and more with the course **_Dotfiles from Start to Finish-ish_**](http://dotfiles.eieio.xyz/)
+[dotfiles, command line use, Homebrew, zsh, git, MacOS and more with the course **_Dotfiles from Start to Finish-ish_**](http://dotfiles.eieio.xyz/)
 by [@EIEIOxyz](https://twitter.com/EIEIOxyz/), and you can too!
 
 ## Restore Instructions
@@ -17,7 +17,7 @@ git clone https://github.com/simonward87/dotfiles.git ~/.dotfiles
 4. Check [Brewfile](Brewfile) and audit software to be installed
 5. [`./install`](install)
 6. Restart computer
-7. Login to Google Drive (and multifactor authentication)
+7. Login to Google Drive (and multi-factor authentication)
 8. Login to Mac App store so `brew mas` will work correctly
 9. [Generate ssh key](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh),
    add to GitHub, and switch remotes.
