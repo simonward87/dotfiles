@@ -1,25 +1,31 @@
 # .zshrc is for 'interactive shells'
-# It is sourced each time a new terminal session is launched
+# it is sourced each time a new terminal session is launched
 
-# Variables
+# variables
 export DOTFILES="$HOME/.dotfiles"
-export HISTORY_IGNORE='(pwd|id|uptime|resize|l[alsx]#( *)#|clear|hist[ory]#|cd ..)' # Command history ignore list
-export HISTSIZE=100000 # Max number of cached commands
-export HISTTIMEFORMAT="%Y-%m-%d %T " # Add time-stamp to command history
+export HISTORY_IGNORE='(pwd|id|uptime|resize|l[alsx]#( *)#|clear|hist[ory]#|cd ..)' # command history ignore list
+export HISTSIZE=100000 # max number of cached commands
+export HISTTIMEFORMAT="%Y-%m-%d %T " # add time-stamp to command history
 export NULLCMD=bat
 export NVIM_CONFIG="$DOTFILES/config/nvim/lua/user"
 
 if exists brew; then
     export EDITOR="$HOMEBREW_PREFIX/bin/nvim"
+    export PSQL_EDITOR=$EDITOR
+    export VISUAL=$EDITOR
+
     export GOBIN="$(go env GOPATH)/bin"
     export GOPATH="$(go env GOPATH)"
     export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
     export HOMEBREW_NO_ENV_HINTS=1
-    export PATH="$PATH:$HOMEBREW_PREFIX/opt/postgresql@15/bin:$GOBIN:$N_PREFIX/bin:$HOME/Study/bin"
     export PGDATA="$HOMEBREW_PREFIX/var/postgresql@15"
-    export PSQL_EDITOR="$HOMEBREW_PREFIX/bin/nvim"
-    export VISUAL=$EDITOR
     export ZPLUG_HOME="$HOMEBREW_PREFIX/opt/zplug"
+
+    export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+    export PATH="$HOMEBREW_PREFIX/opt/postgresql@15/bin:$PATH"
+    export PATH="$PATH:$GOBIN"
+    export PATH="$PATH:$N_PREFIX/bin"
+    export PATH="$PATH:$HOME/Study/bin"
 
     alias bbd='brew bundle dump --force'
     alias bbl='brew bundle list --all | less'
@@ -27,6 +33,7 @@ if exists brew; then
     alias vim="$HOMEBREW_PREFIX/bin/nvim"
 else
     export EDITOR=/usr/bin/vi
+    export PSQL_EDITOR=$EDITOR
     export VISUAL=$EDITOR
 fi
 
@@ -36,33 +43,33 @@ if exists rustup; then
     export RUSTUP_HOME="$HOME/.rustup"
 fi
 
-# Header files for CS50
+# header files for cs50
 export CC="clang"
 export CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
 export LDLIBS="-lcrypt -lcs50 -lm"
 export LIBRARY_PATH="/usr/local/lib"
 
-# Use regular Zsh history search binding in Tmux
+# use regular zsh history search binding in tmux
 bindkey '^R' history-incremental-search-backward
 
-# Options (man zshoptions)
-setopt NO_CASE_GLOB # Case-insensitive glob
-setopt AUTO_CD # Auto CD when a command is a directory name
-setopt CD_SILENT # Never print directory when CD -
-setopt CORRECT # Try to correct command spelling
-setopt CORRECT_ALL # Try to correct argument spelling
-setopt EXTENDED_HISTORY # Save command timestamps
-setopt HIST_EXPIRE_DUPS_FIRST # Remove oldest duplicates first when trimming
-setopt HIST_NO_STORE # Remove history command from list when invoked
+# options (man zshoptions)
+setopt NO_CASE_GLOB # case-insensitive glob
+setopt AUTO_CD # auto cd when a command is a directory name
+setopt CD_SILENT # never print directory when cd -
+setopt CORRECT # try to correct command spelling
+setopt CORRECT_ALL # try to correct argument spelling
+setopt EXTENDED_HISTORY # save command timestamps
+setopt HIST_EXPIRE_DUPS_FIRST # remove oldest duplicates first when trimming
+setopt HIST_NO_STORE # remove history command from list when invoked
 unsetopt BEEP
 
-# Aliases
+# aliases
 alias df='df -h'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
 alias gll='git log --stat -n 1'
-alias hist='fc -l -t "$HISTTIMEFORMAT"' # Display formatted command history
+alias hist='fc -l -t "$HISTTIMEFORMAT"' # display formatted command history
 alias ip='ipconfig getifaddr en0'
 alias k=kubectl
 alias la='gls -AFho --color --group-directories-first'
@@ -72,7 +79,7 @@ alias rm=trash
 alias serve=http-server
 alias trail='<<<${(F)path}'
 
-# Fast travel
+# fast travel
 alias dtfs='cd $DOTFILES && nvim .'
 alias conf='nvim $DOTFILES/tmux.conf $NVIM_CONFIG/colorscheme.lua $DOTFILES/config/alacritty/alacritty.yml'
 alias study='cd $HOME/Study && clear && ls'
@@ -86,18 +93,18 @@ else
     export CLR_ERROR="#c1002f"
 fi
 
-# Custom prompt
+# custom prompt
 if [ -n "$TMUX" ]; then
-    # Hostname removed as displayed in tmux status line
+    # hostname removed as displayed in tmux status line
     PROMPT="%(?..%F{$CLR_ERROR}[%?] %f)%2~ %# "
 else
     PROMPT="%(?.%F{$CLR_COMMENT}%m%f.%F{$CLR_ERROR}[%?]%f %F{$CLR_COMMENT}%m%f) %2~ %# "
 fi
 
-# Prepend new-line to prompt
+# prepend new-line to prompt
 precmd() $funcstack[1]() echo
 
-# Git prompt integration
+# git prompt integration
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
@@ -106,10 +113,10 @@ RPROMPT=\$vcs_info_msg_0_
 zstyle ':vcs_info:git:*' formats "%F{$CLR_COMMENT} %b%f" # '%F{245}%r (%b)%f'
 zstyle ':vcs_info:*' enable git
 
-# Remove $PATH duplicates
+# remove $PATH duplicates
 typeset -U path
 
-# Functions
+# functions
 function mkcd() {
   mkdir -p "$@" && cd "$_";
 }
@@ -124,18 +131,18 @@ function tmx () {
     # -d to prevent current window from changing
     tmux new-window -d -n Server
     # -d to detach any other client (which there shouldn't be,
-    # Since you just created the session).
+    # since you just created the session).
     tmux attach-session -d -t "${PWD##*/}"
 }
 
-# TODO: Uses three almost identical copies of alacritty config, find a
-#       better way to do this. Maybe create a file from a common config
+# TODO: uses three almost identical copies of alacritty config, find a
+#       better way to do this. maybe create a file from a common config
 #       file and seperate dark / light theme config files
-# TODO: find a way to update PROMPT colours without resourcing zshrc and
+# TODO: find a way to update prompt colours without resourcing zshrc and
 #       infinite looping
 function theme () {
     if defaults read -g AppleInterfaceStyle &>/dev/null; then
-        # Dark mode
+        # dark mode
         if grep "driftLight" $DOTFILES/tmux.conf; then
             sed -i '' -E 's/driftLight/driftDark/g' $DOTFILES/tmux.conf
             sed -i '' -E 's/drift-light/drift-dark/g' $NVIM_CONFIG/colorscheme.lua
@@ -143,7 +150,7 @@ function theme () {
 
         fi
     else
-        # Light mode
+        # light mode
         if grep "driftDark" $DOTFILES/tmux.conf; then
             sed -i '' -E 's/driftDark/driftLight/g' $DOTFILES/tmux.conf
             sed -i '' -E 's/drift-dark/drift-light/g' $NVIM_CONFIG/colorscheme.lua
@@ -157,10 +164,10 @@ function theme () {
     fi
 }
 
-# Setup theme
+# setup theme
 theme
 
-# Plugins
+# plugins
 source $ZPLUG_HOME/init.zsh
 
 zplug 'le0me55i/zsh-extract'
@@ -179,7 +186,7 @@ fi
 
 zplug load
 
-# Other
+# other
 fpath=(~/.zsh $fpath ~/.zfunc)
 autoload -Uz compinit
 compinit -u
@@ -190,11 +197,11 @@ bindkey '^T' autosuggest-toggle  # ctrl+t
 bindkey '^@' autosuggest-execute # ctrl+space
 bindkey '^N' expand-or-complete # ctrl+n
 
-# K8s completion
+# k8s completion
 source $DOTFILES/util/kubectl_completion
 compdef __start_kubectl k # completion with k alias
 
-# Heroku completion
+# heroku completion
 if exists brew; then
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
