@@ -2,7 +2,7 @@
 
 echo -e "\n<<< Setting Alacritty terminfo >>>\n"
 
-# to make sure Alacritty works correctly, either the 'alacritty' or
+# to make sure alacritty works correctly, either the 'alacritty' or
 # 'alacritty-direct' terminfo must be used:
 # https://github.com/alacritty/alacritty/blob/master/INSTALL.md#post-build
 if infocmp alacritty >/dev/null; then
