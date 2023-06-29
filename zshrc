@@ -29,6 +29,7 @@ if exists brew; then
 
     alias bbd='brew bundle dump --force'
     alias bbl='brew bundle list --all | less'
+    alias tree="tree -a -C -F -I '.git|vendor' --gitignore"
     alias vi="$HOMEBREW_PREFIX/bin/nvim"
     alias vim="$HOMEBREW_PREFIX/bin/nvim"
 else
@@ -83,6 +84,7 @@ alias trail='<<<${(F)path}'
 alias dtfs='cd $DOTFILES && nvim .'
 alias conf='nvim $DOTFILES/tmux.conf $NVIM_CONFIG/colorscheme.lua $DOTFILES/config/alacritty/alacritty.yml'
 alias study='cd $HOME/Study && clear && ls'
+alias temp='cd $HOME/Study/temp && clear && ls'
 alias work='cd $HOME/Work && clear && ls'
 
 if defaults read -g AppleInterfaceStyle &>/dev/null; then
