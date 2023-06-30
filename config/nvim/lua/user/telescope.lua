@@ -18,6 +18,7 @@ telescope.setup({
 				-- i is insert mode
 				["<esc>"] = actions.close,
 				["<C-u>"] = false,
+				["<C-y>"] = actions.file_edit,
 			},
 			n = {}, -- n is normal mode
 		},
