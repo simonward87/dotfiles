@@ -194,10 +194,9 @@ autoload -Uz compinit
 compinit -u
 
 # command completion bindings
-bindkey '^Y' autosuggest-accept  # ctrl+y
+bindkey '^N' autosuggest-accept  # ctrl+n
 bindkey '^T' autosuggest-toggle  # ctrl+t
-bindkey '^@' autosuggest-execute # ctrl+space
-bindkey '^N' expand-or-complete # ctrl+n
+bindkey '^Y' autosuggest-execute # ctrl+y
 
 # k8s completion
 source $DOTFILES/util/kubectl_completion
