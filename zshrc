@@ -144,7 +144,6 @@ function tmx () {
 #       infinite looping
 function theme () {
     if defaults read -g AppleInterfaceStyle &>/dev/null; then
-        # dark mode
         if grep "driftLight" $DOTFILES/tmux.conf; then
             sed -i '' -E 's/driftLight/driftDark/g' $DOTFILES/tmux.conf
             sed -i '' -E 's/drift-light/drift-dark/g' $NVIM_CONFIG/colorscheme.lua
@@ -152,7 +151,6 @@ function theme () {
 
         fi
     else
-        # light mode
         if grep "driftDark" $DOTFILES/tmux.conf; then
             sed -i '' -E 's/driftDark/driftLight/g' $DOTFILES/tmux.conf
             sed -i '' -E 's/drift-dark/drift-light/g' $NVIM_CONFIG/colorscheme.lua
@@ -162,7 +160,7 @@ function theme () {
 
     if [ -n "$TMUX" ]; then
         tmux source-file ~/.tmux.conf
-        clear
+        clear -x
     fi
 }
 
