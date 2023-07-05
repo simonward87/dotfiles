@@ -479,7 +479,7 @@ colors:
     yellow: "#d0ffbe"
     blue: "#bfaaff"
     magenta: "#ff8cf4"
-    cyan: "#84ccff"
+    cyan: "#9cd6ff"
     white: "#c8d1d8"
   bright:
     black: "#1f3344"
@@ -488,7 +488,7 @@ colors:
     yellow: "#e0ffd4"
     blue: "#d4c6ff"
     magenta: "#ffb2f8"
-    cyan: "#adddff"
+    cyan: "#bde4ff"
     white: "#ffffff"
 
 # # Colors (Drift Dark)
@@ -506,7 +506,7 @@ colors:
 #     yellow: "#d0ffbe"
 #     blue: "#bfaaff"
 #     magenta: "#ff8cf4"
-#     cyan: "#84ccff"
+#     cyan: "#9cd6ff"
 #     white: "#CCD4DA"
 #   bright:
 #     black: "#1f3344"
@@ -515,7 +515,7 @@ colors:
 #     yellow: "#e0ffd4"
 #     blue: "#d4c6ff"
 #     magenta: "#ffb2f8"
-#     cyan: "#adddff"
+#     cyan: "#bde4ff"
 #     white: "#ffffff"
 
 # # Colors (Drift Light)
