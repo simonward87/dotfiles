@@ -25,7 +25,7 @@ if exists brew; then
     export PATH="$HOMEBREW_PREFIX/opt/postgresql@15/bin:$PATH"
     export PATH="$PATH:$GOBIN"
     export PATH="$PATH:$N_PREFIX/bin"
-    export PATH="$PATH:$HOME/Study/bin"
+    export PATH="$PATH:$HOME/Work/bin"
 
     alias bbd='brew bundle dump --force'
     alias bbl='brew bundle list --all | less'
@@ -84,7 +84,7 @@ alias trail='<<<${(F)path}'
 alias dtfs='cd $DOTFILES && nvim .'
 alias conf='nvim $DOTFILES/tmux.conf $NVIM_CONFIG/colorscheme.lua $DOTFILES/config/alacritty/alacritty.yml'
 alias study='cd $HOME/Study && clear && ls'
-alias temp='cd $HOME/Study/temp && clear && ls'
+alias temp='vi $HOME/Study/notes/temp'
 alias work='cd $HOME/Work && clear && ls'
 
 if defaults read -g AppleInterfaceStyle &>/dev/null; then
