@@ -111,3 +111,7 @@ vim.cmd("iabbrev @@ 39803787+simonward87@users.noreply.github.com")
 vim.cmd("iabbrev reutrn return")
 vim.cmd("iabbrev teh the")
 vim.cmd("iabbrev seperate separate")
+
+-- Hide IncSearch on entering INSERT (Paired autocmds: PCLoFRvAUuTj)
+map("i", "<Esc>", "<Esc>:nohlsearch<bar>set nolazyredraw<CR>")
+map("i", "<C-c>", "<C-c>:nohlsearch<bar>set nolazyredraw<CR>")

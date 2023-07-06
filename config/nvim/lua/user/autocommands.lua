@@ -51,6 +51,22 @@ autocmd("TextYankPost", {
 	end,
 })
 
+-- Hide IncSearch on entering INSERT (Paired keymaps: PCLoFRvAUuTj)
+autocmd("InsertEnter", {
+	group = augroup("IncSearchHideOnInsert", { clear = true }),
+	pattern = "*",
+	callback = function()
+		vim.cmd("setlocal nohlsearch")
+	end,
+})
+autocmd("InsertLeave", {
+	group = augroup("IncSearchShowOnEsc", { clear = true }),
+	pattern = "*",
+	callback = function()
+		vim.cmd("setlocal hlsearch lazyredraw")
+	end,
+})
+
 -- clear command line output after CursorHold timeout
 -- autocmd("CursorHold", {
 -- 	pattern = "*",
