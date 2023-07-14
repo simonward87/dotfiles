@@ -83,9 +83,9 @@ alias trail='<<<${(F)path}'
 # fast travel
 alias dtfs='cd $DOTFILES && nvim .'
 alias conf='nvim $DOTFILES/tmux.conf $NVIM_CONFIG/colorscheme.lua $DOTFILES/config/alacritty/alacritty.yml'
-alias study='cd $HOME/Study && clear && ls'
+alias study='cd $HOME/Study && clear && tree -d -L 2'
 alias temp='vi $HOME/Study/notes/temp'
-alias work='cd $HOME/Work && clear && ls'
+alias work='cd $HOME/Work && clear && tree -d -L 2'
 
 if defaults read -g AppleInterfaceStyle &>/dev/null; then
     export CLR_COMMENT="#91A2B0"
