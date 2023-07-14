@@ -103,6 +103,8 @@ map("v", "<leader>cb", "<esc>`>a**<esc>`<<esc>i**<esc>`><esc>ll") -- markdown fo
 
 -- go convenience maps
 map("n", "<leader>ct", 'vi}:norm A `json:""`<CR>vi}:lua vim.lsp.buf.format()<CR>`<$hi') -- add empty json struct tags to all fields inside struct under cursor, and enter INSERT
+map("n", "<leader>gr", ":!go run .<CR>") -- run module
+map("n", "<leader>gR", ":!go run %:p<CR>") -- run file
 
 -- convenience abbreviations
 vim.cmd("iabbrev @@ 39803787+simonward87@users.noreply.github.com")

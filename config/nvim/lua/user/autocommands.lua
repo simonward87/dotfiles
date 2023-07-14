@@ -67,6 +67,15 @@ autocmd("InsertLeave", {
 	end,
 })
 
+-- Tidy Go imports on save
+autocmd("BufWritePost", {
+	group = augroup("TidyGoImports", { clear = true }),
+	pattern = "*.go",
+	callback = function()
+		vim.cmd('silent exe "!goimports -w %:p"')
+	end,
+})
+
 -- clear command line output after CursorHold timeout
 -- autocmd("CursorHold", {
 -- 	pattern = "*",
