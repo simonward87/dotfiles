@@ -14,29 +14,27 @@ else
   n lts
 fi
 
-# install global packages
-npm i -g @prisma/language-server
-npm i -g @tailwindcss/language-server
-npm i -g autocannon
-npm i -g dockerfile-language-server-nodejs
-npm i -g eslint_d
-npm i -g firebase-tools
-npm i -g graphql-language-service-cli
-npm i -g http-server
-npm i -g json-server
-npm i -g neovim
-npm i -g nginxbeautifier
-npm i -g prettier
-npm i -g prettier-plugin-astro
-npm i -g prettier-plugin-svelte
-npm i -g prettier-plugin-tailwindcss
-npm i -g surge
-npm i -g svelte-language-server
-npm i -g trash-cli
-npm i -g typescript
-npm i -g typescript-language-server
-npm i -g vscode-langservers-extracted
-npm i -g yaml-language-server
+packages=(
+    autocannon
+    firebase-tools
+    http-server
+    json-server
+    neovim
+    nginxbeautifier
+    prettier
+    prettier-plugin-astro
+    prettier-plugin-svelte
+    prettier-plugin-tailwindcss
+    surge
+    trash-cli
+    typescript
+)
 
-echo "Global NPM Packages Installed:"
+# install global packages
+for package in ${packages[@]}
+do
+    npm install --global "$package"
+done
+
+echo "Global NPM packages installed:"
 npm list --global --depth=0
