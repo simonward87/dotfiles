@@ -5,9 +5,11 @@ end
 
 bufferline.setup({
 	options = {
+		-- always_show_bufferline = false, -- only visibible with 2 or more buffers
 		indicator = {
-			icon = " ",
-			style = "icon",
+			-- icon = " ",
+			-- style = "icon",
+			style = "none",
 		},
 		max_name_length = 30,
 		max_prefix_length = 30, -- prefix used when a buffer is de-duplicated
