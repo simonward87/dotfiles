@@ -36,7 +36,6 @@ brew "httpie"
 brew "hugo"
 brew "julia"
 brew "less"
-brew "luajit", args: ["HEAD"]
 brew "luarocks"
 brew "make"
 brew "mas"

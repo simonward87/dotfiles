@@ -65,6 +65,7 @@ setopt HIST_NO_STORE # remove history command from list when invoked
 unsetopt BEEP
 
 # aliases
+alias cat=gcat
 alias df='df -h'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'

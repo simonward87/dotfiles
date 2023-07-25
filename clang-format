@@ -1,0 +1,13 @@
+# User clang-format defaults, used by null-ls for formatting C
+BasedOnStyle: Chromium
+
+UseTab: Never
+IndentWidth: 4
+IndentCaseLabels: false
+ColumnLimit: 100
+
+BreakBeforeBraces: Allman
+AllowShortIfStatementsOnASingleLine: Never
+SortIncludes: true
+
+SpaceBeforeCpp11BracedList: true
