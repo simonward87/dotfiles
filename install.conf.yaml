@@ -21,6 +21,7 @@
     ~/.clang-format:
     ~/.gitconfig:
     ~/.psqlrc:
+    ~/.ripgreprc:
     ~/.tmux.conf:
     ~/.zprofile:
     ~/.zshenv:
