@@ -19,6 +19,7 @@ if exists brew; then
     export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
     export HOMEBREW_NO_ENV_HINTS=1
     export PGDATA="$HOMEBREW_PREFIX/var/postgresql@15"
+    export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
     export ZPLUG_HOME="$HOMEBREW_PREFIX/opt/zplug"
 
     export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
@@ -30,8 +31,8 @@ if exists brew; then
     alias bbd='brew bundle dump --force'
     alias bbl='brew bundle list --all | less'
     alias tree="tree -a -C -F -I '.git|vendor' --gitignore"
-    alias vi="$HOMEBREW_PREFIX/bin/nvim"
-    alias vim="$HOMEBREW_PREFIX/bin/nvim"
+    alias vi=$EDITOR
+    alias vim=$EDITOR
 else
     export EDITOR=/usr/bin/vi
     export PSQL_EDITOR=$EDITOR
@@ -53,15 +54,16 @@ export LIBRARY_PATH="/usr/local/lib"
 # use regular zsh history search binding in tmux
 bindkey '^R' history-incremental-search-backward
 
-# options (man zshoptions)
-setopt NO_CASE_GLOB # case-insensitive glob
+# options (https://zsh.sourceforge.io/Doc/Release/Options.html)
 setopt AUTO_CD # auto cd when a command is a directory name
 setopt CD_SILENT # never print directory when cd -
 setopt CORRECT # try to correct command spelling
 setopt CORRECT_ALL # try to correct argument spelling
 setopt EXTENDED_HISTORY # save command timestamps
+setopt HIST_IGNORE_DUPS # don't add duplicate commands to history
 setopt HIST_EXPIRE_DUPS_FIRST # remove oldest duplicates first when trimming
 setopt HIST_NO_STORE # remove history command from list when invoked
+setopt NO_CASE_GLOB # case-insensitive glob
 unsetopt BEEP
 
 # aliases
@@ -78,6 +80,7 @@ alias la='gls -AFho --color --group-directories-first'
 alias ll='gls -Fho --color --group-directories-first'
 alias ls='gls -1F --color --group-directories-first'
 alias rm=trash
+alias sed=gsed
 alias serve=http-server
 alias trail='<<<${(F)path}'
 
@@ -85,7 +88,7 @@ alias trail='<<<${(F)path}'
 alias dtfs='cd $DOTFILES && nvim .'
 alias conf='nvim $DOTFILES/tmux.conf $NVIM_CONFIG/colorscheme.lua $DOTFILES/config/alacritty/alacritty.yml'
 alias study='cd $HOME/Study && clear && tree -d -L 2'
-alias temp='vi $HOME/Study/notes/temp'
+alias temp='nvim $HOME/Study/notes/temp'
 alias work='cd $HOME/Work && clear && tree -d -L 2'
 
 if defaults read -g AppleInterfaceStyle &>/dev/null; then
@@ -146,15 +149,15 @@ function tmx () {
 function theme () {
     if defaults read -g AppleInterfaceStyle &>/dev/null; then
         if grep "driftLight" $DOTFILES/tmux.conf; then
-            sed -i '' -E 's/driftLight/driftDark/g' $DOTFILES/tmux.conf
-            sed -i '' -E 's/drift-light/drift-dark/g' $NVIM_CONFIG/colorscheme.lua
+            sed -i -E 's/driftLight/driftDark/g' $DOTFILES/tmux.conf
+            sed -i -E 's/drift-light/drift-dark/g' $NVIM_CONFIG/colorscheme.lua
             cp $DOTFILES/config/alacritty/dark.yml $DOTFILES/config/alacritty/alacritty.yml
 
         fi
     else
         if grep "driftDark" $DOTFILES/tmux.conf; then
-            sed -i '' -E 's/driftDark/driftLight/g' $DOTFILES/tmux.conf
-            sed -i '' -E 's/drift-dark/drift-light/g' $NVIM_CONFIG/colorscheme.lua
+            sed -i -E 's/driftDark/driftLight/g' $DOTFILES/tmux.conf
+            sed -i -E 's/drift-dark/drift-light/g' $NVIM_CONFIG/colorscheme.lua
             cp $DOTFILES/config/alacritty/light.yml $DOTFILES/config/alacritty/alacritty.yml
         fi
     fi
