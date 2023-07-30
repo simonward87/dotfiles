@@ -77,9 +77,9 @@ autocmd("BufWritePost", {
 })
 
 -- clear command line output after CursorHold timeout
--- autocmd("CursorHold", {
--- 	pattern = "*",
--- 	callback = function()
--- 		print(" ")
--- 	end,
--- })
+autocmd("CursorHold", {
+	pattern = "*",
+	callback = function()
+		print(" ")
+	end,
+})
