@@ -38,3 +38,4 @@
     - command: ./scripts/setup_macos.zsh
     - command: ./scripts/setup_rust.zsh
     - command: ./scripts/setup_alacritty.zsh
+    - command: ./scripts/setup_go.zsh
