@@ -8,6 +8,7 @@ local formatting = null_ls.builtins.formatting
 null_ls.setup({
 	debug = false,
 	sources = {
+		formatting.clang_format,
 		formatting.gofmt,
 		formatting.nginx_beautifier,
 		formatting.prettier.with({

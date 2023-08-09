@@ -1,6 +1,7 @@
 local servers = {
 	"astro",
 	"bashls",
+	"clangd",
 	"cssls",
 	"cssmodules_ls",
 	"denols",
@@ -9,16 +10,19 @@ local servers = {
 	"graphql",
 	"html",
 	"jsonls",
+	"lua_ls",
 	"marksman",
 	"prismals",
 	"pyright",
 	"rust_analyzer",
-	"lua_ls",
 	"svelte",
 	"tailwindcss",
 	"tsserver",
 	"yamlls",
 }
+
+-- TODO
+-- Currently only tracking lsp servers — add DAP, linters, and formatters too
 
 require("mason").setup({
 	ui = {
