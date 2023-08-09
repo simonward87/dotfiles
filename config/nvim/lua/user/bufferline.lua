@@ -5,12 +5,21 @@ end
 
 bufferline.setup({
 	options = {
-		always_show_bufferline = false, -- only visibible with 2 or more buffers
+		-- always_show_bufferline = false, -- only visibible with 2 or more buffers
 		indicator = {
 			style = "none",
 		},
 		max_name_length = 30,
 		max_prefix_length = 30, -- prefix used when a buffer is de-duplicated
+		offsets = {
+			{
+				filetype = "NvimTree",
+				-- text = "",
+				highlight = "Comment",
+				separator = true,
+				text_align = "left",
+			},
+		},
 		tab_size = 0,
 		show_buffer_icons = true,
 		show_buffer_close_icons = false,
@@ -32,10 +41,6 @@ bufferline.setup({
 			},
 		},
 		tab = {
-			fg = {
-				attribute = "fg",
-				highlight = "Normal",
-			},
 			bg = {
 				attribute = "bg",
 				highlight = "Normal",
@@ -51,10 +56,110 @@ bufferline.setup({
 				highlight = "Normal",
 			},
 		},
-		trunc_marker = { -- arrow and number visible when buffers overflow viewport
+		tab_separator = {
 			fg = {
 				attribute = "fg",
-				highlight = "LineNr",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		tab_separator_selected = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		tab_close = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		close_button = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		close_button_visible = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		close_button_selected = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		buffer_visible = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		buffer_selected = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		numbers = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		numbers_visible = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		numbers_selected = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
 			},
 			bg = {
 				attribute = "bg",
@@ -67,7 +172,19 @@ bufferline.setup({
 				highlight = "Normal",
 			},
 		},
-		duplicate_selected = { -- leading filepath on duplicate filenames
+		modified_visible = {
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		modified_selected = {
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		duplicate_selected = {
 			fg = {
 				attribute = "fg",
 				highlight = "Normal",
@@ -78,7 +195,7 @@ bufferline.setup({
 			},
 			italic = false,
 		},
-		duplicate_visible = { -- leading filepath on duplicate filenames
+		duplicate_visible = {
 			fg = {
 				attribute = "fg",
 				highlight = "LineNr",
@@ -89,7 +206,7 @@ bufferline.setup({
 			},
 			italic = false,
 		},
-		duplicate = { -- leading filepath on duplicate filenames
+		duplicate = {
 			fg = {
 				attribute = "fg",
 				highlight = "LineNr",
@@ -99,6 +216,106 @@ bufferline.setup({
 				highlight = "Normal",
 			},
 			italic = false,
+		},
+		separator_selected = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		separator_visible = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		separator = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		indicator_visible = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		indicator_selected = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		pick_selected = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		pick_visible = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		pick = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		offset_separator = {
+			fg = {
+				attribute = "fg",
+				highlight = "Normal",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
+		},
+		trunc_marker = {
+			fg = {
+				attribute = "fg",
+				highlight = "LineNr",
+			},
+			bg = {
+				attribute = "bg",
+				highlight = "Normal",
+			},
 		},
 	},
 })
