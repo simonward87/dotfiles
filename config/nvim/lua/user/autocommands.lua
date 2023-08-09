@@ -10,6 +10,7 @@ vim.cmd("autocmd FileType lua setlocal noexpandtab")
 vim.cmd("autocmd FileType make setlocal noexpandtab softtabstop=0 shiftwidth=8 tabstop=8")
 vim.cmd("autocmd FileType markdown setlocal spell")
 vim.cmd("autocmd FileType prisma setlocal cindent")
+vim.cmd("command! -nargs=1 -complete=help H h <args> | only") -- :H <topic> for full screen help
 
 local frontend_filetypes = {
 	"astro",
@@ -78,6 +79,7 @@ autocmd("BufWritePost", {
 
 -- clear command line output after CursorHold timeout
 autocmd("CursorHold", {
+	group = augroup("ClearCmdAfterTimeout", { clear = true }),
 	pattern = "*",
 	callback = function()
 		print(" ")
