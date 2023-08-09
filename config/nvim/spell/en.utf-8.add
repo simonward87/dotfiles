@@ -158,3 +158,5 @@ dotenv
 httprouter
 env
 mutex
+XSS
+bool
