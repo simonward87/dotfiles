@@ -105,14 +105,17 @@ map("v", "<leader>cb", "<esc>`>a**<esc>`<<esc>i**<esc>`><esc>ll") -- Markdown fo
 map("n", "<leader>ct", 'vi}:norm A `json:""`<CR>vi}:lua vim.lsp.buf.format()<CR>`<$hi') -- Add empty json struct tags to all fields inside struct under cursor, and enter INSERT
 map("n", "<leader>gr", ":!go run .<CR>") -- Run module
 map("n", "<leader>gR", ":!go run %:p<CR>") -- Run file
+map("n", "<leader>gt", ":!go test .<CR>") -- Test module
+map("n", "<leader>gT", ":!go test %:p<CR>") -- Test file
 
 -- Convenience abbreviations
 vim.cmd("iabbrev @@ 39803787+simonward87@users.noreply.github.com")
 
 -- Spell abbreviations
+vim.cmd("iabbrev fucntion function")
 vim.cmd("iabbrev reutrn return")
-vim.cmd("iabbrev teh the")
 vim.cmd("iabbrev seperate separate")
+vim.cmd("iabbrev teh the")
 
 -- Hide IncSearch on entering INSERT (Paired autocmds: PCLoFRvAUuTj)
 map("i", "<Esc>", "<Esc>:nohlsearch<bar>set nolazyredraw<CR>")
