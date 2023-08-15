@@ -12,7 +12,7 @@ vim.cmd("autocmd FileType markdown setlocal spell")
 vim.cmd("autocmd FileType prisma setlocal cindent")
 vim.cmd("command! -nargs=1 -complete=help H h <args> | only") -- :H <topic> for full screen help
 
-local frontend_filetypes = {
+local filetypes = {
 	"astro",
 	"css",
 	"graphql",
@@ -33,8 +33,8 @@ local frontend_filetypes = {
 	"yaml",
 }
 
-for i = 1, #frontend_filetypes do
-	vim.cmd("au FileType " .. frontend_filetypes[i] .. " setlocal softtabstop=2 shiftwidth=2 tabstop=2")
+for i = 1, #filetypes do
+	vim.cmd("au FileType " .. filetypes[i] .. " setlocal softtabstop=2 shiftwidth=2 tabstop=2")
 end
 
 local augroup = vim.api.nvim_create_augroup
