@@ -6,7 +6,7 @@ IndentWidth: 4
 IndentCaseLabels: false
 ColumnLimit: 100
 
-BreakBeforeBraces: Allman
+# BreakBeforeBraces: Allman
 AllowShortIfStatementsOnASingleLine: Never
 SortIncludes: true
 
