@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-echo -e "\n<<< Starting Node Setup >>>\n"
+echo "\n<<< Starting Node Setup >>>\n"
 
 # node versions are managed with `n`, which is in the Brewfile. See
 # `zshenv` for the setting of the `N_PREFIX` variable, making it available

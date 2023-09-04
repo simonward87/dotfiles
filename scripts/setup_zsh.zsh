@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-echo -e "\n<<< Starting ZSH Setup >>>\n"
+echo "\n<<< Starting ZSH Setup >>>\n"
 
 # zsh installation unnecessary; it's in the Brewfile.
 
@@ -32,4 +32,4 @@ else
   # sudo ln -sfv /opt/homebrew/bin/zsh /private/var/select/sh
 fi
 
-echo -e '\033[1m\n<<< Restart shell to ensure everything is correctly sourced >>>\n\033[0m'
+echo '\033[1m\n<<< Restart shell to ensure everything is correctly sourced >>>\n\033[0m'

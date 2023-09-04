@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-echo -e "\n<<< Starting Rust Setup >>>\n"
+echo "\n<<< Starting Rust Setup >>>\n"
 
 if exists rustc; then
   echo "rustc exists, skipping install"

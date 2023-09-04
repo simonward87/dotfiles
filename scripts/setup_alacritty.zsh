@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-echo -e "\n<<< Setting Alacritty terminfo >>>\n"
+echo "\n<<< Setting Alacritty terminfo >>>\n"
 
 # to make sure alacritty works correctly, either the 'alacritty' or
 # 'alacritty-direct' terminfo must be used:

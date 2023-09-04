@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-echo -e "\n<<< Installing Go CLI Tools >>>\n"
+echo "\n<<< Installing Go CLI Tools >>>\n"
 
 
 if exists go; then
