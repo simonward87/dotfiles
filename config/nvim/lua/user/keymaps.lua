@@ -120,3 +120,6 @@ vim.cmd("iabbrev teh the")
 -- Hide IncSearch on entering INSERT (Paired autocmds: PCLoFRvAUuTj)
 map("i", "<Esc>", "<Esc>:nohlsearch<bar>set nolazyredraw<CR>")
 map("i", "<C-c>", "<C-c>:nohlsearch<bar>set nolazyredraw<CR>")
+
+-- Clear cmd output
+map("n", "<Esc>", [[:echo " "<CR>]])

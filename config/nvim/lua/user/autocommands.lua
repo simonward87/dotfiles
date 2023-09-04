@@ -78,10 +78,10 @@ autocmd("BufWritePost", {
 })
 
 -- clear command line output after CursorHold timeout
-autocmd("CursorHold", {
-	group = augroup("ClearCmdAfterTimeout", { clear = true }),
-	pattern = "*",
-	callback = function()
-		print(" ")
-	end,
-})
+-- autocmd("CursorHold", {
+-- 	group = augroup("ClearCmdAfterTimeout", { clear = true }),
+-- 	pattern = "*",
+-- 	callback = function()
+-- 		print(" ")
+-- 	end,
+-- })
