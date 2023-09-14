@@ -28,6 +28,11 @@ if exists brew; then
     export PATH="$PATH:$N_PREFIX/bin"
     export PATH="$PATH:$HOME/Work/bin"
 
+    unalias run-help
+    autoload run-help
+    HELPDIR=$(command brew --prefix)/share/zsh/help
+    alias help=run-help
+
     alias bbd='brew bundle dump --force'
     alias bbl='brew bundle list --all | less'
     alias tree="tree -a -C -F -I '.git|vendor' --gitignore"
@@ -211,3 +216,6 @@ if exists brew; then
     autoload -Uz compinit
     compinit
 fi
+
+# bun completion
+[ -s "/opt/homebrew/Cellar/bun/1.0.0/share/zsh/site-functions/_bun" ] && source "/opt/homebrew/Cellar/bun/1.0.0/share/zsh/site-functions/_bun"

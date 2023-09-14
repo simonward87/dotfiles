@@ -6,6 +6,7 @@ tap "homebrew/cask-versions"
 tap "homebrew/services"
 tap "mongodb/brew"
 tap "osx-cross/avr"
+tap "oven-sh/bun"
 tap "tinygo-org/tools"
 brew "xz"
 brew "arduino-cli"
@@ -73,6 +74,7 @@ brew "armmbed/formulae/arm-none-eabi-gcc"
 brew "heroku/brew/heroku"
 brew "mongodb/brew/mongodb-community"
 brew "osx-cross/avr/avr-gcc@9"
+brew "oven-sh/bun/bun"
 brew "tinygo-org/tools/tinygo"
 cask "alacritty"
 cask "anki"
@@ -114,6 +116,6 @@ cask "qbittorrent"
 cask "raspberry-pi-imager"
 cask "rectangle"
 cask "skype"
-mas "Kindle", id: 405399194
+mas "Kindle Classic", id: 405399194
 mas "Logic Pro", id: 634148309
 mas "Todoist", id: 585829637
