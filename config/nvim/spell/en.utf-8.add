@@ -160,3 +160,5 @@ env
 mutex
 XSS
 bool
+HTMX
+CDN
