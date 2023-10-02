@@ -41,7 +41,7 @@ brew "less"
 brew "luarocks"
 brew "make"
 brew "mas"
-brew "mysql"
+brew "mysql", restart_service: true
 brew "n"
 brew "ncdu"
 brew "neofetch"
@@ -116,6 +116,6 @@ cask "qbittorrent"
 cask "raspberry-pi-imager"
 cask "rectangle"
 cask "skype"
-mas "Kindle Classic", id: 405399194
+mas "Kindle", id: 302584613
 mas "Logic Pro", id: 634148309
 mas "Todoist", id: 585829637
