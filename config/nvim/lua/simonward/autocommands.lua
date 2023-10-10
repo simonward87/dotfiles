@@ -1,14 +1,14 @@
--- go.mod files incorrectly read as 'rapid' — temporary fix:
-vim.cmd("autocmd BufRead,BufNewFile go.mod setfiletype gomod")
+vim.cmd("autocmd BufRead,BufNewFile go.mod setfiletype gomod") -- go.mod files incorrectly matched by default ('rapid')
+vim.cmd("autocmd BufRead,BufNewFile Caddyfile setfiletype caddyfile")
 vim.cmd("autocmd BufRead,BufNewFile Dockerfile.dev setfiletype dockerfile")
 vim.cmd("autocmd BufRead,BufNewFile *.gohtml setfiletype html")
-vim.cmd("autocmd BufRead,BufNewFile *.tmpl setfiletype html")
 vim.cmd("autocmd BufRead,BufNewFile zprofile setfiletype zsh")
+vim.cmd("autocmd FileType caddyfile setlocal noexpandtab softtabstop=0 shiftwidth=4 tabstop=4")
 vim.cmd("autocmd FileType gitcommit setlocal wrap spell textwidth=72")
 vim.cmd("autocmd FileType go setlocal noexpandtab")
 vim.cmd("autocmd FileType lua setlocal noexpandtab")
 vim.cmd("autocmd FileType make setlocal noexpandtab softtabstop=0 shiftwidth=8 tabstop=8")
-vim.cmd("autocmd FileType markdown setlocal spell")
+vim.cmd("autocmd FileType markdown setlocal wrap linebreak spell")
 vim.cmd("autocmd FileType prisma setlocal cindent")
 vim.cmd("command! -nargs=1 -complete=help H h <args> | only") -- :H <topic> for full screen help
 
@@ -22,7 +22,6 @@ local filetypes = {
 	"javascript.jsx",
 	"json",
 	"less",
-	"markdown",
 	"prisma",
 	"scss",
 	"svelte",
@@ -78,10 +77,10 @@ autocmd("BufWritePost", {
 })
 
 -- clear command line output after CursorHold timeout
--- autocmd("CursorHold", {
--- 	group = augroup("ClearCmdAfterTimeout", { clear = true }),
--- 	pattern = "*",
--- 	callback = function()
--- 		print(" ")
--- 	end,
--- })
+autocmd("CursorHold", {
+	group = augroup("ClearCmdAfterTimeout", { clear = true }),
+	pattern = "*",
+	callback = function()
+		print(" ")
+	end,
+})

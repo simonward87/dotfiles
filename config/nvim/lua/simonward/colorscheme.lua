@@ -1,6 +1,6 @@
 local c = "drift-lighter"
 
-local custom_opts_loaded, _ = pcall(require, "user." .. c)
+local custom_opts_loaded, _ = pcall(require, "simonward." .. c)
 
 if custom_opts_loaded then
 	return

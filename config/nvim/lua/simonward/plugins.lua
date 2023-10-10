@@ -31,10 +31,18 @@ end
 
 -- use popup window
 packer.init({
+	-- auto_clean removes unused plugins on sync. Switched off while
+	-- developing plugins, as symlinking into the plugin directory
+	-- for convenience (to get all latest changes) — it's annoying
+	-- getting prompted to remove them on every packer sync. Packer dir:
+	-- ~/.local/share/nvim/site/pack/packer/start
+	auto_clean = false,
+
 	display = {
 		open_fn = function()
 			return require("packer.util").float({ border = "solid" })
 		end,
+
 		prompt_border = "solid",
 	},
 })
@@ -66,14 +74,21 @@ return packer.startup(function(use)
 	})
 	use("nvim-treesitter/nvim-treesitter-context") -- pin code context (current block)
 	use("nvim-treesitter/playground") -- view treesitter info
+	use({
+		"olexsmir/gopher.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+		},
+	})
 	use("tpope/vim-capslock") -- software capslock
 	use("tpope/vim-commentary") -- comment stuff out
 	use("tpope/vim-fugitive") -- git wrapper
 	use("tpope/vim-surround") -- streamline surroundings workflow
 	use("wbthomason/packer.nvim") -- Let packer manage itself
-	use("windwp/nvim-autopairs") -- autopairs with cmp and treesitter integration
+	-- use("windwp/nvim-autopairs") -- autopairs with cmp and treesitter integration
 	use("windwp/nvim-ts-autotag") -- auto-close & auto-rename html tags
-	-- use("simonward87/nvim-autopairs")
+	use("simonward87/nvim-autopairs")
 
 	-- colorschemes
 	use("axvr/photon.vim")
@@ -90,7 +105,7 @@ return packer.startup(function(use)
 	})
 	use("rebelot/kanagawa.nvim")
 	use("sainnhe/gruvbox-material")
-	use("simonward87/drift.nvim")
+	-- use("simonward87/drift.nvim")
 
 	-- completion
 	use("hrsh7th/cmp-buffer") -- buffer completions

@@ -86,6 +86,10 @@ map("n", "<c-t>", "<cmd>Telescope live_grep<CR>")
 -- Nvim-tree
 map("n", "-", ":NvimTreeToggle<CR>")
 
+-- Packages
+map("n", "<leader>um", ":MasonUpdate<CR>")
+map("n", "<leader>up", ":PackerSync<CR>")
+
 -- Commands
 map("n", "<leader>ll", ":!gls -Fho --group-directories-first<CR>")
 map("n", "<leader>la", ":!gls -AFho --group-directories-first<CR>")
@@ -100,13 +104,20 @@ map("n", "<leader>cL", "viw<esc>bi[<esc>ea](<C-r>+)<esc>") -- Markdown format wo
 map("v", "<leader>cL", "<esc>`>a]<esc>`<<esc>i[<esc>%a(<C-r>+)<esc>") -- Markdown format selection as url, and populate from unnamed register
 map("n", "<leader>cb", "viw<esc>bi**<esc>ea**<esc>") -- Markdown format word under cursor as bold
 map("v", "<leader>cb", "<esc>`>a**<esc>`<<esc>i**<esc>`><esc>ll") -- Markdown format selection as bold
+map("n", "<leader>mh", [[:%s/\v\`([^*]+)\`/<code>\1<\/code>/g<CR>gv:s/\v\*{2}([^*]+)\*{2}/<strong>\1<\/strong>/g<CR>]]) -- Convert all markdown bold and code to HTML bold and code
+map("v", "<leader>mh", [[:s/\v\`([^*]+)\`/<code>\1<\/code>/g<CR>gv:s/\v\*{2}([^*]+)\*{2}/<strong>\1<\/strong>/g<CR>]]) -- Convert selection markdown bold and code to HTML bold and code
 
 -- Go convenience maps
-map("n", "<leader>ct", 'vi}:norm A `json:""`<CR>vi}:lua vim.lsp.buf.format()<CR>`<$hi') -- Add empty json struct tags to all fields inside struct under cursor, and enter INSERT
-map("n", "<leader>gr", ":!go run .<CR>") -- Run module
-map("n", "<leader>gR", ":!go run %:p<CR>") -- Run file
-map("n", "<leader>gt", ":!go test .<CR>") -- Test module
-map("n", "<leader>gT", ":!go test %:p<CR>") -- Test file
+-- map("n", "<leader>ct", 'vi}:norm A `json:""`<CR>vi}:lua vim.lsp.buf.format()<CR>`<$hi') -- Add empty json struct tags to all fields inside struct under cursor, and enter INSERT
+map("n", "<leader>goj", ":GoTagAdd json<CR>") -- Add JSON struct tags
+map("n", "<leader>goJ", ":GoTagRm json<CR>") -- Remove JSON struct tags
+map("n", "<leader>goy", ":GoTagAdd yaml<CR>") -- Add YAML struct tags
+map("n", "<leader>goY", ":GoTagRm yaml<CR>") -- Remove YAML struct tags
+map("n", "<leader>goc", ":GoCmt<CR>") -- Generate doc comment
+map("n", "<leader>gor", ":!go run .<CR>") -- Run module
+map("n", "<leader>goR", ":!go run %:p<CR>") -- Run file
+map("n", "<leader>got", ":!go test .<CR>") -- Test module
+map("n", "<leader>goT", ":!go test %:p<CR>") -- Test file
 
 -- Convenience abbreviations
 vim.cmd("iabbrev @@ 39803787+simonward87@users.noreply.github.com")
