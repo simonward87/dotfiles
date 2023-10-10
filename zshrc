@@ -216,6 +216,3 @@ if exists brew; then
     autoload -Uz compinit
     compinit
 fi
-
-# bun completion
-[ -s "/opt/homebrew/Cellar/bun/1.0.0/share/zsh/site-functions/_bun" ] && source "/opt/homebrew/Cellar/bun/1.0.0/share/zsh/site-functions/_bun"
