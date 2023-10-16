@@ -13,7 +13,10 @@
     ~/.config/alacritty: config/alacritty
     ~/.config/bat: config/bat
     ~/.config/karabiner: config/karabiner
-    ~/.config/ncdu: config/ncdu
+    ~/.config/ncdu:
+      config/ncdu
+      # TODO: change to regular symlink, and add a local .gitignore so
+      # that generated 'plugin' directory isn't commited
     ~/.config/nvim/:
       glob: true
       path: config/nvim/*

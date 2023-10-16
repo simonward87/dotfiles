@@ -10,7 +10,7 @@ by [@EIEIOxyz](https://twitter.com/EIEIOxyz/), and you can too!
 2. Clone dotfiles repo. Use `https` and switch to `ssh` later
 
 ```sh
-git clone https://github.com/simonward87/dotfiles.git ~/.dotfiles
+git clone --recursive https://github.com/simonward87/dotfiles.git ~/.dotfiles
 ```
 
 3. `cd ~/.dotfiles`
