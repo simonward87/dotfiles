@@ -7,7 +7,7 @@ export HISTORY_IGNORE='(pwd|id|uptime|resize|l[alsx]#( *)#|clear|hist[ory]#|cd .
 export HISTSIZE=100000 # max number of cached commands
 export HISTTIMEFORMAT="%Y-%m-%d %T " # add time-stamp to command history
 export NULLCMD=bat
-export NVIM_CONFIG="$DOTFILES/config/nvim/lua/user"
+export NVIM_CONFIG="$DOTFILES/config/nvim"
 
 if exists brew; then
     export EDITOR="$HOMEBREW_PREFIX/bin/nvim"
@@ -91,7 +91,7 @@ alias trail='<<<${(F)path}'
 
 # fast travel
 alias dtfs='cd $DOTFILES && nvim .'
-alias conf='nvim $DOTFILES/tmux.conf $NVIM_CONFIG/colorscheme.lua $DOTFILES/config/alacritty/alacritty.yml'
+alias conf='nvim $DOTFILES/tmux.conf $NVIM_CONFIG/lua/$USER/colorscheme.lua $DOTFILES/config/alacritty/alacritty.yml'
 alias study='cd $HOME/Study && clear && tree -d -L 2'
 alias temp='nvim $HOME/Study/notes/temp'
 alias work='cd $HOME/Work && clear && tree -d -L 2'
@@ -155,14 +155,14 @@ function theme () {
     if defaults read -g AppleInterfaceStyle &>/dev/null; then
         if grep "driftLight" $DOTFILES/tmux.conf; then
             sed -i -E 's/driftLight/driftDark/g' $DOTFILES/tmux.conf
-            sed -i -E 's/drift-light/drift-dark/g' $NVIM_CONFIG/colorscheme.lua
+            sed -i -E 's/drift-light/drift-dark/g' $NVIM_CONFIG/lua/$USER/colorscheme.lua
             cp $DOTFILES/config/alacritty/dark.yml $DOTFILES/config/alacritty/alacritty.yml
 
         fi
     else
         if grep "driftDark" $DOTFILES/tmux.conf; then
             sed -i -E 's/driftDark/driftLight/g' $DOTFILES/tmux.conf
-            sed -i -E 's/drift-dark/drift-light/g' $NVIM_CONFIG/colorscheme.lua
+            sed -i -E 's/drift-dark/drift-light/g' $NVIM_CONFIG/lua/$USER/colorscheme.lua
             cp $DOTFILES/config/alacritty/light.yml $DOTFILES/config/alacritty/alacritty.yml
         fi
     fi
