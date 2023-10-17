@@ -28,7 +28,7 @@ if exists brew; then
     export PATH="$PATH:$N_PREFIX/bin"
     export PATH="$PATH:$HOME/Work/bin"
 
-    unalias run-help
+    # unalias run-help
     autoload run-help
     HELPDIR=$(command brew --prefix)/share/zsh/help
     alias help=run-help
@@ -90,7 +90,7 @@ alias serve=http-server
 alias trail='<<<${(F)path}'
 
 # fast travel
-alias dtfs='cd $DOTFILES && nvim .'
+alias dtfs='cd $DOTFILES && ll'
 alias conf='nvim $DOTFILES/tmux.conf $NVIM_CONFIG/lua/$USER/colorscheme.lua $DOTFILES/config/alacritty/alacritty.yml'
 alias study='cd $HOME/Study && clear && tree -d -L 2'
 alias temp='nvim $HOME/Study/notes/temp'
@@ -153,17 +153,16 @@ function tmx () {
 #       infinite looping
 function theme () {
     if defaults read -g AppleInterfaceStyle &>/dev/null; then
-        if grep "driftLight" $DOTFILES/tmux.conf; then
-            sed -i -E 's/driftLight/driftDark/g' $DOTFILES/tmux.conf
-            sed -i -E 's/drift-light/drift-dark/g' $NVIM_CONFIG/lua/$USER/colorscheme.lua
-            cp $DOTFILES/config/alacritty/dark.yml $DOTFILES/config/alacritty/alacritty.yml
-
+        if grep "driftLight" ~/.tmux.conf; then
+            sed -i -E 's/driftLight/driftDark/g' ~/.tmux.conf
+            sed -i -E 's/drift-light/drift-dark/g' ~/.config/nvim/lua/$USER/colorscheme.lua
+            rm ~/.config/alacritty/alacritty.yml && ln -s ~/.config/alacritty/dark.yml ~/.config/alacritty/alacritty.yml
         fi
     else
-        if grep "driftDark" $DOTFILES/tmux.conf; then
-            sed -i -E 's/driftDark/driftLight/g' $DOTFILES/tmux.conf
+        if grep "driftDark" ~/.tmux.conf; then
+            sed -i -E 's/driftDark/driftLight/g' ~/.tmux.conf
             sed -i -E 's/drift-dark/drift-light/g' $NVIM_CONFIG/lua/$USER/colorscheme.lua
-            cp $DOTFILES/config/alacritty/light.yml $DOTFILES/config/alacritty/alacritty.yml
+            rm ~/.config/alacritty/alacritty.yml && ln -s ~/.config/alacritty/light.yml ~/.config/alacritty/alacritty.yml
         fi
     fi
 
