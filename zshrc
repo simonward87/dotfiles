@@ -146,28 +146,27 @@ function tmx () {
     tmux attach-session -d -t "${PWD##*/}"
 }
 
-# TODO: uses three almost identical copies of alacritty config, find a
-#       better way to do this. maybe create a file from a common config
-#       file and seperate dark / light theme config files
-# TODO: find a way to update prompt colours without resourcing zshrc and
-#       infinite looping
 function theme () {
     if defaults read -g AppleInterfaceStyle &>/dev/null; then
-        if grep "driftLight" ~/.tmux.conf; then
-            sed -i -E 's/driftLight/driftDark/g' ~/.tmux.conf
-            sed -i -E 's/drift-light/drift-dark/g' ~/.config/nvim/lua/$USER/colorscheme.lua
-            rm ~/.config/alacritty/alacritty.yml && ln -s ~/.config/alacritty/dark.yml ~/.config/alacritty/alacritty.yml
+        if grep "driftLight" $DOTFILES/tmux.conf; then
+            sed -i -E 's/driftLight/driftDark/g' $DOTFILES/tmux.conf
+            sed -i -E 's/drift-light/drift-dark/g' $NVIM_CONFIG/lua/$USER/colorscheme.lua
+
+            cat $DOTFILES/config/alacritty/{head,themes/drift-darker,tail}.yml \
+                > $DOTFILES/config/alacritty/alacritty.yml
         fi
     else
-        if grep "driftDark" ~/.tmux.conf; then
-            sed -i -E 's/driftDark/driftLight/g' ~/.tmux.conf
+        if grep "driftDark" $DOTFILES/tmux.conf; then
+            sed -i -E 's/driftDark/driftLight/g' $DOTFILES/tmux.conf
             sed -i -E 's/drift-dark/drift-light/g' $NVIM_CONFIG/lua/$USER/colorscheme.lua
-            rm ~/.config/alacritty/alacritty.yml && ln -s ~/.config/alacritty/light.yml ~/.config/alacritty/alacritty.yml
+
+            cat $DOTFILES/config/alacritty/{head,themes/drift-lighter,tail}.yml \
+                > $DOTFILES/config/alacritty/alacritty.yml
         fi
     fi
 
     if [ -n "$TMUX" ]; then
-        tmux source-file ~/.tmux.conf
+        tmux source-file $HOME/.tmux.conf
         clear -x
     fi
 }
