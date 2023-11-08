@@ -6,7 +6,6 @@ export DOTFILES="$HOME/.dotfiles"
 export HISTORY_IGNORE='(pwd|id|uptime|resize|l[alsx]#( *)#|clear|hist[ory]#|cd ..)' # command history ignore list
 export HISTSIZE=100000 # max number of cached commands
 export HISTTIMEFORMAT="%Y-%m-%d %T " # add time-stamp to command history
-export NULLCMD=bat
 export NVIM_CONFIG="$DOTFILES/config/nvim"
 
 if exists brew; then
@@ -18,12 +17,12 @@ if exists brew; then
     export GOPATH="$(go env GOPATH)"
     export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
     export HOMEBREW_NO_ENV_HINTS=1
-    export PGDATA="$HOMEBREW_PREFIX/var/postgresql@15"
+    export PGDATA="$(find $HOMEBREW_PREFIX/var -iname 'postgresql*')" # changes dynamically with version
     export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
     export ZPLUG_HOME="$HOMEBREW_PREFIX/opt/zplug"
 
-    export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
-    export PATH="$HOMEBREW_PREFIX/opt/postgresql@15/bin:$PATH"
+    export PATH="$HOMEBREW_PREFIX/opt/make/libexec/gnubin:$PATH"
+    export PATH="$(find $HOMEBREW_PREFIX/opt -type l -iname 'postgresql*')/bin:$PATH" # changes dynamically with version
     export PATH="$PATH:$GOBIN"
     export PATH="$PATH:$N_PREFIX/bin"
     export PATH="$PATH:$HOME/Work/bin"
