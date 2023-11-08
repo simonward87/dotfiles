@@ -6,12 +6,14 @@ echo "\n<<< Installing Go CLI Tools >>>\n"
 if exists go; then
     packages=(
         github.com/spf13/cobra-cli
+        github.com/go-delve/delve/cmd/dlv
         github.com/kisielk/errcheck
         golang.org/x/tools/cmd/godoc
         golang.org/x/tools/cmd/goimports
         google.golang.org/protobuf/cmd/protoc-gen-go
         github.com/cespare/reflex
         honnef.co/go/tools/cmd/staticcheck
+        github.com/jackc/tern/v2
     )
 
     echo "go executable found, continuing with installs"
