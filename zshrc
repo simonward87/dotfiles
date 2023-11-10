@@ -17,7 +17,7 @@ if exists brew; then
     export GOPATH="$(go env GOPATH)"
     export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
     export HOMEBREW_NO_ENV_HINTS=1
-    export PGDATA="$(find $HOMEBREW_PREFIX/var -iname 'postgresql*')" # changes dynamically with version
+    export PGDATA="$(find $HOMEBREW_PREFIX/var -type d -maxdepth 1 -iname 'postgresql*')" # changes dynamically with version
     export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
     export ZPLUG_HOME="$HOMEBREW_PREFIX/opt/zplug"
 
