@@ -213,3 +213,6 @@ if exists brew; then
     autoload -Uz compinit
     compinit
 fi
+
+# direnv hook
+eval "$(direnv hook zsh)"
