@@ -149,19 +149,15 @@ function tmx () {
 function theme () {
     if defaults read -g AppleInterfaceStyle &>/dev/null; then
         if grep "driftLight" $DOTFILES/tmux.conf; then
-            sed -i -E 's/driftLight/driftDark/g' $DOTFILES/tmux.conf
-            sed -i -E 's/drift-light/drift-dark/g' $NVIM_CONFIG/lua/$USER/colorscheme.lua
-
-            cat $DOTFILES/config/alacritty/{head,themes/drift-darker,tail}.yml \
-                > $DOTFILES/config/alacritty/alacritty.yml
+            sed -i -E 's/driftLighter/driftDark/' $DOTFILES/tmux.conf
+            sed -i -E 's/drift-lighter/drift-dark/' $NVIM_CONFIG/lua/$USER/colorscheme.lua
+            sed -i -E 's/drift-lighter/drift-dark/' $DOTFILES/config/alacritty/alacritty.toml
         fi
     else
         if grep "driftDark" $DOTFILES/tmux.conf; then
-            sed -i -E 's/driftDark/driftLight/g' $DOTFILES/tmux.conf
-            sed -i -E 's/drift-dark/drift-light/g' $NVIM_CONFIG/lua/$USER/colorscheme.lua
-
-            cat $DOTFILES/config/alacritty/{head,themes/drift-lighter,tail}.yml \
-                > $DOTFILES/config/alacritty/alacritty.yml
+            sed -i -E 's/driftDark/driftLighter/' $DOTFILES/tmux.conf
+            sed -i -E 's/drift-dark/drift-lighter/' $NVIM_CONFIG/lua/$USER/colorscheme.lua
+            sed -i -E 's/drift-dark/drift-lighter/' $DOTFILES/config/alacritty/alacritty.toml
         fi
     fi
 
