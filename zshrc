@@ -26,6 +26,7 @@ if exists brew; then
     export PATH="$PATH:$GOBIN"
     export PATH="$PATH:$N_PREFIX/bin"
     export PATH="$PATH:$HOME/Work/bin"
+    export PATH="$PATH:/Applications/Alacritty.app/Contents/MacOS"
 
     # unalias run-help
     autoload run-help
@@ -91,9 +92,9 @@ alias trail='<<<${(F)path}'
 # fast travel
 alias dtfs='cd $DOTFILES && ll'
 alias conf='nvim $DOTFILES/tmux.conf $NVIM_CONFIG/lua/$USER/colorscheme.lua $DOTFILES/config/alacritty/alacritty.yml'
-alias study='cd $HOME/Study && clear && tree -d -L 2'
+alias study='cd $HOME/Study && clear && ls'
 alias temp='nvim $HOME/Study/notes/temp'
-alias work='cd $HOME/Work && clear && tree -d -L 2'
+alias work='cd $HOME/Work && clear && ls'
 
 if defaults read -g AppleInterfaceStyle &>/dev/null; then
     export CLR_COMMENT="#91A2B0"
