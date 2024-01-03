@@ -1,5 +1,5 @@
 # more info: https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd
-import = ["~/.config/alacritty/themes/drift-lighter.toml"]
+import = ["~/.config/alacritty/themes/drift-dark.toml"]
 
 [cursor]
 blink_timeout = 5
