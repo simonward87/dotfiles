@@ -84,6 +84,7 @@ cask "alacritty"
 cask "anki"
 cask "beekeeper-studio"
 cask "blender"
+cask "calibre"
 cask "docker"
 cask "firefox"
 cask "font-charter"
@@ -123,7 +124,8 @@ cask "pika"
 cask "qbittorrent"
 cask "raspberry-pi-imager"
 cask "rectangle"
+cask "shearwater-cloud"
 cask "skype"
-mas "Kindle", id: 302584613
+mas "iMovie", id: 408981434
 mas "Logic Pro", id: 634148309
 mas "Todoist", id: 585829637
