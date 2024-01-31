@@ -76,13 +76,15 @@ alias cat=gcat
 alias df='df -h'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias grep='grep --color=auto'
 alias gll='git log --stat -n 1'
+alias grep='grep --color=auto'
 alias hist='fc -l -t "$HISTTIMEFORMAT"' # display formatted command history
 alias ip='ipconfig getifaddr en0'
 alias k=kubectl
 alias la='gls -AFho --color --group-directories-first'
+alias lad='gls -Ahod --color */'
 alias ll='gls -Fho --color --group-directories-first'
+alias lld='gls -hod --color */'
 alias ls='gls -1F --color --group-directories-first'
 alias rm=trash
 alias sed=gsed
