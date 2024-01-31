@@ -1,6 +1,7 @@
 # more info: https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd
-import = ["~/.config/alacritty/themes/drift-dark.toml"]
+import = ["~/.config/alacritty/themes/drift-darker.toml"]
 
+# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#cursor
 [cursor]
 blink_timeout = 5
 unfocused_hollow = true
@@ -9,6 +10,7 @@ unfocused_hollow = true
 blinking = "Never"
 shape = "Block"
 
+# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#font
 [font]
 size = 15
 
@@ -24,6 +26,7 @@ style = "Regular"
 x = 0
 y = 4
 
+# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#keyboard
 [[keyboard.bindings]]
 action = "Paste"
 key = "Paste"
@@ -242,10 +245,12 @@ key = "B"
 mode = "~Search"
 mods = "Command"
 
+# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#scrolling
 [scrolling]
 history = 10000
 multiplier = 3
 
+# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#window
 [window]
 decorations = "full"
 startup_mode = "Fullscreen"
