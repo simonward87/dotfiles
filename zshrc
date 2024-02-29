@@ -21,6 +21,7 @@ if exists brew; then
     export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
     export ZPLUG_HOME="$HOMEBREW_PREFIX/opt/zplug"
 
+    export PATH="$HOMEBREW_PREFIX/opt/gawk/libexec/gnubin:$PATH"
     export PATH="$HOMEBREW_PREFIX/opt/make/libexec/gnubin:$PATH"
     export PATH="$(find $HOMEBREW_PREFIX/opt -type l -iname 'postgresql*')/bin:$PATH" # changes dynamically with version
     export PATH="$PATH:$GOBIN"
@@ -72,6 +73,7 @@ setopt NO_CASE_GLOB # case-insensitive glob
 unsetopt BEEP
 
 # aliases
+alias awk=gawk
 alias cat=gcat
 alias df='df -h'
 alias egrep='egrep --color=auto'
@@ -148,7 +150,7 @@ function tmx () {
     tmux attach-session -d -t "${PWD##*/}"
 }
 
-function theme () {
+function setTheme () {
     if defaults read -g AppleInterfaceStyle &>/dev/null; then
         if grep "driftLight" $DOTFILES/tmux.conf; then
             sed -i -E 's/driftLight/driftDark/' $DOTFILES/tmux.conf
@@ -169,8 +171,8 @@ function theme () {
     fi
 }
 
-# setup theme
-theme
+# enable theme
+setTheme
 
 # plugins
 source $ZPLUG_HOME/init.zsh
