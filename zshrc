@@ -84,21 +84,18 @@ alias hist='fc -l -t "$HISTTIMEFORMAT"' # display formatted command history
 alias ip='ipconfig getifaddr en0'
 alias k=kubectl
 alias la='gls -AFho --color --group-directories-first'
-alias lad='gls -Ahod --color */'
 alias ll='gls -Fho --color --group-directories-first'
-alias lld='gls -hod --color */'
-alias ls='gls -1F --color --group-directories-first'
+alias ls=gls
 alias rm=trash
 alias sed=gsed
 alias serve=http-server
 alias trail='<<<${(F)path}'
 
 # fast travel
-alias dtfs='cd $DOTFILES && ll'
-alias conf='nvim $DOTFILES/tmux.conf $NVIM_CONFIG/lua/$USER/colorscheme.lua $DOTFILES/config/alacritty/alacritty.yml'
-alias study='cd $HOME/Study && clear && ls'
+alias dtfs='cd $DOTFILES && clear && ll'
+alias study='cd $HOME/Study && clear && ll'
 alias temp='nvim $HOME/Study/notes/temp'
-alias work='cd $HOME/Work && clear && ls'
+alias work='cd $HOME/Work && clear && ll'
 
 if defaults read -g AppleInterfaceStyle &>/dev/null; then
     export CLR_COMMENT="#91A2B0"
