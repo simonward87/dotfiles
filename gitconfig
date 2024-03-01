@@ -16,3 +16,6 @@
 
 [mergetool]
     keepBackup = false
+
+[submodule]
+    fetchJobs = 8
