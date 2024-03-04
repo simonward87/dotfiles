@@ -24,8 +24,8 @@ if exists brew; then
     export PATH="$HOMEBREW_PREFIX/opt/gawk/libexec/gnubin:$PATH"
     export PATH="$HOMEBREW_PREFIX/opt/make/libexec/gnubin:$PATH"
     export PATH="$(find $HOMEBREW_PREFIX/opt -type l -iname 'postgresql*')/bin:$PATH" # changes dynamically with version
+    export PATH="$N_PREFIX/bin:$PATH"
     export PATH="$PATH:$GOBIN"
-    export PATH="$PATH:$N_PREFIX/bin"
     export PATH="$PATH:$HOME/Work/bin"
     export PATH="$PATH:/Applications/Alacritty.app/Contents/MacOS"
 
