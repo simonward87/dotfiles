@@ -36,6 +36,7 @@
     - command: ./scripts/setup_zsh.zsh
     - command: ./scripts/setup_node.zsh
     - command: ./scripts/setup_macos.zsh
+    - command: ./scripts/setup_neovim_providers.zsh
     - command: ./scripts/setup_rust.zsh
     - command: ./scripts/setup_alacritty.zsh
     - command: ./scripts/setup_go.zsh
