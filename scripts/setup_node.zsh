@@ -20,6 +20,7 @@ packages=(
     http-server
     json-server
     neovim
+    prettier
     prettier-plugin-astro
     prettier-plugin-svelte
     prettier-plugin-tailwindcss
