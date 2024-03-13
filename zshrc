@@ -6,7 +6,7 @@ export DOTFILES="$HOME/.dotfiles"
 export HISTORY_IGNORE='(pwd|id|uptime|resize|l[alsx]#( *)#|clear|hist[ory]#|cd ..)' # command history ignore list
 export HISTSIZE=100000 # max number of cached commands
 export HISTTIMEFORMAT="%Y-%m-%d %T " # add time-stamp to command history
-export NVIM_CONFIG="$DOTFILES/config/nvim"
+export NVIM_CONF="$DOTFILES/config/nvim"
 
 if exists brew; then
     export EDITOR="$HOMEBREW_PREFIX/bin/nvim"
