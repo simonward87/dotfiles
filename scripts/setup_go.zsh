@@ -6,10 +6,11 @@ echo "\n<<< Installing Go CLI Tools >>>\n"
 # TODO: remove plugins managed by Mason
 if exists go; then
     packages=(
-        github.com/spf13/cobra-cli
-        google.golang.org/protobuf/cmd/protoc-gen-go
         github.com/cespare/reflex
         github.com/jackc/tern/v2
+        github.com/spf13/cobra-cli
+        golang.org/x/tools/cmd/goimports@latest
+        google.golang.org/protobuf/cmd/protoc-gen-go
     )
 
     echo "go executable found, continuing with installs"
