@@ -1,7 +1,7 @@
 # .zshrc is for 'interactive shells'
 # it is sourced each time a new terminal session is launched
 
-# variables
+# Variables
 export DOTFILES="$HOME/.dotfiles"
 export HISTORY_IGNORE='(pwd|id|uptime|resize|l[alsx]#( *)#|clear|hist[ory]#|cd ..)' # command history ignore list
 export HISTSIZE=100000 # max number of cached commands
@@ -29,7 +29,6 @@ if exists brew; then
     export PATH="$PATH:$HOME/Work/bin"
     export PATH="$PATH:/Applications/Alacritty.app/Contents/MacOS"
 
-    # unalias run-help
     autoload run-help
     HELPDIR=$(command brew --prefix)/share/zsh/help
     alias help=run-help
@@ -51,16 +50,16 @@ if exists rustup; then
     export RUSTUP_HOME="$HOME/.rustup"
 fi
 
-# header files for cs50
+# CS50 header files
 export CC="clang"
 export CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
 export LDLIBS="-lcrypt -lcs50 -lm"
 export LIBRARY_PATH="/usr/local/lib"
 
-# use regular zsh history search binding in tmux
+# Enable zsh history search binding in tmux
 bindkey '^R' history-incremental-search-backward
 
-# options (https://zsh.sourceforge.io/Doc/Release/Options.html)
+# Options (https://zsh.sourceforge.io/Doc/Release/Options.html)
 setopt AUTO_CD # auto cd when a command is a directory name
 setopt CD_SILENT # never print directory when cd -
 setopt CORRECT # try to correct command spelling
@@ -72,7 +71,7 @@ setopt HIST_NO_STORE # remove history command from list when invoked
 setopt NO_CASE_GLOB # case-insensitive glob
 unsetopt BEEP
 
-# aliases
+# Aliases
 alias awk=gawk
 alias cat=gcat
 alias df='df -h'
@@ -91,7 +90,7 @@ alias sed=gsed
 alias serve=http-server
 alias trail='<<<${(F)path}'
 
-# fast travel
+# Fast travel
 alias dtfs='cd $DOTFILES && clear && ll'
 alias study='cd $HOME/Study && clear && ll'
 alias temp='nvim $HOME/Study/notes/temp'
@@ -105,7 +104,7 @@ else
     export CLR_ERROR="#c1002f"
 fi
 
-# custom prompt
+# Custom prompt
 if [ -n "$TMUX" ]; then
     # hostname removed as displayed in tmux status line
     PROMPT="%(?..%F{$CLR_ERROR}[%?] %f)%2~ %# "
@@ -113,10 +112,10 @@ else
     PROMPT="%(?.%F{$CLR_COMMENT}%m%f.%F{$CLR_ERROR}[%?]%f %F{$CLR_COMMENT}%m%f) %2~ %# "
 fi
 
-# prepend new-line to prompt
+# Prepend new-line to prompt
 precmd() $funcstack[1]() echo
 
-# git prompt integration
+# Git prompt integration
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
@@ -125,10 +124,10 @@ RPROMPT=\$vcs_info_msg_0_
 zstyle ':vcs_info:git:*' formats "%F{$CLR_COMMENT} %b%f" # '%F{245}%r (%b)%f'
 zstyle ':vcs_info:*' enable git
 
-# remove $PATH duplicates
+# Remove $PATH duplicates
 typeset -U path
 
-# functions
+# Functions
 function mkcd() {
   mkdir -p "$@" && cd "$_";
 }
@@ -151,13 +150,13 @@ function setTheme () {
     if defaults read -g AppleInterfaceStyle &>/dev/null; then
         if grep "driftLight" $DOTFILES/tmux.conf; then
             sed -i -E 's/driftLight/driftDark/' $DOTFILES/tmux.conf
-            sed -i -E 's/drift-light/drift-dark/' $NVIM_CONFIG/lua/$USER/colorscheme.lua
+            sed -i -E 's/drift-light/drift-dark/' $NVIM_CONF/lua/$USER/colorscheme.lua
             sed -i -E 's/drift-light/drift-dark/' $DOTFILES/config/alacritty/alacritty.toml
         fi
     else
         if grep "driftDark" $DOTFILES/tmux.conf; then
             sed -i -E 's/driftDark/driftLight/' $DOTFILES/tmux.conf
-            sed -i -E 's/drift-dark/drift-light/' $NVIM_CONFIG/lua/$USER/colorscheme.lua
+            sed -i -E 's/drift-dark/drift-light/' $NVIM_CONF/lua/$USER/colorscheme.lua
             sed -i -E 's/drift-dark/drift-light/' $DOTFILES/config/alacritty/alacritty.toml
         fi
     fi
@@ -168,10 +167,10 @@ function setTheme () {
     fi
 }
 
-# enable theme
+# Enable theme
 setTheme
 
-# plugins
+# Plugins
 source $ZPLUG_HOME/init.zsh
 
 zplug 'le0me55i/zsh-extract'
@@ -190,21 +189,21 @@ fi
 
 zplug load
 
-# other
+# Completions
 fpath=(~/.zsh $fpath ~/.zfunc)
 autoload -Uz compinit
 compinit -u
 
-# command completion bindings
+# Command completion bindings
 bindkey '^N' autosuggest-accept  # ctrl+n
 bindkey '^T' autosuggest-toggle  # ctrl+t
 bindkey '^Y' autosuggest-execute # ctrl+y
 
-# k8s completion
+# K8s completion
 source $DOTFILES/util/kubectl_completion
 compdef __start_kubectl k # completion with k alias
 
-# heroku completion
+# Heroku completion
 if exists brew; then
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
@@ -212,5 +211,8 @@ if exists brew; then
     compinit
 fi
 
-# direnv hook
+# Fzf completion
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Direnv hook
 eval "$(direnv hook zsh)"
