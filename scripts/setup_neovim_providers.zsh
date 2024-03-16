@@ -23,3 +23,22 @@ else
   echo "Installing neovim gem..."
   gem install neovim
 fi
+
+if exists ~/.local/venvs/neovim/bin/python; then
+  echo "Python venv already created"
+else
+  echo "Setting up python venv..."
+    if [ ! -d "~/.local/venvs/neovim/bin/" ]; then
+        mkdir -p "~/.local/venvs/neovim/bin/"
+    fi
+
+    python -m venv "~/.local/venvs/neovim"
+fi
+
+if ~/.local/venvs/neovim/bin/python -c "import pynvim" &> /dev/null; then
+    echo "Already installed: pynvim"
+else
+    echo "Installing pynvim..."
+
+    ~/.local/venvs/neovim/bin/python -m pip install pynvim
+fi
