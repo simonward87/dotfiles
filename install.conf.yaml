@@ -9,6 +9,7 @@
 - clean: ["~"]
 
 - link:
+    ~/.clang-format:
     ~/.cobra.yaml:
     ~/.config/alacritty: config/alacritty
     ~/.config/bat: config/bat
@@ -18,7 +19,6 @@
       glob: true
       path: config/nvim/*
     ~/.config/tmux: config/tmux
-    ~/.clang-format:
     ~/.gitconfig:
     ~/.psqlrc:
     ~/.ripgreprc:
