@@ -9,6 +9,7 @@ if exists go; then
         github.com/cespare/reflex
         github.com/jackc/tern/v2
         github.com/spf13/cobra-cli
+        golang.org/x/telemetry/cmd/gotelemetry@latest
         golang.org/x/tools/cmd/goimports@latest
         google.golang.org/protobuf/cmd/protoc-gen-go
     )
