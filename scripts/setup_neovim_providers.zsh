@@ -31,7 +31,6 @@ else
     if [ ! -d "~/.local/venvs/neovim/bin/" ]; then
         mkdir -p "~/.local/venvs/neovim/bin/"
     fi
-
     python -m venv "~/.local/venvs/neovim"
 fi
 
@@ -39,6 +38,5 @@ if ~/.local/venvs/neovim/bin/python -c "import pynvim" &> /dev/null; then
     echo "Already installed: pynvim"
 else
     echo "Installing pynvim..."
-
     ~/.local/venvs/neovim/bin/python -m pip install pynvim
 fi

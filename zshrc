@@ -214,5 +214,9 @@ fi
 # Fzf completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# GCP tools
+source "$HOMEBREW_PREFIX/share/google-cloud-sdk/completion.zsh.inc" # shell completion
+source "$HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc" # add to $PATH
+
 # Direnv hook
 eval "$(direnv hook zsh)"
