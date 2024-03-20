@@ -60,13 +60,14 @@ export LIBRARY_PATH="/usr/local/lib"
 bindkey '^R' history-incremental-search-backward
 
 # Options (https://zsh.sourceforge.io/Doc/Release/Options.html)
+setopt APPEND_HISTORY # sessions append to history file, rather than replace it
 setopt AUTO_CD # auto cd when a command is a directory name
 setopt CD_SILENT # never print directory when cd -
 setopt CORRECT # try to correct command spelling
 setopt CORRECT_ALL # try to correct argument spelling
 setopt EXTENDED_HISTORY # save command timestamps
-setopt HIST_IGNORE_DUPS # don't add duplicate commands to history
 setopt HIST_EXPIRE_DUPS_FIRST # remove oldest duplicates first when trimming
+setopt HIST_IGNORE_DUPS # don't add duplicate commands to history
 setopt HIST_NO_STORE # remove history command from list when invoked
 setopt NO_CASE_GLOB # case-insensitive glob
 unsetopt BEEP
