@@ -1,5 +1,5 @@
 # more info: https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd
-import = ["~/.config/alacritty/themes/drift-light.toml"]
+import = ["~/.config/alacritty/themes/drift-lighter.toml"]
 
 # https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#cursor
 [cursor]
@@ -12,21 +12,21 @@ shape = "Block"
 
 # https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#font
 [font]
-size = 13
+size = 14
 
 [font.normal]
-family = "NotoSansM Nerd Font"
+family = "CourierPrimeCode Nerd Font"
 style = "Regular"
 # style = "Medium"
 
 [font.bold]
-family = "NotoSansM Nerd Font"
+family = "CourierPrimeCode Nerd Font"
 style = "Bold"
 # style = "ExtraBold"
 
 [font.offset]
 x = 0
-y = 0
+y = 5
 
 # https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#keyboard
 [[keyboard.bindings]]
