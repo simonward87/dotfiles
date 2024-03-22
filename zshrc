@@ -98,10 +98,10 @@ alias temp='nvim $HOME/Study/notes/temp'
 alias work='cd $HOME/Work && clear && ll'
 
 if defaults read -g AppleInterfaceStyle &>/dev/null; then
-    export CLR_COMMENT="#91A2B0"
+    export CLR_COMMENT="#91a2b0"
     export CLR_ERROR="#ff9aa0"
 else
-    export CLR_COMMENT="#6B6A64"
+    export CLR_COMMENT="#6b6a64"
     export CLR_ERROR="#c1002f"
 fi
 
