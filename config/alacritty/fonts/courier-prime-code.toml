@@ -1,0 +1,15 @@
+# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#font
+[font]
+size = 14
+
+[font.normal]
+family = "CourierPrimeCode Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "CourierPrimeCode Nerd Font"
+style = "Bold"
+
+[font.offset]
+x = 0
+y = 5

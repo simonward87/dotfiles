@@ -1,5 +1,8 @@
 # more info: https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd
-import = ["~/.config/alacritty/themes/drift-lighter.toml"]
+import = [
+    "~/.config/alacritty/themes/drift-lighter.toml",
+    "~/.config/alacritty/fonts/courier-prime-code.toml"
+]
 
 # https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#cursor
 [cursor]
@@ -9,24 +12,6 @@ unfocused_hollow = true
 [cursor.style]
 blinking = "Never"
 shape = "Block"
-
-# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#font
-[font]
-size = 14
-
-[font.normal]
-family = "CourierPrimeCode Nerd Font"
-style = "Regular"
-# style = "Medium"
-
-[font.bold]
-family = "CourierPrimeCode Nerd Font"
-style = "Bold"
-# style = "ExtraBold"
-
-[font.offset]
-x = 0
-y = 5
 
 # https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#keyboard
 [[keyboard.bindings]]
