@@ -137,16 +137,6 @@ function hgrep() {
     fc -Dlim "*$@*" 1
 }
 
-function tmx () {
-    # -d to allow the rest of the function to run
-    tmux new-session -d -s "${PWD##*/}" -n "Source" nvim .
-    # -d to prevent current window from changing
-    tmux new-window -d -n Server
-    # -d to detach any other client (which there shouldn't be,
-    # since you just created the session).
-    tmux attach-session -d -t "${PWD##*/}"
-}
-
 function setTheme () {
     if defaults read -g AppleInterfaceStyle &>/dev/null; then
         if grep "driftLight" $DOTFILES/tmux.conf; then
