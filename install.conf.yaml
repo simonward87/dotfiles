@@ -19,6 +19,7 @@
       glob: true
       path: config/nvim/*
     ~/.config/tmux: config/tmux
+    ~/.fzf.zsh:
     ~/.gitconfig:
     ~/.psqlrc:
     ~/.ripgreprc:
