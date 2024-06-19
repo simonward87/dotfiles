@@ -2,6 +2,7 @@
 import = [
     "~/.config/alacritty/themes/drift-lighter.toml",
     "~/.config/alacritty/fonts/courier-prime-code.toml"
+    # "~/.config/alacritty/fonts/noto-sans-mono.toml"
 ]
 
 # https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#cursor

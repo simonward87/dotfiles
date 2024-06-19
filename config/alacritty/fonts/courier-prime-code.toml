@@ -1,6 +1,6 @@
 # https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#font
 [font]
-size = 14
+size = 15
 
 [font.normal]
 family = "CourierPrimeCode Nerd Font"
