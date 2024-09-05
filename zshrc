@@ -88,7 +88,6 @@ alias ll='gls -Fho --color --group-directories-first'
 alias ls=gls
 alias rm=trash
 alias sed=gsed
-alias serve=http-server
 alias trail='<<<${(F)path}'
 
 # Fast travel
