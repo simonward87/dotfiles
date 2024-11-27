@@ -138,16 +138,18 @@ function hgrep() {
 
 function setTheme () {
     if defaults read -g AppleInterfaceStyle &>/dev/null; then
-        if grep "driftLight" $DOTFILES/tmux.conf; then
-            sed -i -E 's/driftLight/driftDark/' $DOTFILES/tmux.conf
-            sed -i -E 's/drift-light/drift-dark/' $NVIM_CONF/lua/$USER/colorscheme.lua
-            sed -i -E 's/drift-light/drift-dark/' $DOTFILES/config/alacritty/alacritty.toml
+        if grep -E "kDa(y|wn)" $DOTFILES/tmux.conf; then
+            sed -i -E 's/kDawn/kDusk/' $DOTFILES/tmux.conf
+            sed -i -E 's/kDay/kDark/' $DOTFILES/tmux.conf
+            sed -i -E 's/k-dawn/k-dusk/' $NVIM_CONF/lua/$USER/colorscheme.lua $DOTFILES/config/alacritty/alacritty.toml
+            sed -i -E 's/k-day/k-dark/' $NVIM_CONF/lua/$USER/colorscheme.lua $DOTFILES/config/alacritty/alacritty.toml
         fi
     else
-        if grep "driftDark" $DOTFILES/tmux.conf; then
-            sed -i -E 's/driftDark/driftLight/' $DOTFILES/tmux.conf
-            sed -i -E 's/drift-dark/drift-light/' $NVIM_CONF/lua/$USER/colorscheme.lua
-            sed -i -E 's/drift-dark/drift-light/' $DOTFILES/config/alacritty/alacritty.toml
+        if grep -E "kD(us|ar)k" $DOTFILES/tmux.conf; then
+            sed -i -E 's/kDusk/kDawn/' $DOTFILES/tmux.conf
+            sed -i -E 's/kDark/kDay/' $DOTFILES/tmux.conf
+            sed -i -E 's/k-dusk/k-dawn/' $NVIM_CONF/lua/$USER/colorscheme.lua $DOTFILES/config/alacritty/alacritty.toml
+            sed -i -E 's/k-dark/k-day/' $NVIM_CONF/lua/$USER/colorscheme.lua $DOTFILES/config/alacritty/alacritty.toml
         fi
     fi
 
