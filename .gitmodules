@@ -6,3 +6,6 @@
 	path = config/nvim
 	url = git@github.com:simonward87/nvim.git
 	ignore = dirty
+[submodule "config/tmux/plugins/k.tmux"]
+	path = config/tmux/plugins/k.tmux
+	url = git@github.com:simonward87/k.tmux.git
