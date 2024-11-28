@@ -9,3 +9,6 @@
 [submodule "config/tmux/plugins/k.tmux"]
 	path = config/tmux/plugins/k.tmux
 	url = git@github.com:simonward87/k.tmux.git
+[submodule "config/alacritty/themes/k"]
+	path = config/alacritty/themes/k
+	url = git@github.com:simonward87/k.alacritty.git
