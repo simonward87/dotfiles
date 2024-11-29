@@ -9,6 +9,8 @@
 [submodule "config/alacritty/themes/k"]
 	path = config/alacritty/themes/k
 	url = git@github.com:simonward87/k.alacritty.git
+	ignore = dirty
 [submodule "config/tmux/plugins/k"]
 	path = config/tmux/plugins/k
 	url = git@github.com:simonward87/k.tmux.git
+	ignore = dirty
