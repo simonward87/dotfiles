@@ -75,6 +75,7 @@ unsetopt CORRECT_ALL # argument spelling correction
 # Aliases
 alias awk=gawk
 alias cat=gcat
+alias d=docker
 alias df='df -h'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
