@@ -18,6 +18,7 @@
     ~/.config/ncdu: config/ncdu
     ~/.config/nvim: config/nvim
     ~/.config/tmux: config/tmux
+    ~/.config/zsh: config/zsh
     ~/.fzf.zsh:
     ~/.gitconfig:
     ~/.psqlrc:

@@ -65,7 +65,7 @@ brew "pass"
 brew "perl"
 brew "pidof"
 brew "pkgconf"
-brew "postgresql@15", restart_service: true
+brew "postgresql@15", restart_service: :changed
 brew "python@3.9"
 brew "ranger"
 brew "rclone"
