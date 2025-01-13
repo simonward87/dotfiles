@@ -73,6 +73,7 @@ unsetopt BEEP # beep on error
 unsetopt CORRECT_ALL # argument spelling correction
 
 # Aliases
+alias activate='source $(find . -type f -name activate)' # single quotes mandatory else command substitution executes when sourced
 alias awk=gawk
 alias cat=gcat
 alias d=docker
