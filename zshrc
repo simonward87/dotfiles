@@ -3,6 +3,7 @@
 
 # Variables
 export DOTFILES="$HOME/.dotfiles"
+export EDITOR=/usr/bin/vi
 export HISTORY_IGNORE='(pwd|id|uptime|resize|l[alsx]#( *)#|clear|hist[ory]#|cd ..)' # command history ignore list
 export HISTSIZE=100000 # max number of cached commands
 export HISTTIMEFORMAT="%Y-%m-%d %T " # add time-stamp to command history
@@ -10,9 +11,6 @@ export NVIM_CONF="$DOTFILES/config/nvim"
 
 if exists brew; then
     export EDITOR="$HOMEBREW_PREFIX/bin/nvim"
-    export PSQL_EDITOR=$EDITOR
-    export VISUAL=$EDITOR
-
     export GOBIN="$(go env GOPATH)/bin"
     export GOPATH="$(go env GOPATH)"
     export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
@@ -29,20 +27,15 @@ if exists brew; then
     export PATH="$PATH:$HOME/Work/bin"
     export PATH="$PATH:/Applications/Alacritty.app/Contents/MacOS"
 
-    autoload run-help
-    HELPDIR=$(command brew --prefix)/share/zsh/help
-    alias help=run-help
-
     alias bbd='brew bundle dump --force'
     alias bbl='brew bundle list --all | less'
     alias tree="tree -a -C -F -I '.git|vendor' --gitignore"
-    alias vi=$EDITOR
-    alias vim=$EDITOR
-else
-    export EDITOR=/usr/bin/vi
-    export PSQL_EDITOR=$EDITOR
-    export VISUAL=$EDITOR
+    alias vi="$EDITOR"
+    alias vim="$EDITOR"
 fi
+
+export PSQL_EDITOR="$EDITOR"
+export VISUAL="$EDITOR"
 
 if exists rustup; then
     export CARGO_HOME="$HOME/.cargo"
@@ -100,7 +93,7 @@ alias work='cd $HOME/Work && clear && ll'
 
 if defaults read -g AppleInterfaceStyle &>/dev/null; then
     export CLR_COMMENT="#91a2b0"
-    export CLR_ERROR="#ff9aa0"
+    export CLR_ERROR="#ff7c83"
 else
     export CLR_COMMENT="#6b6a64"
     export CLR_ERROR="#c1002f"
@@ -138,7 +131,7 @@ function hgrep() {
     fc -Dlim "*$@*" 1
 }
 
-function setTheme () {
+function theme () {
     if defaults read -g AppleInterfaceStyle &>/dev/null; then
         if grep -E "da(y|wn).theme" $DOTFILES/tmux.conf; then
             sed -i -E 's/dawn.theme/dusk.theme/' $DOTFILES/tmux.conf
@@ -165,8 +158,8 @@ function setTheme () {
     fi
 }
 
-# Enable theme
-setTheme
+# Enable shell theme
+theme
 
 # Plugins
 source $ZPLUG_HOME/init.zsh
