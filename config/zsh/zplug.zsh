@@ -16,13 +16,4 @@ if [ -n "$ZPLUG_HOME" ]; then
     fi
 
     zplug load
-
-    # Prompt integration with git
-    autoload -Uz vcs_info
-    precmd_vcs_info() { vcs_info }
-    precmd_functions+=( precmd_vcs_info )
-    setopt prompt_subst
-    RPROMPT=\$vcs_info_msg_0_
-    zstyle ':vcs_info:git:*' formats "%F{$CLR_COMMENT} %b%f" # '%F{245}%r (%b)%f'
-    zstyle ':vcs_info:*' enable git
 fi
