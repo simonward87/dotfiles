@@ -1,0 +1,23 @@
+# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#font
+[font]
+size = 14
+
+[font.normal]
+family = "Cascadia Code NF"
+style = "SemiLight"
+
+[font.italic]
+family = "Cascadia Code NF"
+style = "SemiLight Italic"
+
+[font.bold]
+family = "Cascadia Code NF"
+style = "Semibold"
+
+[font.bold_italic]
+family = "Cascadia Code NF"
+style = "Semibold Italic"
+
+[font.offset]
+x = 0
+y = 4
