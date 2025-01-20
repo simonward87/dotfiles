@@ -148,6 +148,7 @@ cask "qbittorrent"
 cask "raspberry-pi-imager"
 cask "rectangle"
 cask "shearwater-cloud"
+cask "standard-notes"
 mas "iMovie", id: 408981434
 mas "Logic Pro", id: 634148309
 mas "Todoist", id: 585829637
