@@ -27,6 +27,7 @@ export NVIM_CONF="$HOME/.dotfiles/config/nvim"
 export PSQL_EDITOR="$EDITOR"
 export VISUAL="$EDITOR"
 
+# used to style prompt, see ~/.config/zsh/zsh.zsh
 if defaults read -g AppleInterfaceStyle &>/dev/null; then
     export CLR_COMMENT="#91a2b0"
     export CLR_ERROR="#ff7c83"

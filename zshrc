@@ -2,19 +2,21 @@
 # terminal session is started.
 
 function () {
-    local ZSH_CONFIGS="$HOME/.config/zsh"
+    local zsh_configs="$HOME/.config/zsh"
 
     # Variables are sourced first as other configs may depend on them
-    source "$ZSH_CONFIGS/vars.zsh"
+    source "$zsh_configs/vars.zsh"
 
-    for FILE in $ZSH_CONFIGS/*.zsh; do
-        if [[ "$FILE" == "$ZSH_CONFIGS/vars.zsh" ]]; then continue; fi
+    for file in $zsh_configs/*.zsh; do
+        if [[ "$file" == "$zsh_configs/vars.zsh" ]]; then continue; fi
 
-        if [[ $FILE =~ '^.*(cmp|zplug)\.zsh$' ]]; then
-            # Scheduled as blocking and slow to initialise
-            sched +3 "source $FILE" &>/dev/null || source $FILE
-        else
-            source $FILE
-        fi
+        source $file
+
+        # if [[ $file =~ '^.*(cmp|zplug)\.zsh$' ]]; then
+        #     # Scheduled as blocking and slow to initialise
+        #     sched +3 "source $file" &>/dev/null || source $file
+        # else
+        #     source $file
+        # fi
     done
 }
