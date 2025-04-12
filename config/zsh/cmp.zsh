@@ -8,7 +8,7 @@ fi
 autoload -Uz compinit
 compinit -u
 
-if exists brew; then
+if exists gcloud; then
     source "$HOMEBREW_PREFIX/share/google-cloud-sdk/completion.zsh.inc" # shell completion
     source "$HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc" # add to $PATH
 fi
