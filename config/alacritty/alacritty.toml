@@ -196,12 +196,12 @@ key = "M"
 mods = "Command"
 
 [[keyboard.bindings]]
-action = "Quit"
+action = "None" # default: "Quit"
 key = "Q"
 mods = "Command"
 
 [[keyboard.bindings]]
-action = "Quit"
+action = "None" # default: "Quit"
 key = "W"
 mods = "Command"
 
@@ -216,15 +216,20 @@ key = "F"
 mods = "Command|Control"
 
 [[keyboard.bindings]]
-action = "SearchForward"
+action = "None" # default: "SearchForward"
 key = "F"
 mode = "~Search"
 mods = "Command"
 
 [[keyboard.bindings]]
-action = "SearchBackward"
+action = "None" # default: "SearchBackward"
 key = "B"
 mode = "~Search"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "None"
+key = "T"
 mods = "Command"
 
 # https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#scrolling
