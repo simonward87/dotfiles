@@ -15,7 +15,6 @@ else
 fi
 
 packages=(
-    autocannon
     firebase-tools
     http-server
     json-server
