@@ -8,6 +8,7 @@ alias hist='fc -l -t "$HISTTIMEFORMAT"' # display formatted command history
 alias ip='ipconfig getifaddr en0'
 alias la='ls -oAFhG'
 alias ll='ls -oFhG'
+alias scripts="[ -e package.json ] && jq '.scripts?' < package.json"
 alias study='cd $HOME/Study && clear && ll'
 alias temp='nvim $HOME/Study/notes/temp'
 alias trail='<<<${(F)path}'
