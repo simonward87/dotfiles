@@ -1,4 +1,5 @@
-# User clang-format defaults, used by null-ls for formatting C
+---
+# User preferences sourced by null-ls when formatting C
 BasedOnStyle: Chromium
 
 UseTab: Never
