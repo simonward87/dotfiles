@@ -23,6 +23,7 @@
     ~/.gitconfig:
     ~/.psqlrc:
     ~/.ripgreprc:
+    ~/.sqlfluff:
     ~/.sqliterc:
     ~/.tmux.conf:
     ~/.zprofile:
