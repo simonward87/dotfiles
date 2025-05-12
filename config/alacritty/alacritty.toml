@@ -232,6 +232,9 @@ action = "None"
 key = "T"
 mods = "Command"
 
+[mouse]
+hide_when_typing = true
+
 # https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#scrolling
 [scrolling]
 history = 10000
