@@ -252,6 +252,6 @@ y = 8
 [general]
 # more info: https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd
 import = [
-    "~/.config/alacritty/themes/k/dawn.toml",
+    "~/.config/alacritty/themes/k/dark.toml",
     "~/.config/alacritty/fonts/courier-prime-code.toml"
 ]
