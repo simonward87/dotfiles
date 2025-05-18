@@ -2,7 +2,7 @@
 # For supported dialects, run 'sqlfluff dialects'
 
 [sqlfluff]
-dialect = postgres
+dialect = sqlite
 max_line_length = 120
 
 [sqlfluff:indentation]
