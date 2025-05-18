@@ -1,0 +1,23 @@
+# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#font
+[font]
+size = 12.5
+
+[font.normal]
+family = "Cousine Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "Cousine Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "Cousine Nerd Font"
+style = "SemiLight Italic"
+
+[font.bold_italic]
+family = "Cousine Nerd Font"
+style = "Semibold Italic"
+
+[font.offset]
+x = 0
+y = 3

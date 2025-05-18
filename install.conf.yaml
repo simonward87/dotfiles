@@ -14,6 +14,7 @@
     ~/.cobra.yaml:
     ~/.config/alacritty: config/alacritty
     ~/.config/bat: config/bat
+    ~/.config/fontconfig: config/fontconfig
     ~/.config/karabiner: config/karabiner
     ~/.config/ncdu: config/ncdu
     ~/.config/nvim: config/nvim

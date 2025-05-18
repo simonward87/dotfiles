@@ -8,8 +8,8 @@ style = "Regular"
 
 [font.bold]
 family = "CourierPrimeCode Nerd Font"
-style = "Bold"
+style = "Italic"
 
 [font.offset]
 x = 0
-y = 5
+y = -2
