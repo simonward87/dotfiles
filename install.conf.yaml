@@ -30,6 +30,9 @@
     ~/.zprofile:
     ~/.zshenv:
     ~/.zshrc:
+    ~/Library/Fonts/:
+      glob: true
+      path: fonts/custom/*
 
 - create:
     - ~/Study
