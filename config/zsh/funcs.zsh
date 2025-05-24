@@ -9,15 +9,15 @@ function hgrep() {
 function theme () {
     if defaults read -g AppleInterfaceStyle &>/dev/null; then
         if grep -E "da(y|wn).theme" $DOTFILES/tmux.conf; then
-            sed -i -E 's/da(y|wn).theme/dark.theme/' $DOTFILES/tmux.conf
-            sed -i -E 's/k-da(y|wn)/k-dark/' $NVIM_CONF/lua/custom/init.lua
-            sed -i -E 's/k\/da(y|wn)/k\/dark/' $DOTFILES/config/alacritty/alacritty.toml
+            sed -i -E 's/da(y|wn).theme/dusk.theme/' $DOTFILES/tmux.conf
+            sed -i -E 's/k-da(y|wn)/k-dusk/' $NVIM_CONF/lua/custom/init.lua
+            sed -i -E 's/k\/da(y|wn)/k\/dusk/' $DOTFILES/config/alacritty/alacritty.toml
         fi
     else
         if grep -E "d(us|ar)k.theme" $DOTFILES/tmux.conf; then
-            sed -i -E 's/d(ar|us)k.theme/day.theme/' $DOTFILES/tmux.conf
-            sed -i -E 's/k-d(ar|us)k/k-day/' $NVIM_CONF/lua/custom/init.lua
-            sed -i -E 's/k\/d(ar|us)k/k\/day/' $DOTFILES/config/alacritty/alacritty.toml
+            sed -i -E 's/d(ar|us)k.theme/dawn.theme/' $DOTFILES/tmux.conf
+            sed -i -E 's/k-d(ar|us)k/k-dawn/' $NVIM_CONF/lua/custom/init.lua
+            sed -i -E 's/k\/d(ar|us)k/k\/dawn/' $DOTFILES/config/alacritty/alacritty.toml
         fi
     fi
 
