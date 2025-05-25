@@ -1,5 +1,6 @@
+alias conf='nvim $HOME/.config/nvim'
 alias df='df -h'
-alias dtfs='cd $DOTFILES && clear && ll'
+alias dtfs='nvim $HOME/.dotfiles'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias gll='git log --stat -n 1'
@@ -9,10 +10,8 @@ alias ip='ipconfig getifaddr en0'
 alias la='ls -oAFhG'
 alias ll='ls -oFhG'
 alias scripts="[ -e package.json ] && jq '.scripts?' < package.json"
-alias study='cd $HOME/Study && clear && ll'
-alias temp='nvim $HOME/Study/notes/temp'
+alias tmp='nvim $HOME/Study/notes/tmp'
 alias trail='<<<${(F)path}'
-alias work='cd $HOME/Work && clear && ll'
 
 if exists brew; then
     alias activate='source $(find . -type f -name activate)' # single quotes mandatory else command substitution executes when sourced
@@ -29,8 +28,4 @@ if exists brew; then
     alias tree="tree -a -C -F -I '.git|vendor' --gitignore"
     alias vi=nvim
     alias vim=nvim
-fi
-
-if exists n; then
-    alias rm=trash
 fi
