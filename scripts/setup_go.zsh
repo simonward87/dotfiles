@@ -7,11 +7,12 @@ echo "\n<<< Installing Go CLI Tools >>>\n"
 if exists go; then
     packages=(
         github.com/cespare/reflex
-        github.com/fatih/gomodifytags@latest
+        github.com/fatih/gomodifytags
         github.com/jackc/tern/v2
+        github.com/skip2/go-qrcode/...
         github.com/spf13/cobra-cli
-        golang.org/x/telemetry/cmd/gotelemetry@latest
-        golang.org/x/tools/cmd/goimports@latest
+        golang.org/x/telemetry/cmd/gotelemetry
+        golang.org/x/tools/cmd/goimports
         google.golang.org/protobuf/cmd/protoc-gen-go
     )
 

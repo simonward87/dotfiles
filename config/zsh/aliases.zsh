@@ -1,12 +1,8 @@
 alias conf='nvim $HOME/.config/nvim'
 alias df='df -h'
 alias dtfs='nvim $HOME/.dotfiles'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
 alias gll='git log --stat -n 1'
-alias grep='grep --color=auto'
 alias hist='fc -l -t "$HISTTIMEFORMAT"' # display formatted command history
-alias htop='htop -C'
 alias ip='ipconfig getifaddr en0'
 alias la='ls -oAFhG'
 alias ll='ls -oFhG'
