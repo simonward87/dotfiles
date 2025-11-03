@@ -21,6 +21,7 @@ if exists brew; then
     alias la='gls -AFho --color --group-directories-first'
     alias ll='gls -Fho --color --group-directories-first'
     alias ls=gls
+    alias rm=trash
     alias sed=gsed
     alias tree="tree -a -C -F -I '.git|vendor' --gitignore"
     alias vi=nvim
