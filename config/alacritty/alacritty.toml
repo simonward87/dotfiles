@@ -253,5 +253,6 @@ y = 8
 # more info: https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd
 import = [
     "~/.config/alacritty/themes/k/day.toml",
-    "~/.config/alacritty/fonts/noto-sans-mono.toml"
+    # "~/.config/alacritty/fonts/noto-sans-mono.toml"
+    "~/.config/alacritty/fonts/cousine.toml"
 ]
