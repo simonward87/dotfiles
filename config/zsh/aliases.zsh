@@ -1,6 +1,3 @@
-alias conf='nvim $HOME/.config/nvim'
-alias df='df -h'
-alias dtfs='nvim $HOME/.dotfiles'
 alias gll='git log --stat -n 1'
 alias hist='fc -l -t "$HISTTIMEFORMAT"' # display formatted command history
 alias ip='ipconfig getifaddr en0'
@@ -20,7 +17,6 @@ if exists brew; then
     alias k=kubectl
     alias la='gls -AFho --color --group-directories-first'
     alias ll='gls -Fho --color --group-directories-first'
-    alias ls=gls
     alias rm=trash
     alias sed=gsed
     alias tree="tree -a -C -F -I '.git|vendor' --gitignore"

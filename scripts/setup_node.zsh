@@ -15,7 +15,6 @@ else
 fi
 
 packages=(
-    firebase-tools
     http-server
     json-server
     neovim
