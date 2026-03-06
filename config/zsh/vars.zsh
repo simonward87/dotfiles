@@ -15,10 +15,11 @@ if exists brew; then
     export PSQL_EDITOR=$HOMEBREW_PREFIX/bin/nvim
     export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
     export VISUAL=$HOMEBREW_PREFIX/bin/nvim
-    export ZPLUG_HOME=$HOMEBREW_PREFIX/opt/zplug
+    export ZPLUG_HOME="$(brew --prefix zplug)"
 
-    export PATH=$HOMEBREW_PREFIX/opt/gawk/libexec/gnubin:$PATH
-    export PATH=$HOMEBREW_PREFIX/opt/make/libexec/gnubin:$PATH
+    export PATH="$(brew --prefix rustup)/bin:$PATH"
+    export PATH="$(brew --prefix gawk)/libexec/gnubin:$PATH"
+    export PATH="$(brew --prefix make)/libexec/gnubin:$PATH"
     export PATH="$(find $HOMEBREW_PREFIX/opt -type l -iname 'postgresql*')/bin:$PATH" # changes dynamically with version
     export PATH=$N_PREFIX/bin:$PATH
     export PATH=$PATH:$GOBIN
@@ -28,14 +29,4 @@ else
     export EDITOR=/usr/bin/vi
     export PSQL_EDITOR=/usr/bin/vi
     export VISUAL=/usr/bin/vi
-fi
-
-
-# used to style prompt, see ~/.config/zsh/zsh.zsh
-if defaults read -g AppleInterfaceStyle &>/dev/null; then
-    export CLR_COMMENT="#91a2b0"
-    export CLR_ERROR="#ff7c83"
-else
-    export CLR_COMMENT="#6b6a64"
-    export CLR_ERROR="#c1002f"
 fi

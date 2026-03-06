@@ -11,6 +11,15 @@ setopt NO_CASE_GLOB # case-insensitive glob
 unsetopt BEEP # beep on error
 unsetopt CORRECT_ALL # argument spelling correction
 
+# used to conditionally style prompt
+if defaults read -g AppleInterfaceStyle &>/dev/null; then
+    CLR_COMMENT="#91a2b0"
+    CLR_ERROR="#ff7c83"
+else
+    CLR_COMMENT="#6b6a64"
+    CLR_ERROR="#c1002f"
+fi
+
 # Custom shell prompt
 PROMPT="%(?.%F{$CLR_COMMENT}%m%f.%F{$CLR_ERROR}[%?]%f %F{$CLR_COMMENT}%m%f) %2~ %# "
 
