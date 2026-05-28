@@ -23,7 +23,6 @@ packages=(
     prettier-plugin-svelte
     prettier-plugin-tailwindcss
     surge
-    trash-cli
     typescript
 )
 
