@@ -28,6 +28,7 @@
     ~/.sqliterc:
     ~/.tmux.conf:
     ~/.zprofile:
+    ~/.zsh_plugins.txt:
     ~/.zshenv:
     ~/.zshrc:
     ~/Library/Fonts/:
