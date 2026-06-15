@@ -21,7 +21,7 @@ else
 fi
 
 # Custom shell prompt
-PROMPT="%(?.%F{$CLR_COMMENT}%m%f.%F{$CLR_ERROR}[%?]%f %F{$CLR_COMMENT}%m%f) %2~ %# "
+PROMPT="%(?..%F{$CLR_ERROR}[%?]%f )%F{$CLR_COMMENT}%([ "%m" = "localhost" ]..@%m)%f%~ %# "
 
 # Prompt git integration
 autoload -Uz vcs_info
