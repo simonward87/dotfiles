@@ -4,7 +4,7 @@
 function () {
     local configs="$HOME/.config/zsh"
 
-    # Variables are sourced first as they are a dependency for other configs
+    # Variables sourced first as they are a dependency for other configs
     source "$configs/vars.zsh"
 
     for file in $configs/*.zsh; do

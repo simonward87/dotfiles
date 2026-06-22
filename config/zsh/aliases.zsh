@@ -1,6 +1,7 @@
 alias gll='git log --stat -n 1'
 alias hist='fc -l -t "$HISTTIMEFORMAT"' # display formatted command history
-alias ip='ipconfig getifaddr en0'
+alias ipl='ipconfig getifaddr en0' # local IP address
+alias ipg='curl -s https://myip.wtf/text' # global IP address
 alias la='ls -oAFhG'
 alias ll='ls -oFhG'
 alias scripts="[ -e package.json ] && jq '.scripts?' < package.json"
