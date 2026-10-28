@@ -16,8 +16,8 @@ if exists brew; then
     alias cat=gcat
     alias d=docker
     alias k=kubectl
-    alias la='gls -AFho --color --group-directories-first'
-    alias ll='gls -Fho --color --group-directories-first'
+    alias la='gls -AFgho --color --group-directories-first --time-style=+%d/%m/%y'
+    alias ll='gls -Fgho --color --group-directories-first --time-style=+%d/%m/%y'
     alias rm='rm -i'
     alias sed=gsed
     alias tree="tree -a -C -F -I '.git|vendor' --gitignore"
