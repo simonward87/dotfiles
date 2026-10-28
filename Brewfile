@@ -1,17 +1,13 @@
 tap "armmbed/formulae", "https://github.com/ArmMbed/homebrew-formulae"
 tap "benbjohnson/litestream"
+tap "espressif/eim", trusted: true
 tap "filosottile/musl-cross", "https://github.com/FiloSottile/homebrew-musl-cross"
-tap "heroku/brew"
-tap "homebrew/services"
-tap "mongodb/brew"
-tap "osx-cross/avr"
-tap "oven-sh/bun"
+tap "mongodb/brew", trusted: { formulae: ["mongodb-database-tools"] }
+tap "osx-cross/avr", trusted: { formulae: ["avr-binutils"] }
 tap "tdewolff/tap"
 tap "tinygo-org/tools"
 # Plugin manager for zsh, inspired by antigen and antibody
 brew "antidote"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
 # Arduino command-line interface
 brew "arduino-cli"
 # General-purpose data compression with high compression ratio
@@ -26,22 +22,34 @@ brew "ncurses"
 brew "bash"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Incredibly fast JavaScript runtime, bundler, test runner, and package manager
+brew "bun"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
+# Core application library for C
+brew "glib"
+# Low-level library for pixel manipulation
+brew "pixman"
 # Cross-platform make
 brew "cmake"
 # Documentation for CMake
 brew "cmake-docs"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Dependency Manager for PHP
 brew "composer"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Get, unpack, build, and install modules from CPAN
 brew "cpanminus"
+# USB programmer
+brew "dfu-util"
 # Load/unload environment variables based on $PWD
 brew "direnv"
 # Command-line tool for DigitalOcean
 brew "doctl"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.14"
 # Command-line EPUB reader
 brew "epr"
 # Command-line tool to interact with exercism.io
@@ -50,8 +58,6 @@ brew "exercism"
 brew "fd"
 # Identify or delete duplicate files
 brew "fdupes"
-# Firebase command-line tools
-brew "firebase-cli"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU awk utility
@@ -66,6 +72,8 @@ brew "git"
 brew "gnu-sed"
 # GNU typing tutor
 brew "gnu-typist"
+# Cryptographic library based on the code from GnuPG
+brew "libgcrypt"
 # GNU Privacy Guard (OpenPGP)
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
@@ -90,6 +98,8 @@ brew "jq"
 brew "julia"
 # Pager program similar to more
 brew "less"
+# General purpose TCP-IP emulator
+brew "libslirp"
 # CLI for the Linode API
 brew "linode-cli"
 # Package manager for the Lua programming language
@@ -106,8 +116,6 @@ brew "mysql"
 brew "n"
 # NCurses Disk Usage
 brew "ncdu"
-# Fast, highly customisable system info script
-brew "neofetch"
 # Incremental parsing library
 brew "tree-sitter"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -148,6 +156,8 @@ brew "rsync"
 brew "rust"
 # Rust toolchain installer
 brew "rustup"
+# SDL2 compatibility layer that uses SDL3 behind the scenes
+brew "sdl2-compat"
 # SQL linter and auto-formatter for Humans
 brew "sqlfluff"
 # Analyze how space is allocated inside an SQLite file
@@ -176,8 +186,21 @@ brew "wget"
 brew "woff2"
 # UNIX shell (command interpreter)
 brew "zsh"
-# GPU-accelerated terminal emulator
-cask "alacritty"
+brew "armmbed/formulae/arm-none-eabi-gcc", trusted: true
+# Streaming replication for SQLite databases
+brew "benbjohnson/litestream/litestream", trusted: true
+# ESP-IDF Installation Manager - CLI tool for setting up ESP-IDF development environment
+brew "espressif/eim/eim"
+# Linux cross compilers based on musl libc
+brew "filosottile/musl-cross/musl-cross", trusted: true
+# High-performance, schema-free, document-oriented database
+brew "mongodb/brew/mongodb-community", trusted: true
+# GNU compiler collection for AVR 8-bit and 32-bit Microcontrollers
+brew "osx-cross/avr/avr-gcc@9", trusted: true
+# Minifier CLI for HTML, CSS, JS, JSON, SVG and XML
+brew "tdewolff/tap/minify", trusted: true
+# TinyGo is a Go compiler for small places. Microcontrollers, WebAssembly, and command-line tools. Based on LLVM.
+brew "tinygo-org/tools/tinygo", trusted: true
 # Memory training application
 cask "anki"
 # Cross platform SQL editor and database management app
@@ -190,8 +213,6 @@ cask "blender"
 cask "calibre"
 # Terminal-based AI coding assistant
 cask "claude-code"
-# Photography workflow application and raw developer
-cask "darktable"
 # App to build and share containerised applications and microservices
 cask "docker-desktop"
 # Email client
@@ -208,6 +229,7 @@ cask "font-courier-prime-code"
 cask "font-courier-prime-medium-and-semi-bold"
 cask "font-courier-prime-sans"
 cask "font-cousine-nerd-font"
+cask "font-crimson-pro"
 cask "font-dm-mono"
 cask "font-dm-sans"
 cask "font-dm-serif-text"
@@ -217,6 +239,7 @@ cask "font-fira-mono"
 cask "font-fira-mono-nerd-font"
 cask "font-fira-sans"
 cask "font-google-sans-code"
+cask "font-googlesanscode-nerd-font"
 cask "font-ibm-plex-mono"
 cask "font-inconsolata"
 cask "font-inter"
@@ -236,6 +259,8 @@ cask "font-roboto-mono-nerd-font"
 cask "font-roboto-slab"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "gcloud-cli"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Free and open-source image editor
 cask "gimp"
 # Web browser
@@ -260,12 +285,8 @@ cask "readest"
 cask "reaper"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
-# Review, edit and share dive log data
-cask "shearwater-cloud"
 # Free, open-source, and completely encrypted notes app
 cask "standard-notes"
-# TinyPNG client
-cask "tinypng4mac"
 mas "Compressor", id: 6746516157
 mas "Final Cut Pro", id: 1631624924
 mas "iMovie", id: 408981434
@@ -288,11 +309,14 @@ go "github.com/cespare/reflex"
 go "github.com/jackc/tern/v2"
 go "github.com/caddyserver/xcaddy/cmd/xcaddy"
 npm "corepack"
+npm "http-server"
 npm "json-server"
 npm "neovim"
 npm "prettier-plugin-astro"
 npm "prettier-plugin-svelte"
 npm "prettier-plugin-tailwindcss"
+npm "prettier"
 npm "serve"
+npm "sharp-cli"
 npm "surge"
 npm "typescript"
