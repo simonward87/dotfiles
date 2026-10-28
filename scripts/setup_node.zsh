@@ -21,7 +21,7 @@ packages=(
     prettier
     prettier-plugin-astro
     prettier-plugin-svelte
-    prettier-plugin-tailwindcss
+    sharp-cli
     surge
     typescript
 )
