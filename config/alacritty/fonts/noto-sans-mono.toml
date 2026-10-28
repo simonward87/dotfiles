@@ -1,6 +1,6 @@
 # https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#font
 [font]
-size = 14
+size = 14.5
 
 [font.normal]
 family = "NotoSansM Nerd Font"
@@ -12,4 +12,4 @@ style = "Bold"
 
 [font.offset]
 x = 0
-y = -2
+y = 1
