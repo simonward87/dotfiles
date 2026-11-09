@@ -8,56 +8,34 @@ tap "tdewolff/tap"
 tap "tinygo-org/tools"
 # Plugin manager for zsh, inspired by antigen and antibody
 brew "antidote"
-# Arduino command-line interface
-brew "arduino-cli"
-# General-purpose data compression with high compression ratio
-brew "xz"
-# Library for USB device access
-brew "libusb"
-# Atmel AVR MCU programmer
-brew "avrdude"
 # Text-based UI library
 brew "ncurses"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
-# Incredibly fast JavaScript runtime, bundler, test runner, and package manager
-brew "bun"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
-# Core application library for C
-brew "glib"
-# Low-level library for pixel manipulation
-brew "pixman"
 # Cross-platform make
 brew "cmake"
 # Documentation for CMake
 brew "cmake-docs"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
+# General-purpose data compression with high compression ratio
+brew "xz"
 # Dependency Manager for PHP
 brew "composer"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
-# Get, unpack, build, and install modules from CPAN
-brew "cpanminus"
+# Library for USB device access
+brew "libusb"
 # USB programmer
 brew "dfu-util"
 # Load/unload environment variables based on $PWD
 brew "direnv"
-# Command-line tool for DigitalOcean
-brew "doctl"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.14"
-# Command-line EPUB reader
-brew "epr"
-# Command-line tool to interact with exercism.io
-brew "exercism"
-# Simple, fast and user-friendly alternative to find
-brew "fd"
 # Identify or delete duplicate files
 brew "fdupes"
+# Firebase command-line tools
+brew "firebase-cli"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU awk utility
@@ -68,6 +46,8 @@ brew "gcc"
 brew "gemini-cli"
 # Distributed revision control system
 brew "git"
+# Core application library for C
+brew "glib"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
 # GNU typing tutor
@@ -80,28 +60,14 @@ brew "gnupg"
 brew "go"
 # Database migrations CLI tool
 brew "golang-migrate"
-# Graph visualization software from AT&T and Bell Labs
-brew "graphviz"
-# Reliable, high performance TCP/HTTP load balancer
-brew "haproxy"
-# HTTP load generator, ApacheBench (ab) replacement
-brew "hey"
 # Improved top (interactive process viewer)
 brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
-# Configurable static site generator
-brew "hugo"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Fast, Dynamic Programming Language
-brew "julia"
 # Pager program similar to more
 brew "less"
-# General purpose TCP-IP emulator
-brew "libslirp"
-# CLI for the Linode API
-brew "linode-cli"
 # Package manager for the Lua programming language
 brew "luarocks"
 # Utility for directing compilation
@@ -122,8 +88,8 @@ brew "tree-sitter"
 brew "neovim"
 # Port scanning utility for large networks
 brew "nmap"
-# Development kit for the Java programming language
-brew "openjdk"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # QR Code generation
 brew "qrencode"
 # Display directories as trees (with optional color/HTML output)
@@ -132,20 +98,18 @@ brew "tree"
 brew "pass"
 # Highly capable, feature-rich programming language
 brew "perl"
-# Display the PID number for a given process name
-brew "pidof"
+# Low-level library for pixel manipulation
+brew "pixman"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Object-relational database system
 brew "postgresql@15", restart_service: :changed
 # Interpreted, interactive, object-oriented programming language
+brew "python@3.14"
+# Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
-# File browser
-brew "ranger"
 # Rsync for cloud storage
 brew "rclone"
-# Persistent key-value database, with built-in net interface
-brew "redis"
 # Perl-powered file rename script with many helpful built-ins
 brew "rename"
 # Search tool like grep and The Silver Searcher
@@ -156,16 +120,12 @@ brew "rsync"
 brew "rust"
 # Rust toolchain installer
 brew "rustup"
-# SDL2 compatibility layer that uses SDL3 behind the scenes
-brew "sdl2-compat"
 # SQL linter and auto-formatter for Humans
 brew "sqlfluff"
 # Analyze how space is allocated inside an SQLite file
 brew "sqlite-analyzer"
 # Opinionated Lua code formatter
 brew "stylua"
-# Version control system designed to be a better CVS
-brew "subversion"
 # User interface to the TELNET protocol
 brew "telnet"
 # Simplified and community-driven man pages
@@ -205,10 +165,6 @@ brew "tinygo-org/tools/tinygo", trusted: true
 cask "anki"
 # Cross platform SQL editor and database management app
 cask "beekeeper-studio"
-# Digital audio workstation
-cask "bitwig-studio"
-# 3D creation suite
-cask "blender"
 # E-books management software
 cask "calibre"
 # Terminal-based AI coding assistant
@@ -257,10 +213,6 @@ cask "font-roboto-flex"
 cask "font-roboto-mono"
 cask "font-roboto-mono-nerd-font"
 cask "font-roboto-slab"
-# Set of tools to manage resources and applications hosted on Google Cloud
-cask "gcloud-cli"
-# Terminal emulator that uses platform-native UI and GPU acceleration
-cask "ghostty"
 # Free and open-source image editor
 cask "gimp"
 # Web browser
@@ -271,8 +223,6 @@ cask "google-drive"
 cask "inkscape"
 # Keyboard customiser
 cask "karabiner-elements"
-# File patching utility
-cask "multipatch"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Colour picker for colours onscreen
@@ -281,12 +231,8 @@ cask "pika"
 cask "raspberry-pi-imager"
 # Ebook reader
 cask "readest"
-# Digital audio production application
-cask "reaper"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
-# Free, open-source, and completely encrypted notes app
-cask "standard-notes"
 mas "Compressor", id: 6746516157
 mas "Final Cut Pro", id: 1631624924
 mas "iMovie", id: 408981434
@@ -308,6 +254,7 @@ go "github.com/skip2/go-qrcode/qrcode"
 go "github.com/cespare/reflex"
 go "github.com/jackc/tern/v2"
 go "github.com/caddyserver/xcaddy/cmd/xcaddy"
+npm "cf"
 npm "corepack"
 npm "http-server"
 npm "json-server"
