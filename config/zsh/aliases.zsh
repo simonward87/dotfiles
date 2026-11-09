@@ -16,11 +16,18 @@ if exists brew; then
     alias cat=gcat
     alias d=docker
     alias k=kubectl
-    alias la='gls -AFgho --color --group-directories-first --time-style=+%d/%m/%y'
-    alias ll='gls -Fgho --color --group-directories-first --time-style=+%d/%m/%y'
+    alias la='gls -AFgho --color --group-directories-first --time-style=+%d/%m/%Y'
+    alias ll='gls -Fgho --color --group-directories-first --time-style=+%d/%m/%Y'
     alias rm='rm -i'
     alias sed=gsed
     alias tree="tree -a -C -F -I '.git|vendor' --gitignore"
     alias vi=nvim
     alias vim=nvim
+
+    # Remove the default of run-help being aliased to man
+    unalias run-help 2>/dev/null
+    # Use zsh's run-help, which will display information for zsh builtins.
+    autoload run-help
+    HELPDIR=$(command brew --prefix)/share/zsh/help
+    alias help=run-help
 fi
