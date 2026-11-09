@@ -15,6 +15,7 @@ else
 fi
 
 packages=(
+    cf
     http-server
     json-server
     neovim
