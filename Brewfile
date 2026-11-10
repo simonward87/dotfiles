@@ -26,6 +26,8 @@ brew "xz"
 brew "composer"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Get, unpack, build, and install modules from CPAN
+brew "cpanminus"
 # Library for USB device access
 brew "libusb"
 # USB programmer
